@@ -7,5 +7,7 @@ namespace Business.Models.Config
         public Rarity Rarity {get; set;}
         public bool IsElemental { get; set; }
         public string Bonus {get; set;}
+        public string Effect {get; set;}        
+        public int? IncreasedElementalRollPercentage {get; set;}
     }
 }

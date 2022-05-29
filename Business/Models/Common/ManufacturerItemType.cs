@@ -7,6 +7,11 @@ namespace Business.Models.Common
     {
         Shield = 1,
         Grenade = 2,
-        Gun = 4
+        CombatRifle = 4,
+        Pistol = 8,
+        SubmachineGun = 16,
+        Shotgun = 32,
+        SniperRifle = 64,
+        RocketLauncher = 128
     }
 }
