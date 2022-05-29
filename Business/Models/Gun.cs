@@ -14,6 +14,13 @@ namespace Business.Models
 
         public int Range { get; set; }
 
-        public GunType GunType { get; set; }
+        public string WeaponType { get; set; }
+
+        public string Prefix {get; set;}
+
+        public string RedText {get; set;}
+
+        public string Bonus {get; set;}
+        public string ExtraDamage { get; internal set; }
     }
 }

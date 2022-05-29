@@ -18,8 +18,10 @@ builder.Services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<GuildConfiguration>(builder.Configuration.GetSection("GuildConfiguration"));
+builder.Services.Configure<WeaponCustomization>(builder.Configuration.GetSection("WeaponCustomization"));
 builder.Services.AddTransient<IItemFactory<Business.Models.Grenade>, GrenadeFactory>();
 builder.Services.AddTransient<IItemFactory<Business.Models.Shield>, ShieldFactory>();
+builder.Services.AddTransient<IGunFactory, GunFactory>();
 
 
 var app = builder.Build();

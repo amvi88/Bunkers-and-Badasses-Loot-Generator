@@ -14,9 +14,16 @@ namespace Business.Models.Config
 
         public ManufacturerItemType SupportedItemTypes { get; set; }
 
+        public GunType? SupportedGunTypes { get; set; }
+
         public bool CanBuild(ManufacturerItemType itemType)
         {
             return SupportedItemTypes.HasFlag(itemType);
+        }
+
+        public bool CanBuild(GunType gunType)
+        {
+            return SupportedGunTypes?.HasFlag(gunType) ?? false;
         }
     }
 

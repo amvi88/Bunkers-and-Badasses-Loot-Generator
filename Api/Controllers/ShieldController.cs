@@ -2,7 +2,7 @@ using Business.Factories;
 using Business.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Api 
+namespace Api
 {
     [ApiController] 
     [Route("[controller]")]
@@ -22,5 +22,4 @@ namespace Api
             return Ok(shield);
         }
     }
-
 }
