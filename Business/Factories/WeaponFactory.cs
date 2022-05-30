@@ -9,14 +9,18 @@ namespace Business.Factories
 {
     public class GunFactory : IGunFactory
     {
-        private readonly GuildConfiguration _guildConfiguration;
-        private readonly WeaponCustomization _weaponCustomization;
+        private readonly GuildConfigurationOptions _guildConfiguration;
+        private readonly WeaponCustomizationOptions _weaponCustomization;
+        private readonly WeaponArchetypesOptions _weaponArchetypesOptions;
 
-        public GunFactory(IOptions<GuildConfiguration> guildOptions, IOptions<WeaponCustomization> weaponCustomizationOptions)
+        public GunFactory(IOptions<GuildConfigurationOptions> guildOptions, IOptions<WeaponCustomizationOptions> weaponCustomizationOptions, IOptions<WeaponArchetypesOptions> weaponArchetypesOptions)
         {
             _guildConfiguration = guildOptions.Value ?? throw new ArgumentException(nameof(guildOptions));
             _weaponCustomization = weaponCustomizationOptions.Value ?? throw new ArgumentException(nameof(weaponCustomizationOptions));
+            _weaponArchetypesOptions = weaponArchetypesOptions.Value ?? throw new ArgumentNullException(nameof(weaponArchetypesOptions));
         }
+
+        
 
         public Gun Manufacture(int playerLevel, Rarity? rarity)
         {
@@ -34,6 +38,8 @@ namespace Business.Factories
 
             var guildsThatProduceSpecificGunType = _guildConfiguration.Guilds.Where(x => x.CanBuild(ManufacturerItemType.Gun) && x.CanBuild(gunType));
             var chosenGuild = guildsThatProduceSpecificGunType.ElementAt(RandomNumberGenerator.GetInt32(0, guildsThatProduceSpecificGunType.Count()));
+            
+            // Create a gun based on Guild specs
             var specs = chosenGuild.WeaponSpecs.First(x => x.Rarity == rarity);
 
             var gun = new Gun
@@ -41,16 +47,49 @@ namespace Business.Factories
                 Level = playerLevel,
                 Guild =  chosenGuild.Name,
                 Element = Element.None,
-                Rarity = rarity.GetValueOrDefault()                              
+                Rarity = rarity.GetValueOrDefault(),
+                Bonus = specs.Bonus                            
             };
 
+            // Roll for elemental type if any and bonus damage if it may be
             if (specs.IsElemental)
             {
                 var elementalValues = Enum.GetValues(typeof(Element));
 
                 var elementValues = RollElement(rarity, specs.IncreasedElementalRollPercentage);
                 gun.Element = elementValues.Item1;
-                gun.ExtraDamage = elementValues.Item2;
+
+                if (! string.IsNullOrWhiteSpace(elementValues.Item2))
+                {
+                    gun.ExtraDamage = elementValues.Item2;
+                }
+            }
+
+            // Get arhetype specs for weapons
+            var archetype = _weaponArchetypesOptions.Archetypes.First(x => x.GunType == gunType);
+            if (!string.IsNullOrEmpty(archetype.Bonus))
+            {
+                gun.WeaponTypeBonus = archetype.Bonus;
+            }
+
+            var gunStats = archetype.WeaponSpecs.First(x => x.MinLevel <= playerLevel && playerLevel <= x.MaxLevel);
+            gun.Range  = gunStats.Range;
+            gun.Damage = gunStats.Damage;
+            gun.HitsByAccuracy = gunStats.HitsByAccuracy;  
+            gun.WeaponType = gunType.ToString(); 
+
+
+            // Check for prefix
+            var calculatedPrefixChance = RandomNumberGenerator.GetInt32(1, 100);
+            if ( calculatedPrefixChance < _weaponCustomization.PrefixChance[rarity.GetValueOrDefault()])
+            {
+                gun.Prefix = "Prefix";
+            }
+
+            var calculatedRedTextChance = RandomNumberGenerator.GetInt32(1, 100);
+            if (calculatedRedTextChance  < _weaponCustomization.RedTextChance[rarity.GetValueOrDefault()])
+            {
+                gun.RedText = "RedText";
             }
 
             return gun;

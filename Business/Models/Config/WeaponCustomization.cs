@@ -2,7 +2,7 @@ using Business.Models.Common;
 
 namespace Business.Models.Config
 {
-    public class WeaponCustomization 
+    public class WeaponCustomizationOptions 
     {
         public Rarity[][] RarityMatrix {get; set;}
 

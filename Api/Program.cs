@@ -4,8 +4,6 @@ using Business.Models.Config;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services
 .AddControllers()
 .AddJsonOptions(opts =>
@@ -14,19 +12,16 @@ builder.Services
         opts.JsonSerializerOptions.Converters.Add(enumConverter);
     });
     
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.Configure<GuildConfiguration>(builder.Configuration.GetSection("GuildConfiguration"));
-builder.Services.Configure<WeaponCustomization>(builder.Configuration.GetSection("WeaponCustomization"));
+builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetSection("GuildConfiguration"));
+builder.Services.Configure<WeaponCustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));
+builder.Services.Configure<WeaponArchetypesOptions>(builder.Configuration.GetSection("WeaponArchetypes"));
 builder.Services.AddTransient<IItemFactory<Business.Models.Grenade>, GrenadeFactory>();
 builder.Services.AddTransient<IItemFactory<Business.Models.Shield>, ShieldFactory>();
 builder.Services.AddTransient<IGunFactory, GunFactory>();
 
-
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -34,9 +29,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

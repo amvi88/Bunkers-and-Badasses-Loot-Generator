@@ -1,4 +1,5 @@
 using Business.Models.Common;
+using Business.Models.Config;
 
 namespace Business.Models
 {
@@ -22,5 +23,7 @@ namespace Business.Models
 
         public string Bonus {get; set;}
         public string ExtraDamage { get; internal set; }
+        public string WeaponTypeBonus { get; internal set; }
+        public Dictionary<string, WeaponHits> HitsByAccuracy { get; internal set; }
     }
 }

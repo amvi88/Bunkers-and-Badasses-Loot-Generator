@@ -9,9 +9,9 @@ namespace Business.Factories
 {
     public class GrenadeFactory : IItemFactory<Grenade>
     {
-        private readonly GuildConfiguration _guildConfiguration;
+        private readonly GuildConfigurationOptions _guildConfiguration;
 
-        public GrenadeFactory(IOptions<GuildConfiguration> guildOptions)
+        public GrenadeFactory(IOptions<GuildConfigurationOptions> guildOptions)
         {
             _guildConfiguration = guildOptions.Value ?? throw new ArgumentException(nameof(guildOptions));
         }
