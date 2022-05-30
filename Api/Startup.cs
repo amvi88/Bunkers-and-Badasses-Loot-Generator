@@ -22,6 +22,7 @@ namespace Api
                 var enumConverter = new System.Text.Json.Serialization.JsonStringEnumConverter();
                 opts.JsonSerializerOptions.Converters.Add(enumConverter);
             });
+            
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
             services.AddControllers();
@@ -29,9 +30,11 @@ namespace Api
             services.Configure<GuildConfigurationOptions>(Configuration.GetSection("GuildConfiguration"));
             services.Configure<WeaponCustomizationOptions>(Configuration.GetSection("WeaponCustomization"));
             services.Configure<WeaponArchetypesOptions>(Configuration.GetSection("WeaponArchetypes"));
+            services.Configure<PotionConfigurationOptions>(Configuration.GetSection("PotionConfiguration"));
             services.AddTransient<IItemFactory<Business.Models.Grenade>, GrenadeFactory>();
             services.AddTransient<IItemFactory<Business.Models.Shield>, ShieldFactory>();
             services.AddTransient<IGunFactory, GunFactory>();
+            services.AddTransient<IPotionFactory,PotionFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

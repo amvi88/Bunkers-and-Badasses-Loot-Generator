@@ -16,14 +16,14 @@ namespace Api
         }
 
         [HttpPost]
-        public IActionResult CreateRandom(int playerLevel, Rarity? rarity)
+        public async Task<IActionResult> CreateRandom(int playerLevel, Rarity? rarity)
         {
             var gun = _gunFactory.Manufacture(playerLevel, rarity);
             return Ok(gun);
         }
 
         [HttpPost("{gunType}")]
-        public IActionResult CreateTyped(int playerLevel, [FromRoute]  GunType gunType, Rarity? rarity)
+        public async Task<IActionResult> CreateTyped(int playerLevel, [FromRoute]  GunType gunType, Rarity? rarity)
         {
             var gun = _gunFactory.Manufacture(playerLevel, rarity, gunType);
             return Ok(gun);

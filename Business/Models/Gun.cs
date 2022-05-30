@@ -15,15 +15,12 @@ namespace Business.Models
 
         public int Range { get; set; }
 
-        public string WeaponType { get; set; }
-
-        public Prefix Prefix {get; set;}
+        public string Name { get; set; }
 
         public RedText RedText {get; set;}
 
-        public string Bonus {get; set;}
-        public string ExtraDamage { get; internal set; }
-        public string WeaponTypeBonus { get; internal set; }
+        public List<string> Bonuses {get; set;}
+
         public Dictionary<string, WeaponHits> HitsByAccuracy { get; internal set; }
     }
 }

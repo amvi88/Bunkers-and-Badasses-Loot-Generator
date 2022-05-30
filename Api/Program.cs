@@ -22,6 +22,8 @@ namespace Api
                         config.AddJsonFile("weaponprefixes.json", true);
                         config.AddJsonFile("weaponredtext.json", true);
                         config.AddJsonFile("guilds.json", true);
+                        config.AddJsonFile("potions.json", true);
+                        config.AddJsonFile("tinytinaspotions.json", true);
                     });
                     webBuilder.UseStartup<Startup>();
                 });

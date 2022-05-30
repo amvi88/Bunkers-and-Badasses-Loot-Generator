@@ -138,7 +138,7 @@
                 "Effect": "Deals 3x Damage to all wizards."
             },
              {
-                "Name": "/ don't want this isolation.",
+                "Name": "I don't want this isolation.",
                 "Effect": "Won't fire unless adjacent to an ally or target."
             },
              {

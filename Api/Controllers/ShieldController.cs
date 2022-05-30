@@ -16,7 +16,7 @@ namespace Api
         }
 
         [HttpPost]
-        public IActionResult Post(int playerLevel)
+        public async Task<IActionResult> Post(int playerLevel)
         {
             var shield = _shieldFactory.Manufacture(playerLevel, null);
             return Ok(shield);

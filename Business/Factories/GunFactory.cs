@@ -46,7 +46,7 @@ namespace Business.Factories
                 Guild =  chosenGuild.Name,
                 Element = Element.None,
                 Rarity = rarity.GetValueOrDefault(),
-                Bonus = specs.Bonus                            
+                Bonuses = new List<string>{ $"(Guild) {specs.Bonus}" }                            
             };
 
             // Roll for elemental type if any and bonus damage if it may be
@@ -57,9 +57,9 @@ namespace Business.Factories
                 var elementValues = RollElement(rarity, specs.IncreasedElementalRollPercentage);
                 gun.Element = elementValues.Item1;
 
-                if (! string.IsNullOrWhiteSpace(elementValues.Item2))
+                if (! string.IsNullOrWhiteSpace(elementValues.Item2) && elementValues.Item1 != Element.None)
                 {
-                    gun.ExtraDamage = elementValues.Item2;
+                    gun.Bonuses.Append( $"(Elemental) +{elementValues.Item2} {elementValues.Item1} DMG");
                 }
             }
 
@@ -67,29 +67,32 @@ namespace Business.Factories
             var archetype = _weaponArchetypesOptions.Archetypes.First(x => x.GunType == gunType);
             if (!string.IsNullOrEmpty(archetype.Bonus))
             {
-                gun.WeaponTypeBonus = archetype.Bonus;
+                gun.Bonuses.Add($"({gunType.GetDescription()}) {archetype.Bonus}");
             }
 
             var gunStats = archetype.WeaponSpecs.First(x => x.MinLevel <= playerLevel && playerLevel <= x.MaxLevel);
             gun.Range  = gunStats.Range;
             gun.Damage = gunStats.Damage;
             gun.HitsByAccuracy = gunStats.HitsByAccuracy;  
-            gun.WeaponType = gunType.ToString(); 
-
-
+            
             // Check for prefix
             var calculatedPrefixChance = RandomNumberGenerator.GetInt32(1, 100);
             if ( calculatedPrefixChance <= _weaponCustomization.PrefixChance[rarity.GetValueOrDefault()])
             {
-                gun.Prefix = _weaponCustomization.Prefixes[RandomNumberGenerator.GetInt32(0, _weaponCustomization.Prefixes.Length)];
+                var prefix = _weaponCustomization.Prefixes[RandomNumberGenerator.GetInt32(0, _weaponCustomization.Prefixes.Length)];
+                gun.Bonuses.Add($"(Prefix) {prefix.Effect}");
+                gun.Name = prefix.Name;
             }
 
             var calculatedRedTextChance = RandomNumberGenerator.GetInt32(1, 100);
             if (calculatedRedTextChance  <= _weaponCustomization.RedTextChance[rarity.GetValueOrDefault()])
             {
-                gun.RedText = _weaponCustomization.RedText[RandomNumberGenerator.GetInt32(0, _weaponCustomization.RedText.Length)];
+                var redText = _weaponCustomization.RedText[RandomNumberGenerator.GetInt32(0, _weaponCustomization.RedText.Length)];
+                gun.Bonuses.Add($"(RedText) {redText.Effect}"); 
+                gun.RedText = redText;
             }
 
+            gun.Name = $"{(string.IsNullOrWhiteSpace(gun.Name)? gunType.GetDescription() : $"{gun.Name} {gunType.GetDescription()}") }";                  
             return gun;
         }
 
