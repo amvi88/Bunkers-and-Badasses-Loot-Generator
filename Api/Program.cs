@@ -1,34 +1,27 @@
 
-using Business.Factories;
-using Business.Models.Config;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services
-.AddControllers()
-.AddJsonOptions(opts =>
-    {
-        var enumConverter = new System.Text.Json.Serialization.JsonStringEnumConverter();
-        opts.JsonSerializerOptions.Converters.Add(enumConverter);
-    });
-    
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetSection("GuildConfiguration"));
-builder.Services.Configure<WeaponCustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));
-builder.Services.Configure<WeaponArchetypesOptions>(builder.Configuration.GetSection("WeaponArchetypes"));
-builder.Services.AddTransient<IItemFactory<Business.Models.Grenade>, GrenadeFactory>();
-builder.Services.AddTransient<IItemFactory<Business.Models.Shield>, ShieldFactory>();
-builder.Services.AddTransient<IGunFactory, GunFactory>();
-
-var app = builder.Build();
-if (app.Environment.IsDevelopment())
+namespace Api
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
 
-app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
-app.Run();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.ConfigureAppConfiguration(config =>
+                    {
+                        config.AddJsonFile("weaponarchetypes.json", true);
+                        config.AddJsonFile("weaponcustomization.json", true);
+                        config.AddJsonFile("guilds.json", true);
+                    });
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
+}

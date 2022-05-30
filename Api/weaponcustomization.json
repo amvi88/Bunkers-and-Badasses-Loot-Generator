@@ -1,0 +1,470 @@
+{
+    "WeaponCustomization": {
+        "PrefixChance": {
+            "Common": 25,
+            "Uncommon": 30,
+            "Rare": 35,
+            "Epic": 40,
+            "Legendary": 45
+        },
+        "Prefixes": [],
+        "RedTextChance": {
+            "Common": 0,
+            "Uncommon": 0,
+            "Rare": 0,
+            "Epic": 5,
+            "Legendary": 10
+        },
+        "RedText": [],
+        "RarityMatrix": [
+            [
+                "Common",
+                "Common",
+                "Common",
+                "Uncommon",
+                "Uncommon",
+                "Rare"
+            ],
+            [
+                "Common",
+                "Common",
+                "Uncommon",
+                "Uncommon",
+                "Rare",
+                "Epic"
+            ],
+            [
+                "Uncommon",
+                "Rare",
+                "Rare",
+                "Epic",
+                "Epic",
+                "Legendary"
+            ],
+            [
+                "Rare",
+                "Rare",
+                "Epic",
+                "Epic",
+                "Legendary",
+                "Legendary"
+            ]
+        ],
+        "ElementalTable": [
+            {
+                "MinRoll": 1,
+                "MaxRoll": 10,
+                "Elements": [
+                    "None",
+                    "None",
+                    "None",
+                    "None",
+                    "None"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "MinRoll": 11,
+                "MaxRoll": 15,
+                "Elements": [
+                    "None",
+                    "None",
+                    "None",
+                    "Radiation",
+                    "Radiation"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "MinRoll": 16,
+                "MaxRoll": 20,
+                "Elements": [
+                    "None",
+                    "None",
+                    "None",
+                    "Corrosive",
+                    "Corrosive"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "MinRoll": 21,
+                "MaxRoll": 15,
+                "Elements": [
+                    "None",
+                    "None",
+                    "None",
+                    "Shock",
+                    "Shock"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "MinRoll": 26,
+                "MaxRoll": 30,
+                "Elements": [
+                    "None",
+                    "None",
+                    "Radiation",
+                    "Explosive",
+                    "Explosive"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "MinRoll": 31,
+                "MaxRoll": 35,
+                "Elements": [
+                    "None",
+                    "None",
+                    "Corrosive",
+                    "Incendiary",
+                    "Incendiary"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "MinRoll": 36,
+                "MaxRoll": 40,
+                "Elements": [
+                    "None",
+                    "None",
+                    "Shock",
+                    "Cryo",
+                    "Cryo"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            {
+                "MinRoll": 41,
+                "MaxRoll": 45,
+                "Elements": [
+                    "None",
+                    "None",
+                    "Explosive",
+                    "Radiation",
+                    "Radiation"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "1d6",
+                    "1d6"
+                ]
+            },
+            {
+                "MinRoll": 46,
+                "MaxRoll": 50,
+                "Elements": [
+                    "None",
+                    "None",
+                    "Incendiary",
+                    "Corrosive",
+                    "Corrosive"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "1d6",
+                    "1d6"
+                ]
+            },
+            {
+                "MinRoll": 51,
+                "MaxRoll": 55,
+                "Elements": [
+                    "None",
+                    "None",
+                    "Cryo",
+                    "Shock",
+                    "Shock"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "",
+                    "1d6",
+                    "1d6"
+                ]
+            },
+            {
+                "MinRoll": 56,
+                "MaxRoll": 60,
+                "Elements": [
+                    "None",
+                    "Radiation",
+                    "Radiation",
+                    "Explosive",
+                    "Explosive"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "1d6",
+                    "1d6",
+                    "1d6"
+                ]
+            },
+            {
+                "MinRoll": 61,
+                "MaxRoll": 65,
+                "Elements": [
+                    "None",
+                    "Corrosive",
+                    "Corrosive",
+                    "Incendiary",
+                    "Incendiary"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "1d6",
+                    "1d6",
+                    "1d6"
+                ]
+            },
+            {
+                "MinRoll": 66,
+                "MaxRoll": 70,
+                "Elements": [
+                    "None",
+                    "Shock",
+                    "Shock",
+                    "Cryo",
+                    "Cryo"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "1d6",
+                    "1d6",
+                    "1d6"
+                ]
+            },
+            {
+                "MinRoll": 71,
+                "MaxRoll": 75,
+                "Elements": [
+                    "None",
+                    "Explosive",
+                    "Explosive",
+                    "Radiation",
+                    "Radiation"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "1d6",
+                    "2d6",
+                    "2d6"
+                ]
+            },
+            {
+                "MinRoll": 76,
+                "MaxRoll": 80,
+                "Elements": [
+                    "None",
+                    "Incendiary",
+                    "Incendiary",
+                    "Corrosive",
+                    "Corrosive"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "1d6",
+                    "2d6",
+                    "2d6"
+                ]
+            },
+            {
+                "MinRoll": 81,
+                "MaxRoll": 85,
+                "Elements": [
+                    "None",
+                    "Cryo",
+                    "Cryo",
+                    "Shock",
+                    "Shock"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "",
+                    "1d6",
+                    "2d6",
+                    "2d6"
+                ]
+            },
+            {
+                "MinRoll": 86,
+                "MaxRoll": 90,
+                "Elements": [
+                    "Radiation",
+                    "Radiation",
+                    "Radiation",
+                    "Explosive",
+                    "Explosive"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "1d6",
+                    "2d6",
+                    "2d6",
+                    "2d6"
+                ]
+            },
+            {
+                "MinRoll": 86,
+                "MaxRoll": 90,
+                "Elements": [
+                    "Radiation",
+                    "Radiation",
+                    "Radiation",
+                    "Explosive",
+                    "Explosive"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "1d6",
+                    "2d6",
+                    "2d6",
+                    "2d6"
+                ]
+            },
+            {
+                "MinRoll": 91,
+                "MaxRoll": 92,
+                "Elements": [
+                    "Corrosive",
+                    "Corrosive",
+                    "Corrosive",
+                    "Incendiary",
+                    "Incendiary"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "1d6",
+                    "2d6",
+                    "2d6",
+                    "2d6"
+                ]
+            },
+            {
+                "MinRoll": 93,
+                "MaxRoll": 94,
+                "Elements": [
+                    "Shock",
+                    "Shock",
+                    "Shock",
+                    "Cryo",
+                    "Cryo"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "1d6",
+                    "2d6",
+                    "2d6",
+                    "2d6"
+                ]
+            },
+            {
+                "MinRoll": 95,
+                "MaxRoll": 96,
+                "Elements": [
+                    "Explosive",
+                    "Explosive",
+                    "Explosive",
+                    "Radiation, Incendiary",
+                    "Radiation, Incendiary"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "1d6",
+                    "2d6",
+                    "1d6",
+                    "1d6"
+                ]
+            },
+            {
+                "MinRoll": 97,
+                "MaxRoll": 98,
+                "Elements": [
+                    "Incendiary",
+                    "Incendiary",
+                    "Incendiary",
+                    "Shock, Corrosive",
+                    "Shock, Corrosive"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "1d6",
+                    "2d6",
+                    "1d6",
+                    "1d6"
+                ]
+            },
+            {
+                "MinRoll": 99,
+                "MaxRoll": 100,
+                "Elements": [
+                    "Cryo",
+                    "Cryo",
+                    "Cryo",
+                    "Explosive, Cryo",
+                    "Explosive, Cryo"
+                ],
+                "ExtraDamage": [
+                    "",
+                    "1d6",
+                    "2d6",
+                    "1d6",
+                    "1d6"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,744 @@
+{"WeaponArchetypes": {
+    "Archetypes": [
+      {
+        "GunType": "CombatRifle",
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d6",
+            "Range": 6,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 3,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 3,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "1d8",
+            "Range": 6,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 3,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d8",
+            "Range": 6,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 2
+              }
+            }
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d6",
+            "Range": 6,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 3,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d6",
+            "Range": 6,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "GunType": "Pistol",
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "2d4",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 3,
+                "Crits": 0
+              }
+            }
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "1d6",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 3,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "2d6",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d8",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 2
+              }
+            }
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "2d8",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "GunType": "SubmachineGun",
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d4",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 3,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 5,
+                "Crits": 0
+              }
+            }
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d4",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 4,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 5,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d6",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 3,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 5,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d6",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 4,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d10",
+            "Range": 5,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 2,
+                "Crits": 2
+              },
+              "8-15": {
+                "Hits": 3,
+                "Crits": 2
+              },
+              "16+": {
+                "Hits": 5,
+                "Crits": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "GunType": "Shotgun",
+        "Bonus": "If Range 2 or Less +2 DMG",
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d8",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d8",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d8",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 2
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 2
+              }
+            }
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d10",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d12",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "8-15": {
+                "Hits": 2,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "GunType": "SniperRifle",
+        "Bonus": "If Range 3+ or Less +3 ACC",
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d10",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 0,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "1d12",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 0,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d10",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 2
+              }
+            }
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d10",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 2
+              }
+            }
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d12",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "GunType": "SniperRifle",
+        "Bonus": "If Range 3+ or Less +3 ACC",
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d10",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 0,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "1d12",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 0,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d10",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 2
+              }
+            }
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d10",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 2
+              }
+            }
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d12",
+            "Range": 8,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "GunType": "RocketLauncher",
+        "Bonus": "Splash",
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d12",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d10",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d12",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 1,
+                "Crits": 2
+              }
+            }
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d12",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 0
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 1
+              }
+            }
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d20",
+            "Range": 4,
+            "HitsByAccuracy": {
+              "2-7": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "8-15": {
+                "Hits": 1,
+                "Crits": 1
+              },
+              "16+": {
+                "Hits": 2,
+                "Crits": 1
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

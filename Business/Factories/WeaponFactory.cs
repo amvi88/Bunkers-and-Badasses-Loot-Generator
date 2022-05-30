@@ -19,9 +19,7 @@ namespace Business.Factories
             _weaponCustomization = weaponCustomizationOptions.Value ?? throw new ArgumentException(nameof(weaponCustomizationOptions));
             _weaponArchetypesOptions = weaponArchetypesOptions.Value ?? throw new ArgumentNullException(nameof(weaponArchetypesOptions));
         }
-
-        
-
+       
         public Gun Manufacture(int playerLevel, Rarity? rarity)
         {
             var gunTypeValues = Enum.GetValues(typeof(GunType));
@@ -81,13 +79,13 @@ namespace Business.Factories
 
             // Check for prefix
             var calculatedPrefixChance = RandomNumberGenerator.GetInt32(1, 100);
-            if ( calculatedPrefixChance < _weaponCustomization.PrefixChance[rarity.GetValueOrDefault()])
+            if ( calculatedPrefixChance <= _weaponCustomization.PrefixChance[rarity.GetValueOrDefault()])
             {
                 gun.Prefix = "Prefix";
             }
 
             var calculatedRedTextChance = RandomNumberGenerator.GetInt32(1, 100);
-            if (calculatedRedTextChance  < _weaponCustomization.RedTextChance[rarity.GetValueOrDefault()])
+            if (calculatedRedTextChance  <= _weaponCustomization.RedTextChance[rarity.GetValueOrDefault()])
             {
                 gun.RedText = "RedText";
             }
