@@ -17,9 +17,9 @@ namespace Business.Models
 
         public string WeaponType { get; set; }
 
-        public string Prefix {get; set;}
+        public Prefix Prefix {get; set;}
 
-        public string RedText {get; set;}
+        public RedText RedText {get; set;}
 
         public string Bonus {get; set;}
         public string ExtraDamage { get; internal set; }

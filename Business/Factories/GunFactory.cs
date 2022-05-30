@@ -81,13 +81,13 @@ namespace Business.Factories
             var calculatedPrefixChance = RandomNumberGenerator.GetInt32(1, 100);
             if ( calculatedPrefixChance <= _weaponCustomization.PrefixChance[rarity.GetValueOrDefault()])
             {
-                gun.Prefix = "Prefix";
+                gun.Prefix = _weaponCustomization.Prefixes[RandomNumberGenerator.GetInt32(0, _weaponCustomization.Prefixes.Length)];
             }
 
             var calculatedRedTextChance = RandomNumberGenerator.GetInt32(1, 100);
             if (calculatedRedTextChance  <= _weaponCustomization.RedTextChance[rarity.GetValueOrDefault()])
             {
-                gun.RedText = "RedText";
+                gun.RedText = _weaponCustomization.RedText[RandomNumberGenerator.GetInt32(0, _weaponCustomization.RedText.Length)];
             }
 
             return gun;

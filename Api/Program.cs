@@ -19,6 +19,8 @@ namespace Api
                     {
                         config.AddJsonFile("weaponarchetypes.json", true);
                         config.AddJsonFile("weaponcustomization.json", true);
+                        config.AddJsonFile("weaponprefixes.json", true);
+                        config.AddJsonFile("weaponredtext.json", true);
                         config.AddJsonFile("guilds.json", true);
                     });
                     webBuilder.UseStartup<Startup>();

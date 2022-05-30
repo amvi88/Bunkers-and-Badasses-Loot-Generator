@@ -1,0 +1,214 @@
+{
+    "WeaponCustomization": 
+    {
+        "RedTextChance": {
+            "Common": 0,
+            "Uncommon": 0,
+            "Rare": 0,
+            "Epic": 5,
+            "Legendary": 10
+        },
+        "RedText": [
+            {        
+                "Name": "POP POP!",
+                "Effect": "Deals Crit Damage twice."
+            },
+             {
+                "Name": "I never freeze",
+                "Effect": "Adds Cryo Element type."
+            },
+             {
+                "Name": "Toasty!",
+                "Effect": "Adds Incendiary Element type."
+            },
+             {
+                "Name": "Was he slow?",
+                "Effect": "Fires backwards."
+            },
+             {
+                "Name": "We Hate You, Please Die.",
+                "Effect": "Taunts the farthest Enemy each turn."
+            },
+             {
+                "Name": "Tell them they're next",
+                "Effect": "Won't deal Damage to the final Enemy in an encounter."
+            },
+             {
+                "Name": "PAN SHOT!",
+                "Effect": "Always Hits the closest Enemy."
+            },
+             {
+                "Name": "Envision Wyverns",
+                "Effect": "Adds Radiation Element type."
+            },
+             {
+                "Name": "I'm melting!",
+                "Effect": "Adds Corrosive Element type."
+            },
+             {
+                "Name": "The same thing that happens to everything else.",
+                "Effect": "Adds Shock Element type."
+            },
+             {
+                "Name": "360 quickscope",
+                "Effect": "Adds a Crit to each Ranged Attack."
+            },
+             {
+                "Name": "Any Questions?",
+                "Effect": "Shoots pumpkin bombs that deal an extra 3d6 Explosive Damage."
+            },
+             {
+                "Name": "Blood and Thunder",
+                "Effect": "Take 1d6 Health Damage to deal +3d6 Shock Damage."
+            },
+             {
+                "Name": "SI VIS PACEM, PARA BELLUM",
+                "Effect": "Gain Extra Attack if Acting Before Enemies."
+            },
+             {
+                "Name": "You're breathtaking!",
+                "Effect": "Wielder cannot be targeted on the first turn of an encounter."
+            },
+             {
+                "Name": "Pass turn.",
+                "Effect": "Wielder may Throw a grenade during the End of Turn step."
+            },
+             {
+                "Name": "I am Vengeance!",
+                "Effect": "Deals 2x Damage to Enemies adjacent to allies."
+            },
+             {
+                "Name": "Roll the dice",
+                "Effect": "If Accuracy Roll is even, 2x Damage. If Accuracy Roll is odd, half Damage."
+            },
+             {
+                "Name": "One among the fence",
+                "Effect": "Add 21 Damage if you roll 13+ on your Accuracy Roll. (1/day)"
+            },
+             {
+                "Name": "Don't be sorry. Be better.",
+                "Effect": "Reroll the Badass Die once per day."
+            },
+             {
+                "Name": "THE PICKLES!",
+                "Effect": "Shoots flaming cheeseburgers that deal an extra 2d6 Incendiary Damage."
+            },
+             {
+                "Name": "Do a kickflip!",
+                "Effect": "+4 on Traverse Checks while equipped."
+            },
+             {
+                "Name": "Extinction is the Rule",
+                "Effect": "Teleport to any square up to 4 away when you kill an Enemy."
+            },
+             {
+                "Name": "Never Fight a Knight with a Perm",
+                "Effect": "DMG Mod +6 against non-human Enemies."
+            },
+             {
+                "Name": "Bye bye, little Butt Stallion!",
+                "Effect": "Shots explode into rainbows that deal an extra 1d8 Damage."
+            },
+             {
+                "Name": "Time 2 Hack",
+                "Effect": "+4 on Interact Checks and Melee Damage while equipped."
+            },
+             {
+                "Name": "HATE Magic. so much",
+                "Effect": "+3 DMG Mod. Take 2d6 Vomit Damage if Reloaded."
+            },
+             {
+                "Name": "OFF WITH THEIR HEADS!",
+                "Effect": "Roll %s. 95%+: the Enemy's head falls off."
+            },
+             {
+                "Name": "This is my BOOMSTICK!",
+                "Effect": "Deals 3x Damage to skeletons."
+            },
+             {
+                "Name": "Super easy, barely an inconvenience",
+                "Effect": "Automatically pass the first Check each day."
+            },
+             {
+                "Name": "Hold onto your butts.",
+                "Effect": "When fired, the wielder and targets Hit are Knocked Back 2 squares."
+            },
+             {
+                "Name": "The Wise Man's Fear",
+                "Effect": "Deals 3x Damage to all wizards."
+            },
+             {
+                "Name": "/ don't want this isolation.",
+                "Effect": "Won't fire unless adjacent to an ally or target."
+            },
+             {
+                "Name": "TUFF with two Fs",
+                "Effect": "Prevents the first 5 Health Damage each turn."
+            },
+             {
+                "Name": "Unlikely Maths",
+                "Effect": "Roll an extra die of each type rolled during an Attack and take the highest result(s)."
+            },
+             {
+                "Name": "Gravity's Rainbow",
+                "Effect": "First Attack against a Badass target always deals max Damage."
+            },
+             {
+                "Name": "Let's do this one last time",
+                "Effect": "Shoots webs that reduce target's Movement to 0 for 1 turn."
+            },
+             {
+                "Name": "BIP!",
+                "Effect": "Once per encounter, the wielder can run into squares with an Enemy, Knocking them Back 1 square."
+            },
+             {
+                "Name": "Heaviest Matter of the Universe",
+                "Effect": "The wielder and targets Hit cannot take Movement Actions."
+            },
+             {
+                "Name": "GREEN FLAME",
+                "Effect": "Shoots burst of green flames while firing. dealing 2d6 Incendiary Damage to adjacent targets."
+            },
+             {
+                "Name": "More like Bore Ragnarok!",
+                "Effect": "Gain 1 Badass Token after a successful Talk Check while equipped."
+            },
+             {
+                "Name": "That's levitation, Holmes!",
+                "Effect": "Ignore difficult terrain while equipped."
+            },
+             {
+                "Name": "Let's boo-boo.",
+                "Effect": "Gain Extra Movement after drinking a potion while equipped."
+            },
+             {
+                "Name": "Mmm Whatcha Say.",
+                "Effect": "Gain a Ranged Attack if an Enemy is talking before an encounter."
+            },
+             {
+                "Name": "Here Comes the FunCooker",
+                "Effect": "On a Crit, the Enemy suffers a miniature combustion, dealing 1d12 Explosive Full Splash Damage."
+            },
+             {
+                "Name": "Overwhelming strength is boring.",
+                "Effect": "-6 Initiative. The first non-Badass, non- boss Enemy that is Melee Attacked dies instantly (1/day)."
+            },
+             {
+                "Name": "Stop talking, I will win. It's what heroes do.",
+                "Effect": "Gun fires explosives that deal +3d6 Damage to adjacent squares."
+            },
+             {
+                "Name": "Richer and cleverer than everyone else!",
+                "Effect": "Add 10 gold per Loot Pile when rolling for Enemy Drops."
+            },
+             {
+                "Name": "METAL WILL DESTROY ALL EVIL!",
+                "Effect": "Allies get +2 ACC Mod each turn you perform a Melee Attack."
+            },
+             {
+                "Name": "Life is a conundrum of esoterica.",
+                "Effect": "Gain 2 Badass Tokens the first time you roll for a Trauma each day."
+            }
+        ]
+    }
+}
