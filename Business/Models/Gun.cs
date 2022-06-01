@@ -7,7 +7,7 @@ namespace Business.Models
     {
         public Rarity Rarity{get; set; }
 
-        public Element? Element {get; set; }
+        public Element Element {get; set; }
 
         public int Level {get; set; }
 

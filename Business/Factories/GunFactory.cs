@@ -55,7 +55,7 @@ namespace Business.Factories
                 var elementalValues = Enum.GetValues(typeof(Element));
 
                 var elementValues = RollElement(rarity, specs.IncreasedElementalRollPercentage);
-                gun.Element = elementValues.Item1;
+                gun.Element = elementValues.Item1 ?? Element.None;
 
                 if (! string.IsNullOrWhiteSpace(elementValues.Item2) && elementValues.Item1 != Element.None)
                 {

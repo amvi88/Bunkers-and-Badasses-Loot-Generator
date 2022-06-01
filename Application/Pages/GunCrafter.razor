@@ -1,0 +1,63 @@
+﻿@page "/gun"
+@namespace Application.Pages
+@using Application.Models 
+@using Business;
+@using Business.Models;
+@using Business.Models.Common;
+@using Business.Factories;
+
+@inject IGunFactory gunFactory;
+@inject ILogger<GunCrafter> logger
+
+
+<PageTitle>Gun</PageTitle>
+
+<EditForm Model=@gunBuilder OnValidSubmit="Roll">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+  <p>
+        <label>
+            Player Level:
+            <InputNumber @bind-Value="gunBuilder.PlayerLevel" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Rarity (optional):
+            <InputSelect @bind-Value="gunBuilder.Rarity">
+              <option value="null">Random</option>
+              @foreach (var rarity in Enum.GetValues(typeof(Rarity)))
+              {
+                  <option value="@rarity">@rarity</option>
+              }
+          </InputSelect>
+        </label>
+    </p>
+    <p>
+        <label>
+            GunType:
+            <InputSelect @bind-Value="gunBuilder.GunType">              
+              @foreach (var rarity in Enum.GetValues(typeof(GunType)))
+              {
+                  <option value="@rarity">@(((GunType)rarity).GetDescription())</option>
+              }
+          </InputSelect>
+        </label>        
+    </p>
+  <input type="submit" class="btn btn-primary" value="Roll"/>
+
+</EditForm>
+
+<GunViewer CraftedGun=@gun/>
+
+@code {
+  GunBuilderModel gunBuilder = new GunBuilderModel();
+  Gun gun = null;
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    System.Diagnostics.Debug.WriteLine("Roll");
+    gun = gunFactory.Manufacture(gunBuilder.PlayerLevel, gunBuilder.Rarity, gunBuilder.GunType);
+  }
+}
