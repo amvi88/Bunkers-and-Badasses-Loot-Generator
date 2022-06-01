@@ -11,7 +11,7 @@ else
 {
   <div id="cards">  
 
-    <figure class="card card--normal">
+    <figure class=@($"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}")>
       <div class="card__image-container">
         <img src="https://cdn.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/1200px-133Eevee.png" alt="Eevee" class="card__image">   
       </div>
@@ -19,13 +19,23 @@ else
       <figcaption class="card__caption">
         <h1 class=@($"card__name_{CraftedGun.Rarity.ToString().ToLower()}")>@CraftedGun.Name</h1>
         
-        <h3 class=@($"card__type_{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}")>
+        <h3 class="card__type">
           @CraftedGun.Element.ToString()
         </h3>
 
         <h3 class="card__guild">
           @CraftedGun.Guild
         </h3>
+
+        @if (CraftedGun.RedText != null)
+        {
+          <div class="card__redtexts">
+            <h4 class="card__redtext">
+              <span class="card__label">@CraftedGun.RedText.Name</span>            
+            </h4>
+          </div>
+        }        
+
 
         <table class="card__stats">
           <tbody>
@@ -67,15 +77,7 @@ else
           }
         </div>
 
-        @if (CraftedGun.RedText != null)
-        {
-          <div class="card__redtexts">
-            <h4 class="card__redtext">
-              <span class="card__label">@CraftedGun.RedText.Name</span>            
-            </h4>
-          </div>
-        }        
-
+        
       </figcaption>
     </figure>
   </div>
