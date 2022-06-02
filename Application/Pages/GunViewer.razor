@@ -2,6 +2,8 @@
 @using Business
 @using Business.Models;
 @using Business.Models.Common;
+@implements IAsyncDisposable
+@inject IJSRuntime JS
 
 @if (CraftedGun == null)
 {
@@ -11,7 +13,7 @@ else
 {
   <div id="cards">  
 
-    <figure class=@($"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}")>
+    <figure class=@($"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}") id="lewt">
       <div class="card__image-container">
         <img src=@($"images/{CraftedGun.GunType}.png") alt="@CraftedGun.GunType" class="card__image">   
       </div>
@@ -82,10 +84,41 @@ else
         
       </figcaption>
     </figure>
+
+    <button @onclick="Download">Download</button>
+
   </div>
 }
 
 @code {
     [Parameter]
     public Gun CraftedGun { get; set; }
+
+    private IJSObjectReference? module;
+    private string? result;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/index.js");
+        }
+    }
+
+    private async Task Download()
+    {
+        result = await DownloadImage("cards");
+    }
+
+    public async ValueTask<string?> DownloadImage(string id) =>
+        module is not null ? 
+            await module.InvokeAsync<string>("downloadCard", id) : null;
+
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
 }

@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "html-to-image": "./html-to-image.js"
+  }
+}

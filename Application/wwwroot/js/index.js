@@ -1,0 +1,1 @@
+import*as a from"./_snowpack/pkg/html-to-image.js";import"./_snowpack/pkg/html-to-image.js";export function downloadCard(n){var e=document.getElementById(n);a.toPng(e).then(function(o){var t=document.createElement("a");t.download="gun.png",t.href=o,t.click()}).catch(function(o){console.error("oops, something went wrong!",o)})}
