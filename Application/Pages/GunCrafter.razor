@@ -12,14 +12,12 @@
 
 <PageTitle>Gun</PageTitle>
 
-<EditForm Model=@gunBuilder OnValidSubmit="Roll">
+<EditForm Model=@gunBuilder OnValidSubmit="Roll" class="form-group">
   <DataAnnotationsValidator />  
   <ValidationSummary />
   <p>
-        <label>
-            Player Level:
-            <InputNumber @bind-Value="gunBuilder.PlayerLevel" />
-        </label>
+        <label for="PlayerLabel">Player Level:</label>
+        <InputNumber @bind-Value="gunBuilder.PlayerLevel" name="PlayerLabel"/>
     </p>
     <p>
         <label>

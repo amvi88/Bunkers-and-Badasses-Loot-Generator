@@ -13,11 +13,11 @@ else
 
     <figure class=@($"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}")>
       <div class="card__image-container">
-        <img src="https://cdn.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/1200px-133Eevee.png" alt="Eevee" class="card__image">   
+        <img src=@($"images/{CraftedGun.GunType}.png") alt="@CraftedGun.GunType" class="card__image">   
       </div>
       
       <figcaption class="card__caption">
-        <h1 class=@($"card__name_{CraftedGun.Rarity.ToString().ToLower()}")>@CraftedGun.Name</h1>
+        <h1 class=@($"card__name rarity_{CraftedGun.Rarity.ToString().ToLower()}")>@CraftedGun.Name</h1>
         
         <h3 class="card__type">
           @CraftedGun.Element.ToString()
@@ -36,16 +36,17 @@ else
           </div>
         }        
 
-
         <table class="card__stats">
-          <tbody>
-            <tr>
-              <th>Level</th>
-              <td>@CraftedGun.Level</td>
-            </tr>
+          <tbody>            
             <tr>
               <th>Damage</th>
-              <td>@CraftedGun.Damage</td>
+              <td>
+                @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
+                {
+                  <img class="dice_small" src=@($"images/{CraftedGun.DiceType}.png") alt="@CraftedGun.DiceType">
+                }
+                
+              </td>
             </tr>
             
             <tr>
@@ -56,13 +57,14 @@ else
         </table>
 
         <table class="card__hits">
+          <caption>Hits By Accuracy</caption>
           <tbody>            
               @foreach(var kvp in CraftedGun.HitsByAccuracy)
               {
                 <tr>
                   <th>@kvp.Key</th>
-                  <td>@kvp.Value.Hits</td>
-                  <td>@kvp.Value.Crits</td>
+                  <td>@kvp.Value.Hits<span class="oi oi-header" aria-hidden="true"></span></td>
+                  <td>@kvp.Value.Crits<span class="oi oi-aperture" aria-hidden="true"></span></td>
                 </tr>
               }
           </tbody>

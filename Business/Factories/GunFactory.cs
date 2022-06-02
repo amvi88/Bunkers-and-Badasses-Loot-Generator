@@ -46,7 +46,8 @@ namespace Business.Factories
                 Guild =  chosenGuild.Name,
                 Element = Element.None,
                 Rarity = rarity.GetValueOrDefault(),
-                Bonuses = new List<string>{ $"(Guild) {specs.Bonus}" }                            
+                Bonuses = new List<string>{ $"(Guild) {specs.Bonus}" },
+                GunType = gunType.ToString()                         
             };
 
             // Roll for elemental type if any and bonus damage if it may be
