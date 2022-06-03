@@ -5,7 +5,7 @@
 @implements IAsyncDisposable
 @inject IJSRuntime JS
 
-@if (CraftedGun == null)
+@if (CraftedShield == null)
 {
   <div class="spinner"></div>
 }
@@ -13,13 +13,13 @@ else
 {
   <div id="cards">  
 
-    <figure class=@GetCssClassCard id="lewt">
-      <div class="card__image-container">
-        <img src=@GetGunImage alt="@CraftedGun.GunType" class="card__image">   
+    <figure class="card--normal" id="lewt">
+      @* <div class="card__image-container">
+        <img src=@($"images/resources/guns/{CraftedGun.GunType}.png") alt="@CraftedGun.GunType" class="card__image">   
       </div>
       
       <figcaption class="card__caption">
-        <h1 class=@GetCssClassCardCaption>@CraftedGun.Name</h1>
+        <h1 class=@($"card__name rarity_{CraftedGun.Rarity.ToString().ToLower()}")>@CraftedGun.Name</h1>
         
         <h3 class="card__type">
           @CraftedGun.Element.ToString()
@@ -29,15 +29,6 @@ else
           @CraftedGun.Guild
         </h3>
 
-        @if (CraftedGun.RedText != null)
-        {
-          <div class="card__redtexts">
-            <h4 class="card__redtext">
-              <span class="card__label">@CraftedGun.RedText.Name</span>            
-            </h4>
-          </div>
-        }        
-
         <table class="card__stats">
           <tbody>            
             <tr>
@@ -45,7 +36,7 @@ else
               <td>
                 @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
                 {
-                  <img class="dice_small" src=@GetDiceImage alt="@CraftedGun.DiceType">
+                  <img class="dice_small" src=@($"images/resources/dice/{CraftedGun.DiceType}.png") alt="@CraftedGun.DiceType">
                 }
                 
               </td>
@@ -58,22 +49,9 @@ else
           </tbody>
         </table>
 
-        <table class="card__hits">
-          <caption>Hits By Accuracy</caption>
-          <tbody>            
-              @foreach(var kvp in CraftedGun.HitsByAccuracy)
-              {
-                <tr>
-                  <th>@kvp.Key</th>
-                  <td>@kvp.Value.Hits<img class="icon icon-header" src="images/open-iconic/svg/header.svg" alt="Header"></td>
-                  <td>@kvp.Value.Crits<img class="icon icon-aperture" src="images/open-iconic/svg/aperture.svg" alt="Aperture"></td>
-                </tr>
-              }
-          </tbody>
-        </table>
-        
+       
         <div class="card__abilities">
-          @foreach(var bonus in CraftedGun.Bonuses)
+          @foreach(var bonus in CraftedShield.Bonuses)
           {
             <h4 class="card__ability">
               <span class="card__label">@bonus</span>            
@@ -82,7 +60,7 @@ else
         </div>
 
         
-      </figcaption>
+      </figcaption> *@
     </figure>
   </div>
   <button @onclick="Download" class="btn btn-primary">Download</button>
@@ -90,7 +68,7 @@ else
 
 @code {
     [Parameter]
-    public Gun CraftedGun { get; set; }
+    public Shield CraftedShield { get; set; }
 
     private IJSObjectReference? module;
     private string? result;
@@ -119,12 +97,4 @@ else
             await module.DisposeAsync();
         }
     }
-
-    public string GetCssClassCard() => $"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}";
-    
-    public string GetGunImage() => $"images/resources/guns/{CraftedGun.GunType}.png";
-    
-    public string GetCssClassCardCaption() => $"card__name rarity_{CraftedGun.Rarity.ToString().ToLower()}";
-
-    public string GetDiceImage() => $"images/resources/dice/{CraftedGun.DiceType}.png";
 }

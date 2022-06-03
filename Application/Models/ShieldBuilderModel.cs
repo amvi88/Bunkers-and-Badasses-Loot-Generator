@@ -8,13 +8,10 @@ namespace Application.Models
 {
 
     [IgnoreAntiforgeryToken]
-    public class GunBuilderModel : PageModel
+    public class ShieldBuilderModel : PageModel
     {
-        public Rarity? Rarity { get; set; }
-        public GunType GunType { get; set; }
-        
         [Required]
         [Range(1, 30)]
-        public int PlayerLevel { get; set; } = 1;           
+        public int PlayerLevel { get; set; }  = 1;    
     }
 }
