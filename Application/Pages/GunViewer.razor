@@ -15,7 +15,7 @@ else
 
     <figure class=@($"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}") id="lewt">
       <div class="card__image-container">
-        <img src=@($"images/{CraftedGun.GunType}.png") alt="@CraftedGun.GunType" class="card__image">   
+        <img src=@($"images/resources/guns/{CraftedGun.GunType}.png") alt="@CraftedGun.GunType" class="card__image">   
       </div>
       
       <figcaption class="card__caption">
@@ -45,7 +45,7 @@ else
               <td>
                 @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
                 {
-                  <img class="dice_small" src=@($"images/{CraftedGun.DiceType}.png") alt="@CraftedGun.DiceType">
+                  <img class="dice_small" src=@($"images/resources/dice/{CraftedGun.DiceType}.png") alt="@CraftedGun.DiceType">
                 }
                 
               </td>
@@ -65,8 +65,8 @@ else
               {
                 <tr>
                   <th>@kvp.Key</th>
-                  <td>@kvp.Value.Hits<span class="oi oi-header" aria-hidden="true"></span></td>
-                  <td>@kvp.Value.Crits<span class="oi oi-aperture" aria-hidden="true"></span></td>
+                  <td>@kvp.Value.Hits<img class="icon icon-header" src="images/open-iconic/svg/header.svg" alt="Header"></td>
+                  <td>@kvp.Value.Crits<img class="icon icon-aperture" src="images/open-iconic/svg/aperture.svg" alt="Aperture"></td>
                 </tr>
               }
           </tbody>
@@ -84,10 +84,8 @@ else
         
       </figcaption>
     </figure>
-
-    <button @onclick="Download">Download</button>
-
   </div>
+  <button @onclick="Download">Download</button>
 }
 
 @code {
