@@ -212,4 +212,25 @@
 .card--shock_corrosive .card__type {
   background-color: #6e7f0e;
 }
+
+.rarity_common {
+  color: rgb(255,255,255);
+  text-shadow: 0px 0px 3px grey;
+}
+
+.rarity_uncommon {
+  color: rgb(61,210,11);
+}
+
+.rarity_rare {
+  color: rgb(47,120,255);
+}
+
+.rarity_legendary {
+  color: rgb(145,50,200);
+}
+
+.rarity_epic{
+  color: rgb(220,120,0);
+}
   

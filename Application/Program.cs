@@ -15,6 +15,7 @@ builder.Configuration.AddJsonFile("weaponredtext.json", true);
 builder.Configuration.AddJsonFile("guilds.json", true);
 builder.Configuration.AddJsonFile("potions.json", true);
 builder.Configuration.AddJsonFile("tinytinaspotions.json", true);
+builder.Configuration.AddJsonFile("relics.json", true);
 
 // Add services to the container.
 builder.Services.Configure<JsonOptions>(options =>
@@ -28,10 +29,12 @@ builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetS
 builder.Services.Configure<WeaponCustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));
 builder.Services.Configure<WeaponArchetypesOptions>(builder.Configuration.GetSection("WeaponArchetypes"));
 builder.Services.Configure<PotionConfigurationOptions>(builder.Configuration.GetSection("PotionConfiguration"));
+builder.Services.Configure<RelicConfigurationOptions>(builder.Configuration.GetSection("RelicConfiguration"));
 builder.Services.AddTransient<IItemFactory<Business.Models.Grenade>, GrenadeFactory>();
 builder.Services.AddTransient<IItemFactory<Business.Models.Shield>, ShieldFactory>();
 builder.Services.AddTransient<IGunFactory, GunFactory>();
 builder.Services.AddTransient<IPotionFactory,PotionFactory>();
+builder.Services.AddTransient<IRelicFactory,RelicFactory>();
 
 var app = builder.Build();
 
