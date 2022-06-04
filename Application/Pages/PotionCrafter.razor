@@ -1,0 +1,27 @@
+﻿@page "/potion"
+@namespace Application.Pages
+@using Application.Models 
+@using Business;
+@using Business.Models;
+@using Business.Models.Common;
+@using Business.Factories;
+
+@inject IPotionFactory potionFactory;
+@inject ILogger<PotionCrafter> logger
+
+
+<PageTitle>Potions</PageTitle>
+
+<input type="button" class="btn btn-primary" value="Roll" onclick="@Roll"/>
+
+<PotionViewer CraftedPotion=@potion/>
+
+@code {
+  Potion potion = null;
+
+  void Roll()
+  {
+    logger.LogDebug("Roll");
+    potion = potionFactory.Brew();
+  }
+}

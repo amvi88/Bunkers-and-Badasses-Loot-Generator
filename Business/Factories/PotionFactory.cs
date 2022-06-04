@@ -33,7 +33,7 @@ namespace Business.Factories
                 var potionIndex = RandomNumberGenerator.GetInt32(0,20) + specs.RollModifier.GetValueOrDefault();
                 var ttPotion = _potionConfiguration.TinyTinasPotions[potionIndex];
 
-                potion.TinyTinasPotion = true;
+                potion.IsTinyTinasPotion = true;
                 potion.Name = ttPotion.Name;
                 potion.Effect = ttPotion.Effect;
             }

@@ -8,6 +8,6 @@ namespace Business.Models
 
         public int Cost {get; set;}
 
-        public bool TinyTinasPotion {get; set;}
+        public bool IsTinyTinasPotion {get; set;}
     }
 }

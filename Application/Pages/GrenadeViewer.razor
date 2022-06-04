@@ -70,7 +70,7 @@ else
 
     public async ValueTask<string?> DownloadImage(string id) =>
         module is not null ? 
-            await module.InvokeAsync<string>("downloadCard", id) : null;
+            await module.InvokeAsync<string>("downloadCard", id, "grenade.png") : null;
 
     async ValueTask IAsyncDisposable.DisposeAsync()
     {
