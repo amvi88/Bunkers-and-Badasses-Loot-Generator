@@ -30,12 +30,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .card__hits {
-  margin: 1em 0;
   width: 100%;
 }
 
 .card__hits caption{
-  margin: 1em 0;
   width: 100%;
   caption-side: top;
   font-size: medium;
@@ -57,11 +55,6 @@ h1, h2, h3, h4, h5 {
   -webkit-box-flex: 1;
       -ms-flex: 1 0;
           flex: 1 0;
-}
-
-.card__ability:nth-child(1)
-{
-  margin-top: 1em;
 }
 
 img.dice_small 

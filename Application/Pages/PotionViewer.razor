@@ -2,16 +2,14 @@
 @using Business
 @using Business.Models;
 @using Business.Models.Common;
-@implements IAsyncDisposable
-@inject IJSRuntime JS
-
+@inherits BaseItemViewer;
 @if (CraftedPotion == null)
 {
   <div class="spinner"></div>
 }
 else
 {
-  <div id="cards">  
+  <div id="cards"  class="card_container">  
 
     <figure class=@GetCardCssClass id="lewt">      
       
@@ -39,34 +37,6 @@ else
 @code {
     [Parameter]
     public Potion CraftedPotion { get; set; }
-
-    private IJSObjectReference? module;
-    private string? result;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/index.js");
-        }
-    }
-
-    private async Task Download()
-    {
-        result = await DownloadImage("lewt");
-    }
-
-    public async ValueTask<string?> DownloadImage(string id) =>
-        module is not null ? 
-            await module.InvokeAsync<string>("downloadCard", id, "potion.png") : null;
-
-    async ValueTask IAsyncDisposable.DisposeAsync()
-    {
-        if (module is not null)
-        {
-            await module.DisposeAsync();
-        }
-    }
 
     public string @GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" : "card card--normal";
 }

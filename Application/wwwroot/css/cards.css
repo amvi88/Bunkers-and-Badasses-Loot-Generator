@@ -1,4 +1,9 @@
  
+  
+  .card_container{
+    margin-top: 2em;
+  }
+
   .card {
     display: inline-block;
     width: 350px;
