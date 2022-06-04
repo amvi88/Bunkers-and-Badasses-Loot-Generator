@@ -13,54 +13,40 @@ else
 {
   <div id="cards">  
 
-    <figure class="card--normal" id="lewt">
-      @* <div class="card__image-container">
-        <img src=@($"images/resources/guns/{CraftedGun.GunType}.png") alt="@CraftedGun.GunType" class="card__image">   
+    <figure class="card card--normal" id="lewt">
+      <div class="card__image-container">
+        <img src=@GetShieldImage alt="shield" class="card__image">   
       </div>
       
       <figcaption class="card__caption">
-        <h1 class=@($"card__name rarity_{CraftedGun.Rarity.ToString().ToLower()}")>@CraftedGun.Name</h1>
+        <h1 class="card__name normal"> @CraftedShield.Effect</h1>
         
         <h3 class="card__type">
-          @CraftedGun.Element.ToString()
+         Shield
         </h3>
 
         <h3 class="card__guild">
-          @CraftedGun.Guild
+          @CraftedShield.Guild
         </h3>
 
         <table class="card__stats">
           <tbody>            
             <tr>
-              <th>Damage</th>
+              <th>Capacity</th>
               <td>
-                @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
-                {
-                  <img class="dice_small" src=@($"images/resources/dice/{CraftedGun.DiceType}.png") alt="@CraftedGun.DiceType">
-                }
-                
+                <td>@CraftedShield.Capacity<img class="icon icon-shield" src="images/open-iconic/svg/shield.svg" alt="Shield"></td>                
               </td>
             </tr>
             
             <tr>
-              <th>Range</th>
-              <td>@CraftedGun.Range</td>
+              <th>Recharge Rate</th>
+              <td>
+                <td>@CraftedShield.RechargeRate<img class="icon icon-rechargerate" src="images/open-iconic/svg/reload.svg" alt="Recharge Rate"></td>                
+              </td>
             </tr>
           </tbody>
-        </table>
-
-       
-        <div class="card__abilities">
-          @foreach(var bonus in CraftedShield.Bonuses)
-          {
-            <h4 class="card__ability">
-              <span class="card__label">@bonus</span>            
-            </h4>
-          }
-        </div>
-
-        
-      </figcaption> *@
+        </table>        
+      </figcaption>
     </figure>
   </div>
   <button @onclick="Download" class="btn btn-primary">Download</button>
@@ -97,4 +83,6 @@ else
             await module.DisposeAsync();
         }
     }
+
+    public string GetShieldImage => $"images/resources/shields/{CraftedShield.Guild}.png";
 }

@@ -13,13 +13,13 @@ else
 {
   <div id="cards">  
 
-    <figure class=@GetCssClassCard id="lewt">
+    <figure class="@GetCssClassCard" id="lewt">
       <div class="card__image-container">
-        <img src=@GetGunImage alt="@CraftedGun.GunType" class="card__image">   
+        <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">   
       </div>
       
       <figcaption class="card__caption">
-        <h1 class=@GetCssClassCardCaption>@CraftedGun.Name</h1>
+        <h1 class="@GetCssClassCardCaption">@CraftedGun.Name</h1>
         
         <h3 class="card__type">
           @CraftedGun.Element.ToString()
@@ -45,7 +45,7 @@ else
               <td>
                 @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
                 {
-                  <img class="dice_small" src=@GetDiceImage alt="@CraftedGun.DiceType">
+                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedGun.DiceType">
                 }
                 
               </td>
@@ -120,11 +120,11 @@ else
         }
     }
 
-    public string GetCssClassCard() => $"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}";
+    public string GetCssClassCard => $"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}";
     
-    public string GetGunImage() => $"images/resources/guns/{CraftedGun.GunType}.png";
+    public string GetGunImage => $"images/resources/guns/{CraftedGun.GunType}.png";
     
-    public string GetCssClassCardCaption() => $"card__name rarity_{CraftedGun.Rarity.ToString().ToLower()}";
+    public string GetCssClassCardCaption => $"card__name rarity_{CraftedGun.Rarity.ToString().ToLower()}";
 
-    public string GetDiceImage() => $"images/resources/dice/{CraftedGun.DiceType}.png";
+    public string GetDiceImage => $"images/resources/dice/{CraftedGun.DiceType}.png";
 }

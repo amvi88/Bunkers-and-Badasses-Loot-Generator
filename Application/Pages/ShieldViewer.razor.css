@@ -14,3 +14,14 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   font-weight: 400;
 }
+
+.card__stats .icon {
+  width: 1em;
+  vertical-align: text-top;
+  margin-top: .1em;
+  margin-left: .2em 
+}
+
+.card__name {
+  font-size: .9em;  
+}
