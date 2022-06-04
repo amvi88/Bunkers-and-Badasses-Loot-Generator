@@ -28,7 +28,8 @@ namespace Business.Factories
                 Guild =  chosenGuild.Name,
                 GrenadeType = specs.GrenadeType,
                 Damage = specs.Damage,
-                Effect = specs.Effect                
+                Effect = specs.Effect,
+                Element = Element.None               
             };
 
             if (specs.IsElemental.GetValueOrDefault())

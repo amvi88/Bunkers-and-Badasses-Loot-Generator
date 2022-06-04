@@ -8,10 +8,7 @@ namespace Application.Models
 {
 
     [IgnoreAntiforgeryToken]
-    public class ShieldBuilderModel : PageModel
+    public class ShieldBuilderModel : ItemModelBuilder
     {
-        [Required]
-        [Range(1, 30)]
-        public int PlayerLevel { get; set; }  = 1;    
     }
 }
