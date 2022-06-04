@@ -11,6 +11,6 @@ namespace Application.Models
     public class GunBuilderModel : ItemModelBuilder
     {
         public Rarity? Rarity { get; set; }
-        public GunType GunType { get; set; }           
+        public GunType GunType { get; set; } = GunType.CombatRifle;          
     }
 }
