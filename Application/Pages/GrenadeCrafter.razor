@@ -1,12 +1,12 @@
 ﻿@page "/grenade"
 @namespace Application.Pages
-@using Application.Models 
 @using Business;
 @using Business.Models;
 @using Business.Models.Common;
+@using Business.Models.Builder;
 @using Business.Factories;
 
-@inject IItemFactory<Grenade> grenadeFactory;
+@inject IItemFactory<Grenade, GrenadeFactoryParameters> factory;
 @inject ILogger<GrenadeCrafter> logger
 
 
@@ -30,12 +30,12 @@
 <GrenadeViewer CraftedGrenade=@grenade FileName="grenade.png"/>
 
 @code {
-  GrenadeBuilderModel grenadeBuilder = new GrenadeBuilderModel();
+  GrenadeFactoryParameters grenadeBuilder = new GrenadeFactoryParameters();
   Grenade grenade = null;
 
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    grenade = grenadeFactory.Manufacture(grenadeBuilder.PlayerLevel, null);
+    grenade = factory.Manufacture(grenadeBuilder);
   }
 }

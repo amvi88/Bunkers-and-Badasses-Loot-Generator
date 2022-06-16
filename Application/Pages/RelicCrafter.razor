@@ -1,12 +1,12 @@
 ﻿@page "/relic"
 @namespace Application.Pages
-@using Application.Models 
 @using Business;
 @using Business.Models;
+@using Business.Models.Builder;
 @using Business.Models.Common;
 @using Business.Factories;
 
-@inject IRelicFactory relicFactory;
+@inject IItemFactory<Relic, RelicFactoryParameters> factory;
 @inject ILogger<RelicCrafter> logger
 
 
@@ -40,12 +40,12 @@
 <RelicViewer CraftedRelic=@relic FileName="relic.png"/>
 
 @code {
-  RelicBuilderModel relicBuilder = new RelicBuilderModel();
+  RelicFactoryParameters relicBuilder = new RelicFactoryParameters();
   Relic relic = null;
 
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    relic = relicFactory.Dig(relicBuilder.Rarity);
+    relic = factory.Manufacture(relicBuilder);
   }
 }

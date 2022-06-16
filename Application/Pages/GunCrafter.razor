@@ -1,12 +1,12 @@
 ﻿@page "/gun"
 @namespace Application.Pages
-@using Application.Models 
 @using Business;
 @using Business.Models;
 @using Business.Models.Common;
+@using Business.Models.Builder;
 @using Business.Factories;
 
-@inject IGunFactory gunFactory;
+@inject IItemFactory<Gun, GunFactoryParameters> factory
 @inject ILogger<GunCrafter> logger
 
 
@@ -53,13 +53,13 @@
 <GunViewer CraftedGun=@gun FileName="gun.png"/>
 
 @code {
-  GunBuilderModel gunBuilder = new GunBuilderModel();
+  GunFactoryParameters gunBuilder = new GunFactoryParameters();
   Gun gun = null;
 
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
     System.Diagnostics.Debug.WriteLine("Roll");
-    gun = gunFactory.Manufacture(gunBuilder.PlayerLevel, gunBuilder.Rarity, gunBuilder.GunType);
+    gun = factory.Manufacture(gunBuilder);
   }
 }

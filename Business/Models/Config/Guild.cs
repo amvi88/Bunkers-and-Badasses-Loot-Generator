@@ -12,11 +12,11 @@ namespace Business.Models.Config
 
         public List<WeaponSpec> WeaponSpecs { get; set; } 
 
-        public ManufacturerItemType SupportedItemTypes { get; set; }
+        public ItemType SupportedItemTypes { get; set; }
 
         public GunType? SupportedGunTypes { get; set; }
 
-        public bool CanBuild(ManufacturerItemType itemType)
+        public bool CanBuild(ItemType itemType)
         {
             return SupportedItemTypes.HasFlag(itemType);
         }

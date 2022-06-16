@@ -1,11 +1,13 @@
 using Business.Models;
-using Business.Models.Common;
+using Business.Models.Builder;
 
 namespace Business.Factories
 {
-    public interface IItemFactory<T> where T: Item
+    public interface IItemFactory<I, P> 
+        where I: Item 
+        where P: BaseFactoryParameters
     {
-        public T Manufacture(int playerLevel, Rarity? rarity);
+        public I Manufacture(P factoryParameters);
     }
 
 }

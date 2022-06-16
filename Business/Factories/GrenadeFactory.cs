@@ -1,4 +1,5 @@
 using Business.Models;
+using Business.Models.Builder;
 using Business.Models.Common;
 using Business.Models.Config;
 using Microsoft.Extensions.Options;
@@ -7,24 +8,22 @@ using System.Security.Cryptography;
 
 namespace Business.Factories
 {
-    public class GrenadeFactory : IItemFactory<Grenade>
+    public class GrenadeFactory : GuildDrivenFactory<Grenade,GrenadeFactoryParameters>
     {
-        private readonly GuildConfigurationOptions _guildConfiguration;
 
         public GrenadeFactory(IOptions<GuildConfigurationOptions> guildOptions)
+        : base (guildOptions)
         {
-            _guildConfiguration = guildOptions.Value ?? throw new ArgumentException(nameof(guildOptions));
         }
 
-        public Grenade Manufacture(int playerLevel, Rarity? rarity)
+        public override Grenade Manufacture(GrenadeFactoryParameters factoryParameters)
         {
-            var guildsThatProduceGrenades = _guildConfiguration.Guilds.Where(x => x.CanBuild(ManufacturerItemType.Grenade));
-            var chosenGuild = guildsThatProduceGrenades.ElementAt(RandomNumberGenerator.GetInt32(0, guildsThatProduceGrenades.Count()));
-            var specs = chosenGuild.GrenadeSpecs.First(x => x.MinLevel <= playerLevel && playerLevel <= x.MaxLevel);
+            var chosenGuild = GetGuild(factoryParameters.Guild, ItemType.Grenade);
+            var specs = chosenGuild.GrenadeSpecs.First(x => x.MinLevel <= factoryParameters.PlayerLevel & factoryParameters.PlayerLevel <= x.MaxLevel);
 
             var grenade = new Grenade
             {
-                Level = playerLevel,
+                Level = factoryParameters.PlayerLevel,
                 Guild =  chosenGuild.Name,
                 GrenadeType = specs.GrenadeType,
                 Damage = specs.Damage,
@@ -32,14 +31,18 @@ namespace Business.Factories
                 Element = Element.None               
             };
 
-            if (specs.IsElemental.GetValueOrDefault())
+            
+            if (factoryParameters.Element.HasValue)
+            {
+                grenade.Element = factoryParameters.Element.GetValueOrDefault();
+            }
+            else if (specs.IsElemental.GetValueOrDefault())
             {
                 var elementalValues = Enum.GetValues(typeof(Element));
                 grenade.Element = (Element)elementalValues.GetValue(RandomNumberGenerator.GetInt32(1,elementalValues.Length));
             }
 
-            return grenade;
-            
+            return grenade;            
         }
     }
 }

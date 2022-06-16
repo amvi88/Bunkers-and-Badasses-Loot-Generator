@@ -1,4 +1,5 @@
 using Business.Models;
+using Business.Models.Builder;
 using Business.Models.Common;
 using Business.Models.Config;
 using Microsoft.Extensions.Options;
@@ -7,7 +8,7 @@ using System.Security.Cryptography;
 
 namespace Business.Factories
 {
-    public class PotionFactory : IPotionFactory
+    public class PotionFactory : IItemFactory<Potion, BaseFactoryParameters>
     {
         private readonly PotionConfigurationOptions _potionConfiguration;
 
@@ -16,8 +17,8 @@ namespace Business.Factories
             _potionConfiguration = potionConfiguration.Value ?? throw new ArgumentException(nameof(potionConfiguration));
         }
 
-        public Potion Brew()
-        {        
+        public Potion Manufacture(BaseFactoryParameters factoryParameters)
+        {
             var roll = RandomNumberGenerator.GetInt32(1,101);    
             var specs = _potionConfiguration.RegularPotions.First(x => x.MinRoll <= roll && roll <= x.MaxRoll);
 
@@ -38,7 +39,7 @@ namespace Business.Factories
                 potion.Effect = ttPotion.Effect;
             }
 
-            return potion;            
+            return potion; 
         }
     }
 }

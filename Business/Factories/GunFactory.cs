@@ -1,51 +1,40 @@
 using Business.Models;
+using Business.Models.Builder;
 using Business.Models.Common;
 using Business.Models.Config;
 using Microsoft.Extensions.Options;
-using System.Linq;
 using System.Security.Cryptography;
 
 namespace Business.Factories
 {
-    public class GunFactory : IGunFactory
+    public class GunFactory : GuildDrivenFactory<Gun, GunFactoryParameters>
     {
-        private readonly GuildConfigurationOptions _guildConfiguration;
         private readonly WeaponCustomizationOptions _weaponCustomization;
         private readonly WeaponArchetypesOptions _weaponArchetypesOptions;
 
         public GunFactory(IOptions<GuildConfigurationOptions> guildOptions, IOptions<WeaponCustomizationOptions> weaponCustomizationOptions, IOptions<WeaponArchetypesOptions> weaponArchetypesOptions)
+            : base(guildOptions)
         {
-            _guildConfiguration = guildOptions.Value ?? throw new ArgumentException(nameof(guildOptions));
             _weaponCustomization = weaponCustomizationOptions.Value ?? throw new ArgumentException(nameof(weaponCustomizationOptions));
             _weaponArchetypesOptions = weaponArchetypesOptions.Value ?? throw new ArgumentNullException(nameof(weaponArchetypesOptions));
         }
        
-        public Gun Manufacture(int playerLevel, Rarity? rarity)
+        public override Gun Manufacture(GunFactoryParameters builderArguments)
         {
-            var gunTypeValues = Enum.GetValues(typeof(GunType));
-            var gunType =  (GunType)gunTypeValues.GetValue(RandomNumberGenerator.GetInt32(1,gunTypeValues.Length));
-            return Manufacture(playerLevel, rarity, gunType);
-        }
-
-        public Gun Manufacture(int playerLevel, Rarity? rarity, GunType gunType)
-        {
-            if (! rarity.HasValue)
-            {
-                rarity = RollRarity();
-            }
-
-            var guildsThatProduceSpecificGunType = _guildConfiguration.Guilds.Where(x => x.CanBuild(ManufacturerItemType.Gun) && x.CanBuild(gunType));
-            var chosenGuild = guildsThatProduceSpecificGunType.ElementAt(RandomNumberGenerator.GetInt32(0, guildsThatProduceSpecificGunType.Count()));
+            
+            var rarity = GetRarity(builderArguments.Rarity);  
+            var gunType = GetGunType(builderArguments.GunType);
+            var chosenGuild = GetGuild(builderArguments.Guild, ItemType.Gun);
             
             // Create a gun based on Guild specs
             var specs = chosenGuild.WeaponSpecs.First(x => x.Rarity == rarity);
 
             var gun = new Gun
             {
-                Level = playerLevel,
+                Level = builderArguments.PlayerLevel,
                 Guild =  chosenGuild.Name,
                 Element = Element.None,
-                Rarity = rarity.GetValueOrDefault(),
+                Rarity = rarity,
                 Bonuses = new List<string>{ $"(Guild) {specs.Bonus}" },
                 GunType = gunType.ToString()                         
             };
@@ -64,21 +53,21 @@ namespace Business.Factories
                 }
             }
 
-            // Get arhetype specs for weapons
+            // Get archetype specs for weapons
             var archetype = _weaponArchetypesOptions.Archetypes.First(x => x.GunType == gunType);
             if (!string.IsNullOrEmpty(archetype.Bonus))
             {
                 gun.Bonuses.Add($"({gunType.GetDescription()}) {archetype.Bonus}");
             }
 
-            var gunStats = archetype.WeaponSpecs.First(x => x.MinLevel <= playerLevel && playerLevel <= x.MaxLevel);
+            var gunStats = archetype.WeaponSpecs.First(x => x.MinLevel <= builderArguments.PlayerLevel && builderArguments.PlayerLevel <= x.MaxLevel);
             gun.Range  = gunStats.Range;
             gun.Damage = gunStats.Damage;
             gun.HitsByAccuracy = gunStats.HitsByAccuracy;  
             
             // Check for prefix
             var calculatedPrefixChance = RandomNumberGenerator.GetInt32(1, 100);
-            if ( calculatedPrefixChance <= _weaponCustomization.PrefixChance[rarity.GetValueOrDefault()])
+            if ( calculatedPrefixChance <= _weaponCustomization.PrefixChance[rarity])
             {
                 var prefix = _weaponCustomization.Prefixes[RandomNumberGenerator.GetInt32(0, _weaponCustomization.Prefixes.Length)];
                 gun.Bonuses.Add($"(Prefix) {prefix.Effect}");
@@ -86,7 +75,7 @@ namespace Business.Factories
             }
 
             var calculatedRedTextChance = RandomNumberGenerator.GetInt32(1, 100);
-            if (calculatedRedTextChance  <= _weaponCustomization.RedTextChance[rarity.GetValueOrDefault()])
+            if (calculatedRedTextChance  <= _weaponCustomization.RedTextChance[rarity])
             {
                 var redText = _weaponCustomization.RedText[RandomNumberGenerator.GetInt32(0, _weaponCustomization.RedText.Length)];
                 gun.Bonuses.Add($"(RedText) {redText.Effect}"); 
@@ -105,11 +94,27 @@ namespace Business.Factories
             return(elementalSpec.Elements[index], elementalSpec.ExtraDamage[index]);
         }
 
-        private Rarity? RollRarity()
+        private Rarity GetRarity(Rarity? rarity)
         {
-            var rowNumber = RandomNumberGenerator.GetInt32(0, _weaponCustomization.RarityMatrix.Length);
-            var colNumber = RandomNumberGenerator.GetInt32(0, _weaponCustomization.RarityMatrix[0].Length);
-            return _weaponCustomization.RarityMatrix[rowNumber][colNumber];
+            if (! rarity.HasValue)
+            {
+                var rowNumber = RandomNumberGenerator.GetInt32(0, _weaponCustomization.RarityMatrix.Length);
+                var colNumber = RandomNumberGenerator.GetInt32(0, _weaponCustomization.RarityMatrix[0].Length);
+                return _weaponCustomization.RarityMatrix[rowNumber][colNumber];
+            }
+
+            return rarity.GetValueOrDefault();
+        }
+
+        private GunType GetGunType(GunType? gunType)
+        {
+            if (! gunType.HasValue)
+            {
+                var gunTypeValues = Enum.GetValues(typeof(GunType));
+                return  (GunType)gunTypeValues.GetValue(RandomNumberGenerator.GetInt32(1,gunTypeValues.Length));
+            }
+
+            return gunType.GetValueOrDefault();
         }
     }
 }

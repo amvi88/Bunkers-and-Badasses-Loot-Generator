@@ -1,12 +1,12 @@
 ﻿@page "/shield"
 @namespace Application.Pages
-@using Application.Models 
 @using Business;
 @using Business.Models;
 @using Business.Models.Common;
+@using Business.Models.Builder;
 @using Business.Factories;
 
-@inject IItemFactory<Shield> shieldFactory;
+@inject IItemFactory<Shield, ShieldFactoryParameters> factory;
 @inject ILogger<ShieldCrafter> logger
 
 
@@ -30,12 +30,12 @@
 <ShieldViewer CraftedShield=@shield FileName="shield.png"/>
 
 @code {
-  ShieldBuilderModel shieldBuilder = new ShieldBuilderModel();
+  ShieldFactoryParameters shieldBuilder = new ShieldFactoryParameters();
   Shield shield = null;
 
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    shield = shieldFactory.Manufacture(shieldBuilder.PlayerLevel, null);
+    shield = factory.Manufacture(shieldBuilder);
   }
 }

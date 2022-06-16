@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Http.Json;
 
 using Business.Factories;
 using Business.Models.Config;
+using Business.Models.Builder;
+using Business.Models.Common;
+using Business.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,11 +33,11 @@ builder.Services.Configure<WeaponCustomizationOptions>(builder.Configuration.Get
 builder.Services.Configure<WeaponArchetypesOptions>(builder.Configuration.GetSection("WeaponArchetypes"));
 builder.Services.Configure<PotionConfigurationOptions>(builder.Configuration.GetSection("PotionConfiguration"));
 builder.Services.Configure<RelicConfigurationOptions>(builder.Configuration.GetSection("RelicConfiguration"));
-builder.Services.AddTransient<IItemFactory<Business.Models.Grenade>, GrenadeFactory>();
-builder.Services.AddTransient<IItemFactory<Business.Models.Shield>, ShieldFactory>();
-builder.Services.AddTransient<IGunFactory, GunFactory>();
-builder.Services.AddTransient<IPotionFactory,PotionFactory>();
-builder.Services.AddTransient<IRelicFactory,RelicFactory>();
+builder.Services.AddTransient<IItemFactory<Grenade, GrenadeFactoryParameters>, GrenadeFactory>();
+builder.Services.AddTransient<IItemFactory<Shield, ShieldFactoryParameters>, ShieldFactory>();
+builder.Services.AddTransient<IItemFactory<Gun, GunFactoryParameters>, GunFactory>();
+builder.Services.AddTransient<IItemFactory<Potion, BaseFactoryParameters>,PotionFactory>();
+builder.Services.AddTransient<IItemFactory<Relic, RelicFactoryParameters>,RelicFactory>();
 
 var app = builder.Build();
 

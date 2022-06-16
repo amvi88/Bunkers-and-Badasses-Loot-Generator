@@ -3,7 +3,7 @@ using System;
 namespace Business.Models.Common
 {
     [Flags]
-    public enum ManufacturerItemType : short
+    public enum ItemType : short
     {
         Shield = 1,
         Grenade = 2,

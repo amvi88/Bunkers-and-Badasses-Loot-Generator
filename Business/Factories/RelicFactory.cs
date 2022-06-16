@@ -1,13 +1,12 @@
 using Business.Models;
-using Business.Models.Common;
+using Business.Models.Builder;
 using Business.Models.Config;
 using Microsoft.Extensions.Options;
-using System.Linq;
 using System.Security.Cryptography;
 
 namespace Business.Factories
 {
-    public class RelicFactory : IRelicFactory
+    public class RelicFactory : IItemFactory<Relic, RelicFactoryParameters>
     {
         private readonly RelicConfigurationOptions _relicConfiguration;
 
@@ -16,15 +15,15 @@ namespace Business.Factories
             _relicConfiguration = relicConfiguration.Value ?? throw new ArgumentException(nameof(relicConfiguration));
         }
 
-        public Relic Dig(Rarity? rarity)
-        {        
+        public Relic Manufacture(RelicFactoryParameters factoryParameters)
+        {
             var maxRoll = 101;
             var minRoll = 1;
 
-            if (rarity.HasValue)
+            if (factoryParameters.Rarity.HasValue)
             {
-                maxRoll = _relicConfiguration.RelicSpecs.Where(x => x.Rarity == rarity).Max(x => (x.MaxRoll ?? x.Roll).GetValueOrDefault()) + 1;
-                minRoll = _relicConfiguration.RelicSpecs.Where(x => x.Rarity == rarity).Min(x => (x.MinRoll ?? x.Roll).GetValueOrDefault());
+                maxRoll = _relicConfiguration.RelicSpecs.Where(x => x.Rarity == factoryParameters.Rarity).Max(x => (x.MaxRoll ?? x.Roll).GetValueOrDefault()) + 1;
+                minRoll = _relicConfiguration.RelicSpecs.Where(x => x.Rarity == factoryParameters.Rarity).Min(x => (x.MinRoll ?? x.Roll).GetValueOrDefault());
             }
 
             var roll = RandomNumberGenerator.GetInt32(minRoll, maxRoll);    
@@ -33,7 +32,7 @@ namespace Business.Factories
             var preferredClass = _relicConfiguration.Classes[RandomNumberGenerator.GetInt32(0, _relicConfiguration.Classes.Length)];
 
 
-            var relic = new Relic
+            return new Relic
             {
                 Type  = specs.Type,
                 Effect = specs.Effect,                
@@ -41,8 +40,6 @@ namespace Business.Factories
                 ClassEffect = specs.ClassEffect,
                 PreferredClass = preferredClass
             };
-
-            return relic;            
         }
     }
 }
