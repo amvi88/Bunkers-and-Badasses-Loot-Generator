@@ -25,7 +25,7 @@ namespace Business.Factories
             var rarity = GetRarity(builderArguments.Rarity);  
             var gunType = GetGunType(builderArguments.GunType);
             var chosenGuild = GetGuild(builderArguments.Guild, ItemType.Gun);
-            
+             
             // Create a gun based on Guild specs
             var specs = chosenGuild.WeaponSpecs.First(x => x.Rarity == rarity);
 
@@ -60,6 +60,8 @@ namespace Business.Factories
                 gun.Bonuses.Add($"({gunType.GetDescription()}) {archetype.Bonus}");
             }
 
+            gun.Name = GetName(archetype);
+
             var gunStats = archetype.WeaponSpecs.First(x => x.MinLevel <= builderArguments.PlayerLevel && builderArguments.PlayerLevel <= x.MaxLevel);
             gun.Range  = gunStats.Range;
             gun.Damage = gunStats.Damage;
@@ -71,7 +73,7 @@ namespace Business.Factories
             {
                 var prefix = _weaponCustomization.Prefixes[RandomNumberGenerator.GetInt32(0, _weaponCustomization.Prefixes.Length)];
                 gun.Bonuses.Add($"(Prefix) {prefix.Effect}");
-                gun.Name = prefix.Name;
+                gun.Name = $"{prefix.Name} {gun.Name}";
             }
 
             var calculatedRedTextChance = RandomNumberGenerator.GetInt32(1, 100);
@@ -82,8 +84,12 @@ namespace Business.Factories
                 gun.RedText = redText;
             }
 
-            gun.Name = $"{(string.IsNullOrWhiteSpace(gun.Name)? gunType.GetDescription() : $"{gun.Name} {gunType.GetDescription()}") }";                  
             return gun;
+        }
+
+        private string GetName(WeaponArchetype archetype)
+        {
+            return archetype.Names[RandomNumberGenerator.GetInt32(0, archetype.Names.Length)];
         }
 
         private (Element?, string) RollElement(Rarity? rarity, int? rollModifier)

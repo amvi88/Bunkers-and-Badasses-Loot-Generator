@@ -390,21 +390,21 @@
                     {
                         "MinLevel": 1,
                         "MaxLevel": 6,
-                        "Effect": "When depleted 1d6 Shock damge to adjacent targets",
+                        "Effect": "When depleted 1d6 Shock damage to adjacent targets",
                         "Capacity": 30,
                         "RechargeRate": 10
                     },
                     {
                         "MinLevel": 7,
                         "MaxLevel": 12,
-                        "Effect": "When depleted 2d6 Shock damge to adjacent targets",
+                        "Effect": "When depleted 2d6 Shock damage to adjacent targets",
                         "Capacity": 50,
                         "RechargeRate": 15
                     },
                     {
                         "MinLevel": 13,
                         "MaxLevel": 18,
-                        "Effect": "When depleted 3d6 Shock damge to adjacent targets",
+                        "Effect": "When depleted 3d6 Shock damage to adjacent targets",
                         "Capacity": 70,
                         "RechargeRate": 20
                     },

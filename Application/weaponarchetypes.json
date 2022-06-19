@@ -3,6 +3,48 @@
     "Archetypes": [
       {
         "GunType": "CombatRifle",
+        "Names": [
+          "Carbine",
+          "Defender",
+          "Grenadier",
+          "Minigun",
+          "Blaster",
+          "Rifle",
+          "Scarab",
+          "Cannon",
+          "Gatling Gun",
+          "Root",
+          "Lance",
+          "Torpedo",
+          "Spitter",
+          "Renegade",
+          "Guerilla",
+          "Rocketeer",
+          "Spinigun",
+          "Bezoomy",
+          "Blister",
+          "BizZurker",
+          "Burzum",
+          "Caracal",
+          "Carbine",
+          "Clipper",
+          "Flogger",
+          "Jaguar",
+          "Maslo",
+          "Mngwa",
+          "N-System",
+          "Oddy-knocky",
+          "Polisher",
+          "Purferater",
+          "Puma",
+          "Q-System",
+          "Ratatater",
+          "Repeater",
+          "Shlaga",
+          "Stranger",
+          "V-System",
+          "Wizzperer"
+        ],
         "WeaponSpecs": [
           {
             "MinLevel": 1,
@@ -108,6 +150,47 @@
       },
       {
         "GunType": "Pistol",
+        "Names": [
+          "Over-Drive",
+          "Repeater",
+          "Anaconda",
+          "Peacemaker",
+          "Magnum",
+          "Negotiator",
+          "Apparatus",
+          "Factualizer",
+          "Attitude",
+          "Devigorator",
+          "Expeditious",
+          "Vision",
+          "Leverage",
+          "Impact",
+          "Synergy",
+          "Revolver",
+          "Wheelgun",
+          "Longarm Iron",
+          "Widow Maker",
+          "Pepperbox",
+          "Aegis",
+          "Phobia",
+          "Torment",
+          "Animosity",
+          "Umbrage",
+          "Aimshot",
+          "Power Shot",
+          "Biggun",
+          "Quickshot",
+          "Cannon",
+          "Hole Puncher",
+          "Rod",
+          "Slapper",
+          "Injector",
+          "TMP",
+          "Assassin",
+          "Fighter",
+          "Troublemaker",
+          "Anarchist"
+        ],
         "WeaponSpecs": [
           {
             "MinLevel": 1,
@@ -213,6 +296,14 @@
       },
       {
         "GunType": "SubmachineGun",
+        "Names": [
+          "Anarchy",
+          "Bruiser",
+          "SMG",
+          "Stinger",
+          "Thumper",
+          "Tsunami"
+        ],
         "WeaponSpecs": [
           {
             "MinLevel": 1,
@@ -319,6 +410,32 @@
       {
         "GunType": "Shotgun",
         "Bonus": "If Range 2 or Less +2 DMG",
+        "Names": [
+          "Carnage",
+          "Matador",
+          "Scattergun",
+          "Shredder",
+          "Thinking",
+          "Projectile Diversification",
+          "Face Time",
+          "Crowdsourcing",
+          "Development",
+          "Longrider",
+          "Scattergun",
+          "Coach Gun",
+          "Bushwack",
+          "Quad",
+          "Sportsman",
+          "Home Security",
+          "Double Barrels!",
+          "Triple Barrels!",
+          "Shotgun Supreme!",
+          "Stalker",
+          "Bangstick",
+          "Pounder",
+          "Hulk",
+          "Ravager"
+        ],
         "WeaponSpecs": [
           {
             "MinLevel": 1,
@@ -425,6 +542,19 @@
       {
         "GunType": "SniperRifle",
         "Bonus": "If Range 3+ or Less +3 ACC",
+        "Names": [
+          "Gamble",
+          "Hawkeye",
+          "Lance",
+          "Wrath",
+          "Sniper",
+          "Thunder",
+          "Power",
+          "Elephant Gun",
+          "Nailer",
+          "Edge",
+          "Rider"
+        ],
         "WeaponSpecs": [
           {
             "MinLevel": 1,
@@ -531,6 +661,19 @@
       {
         "GunType": "SniperRifle",
         "Bonus": "If Range 3+ or Less +3 ACC",
+        "Names": [
+          "Gamble",
+          "Hawkeye",
+          "Lance",
+          "Wrath",
+          "Sniper",
+          "Thunder",
+          "Power",
+          "Elephant Gun",
+          "Nailer",
+          "Edge",
+          "Rider"
+          ],
         "WeaponSpecs": [
           {
             "MinLevel": 1,
@@ -637,6 +780,27 @@
       {
         "GunType": "RocketLauncher",
         "Bonus": "Splash",
+        "Names": [
+          "Area efect",
+          "Bazooka",
+          "Blaaa",
+          "Bombabarbardeer",
+          "Boom",
+          "Deee!",
+          "Dispatch",
+          "Duuurp!",
+          "Glory",
+          "Hero",
+          "Launcher",
+          "Panorama",
+          "Projectile",
+          "Prowler",
+          "Punishment",
+          "RPG",
+          "Spread",
+          "Vanquisher",
+          "Zooka!"
+        ],
         "WeaponSpecs": [
           {
             "MinLevel": 1,
