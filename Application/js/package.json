@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "snowpack build"
+    "build": "snowpack build",
+    "install-build": "npm install && snowpack build"
   },
   "keywords": [],
   "author": "",

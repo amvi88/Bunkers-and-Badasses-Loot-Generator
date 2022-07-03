@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec  Command="npm run build"  WorkingDirectory="js" />
+    <Exec  Command="npm run install-build"  WorkingDirectory="js" />
   </Target>
 
 </Project>
