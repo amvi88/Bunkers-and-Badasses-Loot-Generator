@@ -1,0 +1,12 @@
+{
+    "name": "bunkers-and-badasses-loot-generator",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Bunkers and Badasses Loot Generator",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/amvi88/BunkersAndBadasses.git"
+    },
+    "scripts": {
+    }
+  }
