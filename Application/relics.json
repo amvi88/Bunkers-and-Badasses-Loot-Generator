@@ -12,6 +12,10 @@
             "Soldier",
             "Any"
         ],
+        "RelicNames":[
+
+            
+        ],
         "RelicSpecs": [
             {
                 "MinRoll": 1,

@@ -1,3 +1,5 @@
+using Business.Models.Builder;
+
 namespace Business.Models
 {
     public class Shield : Item

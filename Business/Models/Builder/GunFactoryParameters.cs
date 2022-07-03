@@ -7,7 +7,7 @@ namespace Business.Models.Builder
     {
         [Required]
         [Range(1, 30)]
-        public int PlayerLevel {get; set;}
+        public int PlayerLevel {get; set;} = 1;
 
         public string Guild {get; set;}
 
