@@ -20,7 +20,7 @@ else
         <h1 class="card__name normal"> @CraftedGrenade.Effect</h1>
         
         <h3 class="card__type">
-         @CraftedGrenade.GrenadeType
+         @GetCardLabel
         </h3>
 
         <h3 class="card__guild">
@@ -51,6 +51,8 @@ else
     public Grenade CraftedGrenade { get; set; }
 
     public string GetCardCssClass => $"card card--{CraftedGrenade.Element.ToString().ToLower().Replace(", ","_")}";
+
+    public string GetCardLabel => CraftedGrenade.Element != Element.None ? CraftedGrenade.Element.ToString() : CraftedGrenade.GrenadeType;
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGrenade.DiceType}.png";
 

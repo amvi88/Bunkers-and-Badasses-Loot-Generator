@@ -24,7 +24,7 @@ namespace Business.Factories
             
             var rarity = GetRarity(builderArguments.Rarity);  
             var gunType = GetGunType(builderArguments.GunType);
-            var chosenGuild = GetGuild(builderArguments.Guild, ItemType.Gun);
+            var chosenGuild = GetGuild(builderArguments.Guild, ItemType.Gun, gunType);
              
             // Create a gun based on Guild specs
             var specs = chosenGuild.WeaponSpecs.First(x => x.Rarity == rarity);

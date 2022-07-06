@@ -31,5 +31,18 @@ namespace Business.Factories
 
             return guildsThatProduceItemType.ElementAt(RandomNumberGenerator.GetInt32(0, guildsThatProduceItemType.Count()));
         }
+
+
+        protected Guild GetGuild(string guildName, ItemType itemType, GunType gunType)
+        {
+            var guildsThatProduceItemType = _guildConfiguration.Guilds.Where(x => x.CanBuild(itemType) && x.CanProduceGunType(gunType));
+
+            if (! string.IsNullOrWhiteSpace(guildName))
+            {
+                return guildsThatProduceItemType.First(x => x.Name.Equals(guildName, StringComparison.InvariantCultureIgnoreCase));
+            }
+
+            return guildsThatProduceItemType.ElementAt(RandomNumberGenerator.GetInt32(0, guildsThatProduceItemType.Count()));
+        }
     }
 }

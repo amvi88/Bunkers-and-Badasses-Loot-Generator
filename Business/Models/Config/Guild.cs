@@ -21,7 +21,7 @@ namespace Business.Models.Config
             return SupportedItemTypes.HasFlag(itemType);
         }
 
-        public bool CanBuild(GunType gunType)
+        public bool CanProduceGunType(GunType gunType)
         {
             return SupportedGunTypes?.HasFlag(gunType) ?? false;
         }

@@ -344,8 +344,8 @@
             },
             {
                 "Name": "Malefactor",
-                "SupportedItemTypes": "Gun, Shield, Grenade",
-                "SupportedGunTypes": "Pistol, SubmachineGun, SniperRifle, RocketLauncher, Shield, Grenade",
+                "SupportedItemTypes": "Gun, Grenade, Shield",
+                "SupportedGunTypes": "Pistol, SubmachineGun, SniperRifle, RocketLauncher",
                 "GrenadeSpecs": [
                     {
                         "MinLevel": 1,
