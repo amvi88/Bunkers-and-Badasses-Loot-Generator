@@ -1,0 +1,40 @@
+@namespace Application.Pages
+@using Business.Models.Builder;
+@inherits BaseItemViewer;
+@if (CraftedPotion == null)
+{
+  <div class="spinner"></div>
+}
+else
+{
+  <div id="cards"  class="card_container">  
+
+    <figure class=@GetCardCssClass id="lewt">      
+      
+      <figcaption class="card__caption">
+        <h1 class="card__name normal"> @CraftedPotion.Effect</h1>
+        
+        <h3 class="card__type">
+         @CraftedPotion.Name
+        </h3>
+
+        <table class="card__stats">
+          <tbody>            
+            <tr>
+              <th>Cost</th>
+              <td>@CraftedPotion.Cost<img class="icon icon-money" src="images/open-iconic/svg/contrast.svg" alt="Coin"></td>   
+            </tr>            
+          </tbody>
+        </table>        
+      </figcaption>
+    </figure>
+  </div>
+  <button @onclick="Download" class="btn btn-primary">Download</button>
+}
+
+@code {
+    [Parameter]
+    public Potion CraftedPotion { get; set; }
+
+    public string @GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" : "card card--normal";
+}

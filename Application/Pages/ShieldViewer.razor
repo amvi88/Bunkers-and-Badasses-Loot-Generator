@@ -1,0 +1,52 @@
+@namespace Application.Pages
+@using Business
+@using Business.Models;
+@using Business.Models.Common;
+
+@inherits BaseItemViewer;
+@if (CraftedShield == null)
+{
+  <div class="spinner"></div>
+}
+else
+{
+  <div id="cards"  class="card_container">  
+
+    <figure class="card card--normal" id="lewt">
+      <div class="card__image-container">
+        <img src=@GetShieldImage alt="shield" class="card__image">   
+      </div>
+      
+      <figcaption class="card__caption">
+        <h1 class="card__name normal"> @CraftedShield.Effect</h1>
+        
+        <h3 class="card__type">
+         Shield
+        </h3>
+
+        <h3 class="card__guild">
+          @CraftedShield.Guild
+        </h3>
+
+        <table class="card__stats">
+          <tbody>            
+            <tr>
+              <th>Capacity</th>
+              <td>@CraftedShield.Capacity<img class="icon icon-shield" src="images/open-iconic/svg/shield.svg" alt="Shield"></td>   
+            </tr>            
+            <tr>
+              <th>Recharge Rate</th>
+              <td>@CraftedShield.RechargeRate<img class="icon icon-rechargerate" src="images/open-iconic/svg/reload.svg" alt="Recharge Rate"></td>                
+            </tr>
+          </tbody>
+        </table>        
+      </figcaption>
+    </figure>
+  </div>
+  <button @onclick="Download" class="btn btn-primary">Download</button>
+}
+@code {
+    [Parameter]
+    public Shield CraftedShield { get; set; }
+    public string GetShieldImage => $"images/resources/shields/{CraftedShield.Guild}.png";
+}

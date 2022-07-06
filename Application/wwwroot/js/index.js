@@ -1,0 +1,1 @@
+import*as m from"./_snowpack/pkg/html-to-image.js";import"./_snowpack/pkg/html-to-image.js";export function downloadCard(e,n){var a=document.getElementById(e,n);m.toPng(a).then(function(o){var t=document.createElement("a");t.download=n,t.href=o,t.click()}).catch(function(o){console.error("oops, something went wrong!",o)})}

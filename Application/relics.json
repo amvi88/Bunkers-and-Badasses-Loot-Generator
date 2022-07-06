@@ -1,0 +1,209 @@
+{
+    "RelicConfiguration": {
+        "Classes": [
+            "Assassin",
+            "Berserker",
+            "Commando",
+            "Gunzerker",
+            "Hunter",
+            "Mecromancer",
+            "Psycho",
+            "Siren",
+            "Soldier",
+            "Any"
+        ],
+        "RelicNames":[
+
+            
+        ],
+        "RelicSpecs": [
+            {
+                "MinRoll": 1,
+                "MaxRoll": 5,
+                "Type": "Vitality",
+                "Effect": "+20 Max Health.",
+                "ClassEffect": "+5 Health from Potions.",
+                "Rarity": "Common"
+            },
+            {
+                "MinRoll": 6,
+                "MaxRoll": 10,
+                "Type": "Stockpile",
+                "Effect": "+2 Max Grenades.",
+                "ClassEffect": "+1 Grenade from Loot Piles.",
+                "Rarity": "Common"
+            },
+            {
+                "MinRoll": 11,
+                "MaxRoll": 15,
+                "Type": "Protection",
+                "Effect": "+15 Max Shields.",
+                "ClassEffect": "+10 Recharge Rate.",
+                "Rarity": "Common"
+            },
+            {
+                "MinRoll": 16,
+                "MaxRoll": 20,
+                "Type": "Aggression",
+                "Effect": "+3 Damage for Favored Gun.",
+                "ClassEffect": "+1 Damage to all Guns.",
+                "Rarity": "Common"
+            },
+            {
+                "MinRoll": 21,
+                "MaxRoll": 25,
+                "Type": "Resistance",
+                "Effect": "+1d4 Elemental Resistance.",
+                "ClassEffect": "+1d4 Damage Resistance.",
+                "Rarity": "Common"
+            },
+            {
+                "MinRoll": 26,
+                "MaxRoll": 30,
+                "Type": "Tenacity",
+                "Effect": "+1 Initiative Mod.",
+                "ClassEffect": "+10 Health.",
+                "Rarity": "Common"
+            },
+            {
+                "MinRoll": 31,
+                "MaxRoll": 35,
+                "Type": "Elemental",
+                "Effect": "+2 Elemental Damage.",
+                "ClassEffect": "+20% on Elemental Rolls.",
+                "Rarity": "Common"
+            },
+            {
+                "MinRoll": 36,
+                "MaxRoll": 40,
+                "Type": "Strength",
+                "Effect": "+3 Melee Damage.",
+                "ClassEffect": "+1 Melee Attack/turn.",
+                "Rarity": "Common"
+            },
+            {
+                "MinRoll": 41,
+                "MaxRoll": 45,
+                "Type": "Vitality",
+                "Effect": "+30 Max Health.",
+                "ClassEffect": "+10 Health from Potions.",
+                "Rarity": "Uncommon"
+            },
+            {
+                "MinRoll": 46,
+                "MaxRoll": 50,
+                "Type": "Stockpile",
+                "Effect": "+2 Max Grenades.",
+                "ClassEffect": "+2 Grenade from Loot Piles.",
+                "Rarity": "Uncommon"
+            },
+            {
+                "MinRoll": 51,
+                "MaxRoll": 55,
+                "Type": "Protection",
+                "Effect": "+20 Max Shields.",
+                "ClassEffect": "+15 Recharge Rate.",
+                "Rarity": "Uncommon"
+            },
+            {
+                "MinRoll": 56,
+                "MaxRoll": 60,
+                "Type": "Aggression",
+                "Effect": "+4 Damage for Favored Gun.",
+                "ClassEffect": "+2 Damage to all Guns.",
+                "Rarity": "Uncommon"
+            },
+            {
+                "MinRoll": 61,
+                "MaxRoll": 65,
+                "Type": "Resistance",
+                "Effect": "+1d6 Elemental Resistance.",
+                "ClassEffect": "+1d6 Damage Resistance.",
+                "Rarity": "Uncommon"
+            },
+            {
+                "MinRoll": 66,
+                "MaxRoll": 70,
+                "Type": "Tenacity",
+                "Effect": "+2 Initiative Mod.",
+                "ClassEffect": "+15 Health.",
+                "Rarity": "Uncommon"
+            },
+            {
+                "MinRoll": 71,
+                "MaxRoll": 75,
+                "Type": "Elemental",
+                "Effect": "+3 Elemental Damage.",
+                "ClassEffect": "+30% on Elemental Rolls.",
+                "Rarity": "Uncommon"
+            },
+            {
+                "MinRoll": 76,
+                "MaxRoll": 80,
+                "Type": "Strength",
+                "Effect": "+4 Melee Damage.",
+                "ClassEffect": "+2 Melee Attack/turn.",
+                "Rarity": "Uncommon"
+            },
+            {
+                "MinRoll": 81,
+                "MaxRoll": 85,
+                "Type": "Vitality",
+                "Effect": "+40 Max Health.",
+                "ClassEffect": "+15 Health from Potions.",
+                "Rarity": "Rare"
+            },
+            {
+                "MinRoll": 86,
+                "MaxRoll": 90,
+                "Type": "Stockpile",
+                "Effect": "+4 Max Grenades.",
+                "ClassEffect": "+3 Grenade from Loot Piles.",
+                "Rarity": "Rare"
+            },
+            {
+                "MinRoll": 91,
+                "MaxRoll": 95,
+                "Type": "Protection",
+                "Effect": "+25 Max Shields.",
+                "ClassEffect": "+20 Recharge Rate.",
+                "Rarity": "Rare"
+            },
+            {
+                "Roll": 96,
+                "Type": "Aggression",
+                "Effect": "+5 Damage for Favored Gun.",
+                "ClassEffect": "+3 Damage to all Guns.",
+                "Rarity": "Rare"
+            },
+            {
+                "Roll": 97,
+                "Type": "Resistance",
+                "Effect": "+1d8 Elemental Resistance.",
+                "ClassEffect": "+1d8 Damage Resistance.",
+                "Rarity": "Rare"
+            },
+            {
+                "Roll": 98,
+                "Type": "Tenacity",
+                "Effect": "+3 Initiative Mod.",
+                "ClassEffect": "+20 Health.",
+                "Rarity": "Rare"
+            },
+            {
+                "Roll": 99,
+                "Type": "Elemental",
+                "Effect": "+4 Elemental Damage.",
+                "ClassEffect": "+40% on Elemental Rolls.",
+                "Rarity": "Rare"
+            },
+            {
+                "Roll": 100,
+                "Type": "Strength",
+                "Effect": "+5 Melee Damage.",
+                "ClassEffect": "+3 Melee Attack/turn.",
+                "Rarity": "Rare"
+            }
+        ]
+    }
+}

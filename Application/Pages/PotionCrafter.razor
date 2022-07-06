@@ -1,0 +1,28 @@
+﻿@page "/potion"
+@namespace Application.Pages
+@using Business;
+@using Business.Models;
+@using Business.Models.Common;
+@using Business.Models.Builder;
+@using Business.Factories;
+
+
+@inject IItemFactory<Potion, BaseFactoryParameters> factory
+@inject ILogger<PotionCrafter> logger
+
+
+<PageTitle>B&B: Mad Brewz</PageTitle>
+
+<input type="button" class="btn btn-primary" value="Roll" onclick="@Roll"/>
+
+<PotionViewer CraftedPotion=@potion FileName="potion.png"/>
+
+@code {
+  Potion potion = null;
+
+  void Roll()
+  {
+    logger.LogDebug("Roll");
+    potion = factory.Manufacture(null);
+  }
+}

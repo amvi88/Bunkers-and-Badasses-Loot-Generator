@@ -1,0 +1,29 @@
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.card__stats .icon {
+  width: 1em;
+  vertical-align: text-top;
+  margin-top: .1em;
+  margin-left: .2em 
+}
+
+.card__name {
+  font-size: .9em;  
+}
+
+.card--tinytina {
+  background: linear-gradient(140deg, rgba(255,167,249,1) 0%, rgba(255,44,195,1) 39%, rgba(255,227,167,1) 100%)
+}
+
+.card--tinytina .card__type {
+  background-color: #ff2cc3;
+}

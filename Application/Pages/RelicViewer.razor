@@ -1,0 +1,44 @@
+@namespace Application.Pages
+@using Business.Models;
+@inherits BaseItemViewer;
+@if (CraftedRelic == null)
+{
+  <div class="spinner"></div>
+}
+else
+{
+  <div id="cards"  class="card_container">  
+
+    <figure class="card card--normal" id="lewt">
+      <div class="card__image-container">
+        <img src=@GetRelicImage alt="shield" class="card__image">   
+      </div>
+      
+      <figcaption class="card__caption">
+        <h1 class="@GetCssClassCardCaption">@CraftedRelic.Type</h1>
+        
+        <h3 class="card__type">
+         Relic 
+        </h3>
+
+        <table class="card__stats">
+          <tr>
+              <th>Effect</th>
+              <td>@CraftedRelic.Effect</td>   
+           </tr>
+           <tr>
+              <th>@CraftedRelic.PreferredClass</th>
+              <td>@CraftedRelic.ClassEffect</td>   
+           </tr>      
+        </table>        
+      </figcaption>
+    </figure>
+  </div>
+  <button @onclick="Download" class="btn btn-primary">Download</button>
+}
+@code {
+    [Parameter]
+    public Relic CraftedRelic { get; set; }
+    public string GetRelicImage => $"images/resources/relics/{CraftedRelic.Rarity}.png";
+    public string GetCssClassCardCaption => $"card__name rarity_{CraftedRelic.Rarity.ToString().ToLower()}";
+}

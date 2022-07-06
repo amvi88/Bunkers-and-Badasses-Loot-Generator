@@ -1,0 +1,58 @@
+@namespace Application.Pages
+@using Business
+@using Business.Models.Builder;
+@using Business.Models.Common;
+@inherits BaseItemViewer;
+@if (CraftedGrenade == null)
+{
+  <div class="spinner"></div>
+}
+else
+{
+  <div id="cards" class="card_container">  
+
+    <figure class=@GetCardCssClass id="lewt">
+      <div class="card__image-container">
+        <img src=@GetGrenadeImage alt="grenade" class="card__image">   
+      </div>
+      
+      <figcaption class="card__caption">
+        <h1 class="card__name normal"> @CraftedGrenade.Effect</h1>
+        
+        <h3 class="card__type">
+         @CraftedGrenade.GrenadeType
+        </h3>
+
+        <h3 class="card__guild">
+          @CraftedGrenade.Guild
+        </h3>
+
+        <table class="card__stats">
+          <tbody>            
+            <tr>
+              <th>Damage</th>
+              <td>
+                @for (int index = 0; index < CraftedGrenade.AmountOfDice; index++)
+                {
+                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedGrenade.DiceType">
+                }                
+              </td>
+            </tr>
+          </tbody>
+        </table>        
+      </figcaption>
+    </figure>
+  </div>
+  <button @onclick="Download" class="btn btn-primary">Download</button>
+}
+
+@code {
+    [Parameter]
+    public Grenade CraftedGrenade { get; set; }
+
+    public string GetCardCssClass => $"card card--{CraftedGrenade.Element.ToString().ToLower().Replace(", ","_")}";
+
+    public string GetDiceImage => $"images/resources/dice/{CraftedGrenade.DiceType}.png";
+
+    public string GetGrenadeImage => $"images/resources/grenades/{CraftedGrenade.Guild}.png";
+}

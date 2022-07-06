@@ -1,0 +1,39 @@
+﻿@page "/shield"
+@namespace Application.Pages
+@using Business.Models;
+@using Business.Models.Builder;
+@using Business.Factories;
+
+@inject IItemFactory<Shield, ShieldFactoryParameters> factory;
+@inject ILogger<ShieldCrafter> logger
+
+
+<PageTitle>B&B: They're just Shields. Ok?</PageTitle>
+
+<EditForm Model=@shieldBuilder OnValidSubmit="Roll" class="well form-horizontal">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+
+  <div class="form-group" >
+     <label class="col-md-4 control-label">Player Level:</label>
+     <div class="col-md-8">
+         <InputNumber @bind-Value="shieldBuilder.PlayerLevel" name="PlayerLabel" class="form-control"/>
+     </div>
+  </div>
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Roll"/>
+  </div>
+</EditForm>
+
+<ShieldViewer CraftedShield=@shield FileName="shield.png"/>
+
+@code {
+  ShieldFactoryParameters shieldBuilder = new ShieldFactoryParameters();
+  Shield shield = null;
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    shield = factory.Manufacture(shieldBuilder);
+  }
+}

@@ -1,0 +1,65 @@
+﻿@page "/gun"
+@namespace Application.Pages
+@using Business;
+@using Business.Models;
+@using Business.Models.Common;
+@using Business.Models.Builder;
+@using Business.Factories;
+
+@inject IItemFactory<Gun, GunFactoryParameters> factory
+@inject ILogger<GunCrafter> logger
+
+
+<PageTitle>B&B: Check out these guns!</PageTitle>
+
+<EditForm Model=@gunBuilder OnValidSubmit="Roll" class="well form-horizontal">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+
+  <div class="form-group" >
+     <label class="col-md-4 control-label">Player Level:</label>
+     <div class="col-md-8">
+         <InputNumber @bind-Value="gunBuilder.PlayerLevel" name="PlayerLabel" class="form-control"/>
+     </div>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Rarity</label>
+     <div class="col-md-8">
+        <InputSelect @bind-Value="gunBuilder.Rarity" class="form-control">
+              <option value="null">Random</option>
+              @foreach (var rarity in Enum.GetValues(typeof(Rarity)))
+              {
+                  <option value="@rarity">@rarity</option>
+              }
+          </InputSelect>
+      </div>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Gun Type</label>
+     <div class="col-md-8">
+       <InputSelect @bind-Value="gunBuilder.GunType" class="form-control">              
+              @foreach (var rarity in Enum.GetValues(typeof(GunType)))
+              {
+                  <option value="@rarity">@(((GunType)rarity).GetDescription())</option>
+              }
+          </InputSelect>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Roll"/>
+  </div>
+</EditForm>
+
+<GunViewer CraftedGun=@gun FileName="gun.png"/>
+
+@code {
+  GunFactoryParameters gunBuilder = new GunFactoryParameters();
+  Gun gun = null;
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    System.Diagnostics.Debug.WriteLine("Roll");
+    gun = factory.Manufacture(gunBuilder);
+  }
+}
