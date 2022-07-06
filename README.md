@@ -1,6 +1,6 @@
 # BunkersAndBadasses
 
-This is an (ALPHA) unoficial Loot Generator for 2K and Nerdvana Games <a href="https://nerdvanagames.myshopify.com/">Bunkers and Badasses</a> TTRPG Game. 
+This is an (ALPHA) unoficial [Loot Generator](https://bunkers-n-badasses-loot.herokuapp.com/) for 2K and Nerdvana Games <a href="https://nerdvanagames.myshopify.com/">Bunkers and Badasses</a> TTRPG Game. 
 All of the data has been painstakingly transcribed by hand from the Book, to avoid having to stop the game just to generate loot.
 
 Guns and Mods Images are taken from [Lootlemon](https://lootlemon.com)
