@@ -9,7 +9,8 @@
 @inject IItemFactory<Gun, GunFactoryParameters> factory
 @inject ILogger<GunCrafter> logger
 
-
+<h1>Guns</h1>
+<hr />
 <PageTitle>B&B: Check out these guns!</PageTitle>
 
 <EditForm Model=@gunBuilder OnValidSubmit="Roll" class="well form-horizontal">
@@ -45,6 +46,7 @@
           </InputSelect>
     </div>
   </div>
+  <hr class="divider">
   <div class="form-group">
     <input type="submit" class="btn btn-primary" value="Roll"/>
   </div>
