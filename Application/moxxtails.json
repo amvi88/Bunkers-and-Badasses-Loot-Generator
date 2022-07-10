@@ -1,6 +1,47 @@
 {
-    "MoxxTailsConfiguration": 
+    "MoxxTailConfiguration": 
     {
-        "MoxxTails":[]
+        "MoxxTails":[
+            {
+                "Name":"Hey Sugar",
+                "Effect":"Gain +2 on Talk Checks for 1 hour"
+            },
+            {
+                "Name":"Vamp Vermouth",
+                "Effect":"Gain 1d4 Damage Reduction for the rest of the encounter"
+            },
+            {
+                "Name":"Quadruple Sec",
+                "Effect":"Gain Health Regen 5 for the rest of the encounter"
+            },
+            {
+                "Name":"Kill-You-A",
+                "Effect":"DMG Mod +2 on Ranged Attacks for the rest of the encounter"
+            },
+            {
+                "Name":"Sonic Water",
+                "Effect":"Gain 1d6 to all Element Damage for 1 hour"
+            },
+            {
+                "Name":"Drub Soda",
+                "Effect":"Activate Action Skill for free"
+            },
+            {
+                "Name":"Gamaretto",
+                "Effect":"+3 on Badass Move Rolls for hte rest of the encounter"
+            },
+            {
+                "Name":"Cream of Kapow",
+                "Effect":"Gain an Extra Melee Attack each turn for the rest of the encounter"
+            },
+            {
+                "Name":"Dragnac",
+                "Effect":"Add a Crit to your Ranged Attacks for the rest of the encounter"
+            },
+            {
+                "Name":"Big Bad Bitters",
+                "Effect":"Gain 1 grenade each time you Throw a grenade for the rest of the encounter"
+            }
+        ]
     }
 }

@@ -17,7 +17,7 @@ namespace Business.Factories
 
         public MoxxTail Manufacture(BaseFactoryParameters factoryParameters)
         {
-            var roll = RandomNumberGenerator.GetInt32(1, _moxxTailConfiguration.MoxxTails.Count());    
+            var roll = RandomNumberGenerator.GetInt32(0, _moxxTailConfiguration.MoxxTails.Count());    
             var specs = _moxxTailConfiguration.MoxxTails.ElementAt(roll);
 
             return new MoxxTail
