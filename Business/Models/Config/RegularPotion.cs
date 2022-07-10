@@ -8,5 +8,6 @@ namespace Business.Models.Config
         public int Cost { get; set; }
         public bool? RollTinasPotions { get; set; }
         public int? RollModifier { get; set;}
+        public bool? IsElemental { get; set;}
     }
 }

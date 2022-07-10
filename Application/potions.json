@@ -35,8 +35,9 @@
                 "MinRoll": 21,
                 "MaxRoll": 25,
                 "Name": "Element Potion",
-                "Effect": "Protection from x Element for 2 turns.",
-                "Cost": 15
+                "Effect": "Protection from {0} Element for 2 turns.",
+                "Cost": 15,
+                "IsElemental": true
             },
             {
                 "MinRoll": 25,

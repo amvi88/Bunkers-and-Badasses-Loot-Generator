@@ -2,7 +2,6 @@ using Business.Models.Builder;
 using Business.Models.Common;
 using Business.Models.Config;
 using Microsoft.Extensions.Options;
-using System.Linq;
 using System.Security.Cryptography;
 
 namespace Business.Factories
@@ -28,7 +27,17 @@ namespace Business.Factories
                 Cost = specs.Cost
             };
 
-            if (specs.RollTinasPotions.GetValueOrDefault())
+
+            if (specs.IsElemental.GetValueOrDefault())
+            {
+                var element = GetRandomElement();
+
+                potion.IsElemental = true;
+                potion.Element = element;
+                potion.Effect = string.Format(specs.Effect, element);
+            }
+
+            else if (specs.RollTinasPotions.GetValueOrDefault())
             {
                 var potionIndex = RandomNumberGenerator.GetInt32(0,20) + specs.RollModifier.GetValueOrDefault();
                 var ttPotion = _potionConfiguration.TinyTinasPotions[potionIndex];
@@ -40,5 +49,10 @@ namespace Business.Factories
 
             return potion; 
         }
-    }
+
+        private Element GetRandomElement(){
+            var elementalTypes = Enum.GetValues(typeof(Element));
+            return (Element)elementalTypes.GetValue(RandomNumberGenerator.GetInt32(1,elementalTypes.Length));
+        }
+    }    
 }

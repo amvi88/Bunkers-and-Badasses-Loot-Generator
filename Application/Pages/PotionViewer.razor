@@ -36,5 +36,7 @@ else
     [Parameter]
     public Potion CraftedPotion { get; set; }
 
-    public string @GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" : "card card--normal";
+    public string @GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" :
+                                        CraftedPotion.IsElemental? $"card card--{CraftedPotion.Element.ToString().ToLower().Replace(", ","_")}"
+                                        : "card card--normal";
 }
