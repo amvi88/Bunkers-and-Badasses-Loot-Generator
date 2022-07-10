@@ -1,0 +1,28 @@
+﻿@page "/moxxtails"
+@namespace Application.Pages
+@using Business;
+@using Business.Models;
+@using Business.Models.Common;
+@using Business.Models.Builder;
+@using Business.Factories;
+
+
+@inject IItemFactory<MoxxTail, BaseFactoryParameters> factory
+@inject ILogger<MoxxTailsCrafter> logger
+
+
+<PageTitle>B&B: Moxxie has something for you</PageTitle>
+
+<input type="button" class="btn btn-primary" value="Roll" onclick="@Roll"/>
+
+<MoxxTailViewer CraftedMoxxTail=@moxxtail FileName="moxxtail.png"/>
+
+@code {
+  MoxxTail moxxtail = null;
+
+  void Roll()
+  {
+    logger.LogDebug("Roll");
+    moxxtail = factory.Manufacture(null);
+  }
+}

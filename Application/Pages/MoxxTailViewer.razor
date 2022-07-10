@@ -1,0 +1,41 @@
+@namespace Application.Pages
+@using Business.Models.Builder;
+@using Business.Models.Common;
+@inherits BaseItemViewer;
+@if (CraftedMoxxTail == null)
+{
+  <div class="spinner"></div>
+}
+else
+{
+  <div id="cards"  class="card_container">  
+
+    <figure class=@GetCardCssClass id="lewt">      
+      
+      <figcaption class="card__caption">
+        <h1 class="card__name normal"> Moxx-Tail</h1>
+        
+        <h3 class="card__type">
+         @CraftedMoxxTail.Name
+        </h3>
+
+        <table class="card__stats">
+          <tbody>            
+            <tr>
+              <th>Effect</th>
+              <td>@CraftedMoxxTail.Effect</td>   
+            </tr>            
+          </tbody>
+        </table>        
+      </figcaption>
+    </figure>
+  </div>
+  <button @onclick="Download" class="btn btn-primary">Download</button>
+}
+
+@code {
+    [Parameter]
+    public MoxxTail CraftedMoxxTail { get; set; }
+
+    public string @GetCardCssClass => "card card--normal";
+}

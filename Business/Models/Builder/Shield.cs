@@ -1,6 +1,6 @@
 using Business.Models.Builder;
 
-namespace Business.Models
+namespace Business.Models.Builder
 {
     public class Shield : Item
     {

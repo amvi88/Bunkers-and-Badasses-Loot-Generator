@@ -1,8 +1,7 @@
-using Business.Models.Builder;
 using Business.Models.Common;
 using Business.Models.Config;
 
-namespace Business.Models
+namespace Business.Models.Builder
 {
     public class Gun : Item
     {

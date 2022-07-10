@@ -1,7 +1,7 @@
 using Business.Models.Builder;
 using Business.Models.Common;
 
-namespace Business.Models
+namespace Business.Models.Builder
 {
     public class Relic : Item
     {
