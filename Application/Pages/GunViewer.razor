@@ -59,12 +59,12 @@ else
         <table class="card__hits">
           <caption>Hits By Accuracy</caption>
           <tbody>            
-              @foreach(var kvp in CraftedGun.HitsByAccuracy)
+              @foreach(var hit in CraftedGun.HitsByAccuracy)
               {
                 <tr>
-                  <th>@kvp.Key</th>
-                  <td>@kvp.Value.Hits<img class="icon icon-header" src="images/open-iconic/svg/header.svg" alt="Header"></td>
-                  <td>@kvp.Value.Crits<img class="icon icon-aperture" src="images/open-iconic/svg/aperture.svg" alt="Aperture"></td>
+                  <th>@hit.Label</th>
+                  <td>@hit.Hits<img class="icon icon-header" src="images/open-iconic/svg/header.svg" alt="Header"></td>
+                  <td>@hit.Crits<img class="icon icon-aperture" src="images/open-iconic/svg/aperture.svg" alt="Aperture"></td>
                 </tr>
               }
           </tbody>

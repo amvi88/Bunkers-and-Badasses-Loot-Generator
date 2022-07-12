@@ -27,6 +27,6 @@ namespace Business.Models.Builder
 
         public List<string> Bonuses {get; set;}
 
-        public Dictionary<string, WeaponHits> HitsByAccuracy { get; internal set; }
+        public List<WeaponHits> HitsByAccuracy { get; internal set; }
     }
 }
