@@ -6,8 +6,7 @@ namespace Business.Models.Config
             public int MaxLevel{ get; set;}
             public string Damage { get; set;}
             public int Range { get; set;}     
-
-            public Dictionary<string, WeaponHits> HitsByAccuracy { get; set;}  
+            public List<WeaponHits> HitsByAccuracy { get; set;}  
     }
 
 }
