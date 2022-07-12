@@ -39,12 +39,13 @@
   <div class="form-group">
      <label class="col-md-4 control-label">Gun Type</label>
      <div class="col-md-8">
-       <InputSelect @bind-Value="gunBuilder.GunType" class="form-control" aria-label="Gun Type">              
+       <NullableEnumSelect @bind-Value="gunBuilder.GunType" class="form-control" aria-label="Gun Type">
+              <option value="">Random</option>              
               @foreach (var rarity in Enum.GetValues(typeof(GunType)))
               {
                   <option value="@rarity">@(((GunType)rarity).GetDescription())</option>
               }
-          </InputSelect>
+        </NullableEnumSelect>
     </div>
   </div>
   <hr class="divider">
