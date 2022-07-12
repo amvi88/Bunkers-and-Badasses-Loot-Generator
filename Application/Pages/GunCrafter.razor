@@ -1,5 +1,6 @@
 ﻿@page "/gun"
 @namespace Application.Pages
+@using Application.Components;
 @using Business;
 @using Business.Models;
 @using Business.Models.Common;
@@ -26,13 +27,13 @@
   <div class="form-group">
      <label class="col-md-4 control-label">Rarity</label>
      <div class="col-md-8">
-        <InputSelect @bind-Value="gunBuilder.Rarity" class="form-control" aria-label="Rarity">
-              <option value="null">Random</option>
+        <NullableEnumSelect @bind-Value="gunBuilder.Rarity" class="form-control" aria-label="Rarity">
+              <option value="">Random</option>
               @foreach (var rarity in Enum.GetValues(typeof(Rarity)))
               {
                   <option value="@rarity">@rarity</option>
               }
-          </InputSelect>
+          </NullableEnumSelect>
       </div>
   </div>
   <div class="form-group">
