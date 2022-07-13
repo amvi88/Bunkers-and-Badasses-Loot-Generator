@@ -16,29 +16,39 @@ namespace Business.Services
             _traumaConfiguration = traumaConfiguration.Value ?? throw new ArgumentNullException(nameof(traumaConfiguration));
         }
 
-        public Trauma GetTrauma(TraumaServiceParameters parameters)
+        public List<Trauma> GetTrauma(TraumaServiceParameters parameters)
         {
+            List<Trauma> traumas = new List<Trauma>();
             if (parameters.TraumaType == TraumaType.Temporary)
             {
                 var roll = RandomNumberGenerator.GetInt32(0, _traumaConfiguration.Temporary.Length);
                 var traumaSpec = _traumaConfiguration.Temporary[roll];
 
-                if (!traumaSpec.RerollAsPermanent.GetValueOrDefault())
-                {
-                    return new Trauma
+                traumas.Add(new Trauma
                     {
                         Roll = roll + 1,
                         Effect = traumaSpec.Effect,
                         Name = traumaSpec.Name,
                         TraumaType = TraumaType.Temporary
-                    };
+                    });
+                if (!traumaSpec.RerollAsPermanent.GetValueOrDefault())
+                {
+                    return traumas;
                 }
             }
 
-            return new Trauma
+            var permanentRoll = RandomNumberGenerator.GetInt32(0, _traumaConfiguration.Permanent.Length);
+            var permanentTraumaSpec = _traumaConfiguration.Permanent[permanentRoll];
+
+            traumas.Add(new Trauma
             {
+                Roll = permanentRoll + 1,
+                Effect = permanentTraumaSpec.Effect,
+                Name = permanentTraumaSpec.Name,
                 TraumaType = TraumaType.Permanent
-            };
+            });
+
+            return traumas;
         }
 
     }

@@ -5,6 +5,6 @@ namespace Business.Services
 {
     public interface ITraumatizingService
     {
-        Trauma GetTrauma(TraumaServiceParameters parameters);
+        List<Trauma> GetTrauma(TraumaServiceParameters parameters);
     }
 }

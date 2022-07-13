@@ -4,13 +4,14 @@
 @using Business.Services;
 @using Business.Models.Builder;
 @using Business.Models.Common;
+@using System.Linq;
 
 @inject ITraumatizingService service;
 @inject ILogger<TraumaDiagnostic> logger
 
 
 <PageTitle>B&B: Trauma Central</PageTitle>
-<h1>Relics</h1>
+<h1>Traumas</h1>
 <hr />
 
 <EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
@@ -34,24 +35,27 @@
   </div>
 </EditForm>
 
-@if (trauma != null)
+@if (traumas != null && traumas.Any())
 {
-  <br/>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <h4 class="list-group-item-heading">@trauma.Name (@trauma.TraumaType.ToString())</h4>
-      <p class="list-group-item-text">@trauma.Effect</p>      
-    </li>
-  </ul>
+  foreach(var trauma in traumas)
+  {
+    <br/>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <h4 class="list-group-item-heading">@trauma.Name (@trauma.TraumaType.ToString())</h4>
+        <p class="list-group-item-text">@trauma.Effect</p>      
+      </li>
+    </ul>
+  }
 }
 
 @code {
   TraumaServiceParameters parameters = new TraumaServiceParameters();
-  Trauma trauma = null;
+  List<Trauma> traumas = null;
 
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    trauma = service.GetTrauma(parameters);
+    traumas = service.GetTrauma(parameters);
   }
 }
