@@ -101,6 +101,10 @@
                 "Effect": "Loss of sentimental item. Probably something important lo the campaign. --Least Favorite"
             },
             {
+                "Name":"Least Favorite",
+                "Effect": "Other players must determine your least favourite food/music/film/book/whatever. That is now your vault Hunter’s Favorite Thing in the world, and they will bring it Up anytime they can elegantly do so."
+            },
+            {
                 "Name": "Scar Tissue",
                 "Effect": "Generates a horrific scar in the location where you took Damage. 25% chance to be recognized when entering a town."
             },
