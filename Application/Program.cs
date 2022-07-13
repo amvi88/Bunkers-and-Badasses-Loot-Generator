@@ -4,6 +4,7 @@ using Business.Factories;
 using Business.Models.Config;
 using Business.Models.Builder;
 using Business.Models;
+using Business.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Configuration.AddJsonFile("potions.json", true);
 builder.Configuration.AddJsonFile("tinytinaspotions.json", true);
 builder.Configuration.AddJsonFile("relics.json", true);
 builder.Configuration.AddJsonFile("moxxtails.json", true);
+builder.Configuration.AddJsonFile("traumas.json", true);
 
 // Add services to the container.
 builder.Services.Configure<JsonOptions>(options =>
@@ -31,12 +33,14 @@ builder.Services.Configure<WeaponArchetypesOptions>(builder.Configuration.GetSec
 builder.Services.Configure<PotionConfigurationOptions>(builder.Configuration.GetSection("PotionConfiguration"));
 builder.Services.Configure<RelicConfigurationOptions>(builder.Configuration.GetSection("RelicConfiguration"));
 builder.Services.Configure<MoxxTailConfigurationOptions>(builder.Configuration.GetSection("MoxxTailConfiguration"));
+builder.Services.Configure<TraumasConfigurationOptions>(builder.Configuration.GetSection("TraumasConfiguration"));
 builder.Services.AddTransient<IItemFactory<Grenade, GrenadeFactoryParameters>, GrenadeFactory>();
 builder.Services.AddTransient<IItemFactory<Shield, ShieldFactoryParameters>, ShieldFactory>();
 builder.Services.AddTransient<IItemFactory<Gun, GunFactoryParameters>, GunFactory>();
 builder.Services.AddTransient<IItemFactory<Potion, BaseFactoryParameters>,PotionFactory>();
 builder.Services.AddTransient<IItemFactory<Relic, RelicFactoryParameters>,RelicFactory>();
 builder.Services.AddTransient<IItemFactory<MoxxTail, BaseFactoryParameters>,MoxxTailFactory>();
+builder.Services.AddTransient<ITraumatizingService,TraumatizingService>();
 
 var app = builder.Build();
 

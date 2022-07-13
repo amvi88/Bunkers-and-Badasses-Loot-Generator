@@ -1,0 +1,27 @@
+{
+    "TraumasConfiguration":
+    {
+        "Temporary":[
+           {"Name":"Bad Luck", "Effect":"The BREW-U malfunctions, roll on the Permanent table.", "RerollAsPermanent" : true},
+           {"Name":"Immersive", "Effect":"Must do a silly character voice, if you ever forget take 1d6 damage."},
+           {"Name":"Unloaded", "Effect":"A random equipped gun doesn't spawn with you. You will see it for sale at the next shop you find."},
+           {"Name":"Refractory", "Effect":"every time you roll a natural 20 on an Attack roll, fall asleep for the the next turn."},
+           {"Name":"No Boom", "Effect":"Current grenades is set to 0."},
+           {"Name":"Stumbling", "Effect":"-1 on Talk Checks for the day."},
+           {"Name":"Pistol Perplexion", "Effect":"Your vault Hunter is unable to tell the difference between gun and food."},
+           {"Name":"Health Drain", "Effect":"-5 max Health for the day."},
+           {"Name":"Power Drain", "Effect":"-10 max Shields for the day."},
+           {"Name":"Punch drunk", "Effect":"You must punch every non-combatant NPC you Meet."},
+           {"Name":"Impatient", "Effect":"-1 on Search and Sneak Checks for the day."},
+           {"Name":"Wellllllll Hello There", "Effect":"You Must flirt with every NPC you Meet. Including Bosses."},
+           {"Name":"Catch-a-Phrase", "Effect":"Your vault Hunter is now desperate to popularise a stupid catchphrase they've just come up with."},
+           {"Name":"Four Hundred and Four", "Effect":"One of your non-current guns does not spawn."},
+           {"Name":"Your Hands Are Guns", "Effect":"Your currently equipped gun fuses into the bones of your hands. You no longer have fingers, or the ability to grab things."},
+           {"Name":"You Had Me At Initiative", "Effect":"Your vault Hunter is now unrequitedly in love with another player’s vault Hunter. At the end of the day, you Must dramatically reveal your true feelings."},
+           {"Name":"Brain Freeze", "Effect":"-1 on Insight and Interact Checks for the day."},
+           {"Name":"The Best Policy", "Effect":"Your vault Hunter is now incapable of lying for the rest of the day."},
+           {"Name":"Minor Issue", "Effect":"Your Vault Hunter is now four years old. All their stats are the same, but they look and speak like a four year old."},
+           {"Name":"You Are Claptrap", "Effect":"A bolt of lightning strikes you and turns you into a claptrap unit. All of your stats are reduced by 2. and you have to speak in an annoying voice until the end of the day."},
+        ]
+    }
+}

@@ -1,0 +1,43 @@
+17 80g + Uncommon Gun (Random) + Uncommon Health Potion
+18 100g + Grenades (2) + Random Potions (2)
+19 3d6 9 100g + Uncommon Gun (Random) + Random Potion
+20 100g + Rare Health Potions (2) + Grenade Mod
+21 100g + Rare Shield Potions (2) + Grenade Mod
+22 100g + Random Potions (3) + Uncommon Relic
+1 30g 
+23 100g + Rare Gun (Random) + Shield Mod
+2 Common Health Potion
+24 100g + Rare Gun (Random) + Grenades (2) + Shield Mod
+3 Common Shield Potion
+25 120g + Common Relic + Rare Health Potions (2) + Grenades (2)
+4 30g + Common Health Potion
+26 120g + Grenades (3) + Random Potions (2)
+5 30g + Common Shield Potion
+27 120g + Rare Gun (Random) + Random Potions (2)
+6 50g + Random Potion
+28 1209 + Uncommon Relic + Twofer Potions (2) + Shield Mod
+7 30g + Uncommon Health Potion
+ 29 120g + Rare Gun (Random) + Grenade Mod
+8 30g + Uncommon Shield Potion :
+30 150g + Epic Health Potions (2) + Epic Shield Potion +Grenade Mod
+9 50g + Uncommon Health Potion
+10 50g + Uncommon Shield Potion 
+31 150g + Rare Relics (2) + Shield Mod + Random Potions (2)
+11 50g + Common Gun (Random) 
+32 150g + Epic Gun (Random) + Random Potions (2) + Grenade Mod
+12 60g - Common Health Potion 
+33 150g + Epic Gun (Random) + Grenades (6)
+13 60g  + Uncommon Health Potion + Random Potion 
+34 150g + Random Potions (3) + Grenade Mod + Rare Relic
+14 60g + Uncommon Shield Potion + Grenades (2) 
+35 150g + Epic Gun (Random) + Rare Relic + Epic Health Potions(3) + Shield Mod
+15 70g + Random Potions (2) + Common Relic
+36 200g + Epic Gun (Random) + Grenade Mod + Grenades (5) + Epic Health Potions (3) + Shield Mod 16 Uncommon Gun (Random) + Grenades (2) 
+
+CacheRolls:{
+    GoldSpecs:{
+        Amount : 60
+    },
+    
+
+}

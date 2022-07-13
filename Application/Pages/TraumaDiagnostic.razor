@@ -1,0 +1,57 @@
+﻿@page "/trauma"
+@namespace Application.Pages
+@using Business;
+@using Business.Services;
+@using Business.Models.Builder;
+@using Business.Models.Common;
+
+@inject ITraumatizingService service;
+@inject ILogger<TraumaDiagnostic> logger
+
+
+<PageTitle>B&B: Trauma Central</PageTitle>
+<h1>Relics</h1>
+<hr />
+
+<EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+
+ <div class="form-group">
+     <label class="col-md-4 control-label">Rarity</label>
+     <div class="col-md-8">
+        <InputSelect @bind-Value="parameters.TraumaType" class="form-control" aria-label="Trauma Type">
+              @foreach (var traumaType in Enum.GetValues(typeof(TraumaType)))
+              {
+                 <option value="@traumaType" selected>@traumaType</option>                              
+              }
+          </InputSelect>
+      </div>
+  </div>
+  <hr class="divider">
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Roll"/>
+  </div>
+</EditForm>
+
+@if (trauma != null)
+{
+  <br/>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <h4 class="list-group-item-heading">@trauma.Name (@trauma.TraumaType.ToString())</h4>
+      <p class="list-group-item-text">@trauma.Effect</p>      
+    </li>
+  </ul>
+}
+
+@code {
+  TraumaServiceParameters parameters = new TraumaServiceParameters();
+  Trauma trauma = null;
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    trauma = service.GetTrauma(parameters);
+  }
+}
