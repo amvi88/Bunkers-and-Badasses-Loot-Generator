@@ -16,5 +16,9 @@ namespace Business.Models.Builder
         public Element? Element {get; set;}
 
         public GunType? GunType {get; set; }
+
+        public bool AllowPrefixes {get; set; }
+
+        public bool AllowRedTexts {get; set; }
     }
 }

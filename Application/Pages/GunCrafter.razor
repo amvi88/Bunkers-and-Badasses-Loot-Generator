@@ -48,6 +48,12 @@
         </NullableEnumSelect>
     </div>
   </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Use Prefixes <input type="checkbox" @bind="gunBuilder.AllowPrefixes" aria-label="Allows Prefixes"/></label>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Use RedTexts <input type="checkbox" @bind="gunBuilder.AllowRedTexts" aria-label="Allows RedText"/></label>
+  </div>
   <hr class="divider">
   <div class="form-group">
     <input type="submit" class="btn btn-primary" value="Roll"/>

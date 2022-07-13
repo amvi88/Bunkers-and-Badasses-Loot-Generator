@@ -68,20 +68,26 @@ namespace Business.Factories
             gun.HitsByAccuracy = gunStats.HitsByAccuracy;  
             
             // Check for prefix
-            var calculatedPrefixChance = RandomNumberGenerator.GetInt32(1, 100);
-            if ( calculatedPrefixChance <= _weaponCustomization.PrefixChance[rarity])
+            if (builderArguments.AllowPrefixes)
             {
-                var prefix = _weaponCustomization.Prefixes[RandomNumberGenerator.GetInt32(0, _weaponCustomization.Prefixes.Length)];
-                gun.Bonuses.Add($"(Prefix) {prefix.Effect}");
-                gun.Name = $"{prefix.Name} {gun.Name}";
+                var calculatedPrefixChance = RandomNumberGenerator.GetInt32(1, 100);
+                if (calculatedPrefixChance <= _weaponCustomization.PrefixChance[rarity])
+                {
+                    var prefix = _weaponCustomization.Prefixes[RandomNumberGenerator.GetInt32(0, _weaponCustomization.Prefixes.Length)];
+                    gun.Bonuses.Add($"(Prefix) {prefix.Effect}");
+                    gun.Name = $"{prefix.Name} {gun.Name}";
+                }
             }
 
-            var calculatedRedTextChance = RandomNumberGenerator.GetInt32(1, 100);
-            if (calculatedRedTextChance  <= _weaponCustomization.RedTextChance[rarity])
+            if (builderArguments.AllowRedTexts)
             {
-                var redText = _weaponCustomization.RedText[RandomNumberGenerator.GetInt32(0, _weaponCustomization.RedText.Length)];
-                gun.Bonuses.Add($"(RedText) {redText.Effect}"); 
-                gun.RedText = redText;
+                var calculatedRedTextChance = RandomNumberGenerator.GetInt32(1, 100);
+                if (calculatedRedTextChance  <= _weaponCustomization.RedTextChance[rarity])
+                {
+                    var redText = _weaponCustomization.RedText[RandomNumberGenerator.GetInt32(0, _weaponCustomization.RedText.Length)];
+                    gun.Bonuses.Add($"(RedText) {redText.Effect}"); 
+                    gun.RedText = redText;
+                }
             }
 
             return gun;
