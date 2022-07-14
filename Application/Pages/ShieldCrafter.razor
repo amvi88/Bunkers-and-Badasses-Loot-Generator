@@ -26,7 +26,9 @@
   </div>
 </EditForm>
 
-<ShieldViewer CraftedShield=@shield FileName="shield.png"/>
+<div id="cards"  class="card_container">  
+  <ShieldViewer CraftedShield=@shield/>
+</div>
 
 @code {
   ShieldFactoryParameters shieldBuilder = new ShieldFactoryParameters();

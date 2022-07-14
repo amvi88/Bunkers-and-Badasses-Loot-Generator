@@ -9,9 +9,7 @@
 }
 else
 {
-  <div id="cards" class="card_container">  
-
-    <figure class=@GetCardCssClass id="lewt">
+  <figure class=@GetCardCssClass id="@GetElementId()" @onclick="Download">
       <div class="card__image-container">
         <img src=@GetGrenadeImage alt="grenade" class="card__image">   
       </div>
@@ -42,8 +40,6 @@ else
         </table>        
       </figcaption>
     </figure>
-  </div>
-  <button @onclick="Download" class="btn btn-primary">Download</button>
 }
 
 @code {
@@ -57,4 +53,14 @@ else
     public string GetDiceImage => $"images/resources/dice/{CraftedGrenade.DiceType}.png";
 
     public string GetGrenadeImage => $"images/resources/grenades/{CraftedGrenade.Guild}.png";
+
+    public override string GetElementId()
+    {
+      return $"Grenade_{CraftedGrenade.Guild}_{CraftedGrenade.GrenadeType}";
+    }
+
+    public override string GetFileName()
+    {
+      return $"Grenade_{CraftedGrenade.Guild}_{CraftedGrenade.GrenadeType}.png";
+    }
 }

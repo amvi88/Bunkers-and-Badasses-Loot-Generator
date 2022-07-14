@@ -16,7 +16,9 @@
 <hr />
 <input type="button" class="btn btn-primary" value="Roll" onclick="@Roll"/>
 
-<MoxxTailViewer CraftedMoxxTail=@moxxtail FileName="moxxtail.png"/>
+<div id="cards"  class="card_container">  
+  <MoxxTailViewer CraftedMoxxTail=@moxxtail/>
+</div>
 
 @code {
   MoxxTail moxxtail = null;

@@ -60,7 +60,9 @@
   </div>
 </EditForm>
 
-<GunViewer CraftedGun=@gun FileName="gun.png"/>
+<div id="cards"  class="card_container">  
+  <GunViewer CraftedGun=@gun/>
+</div>
 
 @code {
   GunFactoryParameters gunBuilder = new GunFactoryParameters();

@@ -9,9 +9,6 @@ namespace Application.Pages
         [Inject]
         private IJSRuntime JSRuntime {get; set;}
 
-        [Parameter]
-        public string? FileName {get; set;}
-
         private IJSObjectReference? module;
         private string? result;
 
@@ -26,7 +23,17 @@ namespace Application.Pages
 
         protected async Task Download()
         {
-            result = await DownloadImage("lewt", FileName);
+            result = await DownloadImage(GetElementId(), GetFileName());
+        }
+
+        public virtual string GetElementId()
+        {
+            return string.Empty;
+        }
+
+        public virtual string GetFileName()
+        {
+            return string.Empty;
         }
 
         protected async ValueTask<string?> DownloadImage(string id, string fileName) =>

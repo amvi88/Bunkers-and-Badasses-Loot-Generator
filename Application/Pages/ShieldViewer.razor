@@ -10,9 +10,7 @@
 }
 else
 {
-  <div id="cards"  class="card_container">  
-
-    <figure class="card card--normal" id="lewt">
+    <figure class="card card--normal" id="@GetElementId()" @onclick="Download">
       <div class="card__image-container">
         <img src=@GetShieldImage alt="shield" class="card__image">   
       </div>
@@ -42,11 +40,19 @@ else
         </table>        
       </figcaption>
     </figure>
-  </div>
-  <button @onclick="Download" class="btn btn-primary">Download</button>
 }
 @code {
     [Parameter]
     public Shield CraftedShield { get; set; }
     public string GetShieldImage => $"images/resources/shields/{CraftedShield.Guild}.png";
+
+    public override string GetElementId()
+    {
+      return $"Shield_{CraftedShield.Guild}";
+    }
+
+    public override string GetFileName()
+    {
+      return $"Shield_{CraftedShield.Guild}.png";
+    }
 }

@@ -6,6 +6,8 @@ namespace Business.Models.Builder
     {
         public int Level {get; set;}
 
+        public string Name {get; set;}
+
         public int Capacity {get; set;}
 
         public int RechargeRate {get; set;}  
