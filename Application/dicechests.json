@@ -1,0 +1,57 @@
+{
+    "ChestConfiguration":
+    {
+        "DiceChests":
+        [
+            {
+                "Roll": 1,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon"
+                    }
+                ]
+            },
+            {
+                "Roll": 2,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ]
+            },
+            {
+                "Roll": 3,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ],
+                "PotionSpecs":[
+                    {
+                        "Name": "Health Potion (Rare)"
+                    }
+                ]
+            },
+            {
+                "Roll": 4,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ],
+                "RelicSpecs":[
+                    {
+                        "Rarity": "Common"
+                    }
+                ]
+            }
+        ]
+    }
+}
