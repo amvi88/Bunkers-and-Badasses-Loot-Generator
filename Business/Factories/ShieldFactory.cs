@@ -1,7 +1,7 @@
-using Business.Models;
-using Business.Models.Builder;
-using Business.Models.Common;
-using Business.Models.Config;
+using Models;
+using Models.Builder;
+using Models.Common;
+using Models.Config;
 using Microsoft.Extensions.Options;
 using System.Security.Cryptography;
 

@@ -1,4 +1,4 @@
-using Business.Models.Builder;
+using Models.Builder;
 
 namespace Business.Factories
 {

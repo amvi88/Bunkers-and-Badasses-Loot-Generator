@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Http.Json;
 
 using Business.Factories;
-using Business.Models.Config;
-using Business.Models.Builder;
-using Business.Models;
+using Models.Config;
+using Models.Builder;
+using Models;
 using Business.Services;
 
 var builder = WebApplication.CreateBuilder(args);

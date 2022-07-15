@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using Business.Factories;
-using Business.Models.Builder;
-using Business.Models.Config;
+using Models.Builder;
+using Models.Config;
 using Microsoft.Extensions.Options;
 
 namespace Business.Services

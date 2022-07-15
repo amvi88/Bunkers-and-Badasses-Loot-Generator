@@ -1,5 +1,5 @@
-using Business.Models.Builder;
-using Business.Models.Config;
+using Models.Builder;
+using Models.Config;
 
 namespace Business.Services
 {
