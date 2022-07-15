@@ -27,11 +27,12 @@ namespace Business.Services
             _potionFinderService = potionFinderService ?? throw new ArgumentNullException(nameof(potionFinderService));
         }
 
-        public List<Item> OpenChest(DiceChestServiceParameters parameters)
+        public Chest OpenChest(DiceChestServiceParameters parameters)
         {
             var roll1 = RandomNumberGenerator.GetInt32(0, _chestConfiguration.DiceChests.Length);
             var roll2 = RandomNumberGenerator.GetInt32(0, _chestConfiguration.DiceChests.Length);
-            var spec = _chestConfiguration.DiceChests[Math.Max(roll1, roll2)];
+            var maxRoll = Math.Max(roll1, roll2);
+            var spec = _chestConfiguration.DiceChests.First(s => s.Roll == maxRoll);
 
 
             var items = new List<Item>();
@@ -63,7 +64,11 @@ namespace Business.Services
                 items.Add(_shieldFactory.Manufacture(new ShieldFactoryParameters { PlayerLevel = parameters.PlayerLevel }));
             }
 
-            return items;
+            return new Chest
+            {
+                Roll = maxRoll,
+                Items = items
+            };
         }
     }
 }

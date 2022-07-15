@@ -1,17 +1,18 @@
-﻿.chest_container
+﻿/* _content/Application/Pages/DiceChestCrafter.razor.rz.scp.css */
+.chest_container[b-of5ztcotgm]
 {
+  max-width: 1200px;
   margin: 0 auto;
-  margin-top: 10px;
-  display: flex;
-  /* flex-flow: column wrap; */
-  justify-content: flex-start;
-  align-items: flex-start;
-  height:400px;
-  width:100%;
+  display: grid;
+  grid-gap: 1rem;
 }
 
-.chest_wrapper
-{
-  margin:10px;
-  float: left;
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .chest_container { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .chest_container { grid-template-columns: repeat(3, 1fr); }
 }

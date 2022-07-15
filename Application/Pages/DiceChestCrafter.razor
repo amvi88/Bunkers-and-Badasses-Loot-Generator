@@ -55,9 +55,9 @@
 </EditForm>
 
 <div id="cards"  class="chest_container"> 
-@if (items != null && items.Any())
+@if (chest != null && chest.Items != null && chest.Items.Any())
 {
-  foreach(var item in items)
+  foreach(var item in chest.Items)
   {
     
     if (item is Gun)
@@ -96,11 +96,11 @@
 
 @code {
   DiceChestServiceParameters parameters = new DiceChestServiceParameters();
-  List<Item> items = null;
+  Chest chest = null;
 
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    items = service.OpenChest(parameters);
+    chest = service.OpenChest(parameters);
   }
 }

@@ -4,6 +4,6 @@ namespace Business.Services
 {
     public interface IChestService<T> where T: BaseFactoryParameters
     {
-        List<Item> OpenChest(T parameters);
+        Chest OpenChest(T parameters);
     }
 }
