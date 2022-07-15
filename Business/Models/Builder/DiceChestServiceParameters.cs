@@ -9,7 +9,7 @@ namespace Business.Models.Builder
         [Range(1, 30)]
         public int PlayerLevel {get; set;} = 1;
 
-        public GunType GunType {get; set;}
+        public GunType GunType {get; set;} = GunType.CombatRifle;
 
         public bool AllowPrefixes {get; set; }
 
