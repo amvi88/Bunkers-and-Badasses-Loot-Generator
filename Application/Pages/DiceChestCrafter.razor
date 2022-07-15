@@ -54,32 +54,45 @@
   </div>
 </EditForm>
 
+<div id="cards"  class="chest_container"> 
 @if (items != null && items.Any())
 {
   foreach(var item in items)
   {
+    
     if (item is Gun)
     {
-      <GunViewer CraftedGun=@((Gun)item) FileName="gun.png"/>
+      <div class="chest_wrapper">
+        <GunViewer CraftedGun=@((Gun)item)/>
+      </div>
     }
     else if (item is Grenade)
     {
-      <GrenadeViewer CraftedGrenade=@((Grenade)item) FileName="grenade.png"/>
+      <div class="chest_wrapper">
+        <GrenadeViewer CraftedGrenade=@((Grenade)item)/>
+      </div>
     }
     else if (item is Potion)
     {
-      <PotionViewer CraftedPotion=@((Potion)item) FileName="potion.png"/>
+      <div class="chest_wrapper">
+        <PotionViewer CraftedPotion=@((Potion)item)/>
+      </div>
     }
     else if (item is Shield)
     {
-       <ShieldViewer CraftedShield=@((Shield)item) FileName="shield.png"/>
+      <div class="chest_wrapper">
+       <ShieldViewer CraftedShield=@((Shield)item)/>
+      </div>
     }
     else if (item is Relic)
     {
-      <RelicViewer CraftedRelic=@((Relic)item) FileName="relic.png"/>
+      <div class="chest_wrapper">
+        <RelicViewer CraftedRelic=@((Relic)item)/>
+      </div>
     }
   }
 }
+</div>
 
 @code {
   DiceChestServiceParameters parameters = new DiceChestServiceParameters();

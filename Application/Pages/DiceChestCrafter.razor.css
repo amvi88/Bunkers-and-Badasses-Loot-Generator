@@ -1,0 +1,17 @@
+﻿.chest_container
+{
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  /* flex-flow: column wrap; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  height:400px;
+  width:100%;
+}
+
+.chest_wrapper
+{
+  margin:10px;
+  float: left;
+}
