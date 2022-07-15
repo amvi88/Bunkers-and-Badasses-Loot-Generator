@@ -29,7 +29,9 @@
   </div>
 </EditForm>
 
-<GrenadeViewer CraftedGrenade=@grenade FileName="grenade.png"/>
+<div id="cards"  class="card_container"> 
+  <GrenadeViewer CraftedGrenade=@grenade/>
+</div>
 
 @code {
   GrenadeFactoryParameters grenadeBuilder = new GrenadeFactoryParameters();

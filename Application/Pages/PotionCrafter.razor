@@ -17,7 +17,9 @@
 
 <input type="button" class="btn btn-primary" value="Roll" onclick="@Roll"/>
 
-<PotionViewer CraftedPotion=@potion FileName="potion.png"/>
+<div id="cards"  class="card_container">  
+  <PotionViewer CraftedPotion=@potion/>
+</div>
 
 @code {
   Potion potion = null;

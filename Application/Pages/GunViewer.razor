@@ -9,9 +9,7 @@
 }
 else
 {
-  <div id="cards"  class="card_container">  
-
-    <figure class="@GetCardCssClass" id="lewt">
+    <figure class="@GetCardCssClass" id="@GetElementId()" @onclick="Download">
       <div class="card__image-container">
         <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">   
       </div>
@@ -82,8 +80,6 @@ else
         
       </figcaption>
     </figure>
-  </div>
-  <button @onclick="Download" class="btn btn-primary">Download</button>
 }
 @code {
     [Parameter]
@@ -96,4 +92,14 @@ else
     public string GetCssClassCardCaption => $"card__name rarity_{CraftedGun.Rarity.ToString().ToLower()}";
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGun.DiceType}.png";
+
+    public override string GetElementId()
+    {
+      return $"Gun_{CraftedGun.Guild}_{CraftedGun.Name.Replace(" ","_")}";
+    }
+
+    public override string GetFileName()
+    {
+      return $"Gun_{CraftedGun.Guild}_{CraftedGun.Name.Replace(" ","_")}.png";
+    }
 }
