@@ -8,9 +8,7 @@
 }
 else
 {
-  <div id="cards"  class="card_container">  
-
-    <figure class=@GetCardCssClass id="lewt">      
+    <figure class=@GetCardCssClass id="@GetElementId()" @onclick="Download">      
       
       <figcaption class="card__caption">
         <h1 class="card__name normal"> Moxx-Tail</h1>
@@ -29,8 +27,6 @@ else
         </table>        
       </figcaption>
     </figure>
-  </div>
-  <button @onclick="Download" class="btn btn-primary">Download</button>
 }
 
 @code {
@@ -38,4 +34,14 @@ else
     public MoxxTail CraftedMoxxTail { get; set; }
 
     public string @GetCardCssClass => "card card--normal";
+
+    public override string GetElementId()
+    {
+      return $"MoxxTail_{CraftedMoxxTail.Name.Replace(" ","_")}";
+    }
+
+    public override string GetFileName()
+    {
+      return $"MoxxTail_{CraftedMoxxTail.Name.Replace(" ","_")}.png";
+    }
 }

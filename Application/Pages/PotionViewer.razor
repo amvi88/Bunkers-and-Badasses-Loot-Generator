@@ -7,9 +7,7 @@
 }
 else
 {
-  <div id="cards"  class="card_container">  
-
-    <figure class=@GetCardCssClass id="lewt">      
+  <figure class=@GetCardCssClass  id="@GetElementId()" @onclick="Download">      
       
       <figcaption class="card__caption">
         <h1 class="card__name normal"> @CraftedPotion.Effect</h1>
@@ -28,8 +26,6 @@ else
         </table>        
       </figcaption>
     </figure>
-  </div>
-  <button @onclick="Download" class="btn btn-primary">Download</button>
 }
 
 @code {
@@ -39,4 +35,14 @@ else
     public string @GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" :
                                         CraftedPotion.IsElemental? $"card card--{CraftedPotion.Element.ToString().ToLower().Replace(", ","_")}"
                                         : "card card--normal";
+
+    public override string GetElementId()
+    {
+      return $"Potion_{CraftedPotion.Name.Replace(" ","_")}";
+    }
+
+    public override string GetFileName()
+    {
+      return $"Potion_{CraftedPotion.Name.Replace(" ","_")}.png";
+    }    
 }

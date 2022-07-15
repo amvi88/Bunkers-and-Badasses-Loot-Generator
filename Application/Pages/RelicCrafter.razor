@@ -38,7 +38,9 @@
   </div>
 </EditForm>
 
-<RelicViewer CraftedRelic=@relic FileName="relic.png"/>
+<div id="cards"  class="card_container">  
+  <RelicViewer CraftedRelic=@relic/>
+</div>
 
 @code {
   RelicFactoryParameters relicBuilder = new RelicFactoryParameters();
