@@ -203,6 +203,20 @@
                 "Effect": "+5 Melee Damage.",
                 "ClassEffect": "+3 Melee Attack/turn.",
                 "Rarity": "Rare"
+            },
+            {
+                "Roll": 101,
+                "Type": "D.I.Y",
+                "Effect": "You decide.",
+                "ClassEffect": "You decide.",
+                "Rarity": "Epic"
+            },
+            {
+                "Roll": 102,
+                "Type": "D.I.Y",
+                "Effect": "You decide.",
+                "ClassEffect": "You decide.",
+                "Rarity": "Legendary"
             }
         ]
     }

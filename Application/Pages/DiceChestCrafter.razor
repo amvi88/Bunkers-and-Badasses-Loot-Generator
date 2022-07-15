@@ -1,0 +1,106 @@
+﻿@page "/dicechest"
+@namespace Application.Pages
+@using Business;
+@using Business.Services;
+@using Business.Models.Builder;
+@using Business.Models.Common;
+@using System.Linq;
+
+@inject IChestService<DiceChestServiceParameters> service;
+@inject ILogger<DiceChestCrafter> logger
+
+
+<PageTitle>B&B: Dice Chests</PageTitle>
+<h1>DiceChests</h1>
+<hr />
+
+<EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+
+   <div class="form-group" >
+     <label class="col-md-4 control-label">Player Level:</label>
+     <div class="col-md-8">
+         <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
+     </div>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Favored Gun Type</label>
+     <div class="col-md-8">
+       <InputSelect @bind-Value="parameters.GunType" class="form-control" aria-label="Gun Type">
+              @foreach (var gunType in Enum.GetValues(typeof(GunType)))
+              {
+                if ((GunType)gunType == GunType.CombatRifle)
+                {
+                  <option value="@gunType" selected>@(((GunType)gunType).GetDescription())</option>
+                }                
+                else
+                {
+                  <option value="@gunType">@(((GunType)gunType).GetDescription())</option>
+                }
+              } 
+        </InputSelect>
+    </div>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Use Prefixes <input type="checkbox" @bind="parameters.AllowPrefixes" aria-label="Allows Prefixes"/></label>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Use RedTexts <input type="checkbox" @bind="parameters.AllowRedTexts" aria-label="Allows RedText"/></label>
+  </div>
+  <hr class="divider">
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Roll"/>
+  </div>
+</EditForm>
+
+<div id="cards"  class="chest_container"> 
+@if (chest != null && chest.Items != null && chest.Items.Any())
+{
+  foreach(var item in chest.Items)
+  {
+    
+    if (item is Gun)
+    {
+      <div class="chest_wrapper">
+        <GunViewer CraftedGun=@((Gun)item)/>
+      </div>
+    }
+    else if (item is Grenade)
+    {
+      <div class="chest_wrapper">
+        <GrenadeViewer CraftedGrenade=@((Grenade)item)/>
+      </div>
+    }
+    else if (item is Potion)
+    {
+      <div class="chest_wrapper">
+        <PotionViewer CraftedPotion=@((Potion)item)/>
+      </div>
+    }
+    else if (item is Shield)
+    {
+      <div class="chest_wrapper">
+       <ShieldViewer CraftedShield=@((Shield)item)/>
+      </div>
+    }
+    else if (item is Relic)
+    {
+      <div class="chest_wrapper">
+        <RelicViewer CraftedRelic=@((Relic)item)/>
+      </div>
+    }
+  }
+}
+</div>
+
+@code {
+  DiceChestServiceParameters parameters = new DiceChestServiceParameters();
+  Chest chest = null;
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    chest = service.OpenChest(parameters);
+  }
+}

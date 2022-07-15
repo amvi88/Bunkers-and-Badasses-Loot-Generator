@@ -1,0 +1,35 @@
+@namespace Application.Pages
+@using Business
+@using Business.Models.Builder;
+@using Business.Models.Common;
+
+@inherits BaseItemViewer;
+@if (Gold == null)
+{
+  <div class="spinner"></div>
+}
+else
+{
+  <div id="cards"  class="card_container">  
+
+    <figure class="card card--normal" id="lewt">
+      <div class="card__image-container">
+        <img src=@GetGoldImage alt="shield" class="card__image">   
+      </div>
+      
+      <figcaption class="card__caption">
+        <h1 class="card__name normal"> @Gold.Amount</h1>
+        
+        <h3 class="card__type">
+         Gold
+        </h3> 
+      </figcaption>
+    </figure>
+  </div>
+  <button @onclick="Download" class="btn btn-primary">Download</button>
+}
+@code {
+    [Parameter]
+    public Gold Gold { get; set; }
+    public string GetGoldImage => $"images/resources/gold.png";
+}
