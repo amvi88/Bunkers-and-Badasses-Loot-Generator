@@ -3,12 +3,7 @@
 @using Models.Builder;
 @using Models.Common;
 @inherits BaseItemViewer;
-@if (CraftedGrenade == null)
-{
-  <div class="spinner"></div>
-}
-else
-{
+
   <figure class=@GetCardCssClass id="@GetElementId()" @onclick="Download">
       <div class="card__image-container">
         <img src=@GetGrenadeImage alt="grenade" class="card__image">   
@@ -40,7 +35,7 @@ else
         </table>        
       </figcaption>
     </figure>
-}
+
 
 @code {
     [Parameter]

@@ -3,12 +3,7 @@
 @using Models;
 @using Models.Builder;
 @inherits BaseItemViewer;
-@if (CraftedGun == null)
-{
-  <div class="spinner"></div>
-}
-else
-{
+
     <figure class="@GetCardCssClass" id="@GetElementId()" @onclick="Download">
       <div class="card__image-container">
         <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">   
@@ -80,7 +75,7 @@ else
         
       </figcaption>
     </figure>
-}
+
 @code {
     [Parameter]
     public Gun CraftedGun { get; set; }
@@ -91,7 +86,7 @@ else
     
     public string GetCssClassCardCaption => $"card__name";
 
-    public string GetCssClassCardType => $"card__type {CraftedGun.Element.ToString().Replace(" ,", "-").ToLower()}";
+    public string GetCssClassCardType => $"card__type {CraftedGun.Element.ToString().ToLower().Replace(", ","-")}";
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGun.DiceType}.png";
 

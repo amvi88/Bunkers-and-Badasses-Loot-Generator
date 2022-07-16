@@ -29,13 +29,16 @@
   </div>
 </EditForm>
 
-<div id="cards"  class="card_container"> 
-  <GrenadeViewer CraftedGrenade=@grenade/>
-</div>
+@if (grenade != null)
+{
+  <div id="cards"  class="card_container"> 
+    <GrenadeViewer CraftedGrenade=@grenade.Item/>
+  </div>
+}
 
 @code {
   GrenadeFactoryParameters grenadeBuilder = new GrenadeFactoryParameters();
-  Grenade grenade = null;
+  ItemWrapper<Grenade> grenade = null;
 
   void Roll(EditContext editContext)
   {

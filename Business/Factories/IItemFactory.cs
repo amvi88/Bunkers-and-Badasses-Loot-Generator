@@ -6,7 +6,7 @@ namespace Business.Factories
         where I: Item 
         where P: BaseFactoryParameters
     {
-        public I Manufacture(P factoryParameters);
+        public ItemWrapper<I> Manufacture(P factoryParameters);
     }
 
 }

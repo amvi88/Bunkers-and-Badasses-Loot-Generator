@@ -15,7 +15,7 @@ namespace Business.Factories
             _potionConfiguration = potionConfiguration.Value ?? throw new ArgumentException(nameof(potionConfiguration));
         }
 
-        public Potion Manufacture(BaseFactoryParameters factoryParameters)
+        public ItemWrapper<Potion> Manufacture(BaseFactoryParameters factoryParameters)
         {
             var roll = RandomNumberGenerator.GetInt32(1,101);    
             var specs = _potionConfiguration.RegularPotions.First(x => x.MinRoll <= roll && roll <= x.MaxRoll);
@@ -48,7 +48,18 @@ namespace Business.Factories
                 potion.Effect = ttPotion.Effect;
             }
 
-            return potion; 
+            return new ItemWrapper<Potion>
+            {
+                DiceRolls = new DiceRoll[]
+                {
+                    new DiceRoll
+                    {
+                        DiceType = "d100",
+                        Result = roll
+                    }
+                },
+                Item = potion
+            };
         }
 
         private Element GetRandomElement(){

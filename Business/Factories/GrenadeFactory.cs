@@ -15,9 +15,9 @@ namespace Business.Factories
         {
         }
 
-        public override Grenade Manufacture(GrenadeFactoryParameters factoryParameters)
+        public override ItemWrapper<Grenade> Manufacture(GrenadeFactoryParameters factoryParameters)
         {
-            var chosenGuild = GetGuild(factoryParameters.Guild, ItemType.Grenade);
+            var chosenGuild = GetGuild(factoryParameters.Guild, ItemType.Grenade, out var roll);
             var specs = chosenGuild.GrenadeSpecs.First(x => x.MinLevel <= factoryParameters.PlayerLevel & factoryParameters.PlayerLevel <= x.MaxLevel);
 
             var grenade = new Grenade
@@ -41,7 +41,19 @@ namespace Business.Factories
                 grenade.Element = (Element)elementalValues.GetValue(RandomNumberGenerator.GetInt32(1,elementalValues.Length));
             }
 
-            return grenade;            
+            return new ItemWrapper<Grenade>
+            {
+                DiceRolls = new DiceRoll[]
+                {
+                    new DiceRoll
+                    {
+                        DiceType = "d8",
+                        Result = roll
+
+                    }
+                },
+                Item = grenade
+            };            
         }
     }
 }

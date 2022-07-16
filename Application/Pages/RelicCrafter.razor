@@ -35,13 +35,16 @@
   </div>
 </EditForm>
 
-<div id="cards"  class="card_container">  
-  <RelicViewer CraftedRelic=@relic/>
-</div>
+@if (relic != null)
+{
+  <div id="cards"  class="card_container">  
+    <RelicViewer CraftedRelic=@relic.Item/>
+  </div>
+}
 
 @code {
   RelicFactoryParameters relicBuilder = new RelicFactoryParameters();
-  Relic relic = null;
+  ItemWrapper<Relic> relic = null;
 
   void Roll(EditContext editContext)
   {

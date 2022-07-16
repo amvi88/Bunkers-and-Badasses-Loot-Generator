@@ -17,12 +17,15 @@
 
 <input type="button" class="btn btn-primary" value="Roll" onclick="@Roll"/>
 
-<div id="cards"  class="card_container">  
-  <PotionViewer CraftedPotion=@potion/>
-</div>
+@if (potion != null)
+{
+  <div id="cards"  class="card_container">  
+    <PotionViewer CraftedPotion=@potion.Item/>
+  </div>
+}
 
 @code {
-  Potion potion = null;
+  ItemWrapper<Potion> potion = null;
 
   void Roll()
   {

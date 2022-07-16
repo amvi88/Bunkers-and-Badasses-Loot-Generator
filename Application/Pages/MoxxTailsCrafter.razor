@@ -16,12 +16,15 @@
 <hr />
 <input type="button" class="btn btn-primary" value="Roll" onclick="@Roll"/>
 
-<div id="cards"  class="card_container">  
-  <MoxxTailViewer CraftedMoxxTail=@moxxtail/>
-</div>
+@if (moxxtail != null)
+{
+  <div id="cards"  class="card_container">  
+    <MoxxTailViewer CraftedMoxxTail=@moxxtail.Item/>
+  </div>
+}
 
 @code {
-  MoxxTail moxxtail = null;
+  ItemWrapper<MoxxTail> moxxtail = null;
 
   void Roll()
   {

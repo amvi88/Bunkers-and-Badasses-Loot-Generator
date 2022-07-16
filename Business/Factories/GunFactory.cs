@@ -18,12 +18,12 @@ namespace Business.Factories
             _weaponArchetypesOptions = weaponArchetypesOptions.Value ?? throw new ArgumentNullException(nameof(weaponArchetypesOptions));
         }
        
-        public override Gun Manufacture(GunFactoryParameters builderArguments)
+        public override ItemWrapper<Gun> Manufacture(GunFactoryParameters builderArguments)
         {
             
             var rarity = GetRarity(builderArguments.Rarity);  
             var gunType = GetGunType(builderArguments.GunType);
-            var chosenGuild = GetGuild(builderArguments.Guild, ItemType.Gun, gunType);
+            var chosenGuild = GetGuild(builderArguments.Guild, ItemType.Gun, gunType, out var roll);
              
             // Create a gun based on Guild specs
             var specs = chosenGuild.WeaponSpecs.First(x => x.Rarity == rarity);
@@ -89,7 +89,19 @@ namespace Business.Factories
                 }
             }
 
-            return gun;
+            return new ItemWrapper<Gun>
+            {
+                DiceRolls = new DiceRoll[]
+                {
+                    new DiceRoll
+                    {
+                        DiceType = "d8",
+                        Result = roll,
+                        Purpose = "Manufacturer"
+                    }
+                },
+                Item = gun
+            };
         }
 
         private string GetName(WeaponArchetype archetype)

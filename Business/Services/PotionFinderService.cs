@@ -1,7 +1,5 @@
-using System.Security.Cryptography;
 using Business.Factories;
 using Models.Builder;
-using Models.Common;
 using Models.Config;
 using Microsoft.Extensions.Options;
 
@@ -22,7 +20,7 @@ namespace Business.Services
         {
             if (potionSpec.IsRandomPotion)
             {
-                return _potionFactory.Manufacture(new BaseFactoryParameters());
+                return _potionFactory.Manufacture(new BaseFactoryParameters()).Item;
             }
 
             var potionConfigSpec = _potionConfiguration.RegularPotions.First(x => x.Name.Equals(potionSpec.Name, StringComparison.InvariantCultureIgnoreCase));

@@ -2,7 +2,7 @@ namespace Models.Builder
 {
     public class ItemWrapper<T> where T: Item
     {
-        public int Roll {get; set;}
+        public DiceRoll[] DiceRolls {get; set;} = new DiceRoll[0];
 
         public T Item {get; set;}
     }

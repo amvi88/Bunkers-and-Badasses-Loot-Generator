@@ -1,12 +1,7 @@
 @namespace Application.Pages
 @using Models.Builder;
 @inherits BaseItemViewer;
-@if (CraftedRelic == null)
-{
-  <div class="spinner"></div>
-}
-else
-{
+
    <figure class="@GetCardCssClass"  id="@GetElementId()" @onclick="Download">
       <div class="card__image-container">
         <img src=@GetRelicImage alt="shield" class="card__image">   
@@ -31,7 +26,7 @@ else
         </table>        
       </figcaption>
     </figure>
-}
+
 @code {
     [Parameter]
     public Relic CraftedRelic { get; set; }

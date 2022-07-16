@@ -15,15 +15,18 @@ namespace Business.Factories
             _moxxTailConfiguration = moxxTailConfiguration.Value ?? throw new ArgumentException(nameof(moxxTailConfiguration));
         }
 
-        public MoxxTail Manufacture(BaseFactoryParameters factoryParameters)
+        public ItemWrapper<MoxxTail> Manufacture(BaseFactoryParameters factoryParameters)
         {
             var roll = RandomNumberGenerator.GetInt32(0, _moxxTailConfiguration.MoxxTails.Count());    
             var specs = _moxxTailConfiguration.MoxxTails.ElementAt(roll);
 
-            return new MoxxTail
+            return new ItemWrapper<MoxxTail>
             {
-                Name  = specs.Name,
-                Effect = specs.Effect
+                Item = new MoxxTail
+                {
+                    Name  = specs.Name,
+                    Effect = specs.Effect
+                }
             };
         }
     }    

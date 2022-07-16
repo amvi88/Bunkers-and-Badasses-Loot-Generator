@@ -15,7 +15,7 @@ namespace Business.Factories
             _relicConfiguration = relicConfiguration.Value ?? throw new ArgumentException(nameof(relicConfiguration));
         }
 
-        public Relic Manufacture(RelicFactoryParameters factoryParameters)
+        public ItemWrapper<Relic> Manufacture(RelicFactoryParameters factoryParameters)
         {
             var maxRoll = 101;
             var minRoll = 1;
@@ -32,13 +32,24 @@ namespace Business.Factories
             var preferredClass = _relicConfiguration.Classes[RandomNumberGenerator.GetInt32(0, _relicConfiguration.Classes.Length)];
 
 
-            return new Relic
+            return new ItemWrapper<Relic>
             {
-                Type  = specs.Type,
-                Effect = specs.Effect,                
-                Rarity = specs.Rarity,
-                ClassEffect = specs.ClassEffect,
-                PreferredClass = preferredClass
+                DiceRolls = new DiceRoll[]
+                {
+                    new DiceRoll
+                    {
+                        DiceType = "d100",
+                        Result = roll
+                    }
+                },
+                Item = new Relic
+                {
+                    Type  = specs.Type,
+                    Effect = specs.Effect,                
+                    Rarity = specs.Rarity,
+                    ClassEffect = specs.ClassEffect,
+                    PreferredClass = preferredClass
+                }
             };
         }
     }

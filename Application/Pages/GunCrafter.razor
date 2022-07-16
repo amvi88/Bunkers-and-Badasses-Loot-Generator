@@ -60,13 +60,16 @@
   </div>
 </EditForm>
 
-<div id="cards"  class="card_container">  
-  <GunViewer CraftedGun=@gun/>
-</div>
+@if (gun != null)
+{
+  <div id="cards"  class="card_container">  
+    <GunViewer CraftedGun=@gun.Item/>
+  </div>
+}
 
 @code {
   GunFactoryParameters gunBuilder = new GunFactoryParameters();
-  Gun gun = null;
+  ItemWrapper<Gun> gun = null;
 
   void Roll(EditContext editContext)
   {

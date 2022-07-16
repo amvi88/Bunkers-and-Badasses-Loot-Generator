@@ -2,12 +2,7 @@
 @using Models.Builder;
 @using Models.Common;
 @inherits BaseItemViewer;
-@if (CraftedMoxxTail == null)
-{
-  <div class="spinner"></div>
-}
-else
-{
+
     <figure class=@GetCardCssClass id="@GetElementId()" @onclick="Download">      
       
       <figcaption class="card__caption">
@@ -27,7 +22,7 @@ else
         </table>        
       </figcaption>
     </figure>
-}
+
 
 @code {
     [Parameter]

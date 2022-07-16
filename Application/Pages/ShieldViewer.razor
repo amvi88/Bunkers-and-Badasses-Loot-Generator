@@ -4,12 +4,7 @@
 @using Models.Common;
 
 @inherits BaseItemViewer;
-@if (CraftedShield == null)
-{
-  <div class="spinner"></div>
-}
-else
-{
+
     <figure class="card card--normal" id="@GetElementId()" @onclick="Download">
       <div class="card__image-container">
         <img src=@GetShieldImage alt="shield" class="card__image">   
@@ -40,7 +35,7 @@ else
         </table>        
       </figcaption>
     </figure>
-}
+
 @code {
     [Parameter]
     public Shield CraftedShield { get; set; }

@@ -18,31 +18,35 @@ namespace Business.Factories
             _guildConfiguration = guildOptions.Value ?? throw new ArgumentException(nameof(guildOptions));
         }
 
-        public abstract I Manufacture(P factoryParameters);
+        public abstract ItemWrapper<I> Manufacture(P factoryParameters);
 
-        protected Guild GetGuild(string guildName, ItemType itemType)
+        protected Guild GetGuild(string guildName, ItemType itemType, out int roll)
         {
             var guildsThatProduceItemType = _guildConfiguration.Guilds.Where(x => x.CanBuild(itemType));
 
             if (! string.IsNullOrWhiteSpace(guildName))
             {
+                roll = 0;
                 return guildsThatProduceItemType.First(x => x.Name.Equals(guildName, StringComparison.InvariantCultureIgnoreCase));
             }
 
-            return guildsThatProduceItemType.ElementAt(RandomNumberGenerator.GetInt32(0, guildsThatProduceItemType.Count()));
+            roll = RandomNumberGenerator.GetInt32(0, guildsThatProduceItemType.Count());
+            return guildsThatProduceItemType.ElementAt(roll++);
         }
 
 
-        protected Guild GetGuild(string guildName, ItemType itemType, GunType gunType)
+        protected Guild GetGuild(string guildName, ItemType itemType, GunType gunType, out int roll)
         {
             var guildsThatProduceItemType = _guildConfiguration.Guilds.Where(x => x.CanBuild(itemType) && x.CanProduceGunType(gunType));
 
             if (! string.IsNullOrWhiteSpace(guildName))
             {
+                roll = 0;
                 return guildsThatProduceItemType.First(x => x.Name.Equals(guildName, StringComparison.InvariantCultureIgnoreCase));
             }
 
-            return guildsThatProduceItemType.ElementAt(RandomNumberGenerator.GetInt32(0, guildsThatProduceItemType.Count()));
+            roll = RandomNumberGenerator.GetInt32(0, guildsThatProduceItemType.Count());
+            return guildsThatProduceItemType.ElementAt(roll++);
         }
     }
 }

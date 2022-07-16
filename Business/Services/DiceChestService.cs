@@ -46,22 +46,22 @@ namespace Business.Services
                     weaponBuildParameters.GunType = parameters.GunType;
                 }
                 
-                items.Add(_gunFactory.Manufacture(weaponBuildParameters));
+                items.Add(_gunFactory.Manufacture(weaponBuildParameters).Item);
             }
 
             foreach (var relicSpec in spec.RelicSpecs)
             {
-                items.Add(_relicFactory.Manufacture(new RelicFactoryParameters { Rarity = relicSpec.Rarity }));
+                items.Add(_relicFactory.Manufacture(new RelicFactoryParameters { Rarity = relicSpec.Rarity }).Item);
             }
 
             for (int index = 0; index < spec.AmountOfGrenades; index++)
             {
-                items.Add(_grenadeFactory.Manufacture(new GrenadeFactoryParameters { PlayerLevel = parameters.PlayerLevel }));
+                items.Add(_grenadeFactory.Manufacture(new GrenadeFactoryParameters { PlayerLevel = parameters.PlayerLevel }).Item);
             }
 
             for (int index = 0; index < spec.AmountOfShieldMods; index++)
             {
-                items.Add(_shieldFactory.Manufacture(new ShieldFactoryParameters { PlayerLevel = parameters.PlayerLevel }));
+                items.Add(_shieldFactory.Manufacture(new ShieldFactoryParameters { PlayerLevel = parameters.PlayerLevel }).Item);
             }
 
             return new Chest

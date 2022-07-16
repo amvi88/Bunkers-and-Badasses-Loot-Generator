@@ -26,13 +26,16 @@
   </div>
 </EditForm>
 
-<div id="cards"  class="card_container">  
-  <ShieldViewer CraftedShield=@shield/>
-</div>
+@if (shield != null)
+{
+  <div id="cards"  class="card_container">  
+    <ShieldViewer CraftedShield=@shield.Item/>
+  </div>
+}
 
 @code {
   ShieldFactoryParameters shieldBuilder = new ShieldFactoryParameters();
-  Shield shield = null;
+  ItemWrapper<Shield> shield = null;
 
   void Roll(EditContext editContext)
   {
