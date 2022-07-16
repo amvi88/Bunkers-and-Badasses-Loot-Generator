@@ -1,236 +1,230 @@
- 
-  
-  .card_container{
-    margin-top: 2em;
+ .card_container {
+   margin-top: 2em;
+ }
+
+ .card {
+   display: inline-block;
+   width: 350px;
+   min-width: 300px;
+   max-width: 350px;
+   padding: 1em;
+   border-radius: 15px;
+   background: #ddd;
+   text-align: left;
+   -webkit-box-shadow: 0px 5px 20px -10px #111111;
+   box-shadow: 0px 5px 20px -10px #111111;
+   position: relative;
+ }
+
+ .card__caption {
+   background-color: rgba(255, 255, 255, 0.9);
+   padding: 1em;
+   position: relative;
+   border-radius: 0 0 3px 3px;
+ }
+
+ .card__image-container {
+   background-color: rgba(0, 0, 0, 0.7);
+   text-align: center;
+   padding: 1em 1em 0;
+   border-radius: 3px 3px 0 0;
+ }
+
+ .card__type {
+   position: absolute;
+   top: 0;
+   right: 1em;
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+   color: #ffffff;
+   text-transform: uppercase;
+   font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+   letter-spacing: 0.1em;
+   padding: 0.25em;
+   line-height: 1;
+   border-radius: 2px;
+   background: #bbbbbb;
+   font-size: medium;
+ }
+
+ .card__label {
+   font-size: 10px;
+   text-transform: uppercase;
+   font-weight: 400;
+   display: bold;
+   margin-bottom: 3px;
+ }
+
+ .card__name {
+   font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+   text-align: center;
+   font-size: 1.5em;
+   font-weight: 700;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+ }
+
+ .card__guild {
+   text-transform: uppercase;
+   text-align: center;
+ }
+
+ .card__stats {
+   margin: 1em 0;
+   width: 100%;
+ }
+
+ .card__stats th {
+   font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+   text-align: right;
+   font-weight: 300;
+ }
+
+ .card__stats th,
+ .card__stats td {
+   width: 50%;
+   padding: 0.25em 0.5em 0;
+ }
+
+ .card__abilities {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   flex-direction: column;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+ }
+
+ .card__ability {
+   -webkit-box-flex: 1;
+   -ms-flex: 1 0;
+   flex: 1 0;
+ }
+
+ .card__ability:nth-child(1) {
+   margin-top: 1em;
+ }
+
+ .card--normal {
+   background: linear-gradient(110deg, #81807f 0%, #cfbdf0 100%);
+   -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
+   box-shadow: 0px 5px 20px -10px #cfbdf0;
+ }
+
+ .normal {
+   background-color: #81807f;
+ }
+
+ .shock_corrosive {
+   background-color: #6e7f0e;
+ }
+
+ .shock {
+   background-color: #1CB5E0;
+ }
+
+ .radiation {
+   background: -webkit-gradient(linear, left top, right top, color-stop(34%, #ffde00), color-stop(83%, #e8ff99));
+   background: linear-gradient(90deg, #ffde00 34%, #e8ff99 83%);
+   color:#575757
   }
 
-  .card {
-    display: inline-block;
-    width: 350px;
-    min-width: 300px;
-    max-width: 350px;
-    padding: 1em;
-    border-radius: 15px;
-    background: #ddd;
-    text-align: left;
-    -webkit-box-shadow: 0px 5px 20px -10px #111111;
-            box-shadow: 0px 5px 20px -10px #111111;
-    position: relative;
-  }
-  
-  .card__caption {
-    background-color: rgba(255, 255, 255, 0.65);
-    padding: 1em;
-    position: relative;
-    border-radius: 0 0 3px 3px;
-  }
-  
-  .card__image-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 1em 1em 0;
-    border-radius: 3px 3px 0 0;
-  }
-  
-  .card__type {
-    position: absolute;
-    top: 0;
-    right: 1em;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    color: #ffffff;
-    text-transform: uppercase;
-    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-    letter-spacing: 0.1em;
-    padding: 0.25em;
-    line-height: 1;
-    border-radius: 2px;
-    background: #bbbbbb;
-    font-size: medium;
-  }
-  
-  .card__label {
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: 400;
-    display: bold;
-    margin-bottom: 3px;
-  }
-  
-  .card__name {
-    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
-  
-  .card__guild
-  {
-    text-transform: uppercase;
-    text-align: center;
-  }
-    
-  .card__stats {
-    margin: 1em 0;
-    width: 100%;
-  }
-  
-  .card__stats th {
-    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-    text-align: right;
-    font-weight: 300;
-  }
-  
-  .card__stats th, .card__stats td {
-    width: 50%;
-    padding: 0.25em 0.5em 0;
-  }
-  
-  .card__abilities {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  
-  .card__ability {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0;
-            flex: 1 0;
-  }
-  
-  .card__ability:nth-child(1)
-  {
-    margin-top: 1em;
-  }
-  
-  .card--normal {
-    background: linear-gradient(110deg, #81807f 0%, #cfbdf0 100%);
-    -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
-            box-shadow: 0px 5px 20px -10px #cfbdf0;
-  }
-  
-  .card--normal .card__type {
-    background-color: #81807f;
-  }
-  
-  .card--shock_corrosive .card__type {
-    background-color: #6e7f0e;
+ .incendiary {
+   background-color: #c71800;
+   color:#ffffff
+ }
+
+ .corrosive {
+   background: #6e7f0e;
+   color:#111111
+ }
+
+ .cryo {
+   background: #6fb8eb;
+   color:#111111
+ }
+
+ .explosive {
+   background: #ffd900;
+   color:#111111
+ }
+
+ .explosive-cryo {
+   background: linear-gradient(250deg, #ffe866 0%, #a0eaf1 46%, #6fb8eb 100%);
+   color:#111111
   }
 
-  .card--normal {
-  background: linear-gradient(110deg, #81807f 0%, #cfbdf0 100%);
-  -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
-          box-shadow: 0px 5px 20px -10px #cfbdf0;
-}
+ .incendiary-radiation {
+   background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #c71800), to(#ffde00));
+   background: linear-gradient(0deg, #c71800 10%, #ffde00 100%);
+   color:#111111
+  }
 
-.card--normal .card__type {
-  background-color: #81807f;
-}
+ .shock-corrosive {
+   background: linear-gradient(140deg, #1CB5E0 0%, #6e7f0e 69%, #275009 100%);
+   -webkit-box-shadow: 0px 5px 20px -10px #275009;
+   box-shadow: 0px 5px 20px -10px #275009;
+   color:#111111
+ }
 
-.card--shock {
-  background: linear-gradient(120deg, #1CB5E0 0%, #000851 100%);
-  -webkit-box-shadow: 0px 5px 20px -10px #000851;
-          box-shadow: 0px 5px 20px -10px #000851;
-}
+ .rarity_common {
+   color: rgb(255, 255, 255);
+   text-shadow: 0px 0px 3px grey;
+   background: -webkit-linear-gradient(to top, rgb(160, 160, 160), rgb(255, 255, 255));  
+   background: linear-gradient(to top, rgb(160, 160, 160), rgb(255, 255, 255));
+ }
 
-.card--shock .card__type {
-  background-color: #1CB5E0;
-}
+ .rarity_uncommon {
+   color: rgb(61, 210, 11);
+   background: -webkit-linear-gradient(to top, #0eae41, rgb(61, 210, 11));  
+   background: linear-gradient(to top, #0eae41, rgb(61, 210, 11));
+ }
 
-.card--radiation {
-  background: -webkit-gradient(linear, left top, right top, color-stop(34%, #ffde00), color-stop(83%, #e8ff99));
-  background: linear-gradient(90deg, #ffde00 34%, #e8ff99 83%);
-}
+ .rarity_rare {
+   color: rgb(47, 120, 255);
+   background: -webkit-linear-gradient(to top, #4A00E0, rgb(47, 120, 255));  
+   background: linear-gradient(to top, #4A00E0, rgb(47, 120, 255));
+ }
 
-.card--radiation .card__type {
-  background-color: #000;
-}
+ .rarity_legendary {
+   color: rgb(145, 50, 200);
+   background: -webkit-linear-gradient(to top, rgb(116, 11, 176), rgb(145, 50, 200));  
+   background: linear-gradient(to top, rgb(116, 11, 176), rgb(145, 50, 200));
+ }
 
-.card--incendiary {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #c71800), to(#fcc245));
-  background: linear-gradient(0deg, #c71800 10%, #fcc245 100%);
-}
+ .rarity_epic {
+   color: rgb(220, 120, 0);
+   background: -webkit-linear-gradient(to top, rgb(194, 107, 0), rgb(220, 120, 0));  
+   background: linear-gradient(to top, rgb(194, 107, 0), rgb(220, 120, 0));
+ }
 
-.card--incendiary .card__type {
-  background-color: #c71800;
-}
+ .card--common {
+   background: linear-gradient(110deg, #81807f 0%, #cfbdf0 100%);
+   -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
+   box-shadow: 0px 5px 20px -10px #cfbdf0;
+ }
 
+ .card--uncommon {
+   background: linear-gradient(to top, #0eae41, rgb(61, 210, 11));
+   -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
+   box-shadow: 0px 5px 20px -10px #cfbdf0;
+ }
 
-.card--corrosive {
-  background: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%);
-}
+ .card--rare {
+   background: linear-gradient(to top, #4A00E0, rgb(47, 120, 255));
+   -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
+   box-shadow: 0px 5px 20px -10px #cfbdf0;
+ }
 
-.card--corrosive .card__type {
-  background: #6e7f0e;
-}
+ .card--epic {
+   background: linear-gradient(to top, rgb(116, 11, 176), rgb(145, 50, 200));
+   -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
+   box-shadow: 0px 5px 20px -10px #cfbdf0;
+ }
 
-.card--cryo {
-  background: linear-gradient(230deg, #caeaf6 0%, #a0eaf1 46%, #6fb8eb 100%);
-}
-
-.card--cryo .card__type {
-  background: #6fb8eb;
-}
-
-.card--explosive {
-  background: linear-gradient(20deg, #ffe866 0%, #ffe866 33%, #ffd900 100%);
-}
-
-.card--explosive .card__type {
-  background: #ffd900;
-}
-
-.card--explosive_cryo {
-  background: linear-gradient(250deg, #ffe866 0%, #a0eaf1 46%, #6fb8eb 100%);
-}
-
-.card--explosive_cryo .card__type {
-  background: #6fb8eb;
-}
-
-.card--incendiary_radiation {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #c71800), to(#ffde00));
-  background: linear-gradient(0deg, #c71800 10%, #ffde00 100%);
-}
-
-.card--incendiary_radiation .card__type {
-  background-color: #c71800;
-}
-
-.card--shock_corrosive {
-  background: linear-gradient(140deg, #1CB5E0 0%, #6e7f0e 69%, #275009 100%);
-  -webkit-box-shadow: 0px 5px 20px -10px #275009;
-          box-shadow: 0px 5px 20px -10px #275009;
-}
-
-.card--shock_corrosive .card__type {
-  background-color: #6e7f0e;
-}
-
-.rarity_common {
-  color: rgb(255,255,255);
-  text-shadow: 0px 0px 3px grey;
-}
-
-.rarity_uncommon {
-  color: rgb(61,210,11);
-}
-
-.rarity_rare {
-  color: rgb(47,120,255);
-}
-
-.rarity_legendary {
-  color: rgb(145,50,200);
-}
-
-.rarity_epic{
-  color: rgb(220,120,0);
-}
-  
+ .card--legendary {
+   background: linear-gradient(to top, rgb(194, 107, 0), rgb(220, 120, 0));
+   -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
+   box-shadow: 0px 5px 20px -10px #cfbdf0;
+ }

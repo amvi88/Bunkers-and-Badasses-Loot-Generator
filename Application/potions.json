@@ -46,35 +46,40 @@
                 "Effect": null,
                 "RollTinasPotions": true,
                 "RollModifier": 3,
-                "Cost": 25
+                "Cost": 25,
+                "Rarity":"Rare"
             },
             {
                 "MinRoll": 31,
                 "MaxRoll": 35,
                 "Name": "Health Potion (Rare)",
                 "Effect": "Regens 2d8+5 Health.",
-                "Cost": 40
+                "Cost": 40,
+                "Rarity":"Rare"
             },
             {
                 "MinRoll": 36,
                 "MaxRoll": 40,
                 "Name": "Shield Potion (Rare)",
                 "Effect": "Recharges 2d8+5 Shield.",
-                "Cost": 30
+                "Cost": 30,
+                "Rarity":"Rare"                
             },
             {
                 "MinRoll": 41,
                 "MaxRoll": 45,
                 "Name": "Stat Potion",
                 "Effect": "3 to x Stat Mod for 1 hour.",
-                "Cost": 40
+                "Cost": 40,
+                "Rarity":"Rare"
             },
             {
                 "MinRoll": 46,
                 "MaxRoll": 50,
                 "Name": "Twofer Potion",
                 "Effect": "Gain 1d8 +3 Health and Shields.",
-                "Cost": 70
+                "Cost": 70,
+                "Rarity":"Rare"
             },
             {
                 "MinRoll": 51,
@@ -83,35 +88,40 @@
                 "Effect": null,
                 "RollTinasPotions": true,
                 "RollModifier": 5,
-                "Cost": 80
+                "Cost": 80,
+                "Rarity":"Epic"
             },
             {
                 "MinRoll": 56,
                 "MaxRoll": 60,
                 "Name": "Health Potion (Epic)",
                 "Effect": "Regen 3d8+10 Health.",
-                "Cost": 100
+                "Cost": 100,
+                "Rarity":"Epic"
             },
             {
                 "MinRoll": 61,
                 "MaxRoll": 65,
                 "Name": "Shield Potion (Epic)",
                 "Effect": "Recharges 3d8+10 Shield.",
-                "Cost": 80
+                "Cost": 80,
+                "Rarity":"Epic"
             },
             {
                 "MinRoll": 66,
                 "MaxRoll": 70,
                 "Name": "Lucky Potion",
                 "Effect": "Re-roll 1 die per Attack for 2 turns.",
-                "Cost": 100
+                "Cost": 100,
+                "Rarity":"Epic"
             },
             {
                 "MinRoll": 71,
                 "MaxRoll": 75,
                 "Name": "Invisibility Potion",
                 "Effect": "Become Cloaked for 3 turns.",
-                "Cost": 120
+                "Cost": 120,
+                "Rarity":"Epic"
             },
             {
                 "MinRoll": 76,
@@ -120,35 +130,40 @@
                 "Effect": null,
                 "Cost": 200,
                 "RollTinasPotions": true,
-                "RollModifier": 10
+                "RollModifier": 10,
+                "Rarity":"Legendary"
             },
             {
                 "MinRoll": 81,
                 "MaxRoll": 85,
                 "Name": "Health Potion (Legendary)",
                 "Effect": "Regens 4d8+20 Health.",
-                "Cost": 250
+                "Cost": 250,
+                "Rarity":"Legendary"
             },
             {
                 "MinRoll": 86,
                 "MaxRoll": 90,
                 "Name": "Shield Potion (Legendary)",
                 "Effect": "Recharges 4d8+20 Shields.",
-                "Cost": 230
+                "Cost": 230,
+                "Rarity":"Legendary"
             },
             {
                 "MinRoll": 91,
                 "MaxRoll": 95,
                 "Name": "Fumble Potion",
                 "Effect": "All 1's become 20's for 2 hours.",
-                "Cost": 250
+                "Cost": 250,
+                "Rarity":"Legendary"
             },
             {
                 "MinRoll": 96,
                 "MaxRoll": 100,
                 "Name": "Gold Farmer Potion",
                 "Effect": "+2d6 to all Cache Rolls for 2 hours.",
-                "Cost": 270
+                "Cost": 270,
+                "Rarity":"Legendary"
             }
         ]
     }
