@@ -7,7 +7,7 @@
 }
 else
 {
-   <figure class="card card--normal"  id="@GetElementId()" @onclick="Download">
+   <figure class="@GetCardCssClass"  id="@GetElementId()" @onclick="Download">
       <div class="card__image-container">
         <img src=@GetRelicImage alt="shield" class="card__image">   
       </div>
@@ -37,6 +37,7 @@ else
     public Relic CraftedRelic { get; set; }
     public string GetRelicImage => $"images/resources/relics/{CraftedRelic.Rarity}.png";
     public string GetCssClassCardCaption => $"card__name rarity_{CraftedRelic.Rarity.ToString().ToLower()}";
+    public string GetCardCssClass => $"card card--{CraftedRelic.Rarity.ToString().ToLower()}";
 
     public override string GetElementId()
     {

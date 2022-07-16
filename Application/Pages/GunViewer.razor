@@ -17,7 +17,7 @@ else
       <figcaption class="card__caption">
         <h1 class="@GetCssClassCardCaption">@CraftedGun.Name</h1>
         
-        <h3 class="card__type">
+        <h3 class="@GetCssClassCardType">
           @CraftedGun.Element.ToString()
         </h3>
 
@@ -85,11 +85,13 @@ else
     [Parameter]
     public Gun CraftedGun { get; set; }
 
-    public string GetCardCssClass => $"card card--{CraftedGun.Element.ToString().ToLower().Replace(", ","_")}";
+    public string GetCardCssClass => $"card card--{CraftedGun.Rarity.ToString().ToLower()}";
     
     public string GetGunImage => $"images/resources/guns/{CraftedGun.GunType}.png";
     
-    public string GetCssClassCardCaption => $"card__name rarity_{CraftedGun.Rarity.ToString().ToLower()}";
+    public string GetCssClassCardCaption => $"card__name normal";
+
+    public string GetCssClassCardType => $"card__type .{CraftedGun.Element.ToString().ToLower()}";
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGun.DiceType}.png";
 
