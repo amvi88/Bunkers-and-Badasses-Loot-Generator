@@ -24,10 +24,7 @@
               <option value="null">Random</option>
               @foreach (var rarity in Enum.GetValues(typeof(Rarity)))
               {
-                  @if ((int)rarity <= (int)Rarity.Rare)
-                  {
-                    <option value="@rarity">@rarity</option>
-                  }                  
+                  <option value="@rarity">@rarity</option>
               }
           </InputSelect>
       </div>
