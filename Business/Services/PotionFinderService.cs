@@ -28,7 +28,8 @@ namespace Business.Services
             {
                 Name = potionConfigSpec.Name,
                 Effect = potionConfigSpec.Effect,
-                Cost = potionConfigSpec.Cost
+                Cost = potionConfigSpec.Cost,
+                Rarity = potionConfigSpec.Rarity
             };
         }
 

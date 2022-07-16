@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 namespace Business.Services
 {
 
-    public class DiceChestService : IChestService<DiceChestServiceParameters>
+    public class UnassumingChestService : IChestService<UnassumingChestServiceParameters>
     {
         private readonly ChestConfigurationOptions _chestConfiguration;
         private readonly IItemFactory<Grenade, GrenadeFactoryParameters> _grenadeFactory;
@@ -17,7 +17,7 @@ namespace Business.Services
         private readonly IPotionFinderService _potionFinderService;
 
 
-        public DiceChestService(IOptions<ChestConfigurationOptions> chestConfiguration, IItemFactory<Grenade, GrenadeFactoryParameters> grenadeFactory, IItemFactory<Shield, ShieldFactoryParameters> shieldFactory, IItemFactory<Gun, GunFactoryParameters> gunFactory, IItemFactory<Relic, RelicFactoryParameters> relicFactory, IPotionFinderService potionFinderService)
+        public UnassumingChestService(IOptions<ChestConfigurationOptions> chestConfiguration, IItemFactory<Grenade, GrenadeFactoryParameters> grenadeFactory, IItemFactory<Shield, ShieldFactoryParameters> shieldFactory, IItemFactory<Gun, GunFactoryParameters> gunFactory, IItemFactory<Relic, RelicFactoryParameters> relicFactory, IPotionFinderService potionFinderService)
         {
             _chestConfiguration = chestConfiguration.Value ?? throw new ArgumentNullException(nameof(chestConfiguration));
             _grenadeFactory = grenadeFactory ?? throw new ArgumentNullException(nameof(grenadeFactory));
@@ -27,15 +27,18 @@ namespace Business.Services
             _potionFinderService = potionFinderService ?? throw new ArgumentNullException(nameof(potionFinderService));
         }
 
-        public Chest OpenChest(DiceChestServiceParameters parameters)
+        public Chest OpenChest(UnassumingChestServiceParameters parameters)
         {
-            var roll1 = RandomNumberGenerator.GetInt32(1, _chestConfiguration.DiceChests.Length+1);
-            var roll2 = RandomNumberGenerator.GetInt32(1, _chestConfiguration.DiceChests.Length+1);
-            var maxRoll = Math.Max(roll1, roll2);
-            var spec = _chestConfiguration.DiceChests.First(s => s.Roll == maxRoll);
+            var roll = RandomNumberGenerator.GetInt32(1, _chestConfiguration.UnassumingChests.Length);
+            var spec = _chestConfiguration.UnassumingChests.First(s => s.Roll == roll);
 
 
             var items = new List<Item>();
+
+            if (spec.IsMimic)
+            {
+                items.Add(new Mimic());
+            }
             
             foreach (var weaponSpec in spec.WeaponSpecs)
             {
@@ -71,7 +74,7 @@ namespace Business.Services
 
             return new Chest
             {
-                Roll = maxRoll,
+                Roll = roll,
                 Items = items
             };
         }

@@ -127,75 +127,75 @@
  .radiation {
    background: -webkit-gradient(linear, left top, right top, color-stop(34%, #ffde00), color-stop(83%, #e8ff99));
    background: linear-gradient(90deg, #ffde00 34%, #e8ff99 83%);
-   color:#575757
-  }
+   color: #575757
+ }
 
  .incendiary {
    background-color: #c71800;
-   color:#ffffff
+   color: #ffffff
  }
 
  .corrosive {
    background: #6e7f0e;
-   color:#111111
+   color: #111111
  }
 
  .cryo {
    background: #6fb8eb;
-   color:#111111
+   color: #111111
  }
 
  .explosive {
    background: #ffd900;
-   color:#111111
+   color: #111111
  }
 
  .explosive-cryo {
    background: linear-gradient(250deg, #ffe866 0%, #a0eaf1 46%, #6fb8eb 100%);
-   color:#111111
-  }
+   color: #111111
+ }
 
  .incendiary-radiation {
    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #c71800), to(#ffde00));
    background: linear-gradient(0deg, #c71800 10%, #ffde00 100%);
-   color:#111111
-  }
+   color: #111111
+ }
 
  .shock-corrosive {
    background: linear-gradient(140deg, #1CB5E0 0%, #6e7f0e 69%, #275009 100%);
    -webkit-box-shadow: 0px 5px 20px -10px #275009;
    box-shadow: 0px 5px 20px -10px #275009;
-   color:#111111
+   color: #111111
  }
 
  .rarity_common {
    color: rgb(255, 255, 255);
    text-shadow: 0px 0px 3px grey;
-   background: -webkit-linear-gradient(to top, rgb(160, 160, 160), rgb(255, 255, 255));  
+   background: -webkit-linear-gradient(to top, rgb(160, 160, 160), rgb(255, 255, 255));
    background: linear-gradient(to top, rgb(160, 160, 160), rgb(255, 255, 255));
  }
 
  .rarity_uncommon {
    color: rgb(61, 210, 11);
-   background: -webkit-linear-gradient(to top, #0eae41, rgb(61, 210, 11));  
+   background: -webkit-linear-gradient(to top, #0eae41, rgb(61, 210, 11));
    background: linear-gradient(to top, #0eae41, rgb(61, 210, 11));
  }
 
  .rarity_rare {
    color: rgb(47, 120, 255);
-   background: -webkit-linear-gradient(to top, #4A00E0, rgb(47, 120, 255));  
+   background: -webkit-linear-gradient(to top, #4A00E0, rgb(47, 120, 255));
    background: linear-gradient(to top, #4A00E0, rgb(47, 120, 255));
  }
 
  .rarity_legendary {
    color: rgb(145, 50, 200);
-   background: -webkit-linear-gradient(to top, rgb(116, 11, 176), rgb(145, 50, 200));  
+   background: -webkit-linear-gradient(to top, rgb(116, 11, 176), rgb(145, 50, 200));
    background: linear-gradient(to top, rgb(116, 11, 176), rgb(145, 50, 200));
  }
 
  .rarity_epic {
    color: rgb(220, 120, 0);
-   background: -webkit-linear-gradient(to top, rgb(194, 107, 0), rgb(220, 120, 0));  
+   background: -webkit-linear-gradient(to top, rgb(194, 107, 0), rgb(220, 120, 0));
    background: linear-gradient(to top, rgb(194, 107, 0), rgb(220, 120, 0));
  }
 
@@ -227,4 +227,15 @@
    background: linear-gradient(to top, rgb(194, 107, 0), rgb(220, 120, 0));
    -webkit-box-shadow: 0px 5px 20px -10px #cfbdf0;
    box-shadow: 0px 5px 20px -10px #cfbdf0;
+ }
+
+ .card--gold {
+   background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+     radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+ }
+
+ .card--mimic {
+   background-color: #db25eb;
+   opacity: 0.8;
+   background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #db25eb 7px), repeating-linear-gradient(#85ee5e55, #85ee5e);
  }

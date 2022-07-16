@@ -1,0 +1,25 @@
+@namespace Application.Pages
+
+@inherits BaseItemViewer;
+  <div id="cards"  class="card_container">  
+
+    <figure class="card card--mimic" id="mimic">
+      <div class="card__image-container">
+        <img src=@GetMimicImage alt="mimic" class="card__image">   
+      </div>
+      
+      <figcaption class="card__caption">
+        <h1 class="card__name">This is not the treasure you wanted</h1>
+        
+        <h3 class="card__type">
+         Mimic
+        </h3> 
+
+        <h4>Roll for Initiative suckers!</h4>
+      </figcaption>
+    </figure>
+  </div>
+
+@code {
+    public string GetMimicImage => $"images/resources/chests/mimic.png";
+}

@@ -4,17 +4,11 @@
 @using Models.Common;
 
 @inherits BaseItemViewer;
-@if (Gold == null)
-{
-  <div class="spinner"></div>
-}
-else
-{
   <div id="cards"  class="card_container">  
 
-    <figure class="card card--normal" id="lewt">
+    <figure class="card card--gold" id="lewt">
       <div class="card__image-container">
-        <img src=@GetGoldImage alt="shield" class="card__image">   
+        <img src=@GetGoldImage alt="gold" class="card__image">   
       </div>
       
       <figcaption class="card__caption">
@@ -26,10 +20,9 @@ else
       </figcaption>
     </figure>
   </div>
-  <button @onclick="Download" class="btn btn-primary">Download</button>
-}
+
 @code {
     [Parameter]
     public Gold Gold { get; set; }
-    public string GetGoldImage => $"images/resources/gold.png";
+    public string GetGoldImage => $"images/resources/chests/gold.png";
 }

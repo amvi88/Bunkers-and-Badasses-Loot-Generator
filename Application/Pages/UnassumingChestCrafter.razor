@@ -1,4 +1,4 @@
-﻿@page "/dicechest"
+﻿@page "/unassuming-chest"
 @namespace Application.Pages
 @using Business;
 @using Business.Services;
@@ -6,12 +6,12 @@
 @using Models.Common;
 @using System.Linq;
 
-@inject IChestService<DiceChestServiceParameters> service;
-@inject ILogger<DiceChestCrafter> logger
+@inject IChestService<UnassumingChestServiceParameters> service;
+@inject ILogger<UnassumingChestCrafter> logger
 
 
 <PageTitle>B&B: Dice Chests</PageTitle>
-<h1>Dice Chests</h1>
+<h1>Unassuming Chests</h1>
 <hr />
 
 <EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
@@ -59,8 +59,13 @@
 {
   foreach(var item in chest.Items)
   {
-    
-    if (item is Gun)
+    if (item is Mimic)
+    {
+      <div class="chest_wrapper">
+        <MimicViewer/>
+      </div>
+    }
+    else if (item is Gun)
     {
       <div class="chest_wrapper">
         <GunViewer CraftedGun=@((Gun)item)/>
@@ -95,7 +100,7 @@
 </div>
 
 @code {
-  DiceChestServiceParameters parameters = new DiceChestServiceParameters();
+  UnassumingChestServiceParameters parameters = new UnassumingChestServiceParameters();
   Chest chest = null;
 
   void Roll(EditContext editContext)

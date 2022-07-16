@@ -19,6 +19,7 @@ builder.Configuration.AddJsonFile("relics.json", true);
 builder.Configuration.AddJsonFile("moxxtails.json", true);
 builder.Configuration.AddJsonFile("traumas.json", true);
 builder.Configuration.AddJsonFile("dicechests.json", true);
+builder.Configuration.AddJsonFile("unassumingchests.json", true);
 
 // Add services to the container.
 builder.Services.Configure<JsonOptions>(options =>
@@ -45,6 +46,7 @@ builder.Services.AddTransient<IItemFactory<MoxxTail, BaseFactoryParameters>,Moxx
 builder.Services.AddTransient<ITraumatizingService,TraumatizingService>();
 builder.Services.AddTransient<IPotionFinderService, PotionFinderService>();
 builder.Services.AddTransient<IChestService<DiceChestServiceParameters>,DiceChestService>();
+builder.Services.AddTransient<IChestService<UnassumingChestServiceParameters>,UnassumingChestService>();
 
 var app = builder.Build();
 

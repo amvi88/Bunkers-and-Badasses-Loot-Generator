@@ -4,6 +4,8 @@ namespace Models.Config
 {
     public class ChestSpec
     {
+        public bool IsMimic  { get; set;}
+        
         public int Roll { get; set;}
 
         public int Gold {get; set;}
