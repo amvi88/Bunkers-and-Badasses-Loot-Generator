@@ -13,7 +13,7 @@ else
       </div>
       
       <figcaption class="card__caption">
-        <h1 class="@GetCssClassCardCaption">@CraftedRelic.Type</h1>
+        <h1 class="card__name">@CraftedRelic.Type</h1>
         
         <h3 class="card__type">
          Relic 
@@ -36,7 +36,6 @@ else
     [Parameter]
     public Relic CraftedRelic { get; set; }
     public string GetRelicImage => $"images/resources/relics/{CraftedRelic.Rarity}.png";
-    public string GetCssClassCardCaption => $"card__name rarity_{CraftedRelic.Rarity.ToString().ToLower()}";
     public string GetCardCssClass => $"card card--{CraftedRelic.Rarity.ToString().ToLower()}";
 
     public override string GetElementId()

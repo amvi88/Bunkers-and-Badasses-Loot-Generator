@@ -15,7 +15,7 @@ else
       </div>
       
       <figcaption class="card__caption">
-        <h1 class="card__name normal"> @CraftedGrenade.Effect</h1>
+        <h1 class="card__name"> @CraftedGrenade.Effect</h1>
         
         <h3 class="@GetCssClassCardType">
          @GetCardLabel
@@ -50,7 +50,7 @@ else
 
     public string GetCardLabel => CraftedGrenade.Element != Element.None ? CraftedGrenade.Element.ToString() : CraftedGrenade.GrenadeType;
 
-    public string GetCssClassCardType => $"card__type .{(CraftedGrenade.Element != Element.None ? CraftedGrenade.Element.ToString().ToLower() : "normal")}";
+    public string GetCssClassCardType => $"card__type {(CraftedGrenade.Element != Element.None ? CraftedGrenade.Element.ToString().ToLower() : "normal")}";
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGrenade.DiceType}.png";
 

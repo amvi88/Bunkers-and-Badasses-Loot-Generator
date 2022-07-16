@@ -10,9 +10,9 @@ else
   <figure class=@GetCardCssClass  id="@GetElementId()" @onclick="Download">      
       
       <figcaption class="card__caption">
-        <h1 class="card__name normal"> @CraftedPotion.Effect</h1>
+        <h1 class="card__name"> @CraftedPotion.Effect</h1>
         
-        <h3 class="card__type">
+        <h3 class="@GetCssClassCardType">
          @CraftedPotion.Name
         </h3>
 
@@ -32,9 +32,11 @@ else
     [Parameter]
     public Potion CraftedPotion { get; set; }
 
-    public string @GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" :
-                                        CraftedPotion.IsElemental? $"card card--{CraftedPotion.Element.ToString().ToLower().Replace(", ","_")}"
-                                        : "card card--normal";
+    public string GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" : "card card--normal";
+
+    public string GetCssClassCardType => CraftedPotion.IsElemental? $"card__type {CraftedPotion.Element.ToString().ToLower().Replace(", ","_")}"
+                                        : "card__type normal";
+
 
     public override string GetElementId()
     {

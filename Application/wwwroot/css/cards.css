@@ -127,41 +127,45 @@
  .radiation {
    background: -webkit-gradient(linear, left top, right top, color-stop(34%, #ffde00), color-stop(83%, #e8ff99));
    background: linear-gradient(90deg, #ffde00 34%, #e8ff99 83%);
- }
-
- .card--radiation .card__type {
-   background-color: #000;
- }
+   color:#575757
+  }
 
  .incendiary {
    background-color: #c71800;
+   color:#ffffff
  }
 
  .corrosive {
    background: #6e7f0e;
+   color:#111111
  }
 
  .cryo {
    background: #6fb8eb;
+   color:#111111
  }
 
  .explosive {
    background: #ffd900;
+   color:#111111
  }
 
- .explosive_cryo {
+ .explosive-cryo {
    background: linear-gradient(250deg, #ffe866 0%, #a0eaf1 46%, #6fb8eb 100%);
- }
+   color:#111111
+  }
 
- .incendiary_radiation {
+ .incendiary-radiation {
    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #c71800), to(#ffde00));
    background: linear-gradient(0deg, #c71800 10%, #ffde00 100%);
- }
+   color:#111111
+  }
 
- .shock_corrosive {
+ .shock-corrosive {
    background: linear-gradient(140deg, #1CB5E0 0%, #6e7f0e 69%, #275009 100%);
    -webkit-box-shadow: 0px 5px 20px -10px #275009;
    box-shadow: 0px 5px 20px -10px #275009;
+   color:#111111
  }
 
  .rarity_common {

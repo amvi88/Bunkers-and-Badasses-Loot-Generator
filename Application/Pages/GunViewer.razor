@@ -89,9 +89,9 @@ else
     
     public string GetGunImage => $"images/resources/guns/{CraftedGun.GunType}.png";
     
-    public string GetCssClassCardCaption => $"card__name normal";
+    public string GetCssClassCardCaption => $"card__name";
 
-    public string GetCssClassCardType => $"card__type .{CraftedGun.Element.ToString().ToLower()}";
+    public string GetCssClassCardType => $"card__type {CraftedGun.Element.ToString().Replace(" ,", "-").ToLower()}";
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGun.DiceType}.png";
 
