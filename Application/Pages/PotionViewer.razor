@@ -32,7 +32,9 @@ else
     [Parameter]
     public Potion CraftedPotion { get; set; }
 
-    public string GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" : "card card--normal";
+    public string GetCardCssClass => CraftedPotion.IsTinyTinasPotion? "card card--tinytina" : 
+                                    CraftedPotion.Rarity != Models.Common.Rarity.Common? $"card card--{CraftedPotion.Rarity.ToString().ToLower()}"
+                                    : "card card--normal";
 
     public string GetCssClassCardType => CraftedPotion.IsElemental? $"card__type {CraftedPotion.Element.ToString().ToLower().Replace(", ","_")}"
                                         : "card__type normal";

@@ -1,3 +1,5 @@
+using Models.Common;
+
 namespace Models.Config
 {
     public class PotionSpec
@@ -5,5 +7,7 @@ namespace Models.Config
         public string Name { get; set; }
 
         public string Effect { get; set; }
+
+        public Rarity Rarity { get; set; } = Rarity.Common;
     }
 }

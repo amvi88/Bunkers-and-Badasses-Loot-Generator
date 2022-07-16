@@ -14,6 +14,8 @@ namespace Models.Builder
 
         public bool IsElemental { get; set;}
 
-        public Element Element {get; set;}
+        public Element Element {get; set;} = Element.None;
+
+        public Rarity Rarity {get; set;} = Rarity.Common;
     }
 }

@@ -24,7 +24,8 @@ namespace Business.Factories
             {
                 Name  = specs.Name,
                 Effect = specs.Effect,                
-                Cost = specs.Cost
+                Cost = specs.Cost,
+                Rarity = specs.Rarity
             };
 
 
