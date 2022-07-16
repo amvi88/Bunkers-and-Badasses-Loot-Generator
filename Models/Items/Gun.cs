@@ -17,6 +17,10 @@ namespace Models.Builder
 
         public string DiceType => Damage.Substring(1);
 
+        public int ExtraAmountOfDice => string.IsNullOrWhiteSpace(ExtraDamage) ? 0 : int.Parse(ExtraDamage.Substring(0,1));
+
+        public string ExtraDiceType =>  string.IsNullOrWhiteSpace(ExtraDamage)? string.Empty : ExtraDamage.Substring(1);
+
         public int Range { get; set; }
 
         public string Name { get; set; }
@@ -28,5 +32,6 @@ namespace Models.Builder
         public List<string> Bonuses {get; set;}
 
         public List<WeaponHits> HitsByAccuracy { get; set; }
+        public string ExtraDamage { get; set; }
     }
 }

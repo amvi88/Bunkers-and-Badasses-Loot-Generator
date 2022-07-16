@@ -38,6 +38,10 @@
                 {
                   <img class="dice_small" src="@GetDiceImage" alt="@CraftedGun.DiceType">
                 }
+                @for (int index = 0; index < CraftedGun.ExtraAmountOfDice; index++)
+                {
+                  <img class="dice_small" src="@GetExtraDiceImage" alt="@CraftedGun.ExtraDiceType">
+                }
                 
               </td>
             </tr>
@@ -89,6 +93,8 @@
     public string GetCssClassCardType => $"card__type {CraftedGun.Element.ToString().ToLower().Replace(", ","-")}";
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGun.DiceType}.png";
+
+    public string GetExtraDiceImage => $"images/resources/dice/{CraftedGun.ExtraDiceType}.png";
 
     public override string GetElementId()
     {

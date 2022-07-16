@@ -49,6 +49,7 @@ namespace Business.Factories
                 if (! string.IsNullOrWhiteSpace(elementValues.Item2) && elementValues.Item1 != Element.None)
                 {
                     gun.Bonuses.Append( $"(Elemental) +{elementValues.Item2} {elementValues.Item1} DMG");
+                    gun.ExtraDamage = elementValues.Item2;
                 }
             }
 
