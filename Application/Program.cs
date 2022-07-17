@@ -47,6 +47,7 @@ builder.Services.AddTransient<ITraumatizingService,TraumatizingService>();
 builder.Services.AddTransient<IPotionFinderService, PotionFinderService>();
 builder.Services.AddTransient<IChestService<DiceChestServiceParameters>,DiceChestService>();
 builder.Services.AddTransient<IChestService<UnassumingChestServiceParameters>,UnassumingChestService>();
+builder.Services.AddTransient<IChestService<CacheRollServiceParameters>, CacheRollService>();
 
 var app = builder.Build();
 
