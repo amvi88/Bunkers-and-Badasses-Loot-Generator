@@ -10,7 +10,7 @@
       </div>
       
       <figcaption class="card__caption">
-        <h1 class="@GetCssClassCardCaption">@CraftedGun.Name</h1>
+        <h1 class="@GetCssClassCardCaption">@CraftedGun.Name</h1>        
         
         <h3 class="@GetCssClassCardType">
           @CraftedGun.Element.ToString()
@@ -75,6 +75,8 @@
             </h4>
           }
         </div>
+ 
+        <img src=@GetWeaponTypeImage alt="@CraftedGun.GunType" class="card__image gun-icon" >
 
         
       </figcaption>
@@ -87,6 +89,8 @@
     public string GetCardCssClass => $"card card--{CraftedGun.Rarity.ToString().ToLower()}";
     
     public string GetGunImage => $"images/resources/guns/{CraftedGun.GunType}.png";
+
+    public string GetWeaponTypeImage => $"images/resources/icons/guns/{CraftedGun.GunType.ToString().ToLower()}.png";
     
     public string GetCssClassCardCaption => $"card__name";
 
