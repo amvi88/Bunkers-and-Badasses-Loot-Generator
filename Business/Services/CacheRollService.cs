@@ -29,15 +29,19 @@ namespace Business.Services
 
         public Chest OpenChest(CacheRollServiceParameters parameters)
         {
-            var amoutOfDice = Math.Max((int)parameters.CacheRollSize + (parameters.GoldFarmerBonus? 2 : 0), 6);
-            var maxNumber =  amoutOfDice * 6 + 1;
+            var amoutOfDice = Math.Max((int)parameters.CacheRollSize + (parameters.GoldFarmerBonus ? 2 : 0), 6);
+            var maxNumber = amoutOfDice * 6 + 1;
 
             var roll = RandomNumberGenerator.GetInt32(1, maxNumber);
-            var spec = _chestConfiguration.Caches.First(s => s.Roll == roll);
+            var spec = _chestConfiguration.CacheRolls.First(s => s.Roll == roll);
 
             var items = new List<Item>();
-            
-            items.Add(new Gold{ Amount = spec.Gold });
+
+            if (spec.Gold > 0)
+            {
+                items.Add(new Gold { Amount = spec.Gold });
+            }
+
 
             foreach (var weaponSpec in spec.WeaponSpecs)
             {

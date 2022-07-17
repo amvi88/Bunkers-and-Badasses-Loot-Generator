@@ -20,6 +20,7 @@ builder.Configuration.AddJsonFile("moxxtails.json", true);
 builder.Configuration.AddJsonFile("traumas.json", true);
 builder.Configuration.AddJsonFile("dicechests.json", true);
 builder.Configuration.AddJsonFile("unassumingchests.json", true);
+builder.Configuration.AddJsonFile("cacherolls.json", true);
 
 // Add services to the container.
 builder.Services.Configure<JsonOptions>(options =>
