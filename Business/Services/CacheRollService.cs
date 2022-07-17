@@ -29,7 +29,7 @@ namespace Business.Services
 
         public Chest OpenChest(CacheRollServiceParameters parameters)
         {
-            var amoutOfDice = Math.Max((int)parameters.CacheRollSize + (parameters.GoldFarmerBonus ? 2 : 0), 6);
+            var amoutOfDice = Math.Min((int)parameters.CacheRollSize + (parameters.GoldFarmerBonus ? 2 : 0), 6);
             var maxNumber = amoutOfDice * 6 + 1;
 
             var roll = RandomNumberGenerator.GetInt32(1, maxNumber);
