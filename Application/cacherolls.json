@@ -125,7 +125,7 @@
                         "Name": "Shield Potion (Uncommon)"
                     }
                 ],
-                "AmountOfGrenades":2
+                "AmountOfGrenades": 2
             },
             {
                 "Roll": 15,
@@ -138,7 +138,7 @@
                         "IsRandomPotion": true
                     }
                 ],
-                "RelicSpecs":[
+                "RelicSpecs": [
                     {
                         "Rarity": "Common"
                     }
@@ -147,12 +147,12 @@
             {
                 "Roll": 16,
                 "Gold": 80,
-                "WeaponSpecs":[
+                "WeaponSpecs": [
                     {
-                        "Rarity":"Uncommon"
+                        "Rarity": "Uncommon"
                     }
                 ],
-                "AmountOfGrenades":2
+                "AmountOfGrenades": 2
             },
             {
                 "Roll": 17,
@@ -162,106 +162,319 @@
                         "Name": "Health Potion (Uncommon)"
                     }
                 ],
-                "WeaponSpecs":[
+                "WeaponSpecs": [
                     {
-                        "Rarity":"Uncommon"
+                        "Rarity": "Uncommon"
                     }
                 ]
             },
             {
                 "Roll": 18,
                 "Gold": 100,
-                "AmountOfGrenades":2,
-                "PotionSpecs":[
+                "AmountOfGrenades": 2,
+                "PotionSpecs": [
                     {
-                        "IsRandomPotion":true
+                        "IsRandomPotion": true
                     },
                     {
-                        "IsRandomPotion":true
+                        "IsRandomPotion": true
                     }
                 ]
             },
             {
                 "Roll": 19,
                 "Gold": 100,
-                "WeaponSpecs":[
+                "WeaponSpecs": [
                     {
-                        "Rarity":"Uncommon"
+                        "Rarity": "Uncommon"
                     }
                 ],
-                "PotionSpecs":[
+                "PotionSpecs": [
                     {
-                        "IsRandomPotion":true
+                        "IsRandomPotion": true
                     }
                 ]
             },
             {
                 "Roll": 20,
-                "Gold": 100
+                "Gold": 100,
+                "PotionSpecs": [
+                    {
+                        "Name": "Health Potion (Rare)"
+                    },
+                    {
+                        "Name": "Health Potion (Rare)"
+                    }
+                ],
+                "AmountOfGrenadeMods": 1
             },
             {
                 "Roll": 21,
-                "Gold": 100
+                "Gold": 100,
+                "PotionSpecs": [
+                    {
+                        "Name": "Shield Potion (Rare)"
+                    },
+                    {
+                        "Name": "Shield Potion (Rare)"
+                    }
+                ],
+                "AmountOfGrenadeMods": 1
             },
             {
                 "Roll": 22,
-                "Gold": 100
+                "Gold": 100,
+                "PotionSpecs": [
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    }
+                ],
+                "RelicSpecs": [
+                    {
+                        "Rarity": "Uncommon"
+                    }
+                ]
             },
             {
                 "Roll": 23,
-                "Gold": 100
+                "Gold": 100,
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Rare"
+                    }
+                ],
+                "AmountOfShieldMods": 1
             },
             {
                 "Roll": 24,
-                "Gold": 100
+                "Gold": 100,
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Rare"
+                    }
+                ],
+                "AmountOfShieldMods": 1,
+                "AmountOfGrenades": 2
             },
             {
                 "Roll": 25,
-                "Gold": 120
+                "Gold": 120,
+                "PotionSpecs": [
+                    {
+                        "Name": "Health Potion (Rare)"
+                    },
+                    {
+                        "Name": "Health Potion (Rare)"
+                    }
+                ],
+                "AmountOfGrenades": 2
             },
             {
                 "Roll": 26,
-                "Gold": 120
+                "Gold": 120,
+                "PotionSpecs": [
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    }
+                ],
+                "AmountOfGrenades": 3
             },
             {
                 "Roll": 27,
-                "Gold": 120
+                "Gold": 120,
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Rare"
+                    }
+                ],
+                "PotionSpecs": [
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    }
+                ]
             },
             {
                 "Roll": 28,
-                "Gold": 120
+                "Gold": 120,
+                "RelicSpecs": [
+                    {
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "PotionSpecs": [
+                    {
+                        "Name": "Twofer Potion"
+                    },
+                    {
+                        "Name": "Twofer Potion"
+                    }
+                ],
+                "AmountOfShieldMods": 1
             },
             {
                 "Roll": 29,
-                "Gold": 120
+                "Gold": 120,
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Rare"
+                    }
+                ],
+                "AmountOfGrenadeMods": 1
             },
             {
                 "Roll": 30,
-                "Gold": 120
+                "Gold": 150,
+                "AmountOfGrenadeMods": 1,
+                "PotionSpecs": [
+                    {
+                        "Name": "Health Potion (Epic)"
+                    },
+                    {
+                        "Name": "Health Potion (Epic)"
+                    },
+                    {
+                        "Name": "Shield Potion (Epic)"
+                    }
+                ]
             },
             {
                 "Roll": 31,
-                "Gold": 150
+                "Gold": 150,
+                "RelicSpecs": [
+                    {
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Rarity": "Rare"
+                    }
+                ],
+                "AmountOfShieldMods": 1,
+                "PotionSpecs": [
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    }
+                ]
             },
             {
                 "Roll": 32,
-                "Gold": 150
+                "Gold": 150,
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Epic"
+                    }
+                ],
+                "AmountOfGrenadeMods": 1,
+                "PotionSpecs": [
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    }
+                ]
             },
             {
                 "Roll": 33,
-                "Gold": 150
+                "Gold": 150,
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Epic"
+                    }
+                ],
+                "AmountOfGrenades": 6
             },
             {
                 "Roll": 34,
-                "Gold": 150
+                "Gold": 150,
+                "PotionSpecs": [
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    }
+                ],
+                "RelicSpecs": [
+                    {
+                        "Rarity": "Rare"
+                    }
+                ],
+                "AmountOfGrenadeMods": 1
             },
             {
                 "Roll": 35,
-                "Gold": 150
+                "Gold": 150,
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Epic"
+                    }
+                ],
+                "PotionSpecs": [
+                    {
+                        "Name": "Health Potion (Epic)"
+                    },
+                    {
+                        "Name": "Health Potion (Epic)"
+                    },
+                    {
+                        "Name": "Health Potion (Epic)"
+                    }
+                ],
+                "RelicSpecs": [
+                    {
+                        "Rarity": "Rare"
+                    }
+                ],
+                "AmountOfShieldMods": 1
             },
             {
                 "Roll": 36,
-                "Gold": 200
+                "Gold": 200,
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Epic"
+                    }
+                ],
+                "PotionSpecs": [
+                    {
+                        "Name": "Health Potion (Epic)"
+                    },
+                    {
+                        "Name": "Health Potion (Epic)"
+                    },
+                    {
+                        "Name": "Health Potion (Epic)"
+                    }
+                ],
+                "RelicSpecs": [
+                    {
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Rarity": "Rare"
+                    }
+                ],
+                "AmountOfGrenades":5,
+                "AmountOfShieldMods": 1,
+                "AmountOfGrenadeMods":1
             }
         ]
     }
