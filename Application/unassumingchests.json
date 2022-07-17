@@ -70,7 +70,7 @@
                 "Roll": 10,
                 "PotionSpecs":[
                     {
-                        "Name": "Health Potion (Rare)"
+                        "Name": "Health Potion (Uncommon)"
                     }
                 ]
             },
@@ -78,7 +78,7 @@
                 "Roll": 11,
                 "PotionSpecs":[
                     {
-                        "Name": "Shield Potion (Rare)"
+                        "Name": "Shield Potion (Uncommon)"
                     }
                 ]
             },
@@ -103,7 +103,7 @@
             },
             {
                 "Roll": 14,
-                "AmountOfGrenades":1,
+                "AmountOfGrenadeMods":1,
                 "AmountOfShieldMods":1
             },
             {

@@ -217,7 +217,7 @@
                         "IsFavored":true
                     }
                 ],
-                "AmountOfGrenades":1
+                "AmountOfGrenadeMods":1
             },
             {
                 "Roll": 19,
@@ -259,7 +259,7 @@
                         "IsRandomPotion": true
                     }
                 ],
-                "AmountOfGrenades":1,
+                "AmountOfGrenadeMods":1,
                 "AmountOfShieldMods":1
             }
         ]

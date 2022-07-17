@@ -7,20 +7,20 @@ using System.Security.Cryptography;
 
 namespace Business.Factories
 {
-    public class GrenadeFactory : GuildDrivenFactory<Grenade,GrenadeFactoryParameters>
+    public class GrenadeModFactory : GuildDrivenFactory<GrenadeMod,GrenadeModFactoryParameters>
     {
 
-        public GrenadeFactory(IOptions<GuildConfigurationOptions> guildOptions)
+        public GrenadeModFactory(IOptions<GuildConfigurationOptions> guildOptions)
         : base (guildOptions)
         {
         }
 
-        public override ItemWrapper<Grenade> Manufacture(GrenadeFactoryParameters factoryParameters)
+        public override ItemWrapper<GrenadeMod> Manufacture(GrenadeModFactoryParameters factoryParameters)
         {
             var chosenGuild = GetGuild(factoryParameters.Guild, ItemType.Grenade, out var roll);
             var specs = chosenGuild.GrenadeSpecs.First(x => x.MinLevel <= factoryParameters.PlayerLevel & factoryParameters.PlayerLevel <= x.MaxLevel);
 
-            var grenade = new Grenade
+            var grenade = new GrenadeMod
             {
                 Level = factoryParameters.PlayerLevel,
                 Guild =  chosenGuild.Name,
@@ -41,7 +41,7 @@ namespace Business.Factories
                 grenade.Element = (Element)elementalValues.GetValue(RandomNumberGenerator.GetInt32(1,elementalValues.Length));
             }
 
-            return new ItemWrapper<Grenade>
+            return new ItemWrapper<GrenadeMod>
             {
                 DiceRolls = new DiceRoll[]
                 {

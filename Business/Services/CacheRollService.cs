@@ -10,14 +10,14 @@ namespace Business.Services
     public class CacheRollService : IChestService<CacheRollServiceParameters>
     {
         private readonly ChestConfigurationOptions _chestConfiguration;
-        private readonly IItemFactory<Grenade, GrenadeFactoryParameters> _grenadeFactory;
+        private readonly IItemFactory<GrenadeMod, GrenadeModFactoryParameters> _grenadeFactory;
         private readonly IItemFactory<Shield, ShieldFactoryParameters> _shieldFactory;
         private readonly IItemFactory<Gun, GunFactoryParameters> _gunFactory;
         private readonly IItemFactory<Relic, RelicFactoryParameters> _relicFactory;
         private readonly IPotionFinderService _potionFinderService;
 
 
-        public CacheRollService(IOptions<ChestConfigurationOptions> chestConfiguration, IItemFactory<Grenade, GrenadeFactoryParameters> grenadeFactory, IItemFactory<Shield, ShieldFactoryParameters> shieldFactory, IItemFactory<Gun, GunFactoryParameters> gunFactory, IItemFactory<Relic, RelicFactoryParameters> relicFactory, IPotionFinderService potionFinderService)
+        public CacheRollService(IOptions<ChestConfigurationOptions> chestConfiguration, IItemFactory<GrenadeMod, GrenadeModFactoryParameters> grenadeFactory, IItemFactory<Shield, ShieldFactoryParameters> shieldFactory, IItemFactory<Gun, GunFactoryParameters> gunFactory, IItemFactory<Relic, RelicFactoryParameters> relicFactory, IPotionFinderService potionFinderService)
         {
             _chestConfiguration = chestConfiguration.Value ?? throw new ArgumentNullException(nameof(chestConfiguration));
             _grenadeFactory = grenadeFactory ?? throw new ArgumentNullException(nameof(grenadeFactory));
@@ -59,9 +59,14 @@ namespace Business.Services
                 items.Add(_relicFactory.Manufacture(new RelicFactoryParameters { Rarity = relicSpec.Rarity }).Item);
             }
 
+            for (int index = 0; index < spec.AmountOfGrenadeMods; index++)
+            {
+                items.Add(_grenadeFactory.Manufacture(new GrenadeModFactoryParameters { PlayerLevel = parameters.PlayerLevel }).Item);
+            }
+
             for (int index = 0; index < spec.AmountOfGrenades; index++)
             {
-                items.Add(_grenadeFactory.Manufacture(new GrenadeFactoryParameters { PlayerLevel = parameters.PlayerLevel }).Item);
+                items.Add(new Grenade());
             }
 
             for (int index = 0; index < spec.AmountOfShieldMods; index++)

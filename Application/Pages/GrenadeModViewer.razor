@@ -1,0 +1,63 @@
+@namespace Application.Pages
+@using Business
+@using Models.Builder;
+@using Models.Common;
+@inherits BaseItemViewer;
+
+  <figure class=@GetCardCssClass id="@GetElementId()" @onclick="Download">
+      <div class="card__image-container">
+        <img src=@GetGrenadeImage alt="grenade" class="card__image">   
+      </div>
+      
+      <figcaption class="card__caption">
+        <h1 class="card__name"> @CraftedGrenadeMod.Effect</h1>
+        
+        <h3 class="@GetCssClassCardType">
+         @GetCardLabel
+        </h3>
+
+        <h3 class="card__guild">
+          @CraftedGrenadeMod.Guild
+        </h3>
+
+        <table class="card__stats">
+          <tbody>            
+            <tr>
+              <th>Damage</th>
+              <td>
+                @for (int index = 0; index < CraftedGrenadeMod.AmountOfDice; index++)
+                {
+                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedGrenadeMod.DiceType">
+                }                
+              </td>
+            </tr>
+          </tbody>
+        </table>        
+      </figcaption>
+    </figure>
+
+
+@code {
+    [Parameter]
+    public GrenadeMod CraftedGrenadeMod { get; set; }
+
+    public string GetCardCssClass => $"card card--normal";
+
+    public string GetCardLabel => CraftedGrenadeMod.Element != Element.None ? CraftedGrenadeMod.Element.ToString() : CraftedGrenadeMod.GrenadeType;
+
+    public string GetCssClassCardType => $"card__type {(CraftedGrenadeMod.Element != Element.None ? CraftedGrenadeMod.Element.ToString().ToLower() : "normal")}";
+
+    public string GetDiceImage => $"images/resources/dice/{CraftedGrenadeMod.DiceType}.png";
+
+    public string GetGrenadeImage => $"images/resources/grenades/{CraftedGrenadeMod.Guild}.png";
+
+    public override string GetElementId()
+    {
+      return $"Grenade_{CraftedGrenadeMod.Guild}_{CraftedGrenadeMod.GrenadeType}";
+    }
+
+    public override string GetFileName()
+    {
+      return $"Grenade_{CraftedGrenadeMod.Guild}_{CraftedGrenadeMod.GrenadeType}.png";
+    }
+}

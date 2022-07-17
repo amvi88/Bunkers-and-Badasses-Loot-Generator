@@ -38,7 +38,7 @@ builder.Services.Configure<RelicConfigurationOptions>(builder.Configuration.GetS
 builder.Services.Configure<MoxxTailConfigurationOptions>(builder.Configuration.GetSection("MoxxTailConfiguration"));
 builder.Services.Configure<TraumasConfigurationOptions>(builder.Configuration.GetSection("TraumasConfiguration"));
 builder.Services.Configure<ChestConfigurationOptions>(builder.Configuration.GetSection("ChestConfiguration"));
-builder.Services.AddTransient<IItemFactory<Grenade, GrenadeFactoryParameters>, GrenadeFactory>();
+builder.Services.AddTransient<IItemFactory<GrenadeMod, GrenadeModFactoryParameters>, GrenadeModFactory>();
 builder.Services.AddTransient<IItemFactory<Shield, ShieldFactoryParameters>, ShieldFactory>();
 builder.Services.AddTransient<IItemFactory<Gun, GunFactoryParameters>, GunFactory>();
 builder.Services.AddTransient<IItemFactory<Potion, BaseFactoryParameters>,PotionFactory>();

@@ -6,12 +6,12 @@
 @using Models.Builder;
 @using Business.Factories;
 
-@inject IItemFactory<Grenade, GrenadeFactoryParameters> factory;
-@inject ILogger<GrenadeCrafter> logger
+@inject IItemFactory<GrenadeMod, GrenadeModFactoryParameters> factory;
+@inject ILogger<GrenadeModCrafter> logger
 
 
 <PageTitle>B&B: Build-a-boom</PageTitle>
-<h1>Grenades</h1>
+<h1>Grenade Mods</h1>
 <hr />
 <EditForm Model=@grenadeBuilder OnValidSubmit="Roll" class="well form-horizontal">
   <DataAnnotationsValidator />  
@@ -29,20 +29,20 @@
   </div>
 </EditForm>
 
-@if (grenade != null)
+@if (grenadeMod != null)
 {
   <div id="cards"  class="card_container"> 
-    <GrenadeViewer CraftedGrenade=@grenade.Item/>
+    <GrenadeModViewer CraftedGrenadeMod=@grenadeMod.Item/>
   </div>
 }
 
 @code {
-  GrenadeFactoryParameters grenadeBuilder = new GrenadeFactoryParameters();
-  ItemWrapper<Grenade> grenade = null;
+  GrenadeModFactoryParameters grenadeBuilder = new GrenadeModFactoryParameters();
+  ItemWrapper<GrenadeMod> grenadeMod = null;
 
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    grenade = factory.Manufacture(grenadeBuilder);
+    grenadeMod = factory.Manufacture(grenadeBuilder);
   }
 }

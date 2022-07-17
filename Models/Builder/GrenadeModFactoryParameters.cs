@@ -3,7 +3,7 @@ using Models.Common;
 
 namespace Models.Builder
 {
-    public class GrenadeFactoryParameters : BaseFactoryParameters
+    public class GrenadeModFactoryParameters : BaseFactoryParameters
     {
 
         [Required]

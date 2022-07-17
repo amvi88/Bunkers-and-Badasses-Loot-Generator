@@ -2,62 +2,26 @@
 @using Business
 @using Models.Builder;
 @using Models.Common;
-@inherits BaseItemViewer;
 
-  <figure class=@GetCardCssClass id="@GetElementId()" @onclick="Download">
+@inherits BaseItemViewer;
+  <div id="cards"  class="card_container">  
+
+    <figure class="card card--normal" id="lewt">
       <div class="card__image-container">
-        <img src=@GetGrenadeImage alt="grenade" class="card__image">   
+        <img src=@GetGrenadeImage alt="gold" class="card__image">   
       </div>
       
       <figcaption class="card__caption">
-        <h1 class="card__name"> @CraftedGrenade.Effect</h1>
+        <h1 class="card__name"> A grenade!</h1>
         
-        <h3 class="@GetCssClassCardType">
-         @GetCardLabel
-        </h3>
-
-        <h3 class="card__guild">
-          @CraftedGrenade.Guild
-        </h3>
-
-        <table class="card__stats">
-          <tbody>            
-            <tr>
-              <th>Damage</th>
-              <td>
-                @for (int index = 0; index < CraftedGrenade.AmountOfDice; index++)
-                {
-                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedGrenade.DiceType">
-                }                
-              </td>
-            </tr>
-          </tbody>
-        </table>        
+        <h3 class="card__type">
+         Grenade
+        </h3> 
       </figcaption>
     </figure>
-
+  </div>
 
 @code {
-    [Parameter]
-    public Grenade CraftedGrenade { get; set; }
 
-    public string GetCardCssClass => $"card card--normal";
-
-    public string GetCardLabel => CraftedGrenade.Element != Element.None ? CraftedGrenade.Element.ToString() : CraftedGrenade.GrenadeType;
-
-    public string GetCssClassCardType => $"card__type {(CraftedGrenade.Element != Element.None ? CraftedGrenade.Element.ToString().ToLower() : "normal")}";
-
-    public string GetDiceImage => $"images/resources/dice/{CraftedGrenade.DiceType}.png";
-
-    public string GetGrenadeImage => $"images/resources/grenades/{CraftedGrenade.Guild}.png";
-
-    public override string GetElementId()
-    {
-      return $"Grenade_{CraftedGrenade.Guild}_{CraftedGrenade.GrenadeType}";
-    }
-
-    public override string GetFileName()
-    {
-      return $"Grenade_{CraftedGrenade.Guild}_{CraftedGrenade.GrenadeType}.png";
-    }
+    public string GetGrenadeImage => $"images/resources/grenades/grenade.png";
 }

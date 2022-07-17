@@ -12,6 +12,8 @@ namespace Models.Config
 
         public int AmountOfGrenades {get; set;}
 
+        public int AmountOfGrenadeMods {get; set;}
+
         public int AmountOfShieldMods {get; set;}
 
         public ChestWeaponSpec[] WeaponSpecs {get; set;} = new ChestWeaponSpec[0];
