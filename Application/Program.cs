@@ -12,6 +12,7 @@ builder.Configuration.AddJsonFile("weaponarchetypes.json", true);
 builder.Configuration.AddJsonFile("weaponcustomization.json", true);
 builder.Configuration.AddJsonFile("weaponprefixes.json", true);
 builder.Configuration.AddJsonFile("weaponredtext.json", true);
+builder.Configuration.AddJsonFile("weapongallery.json", true);
 builder.Configuration.AddJsonFile("guilds.json", true);
 builder.Configuration.AddJsonFile("potions.json", true);
 builder.Configuration.AddJsonFile("tinytinaspotions.json", true);
