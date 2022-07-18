@@ -170,14 +170,16 @@
                 "MaxRoll": 101,
                 "Name": "Health Potion (Uncommon)",
                 "Effect": "Regens 2d8 Health.",
-                "Cost": 20
+                "Cost": 20,
+                "Rarity":"Uncommon"
             },
             {
                 "MinRoll": 102,
                 "MaxRoll": 102,
                 "Name": "Shield Potion (Uncommon)",
                 "Effect": "Recharges 2d8 Shield.",
-                "Cost": 15
+                "Cost": 15,
+                "Rarity":"Uncommon"
             }
         ]
     }
