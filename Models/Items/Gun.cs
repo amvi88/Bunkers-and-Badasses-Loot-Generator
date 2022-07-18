@@ -33,5 +33,9 @@ namespace Models.Builder
 
         public List<WeaponHits> HitsByAccuracy { get; set; }
         public string ExtraDamage { get; set; }
+
+        public string Source { get; set; }
+
+        public string ImageUrl { get; set; }
     }
 }
