@@ -41,9 +41,11 @@
     public Shield CraftedShield { get; set; }
     public string GetShieldImage => $"images/resources/shields/{CraftedShield.Guild}.png";
 
+    private Guid id = Guid.NewGuid();
+
     public override string GetElementId()
     {
-      return $"Shield_{CraftedShield.Guild}";
+      return $"shield-{id}";
     }
 
     public override string GetFileName()

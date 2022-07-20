@@ -51,9 +51,11 @@
 
     public string GetGrenadeImage => $"images/resources/grenades/{CraftedGrenadeMod.Guild}.png";
 
+    private Guid id = Guid.NewGuid();
+
     public override string GetElementId()
     {
-      return $"GrenadeMod-{Guid.NewGuid()}";
+      return $"GrenadeMod-{id}";
     }
 
     public override string GetFileName()

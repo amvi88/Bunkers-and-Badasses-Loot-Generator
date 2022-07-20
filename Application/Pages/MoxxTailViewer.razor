@@ -30,9 +30,11 @@
 
     public string @GetCardCssClass => "card card--normal";
 
+    private Guid id = Guid.NewGuid();
+
     public override string GetElementId()
     {
-      return $"MoxxTail-{Guid.NewGuid()}";
+      return $"MoxxTail-{id}";
     }
 
     public override string GetFileName()

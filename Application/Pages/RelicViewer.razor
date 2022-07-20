@@ -33,9 +33,10 @@
     public string GetRelicImage => $"images/resources/relics/{CraftedRelic.Rarity}.png";
     public string GetCardCssClass => $"card card--{CraftedRelic.Rarity.ToString().ToLower()}";
 
+    private Guid id = Guid.NewGuid();
     public override string GetElementId()
     {
-      return $"Relic_{CraftedRelic.Rarity}_{CraftedRelic.Type}";
+      return $"relic-{id}";
     }
 
     public override string GetFileName()

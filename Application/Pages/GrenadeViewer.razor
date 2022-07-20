@@ -22,10 +22,10 @@
 
     public string GetGrenadeImage => $"images/resources/grenades/grenade.png";
 
-
+    private Guid id = Guid.NewGuid();
     public override string GetElementId()
     {
-      return $"Grenade-{Guid.NewGuid()}";
+      return $"Grenade-{id}";
     }
 
     public override string GetFileName()

@@ -101,9 +101,10 @@
 
     public string GetExtraDiceImage => $"images/resources/dice/{CraftedGun.ExtraDiceType}.png";
 
+    private Guid id = Guid.NewGuid();
     public override string GetElementId()
     {
-      return $"Gun-{Guid.NewGuid()}";
+      return $"Gun-{id}";
     }
 
     public override string GetFileName()

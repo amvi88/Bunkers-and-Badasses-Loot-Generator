@@ -40,9 +40,10 @@ else
                                         : "card__type normal";
 
 
+    private Guid id = Guid.NewGuid();
     public override string GetElementId()
     {
-      return $"Potion-{Guid.NewGuid()}";
+      return $"Potion-{id}";
     }
 
     public override string GetFileName()
