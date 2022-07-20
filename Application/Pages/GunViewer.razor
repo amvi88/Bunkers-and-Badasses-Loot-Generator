@@ -8,6 +8,10 @@
     <figure class="@GetCardCssClass" id="@GetElementId()">
       <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
+        @if (!string.IsNullOrWhiteSpace(CraftedGun.Source))
+        {
+          <img src="@GetSourceImage" alt="@CraftedGun.Source" class="card__game_icon"> 
+        }
         <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">   
       </div>
       
@@ -98,6 +102,8 @@
     
     public string GetGunImage => !string.IsNullOrWhiteSpace(CraftedGun.ImageUrl) ? CraftedGun.ImageUrl
                  : $"images/resources/guns/{CraftedGun.GunType}.png";
+
+    public string GetSourceImage => $"images/resources/game-icons/{CraftedGun.Source}.png";
 
     public string GetWeaponTypeImage => $"images/resources/gun-icons/{CraftedGun.GunType.ToString().ToLower()}.png";
     

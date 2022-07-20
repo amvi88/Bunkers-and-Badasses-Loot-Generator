@@ -54,9 +54,8 @@ const copyImageToClipBoardSafari = (id) =>
 }
 
 const copyImageToClipBoardOtherBrowsers = (id) => {
-
-  if(isNotFirefox) {
-    navigator?.permissions?.query({ name: "clipboard-write" })
+   var permission = isNotFirefox? "clipboard-write" : "clipboardWrite";
+    navigator?.permissions?.query({ name: permission })
       .then(async (result) => {
         if (result.state === "granted") {
           const type = "image/png";
@@ -71,11 +70,8 @@ const copyImageToClipBoardOtherBrowsers = (id) => {
             });
         }
     });
-  } else {
-    alert("Firefox does not support this functionality");
   }
 
-}
 
 export function downloadCard(id, filename)
 {

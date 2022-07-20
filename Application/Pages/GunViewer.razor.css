@@ -10,7 +10,11 @@ img {
   display: inline-block;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   font-weight: 400;
 }
@@ -23,7 +27,7 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
 }
 
-.card__redtext > .card__label[b-62go5clab6] {
+.card__redtext>.card__label[b-62go5clab6] {
   color: #f0061f;
   font-weight: 500;
   font-size: .75em;
@@ -33,7 +37,7 @@ h1, h2, h3, h4, h5 {
   width: 100%;
 }
 
-.card__hits caption{
+.card__hits caption {
   width: 100%;
   caption-side: top;
   font-size: medium;
@@ -46,19 +50,19 @@ h1, h2, h3, h4, h5 {
   font-weight: 300;
 }
 
-.card__hits th, .card__hits td {
+.card__hits th,
+.card__hits td {
   width: 33%;
   padding: 0.25em 0.5em 0;
 }
 
 .card__ability {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0;
-          flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
 }
 
-img.dice_small 
-{
+img.dice_small {
   width: 32px;
   height: 32px;
 }
@@ -67,11 +71,10 @@ img.dice_small
   width: 1em;
   vertical-align: text-top;
   margin-top: .1em;
-  margin-left: .2em 
+  margin-left: .2em
 }
 
-.card_hits_caption
-{
+.card_hits_caption {
   text-align: center;
 }
 
@@ -80,8 +83,15 @@ img.dice_small
   grid-template-columns: repeat(3, 1fr);
 }
 
-.accuracy
-{
+.card__game_icon {
+  position: absolute;
+  width: 36px;
+  float: right;
+  left: .99em;
+  top: 1.2em
+}
+
+.accuracy {
   text-align: right;
 }
 
@@ -89,7 +99,7 @@ img.dice_small
   text-align: center;
 }
 
-.critical{
+.critical {
   text-align: left;
 }
 
