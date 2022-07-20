@@ -4,7 +4,9 @@
 @using Models.Builder;
 @inherits BaseItemViewer;
 
-    <figure class="@GetCardCssClass" id="@GetElementId()" @onclick="Copy">
+<div>
+    <figure class="@GetCardCssClass" id="@GetElementId()">
+      <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
         <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">   
       </div>
@@ -53,19 +55,17 @@
           </tbody>
         </table>
 
-        <table class="card__hits">
-          <caption>Hits By Accuracy</caption>
-          <tbody>            
+        <div class="card__hits">
+          <div class="card_hits_caption">Hits By Accuracy</div>
+          <div class="card-hits-container">            
               @foreach(var hit in CraftedGun.HitsByAccuracy)
               {
-                <tr>
-                  <th>@hit.Label</th>
-                  <td>@hit.Hits<img class="icon icon-header" src="images/open-iconic/svg/header.svg" alt="Header"></td>
-                  <td>@hit.Crits<img class="icon icon-aperture" src="images/open-iconic/svg/aperture.svg" alt="Aperture"></td>
-                </tr>
+                  <div class="accuracy">@hit.Label</div>
+                  <div class="hits">@hit.Hits<img class="icon icon-header" src="images/open-iconic/svg/header.svg" alt="Header"></div>
+                  <div class="critical">@hit.Crits<img class="icon icon-aperture" src="images/open-iconic/svg/aperture.svg" alt="Aperture"></div>
               }
-          </tbody>
-        </table>
+          </div>
+        </div>
         
         <div class="card__abilities">
           @foreach(var bonus in CraftedGun.Bonuses)
@@ -80,7 +80,15 @@
 
         
       </figcaption>
+      </ContextMenuTrigger>
     </figure>
+
+    <ContextMenu Id="@GetMenuId()">
+      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+    </ContextMenu>
+
+</div>
 
 @code {
     [Parameter]
@@ -100,12 +108,6 @@
     public string GetDiceImage => $"images/resources/dice/{CraftedGun.DiceType}.png";
 
     public string GetExtraDiceImage => $"images/resources/dice/{CraftedGun.ExtraDiceType}.png";
-
-    private Guid id = Guid.NewGuid();
-    public override string GetElementId()
-    {
-      return $"Gun-{id}";
-    }
 
     public override string GetFileName()
     {

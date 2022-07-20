@@ -239,3 +239,11 @@
    opacity: 0.8;
    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #db25eb 7px), repeating-linear-gradient(#85ee5e55, #85ee5e);
  }
+
+ .icon-download{
+  color: linear-gradient(to top, rgb(194, 107, 0), rgb(220, 120, 0));
+ }
+
+ .icon-copy{
+  color:linear-gradient(to top, #4A00E0, rgb(47, 120, 255));
+ }

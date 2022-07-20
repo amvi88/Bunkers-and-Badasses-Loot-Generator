@@ -1,32 +1,35 @@
 @namespace Application.Pages
 @using Models.Builder;
 @inherits BaseItemViewer;
-@if (CraftedPotion == null)
-{
-  <div class="spinner"></div>
-}
-else
-{
-  <figure class=@GetCardCssClass  id="@GetElementId()" @onclick="Download">      
-      
-      <figcaption class="card__caption">
-        <h1 class="card__name"> @CraftedPotion.Effect</h1>
-        
-        <h3 class="@GetCssClassCardType">
-         @CraftedPotion.Name
-        </h3>
 
-        <table class="card__stats">
-          <tbody>            
-            <tr>
-              <th>Cost</th>
-              <td>@CraftedPotion.Cost<img class="icon icon-money" src="images/open-iconic/svg/contrast.svg" alt="Coin"></td>   
-            </tr>            
-          </tbody>
-        </table>        
-      </figcaption>
+<div>
+  <figure class=@GetCardCssClass id="@GetElementId()">
+      <ContextMenuTrigger MenuId="@GetMenuId()">
+        <figcaption class="card__caption">
+          <h1 class="card__name"> @CraftedPotion.Effect</h1>
+          
+          <h3 class="@GetCssClassCardType">
+          @CraftedPotion.Name
+          </h3>
+
+          <table class="card__stats">
+            <tbody>            
+              <tr>
+                <th>Cost</th>
+                <td>@CraftedPotion.Cost<img class="icon icon-money" src="images/open-iconic/svg/contrast.svg" alt="Coin"></td>   
+              </tr>            
+            </tbody>
+          </table>        
+        </figcaption>
+      </ContextMenuTrigger>
     </figure>
-}
+
+    <ContextMenu Id="@GetMenuId()">
+      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+    </ContextMenu>
+
+</div>
 
 @code {
     [Parameter]
@@ -39,12 +42,6 @@ else
     public string GetCssClassCardType => CraftedPotion.IsElemental? $"card__type {CraftedPotion.Element.ToString().ToLower().Replace(", ","_")}"
                                         : "card__type normal";
 
-
-    private Guid id = Guid.NewGuid();
-    public override string GetElementId()
-    {
-      return $"Potion-{id}";
-    }
 
     public override string GetFileName()
     {

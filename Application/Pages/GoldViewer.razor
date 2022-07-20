@@ -5,7 +5,9 @@
 
 @inherits BaseItemViewer;
 
+<div>
     <figure class="card card--gold" id="@GetElementId()">
+      <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
         <img src=@GetGoldImage alt="gold" class="card__image">   
       </div>
@@ -17,20 +19,23 @@
          Gold
         </h3> 
       </figcaption>
+      </ContextMenuTrigger>
     </figure>
+
+    <ContextMenu Id="@GetMenuId()">
+      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+    </ContextMenu>
+
+</div>
 
 @code {
     [Parameter]
     public Gold Gold { get; set; }
     public string GetGoldImage => $"images/resources/chests/gold.png";
 
-    public override string GetElementId()
-    {
-      return "gold";
-    }
-
     public override string GetFileName()
     {
-      return "gold.png";
+      return $"gold_{Gold.Amount}.png";
     }
 }

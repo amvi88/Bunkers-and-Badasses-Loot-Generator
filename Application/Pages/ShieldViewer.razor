@@ -4,8 +4,9 @@
 @using Models.Common;
 
 @inherits BaseItemViewer;
-
-    <figure class="card card--normal" id="@GetElementId()" @onclick="Download">
+<div>
+    <figure class="card card--normal" id="@GetElementId()">
+      <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
         <img src=@GetShieldImage alt="shield" class="card__image">   
       </div>
@@ -34,19 +35,19 @@
           </tbody>
         </table>        
       </figcaption>
+      </ContextMenuTrigger>
     </figure>
 
+    <ContextMenu Id="@GetMenuId()">
+      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+    </ContextMenu>
+
+</div>
 @code {
     [Parameter]
     public Shield CraftedShield { get; set; }
     public string GetShieldImage => $"images/resources/shields/{CraftedShield.Guild}.png";
-
-    private Guid id = Guid.NewGuid();
-
-    public override string GetElementId()
-    {
-      return $"shield-{id}";
-    }
 
     public override string GetFileName()
     {

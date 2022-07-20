@@ -51,6 +51,7 @@ builder.Services.AddTransient<IChestService<DiceChestServiceParameters>,DiceChes
 builder.Services.AddTransient<IChestService<UnassumingChestServiceParameters>,UnassumingChestService>();
 builder.Services.AddTransient<IChestService<CacheRollServiceParameters>, CacheRollService>();
 builder.Services.AddTransient<IGuildService, GuildService>();
+builder.Services.AddBlazorContextMenu();
 
 var app = builder.Build();
 

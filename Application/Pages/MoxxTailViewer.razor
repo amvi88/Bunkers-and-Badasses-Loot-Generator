@@ -3,8 +3,9 @@
 @using Models.Common;
 @inherits BaseItemViewer;
 
-    <figure class=@GetCardCssClass id="@GetElementId()" @onclick="Download">      
-      
+<div>
+    <figure class=@GetCardCssClass id="@GetElementId()">
+      <ContextMenuTrigger MenuId="@GetMenuId()">
       <figcaption class="card__caption">
         <h1 class="card__name"> Moxx-Tail</h1>
         
@@ -21,7 +22,15 @@
           </tbody>
         </table>        
       </figcaption>
+      </ContextMenuTrigger>
     </figure>
+
+    <ContextMenu Id="@GetMenuId()">
+      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+    </ContextMenu>
+
+</div>
 
 
 @code {
@@ -29,13 +38,6 @@
     public MoxxTail CraftedMoxxTail { get; set; }
 
     public string @GetCardCssClass => "card card--normal";
-
-    private Guid id = Guid.NewGuid();
-
-    public override string GetElementId()
-    {
-      return $"MoxxTail-{id}";
-    }
 
     public override string GetFileName()
     {

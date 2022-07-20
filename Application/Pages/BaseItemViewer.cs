@@ -11,8 +11,7 @@ namespace Application.Pages
 
         private IJSObjectReference? module;
         private string? result;
-
-
+        protected Guid id = Guid.NewGuid();
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)
@@ -31,14 +30,19 @@ namespace Application.Pages
             result = await CopyImageToClipboard(GetElementId());
         }
 
-        public virtual string GetElementId()
+        public string GetElementId()
         {
-            return string.Empty;
+            return $"widget-{id}";
         }
 
         public virtual string GetFileName()
         {
             return string.Empty;
+        }
+
+        public string GetMenuId()
+        {
+            return $"menu-{id}";
         }
 
         protected async ValueTask<string?> DownloadImage(string id, string fileName) =>

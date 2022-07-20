@@ -14,8 +14,12 @@
     <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Blazor.ContextMenu" Version="1.14.0" />
+  </ItemGroup>
+
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec  Command="npm run install-build"  WorkingDirectory="js" />
+    <Exec Command="npm run install-build" WorkingDirectory="js" />
   </Target>
 
 </Project>

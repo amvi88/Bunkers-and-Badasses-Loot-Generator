@@ -2,7 +2,9 @@
 @using Models.Builder;
 @inherits BaseItemViewer;
 
-   <figure class="@GetCardCssClass"  id="@GetElementId()" @onclick="Download">
+<div>
+   <figure class="@GetCardCssClass"  id="@GetElementId()">
+      <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
         <img src=@GetRelicImage alt="shield" class="card__image">   
       </div>
@@ -25,19 +27,21 @@
            </tr>      
         </table>        
       </figcaption>
+      </ContextMenuTrigger>
     </figure>
+
+    <ContextMenu Id="@GetMenuId()">
+      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+    </ContextMenu>
+
+</div>
 
 @code {
     [Parameter]
     public Relic CraftedRelic { get; set; }
     public string GetRelicImage => $"images/resources/relics/{CraftedRelic.Rarity}.png";
     public string GetCardCssClass => $"card card--{CraftedRelic.Rarity.ToString().ToLower()}";
-
-    private Guid id = Guid.NewGuid();
-    public override string GetElementId()
-    {
-      return $"relic-{id}";
-    }
 
     public override string GetFileName()
     {

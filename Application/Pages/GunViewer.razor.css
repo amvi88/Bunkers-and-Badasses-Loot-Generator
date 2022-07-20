@@ -70,6 +70,29 @@ img.dice_small
   margin-left: .2em 
 }
 
+.card_hits_caption
+{
+  text-align: center;
+}
+
+.card-hits-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.accuracy
+{
+  text-align: right;
+}
+
+.hits {
+  text-align: center;
+}
+
+.critical{
+  text-align: left;
+}
+
 .gun-icon {
   position: absolute;
   bottom: 0;

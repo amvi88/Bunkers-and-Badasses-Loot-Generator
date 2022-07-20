@@ -1,7 +1,9 @@
 @namespace Application.Pages
 
 @inherits BaseItemViewer;
+<div>
     <figure class="card card--mimic" id="@GetElementId()">
+      <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
         <img src=@GetMimicImage alt="mimic" class="card__image">   
       </div>
@@ -15,15 +17,18 @@
 
         <h4>Roll for Initiative suckers!</h4>
       </figcaption>
+      </ContextMenuTrigger>
     </figure>
+
+    <ContextMenu Id="@GetMenuId()">
+      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+    </ContextMenu>
+
+</div>
 
 @code {
     public string GetMimicImage => $"images/resources/chests/mimic.png";
-
-    public override string GetElementId()
-    {
-      return "mimic";
-    }
 
     public override string GetFileName()
     {
