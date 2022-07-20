@@ -1,0 +1,2886 @@
+{
+    "WeaponCustomization": {
+        "WeaponGallery": [
+            {
+                "Name": "Ajax's Spear",
+                "GunType": "AssaultRifle",
+                "Guild": "Alas!",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51afd83966ab0b0957ca_613cb3e3ee7de46be2a3c850_Ajax%2527s%2520Spear%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Anaconda",
+                "GunType": "Pistol",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b0d399e55411caf8fa_613cb45639123e7510db92b5_Anaconda%2520(Revolver-BL1).png"
+            },
+            {
+                "Name": "Aries",
+                "GunType": "Pistol",
+                "Guild": "Alas!",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b085f55ed5e3c060ac_613cb457ba5cf74c94973edd_Aries%2520(Revolver-BL1).png"
+            },
+            {
+                "Name": "Athena's Wisdom",
+                "GunType": "Repeater",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b185f55ecb50c060b3_613cb42661d45360eb9abaeb_Athena%2527s%2520Wisdom%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Avenger",
+                "GunType": "AssaultRifle",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b17af83a1e5925f1ab_613cb3e5a47a6b69b1dddf14_Avenger%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Baha's Bigger Blaster",
+                "GunType": "Shotgun",
+                "Guild": "Gearbox",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b2d25b707099b159f1_613cb4718ac2f6328ed75430_Baha%2527s%2520Bigger%2520Blaster%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Bastard",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b3206f3056f96a15f7_613cb3e4ff6479718d863024_Bastard%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Bessie",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b43ae59b719237d69b_613cb495d83966fe81018e4b_Bessie%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Bitch",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b5c50d3c76e566ad22_613cb47fa47a6bdf4edde2b8_Bitch%2520(SMG-BL1).png"
+            },
+            {
+                "Name": "Blaster",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Uncommon",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b6f12e2ec07e31db6b_613cb3f239123ed073db8fe6_Blaster%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Bone Shredder",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b879fcdfbcf9abb1ae_613cb481d399e59276c3d112_Bone%2520Shredder%2520(SMG-BL1).png"
+            },
+            {
+                "Name": "Boom Stick",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51b9c3defccee42b80a4_613cb4718ac2f6bdbed7542f_Boom%2520Stick%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Bulldog",
+                "GunType": "Shotgun",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51ba36aa8c45e4714f01_613cb47185f55e2064b97520_Bulldog%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Butcher",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51bb6c60bf32793a6c33_613cb473b24c434a5f835cb7_Butcher%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Cannon",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Uncommon",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51bc23f5589a49ee4857_613cb40385f55e2035b97516_Cannon%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Chimera",
+                "GunType": "Pistol",
+                "Guild": "Alas!",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51bd430154d599a7e6e7_613cb455b24c433a7a835caa_Chimera%2520(Revolver-BL1).png"
+            },
+            {
+                "Name": "Chiquito Amigo",
+                "GunType": "Repeater",
+                "Guild": "Feriore",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51bd3d78bdf269e55bb5_613cb41f540d8f27c1a24aea_Chiquito%2520Amigo%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Cobra",
+                "GunType": "SniperRifle",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51bed8396666e80957df_613cb496e26c577088c2e6ec_Cobra%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Crux",
+                "GunType": "Shotgun",
+                "Guild": "S&S Munitions",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51bed8396679d20957e4_613cb473206f30c8ff634f74_Crux%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Crux (Plague)",
+                "GunType": "Shotgun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51dc7b270d7822e842ec_613cb46d8bba365d88cb2263_Plague%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Cyclops",
+                "GunType": "SniperRifle",
+                "Guild": "Alas!",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51bfd25b701a18b15bab_613cb495e26c577c70c2e6eb_Cyclops%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Defender",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c07b270dc4bde83ff6_613cb473d399e5895cc3cf99_Defender%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Defiler",
+                "GunType": "Pistol",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c0430154231ba7e6fa_613cb4551ac7a9767e1609cf_Defiler%2520(Revolver-BL1).png"
+            },
+            {
+                "Name": "Destroyer",
+                "GunType": "AssaultRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c1ff64792b068cda10_613cb3e5f40b1c5ab1ea8734_Destroyer%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Draco",
+                "GunType": "AssaultRifle",
+                "Guild": "S&S Munitions",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c1cd67151f0ea1ae12_613cb3e7270e9b65619a8d26_Draco%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Equalizer",
+                "GunType": "Pistol",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c220f7ebd5b872ddd7_613cb4563ae59b900230ce94_Equalizer%2520(Revolver-BL1).png"
+            },
+            {
+                "Name": "Fireball",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Rare",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c3206f307dec6a1603_613cb404e28f9c7639a52692_Firebomb%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Firebomb",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c3206f307dec6a1603_613cb404e28f9c7639a52692_Firebomb%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Firehawk",
+                "GunType": "Repeater",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c5d399e54080caf902_613cb42636aa8c44356a2e52_Firehawk%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Flaregun",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Uncommon",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c51a0cf03a0342a168_613cb4041ac7a9f1e41608fb_Flaregun%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Friendly Fire",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c6c3da532765a98d29_613cb465d839663793018dc7_Friendly%2520Fire%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Gasher",
+                "GunType": "SubmachineGun",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c715c9a44752c7e463_613cb483206f302136634fb9_Gasher%2520(SMG-BL1).png"
+            },
+            {
+                "Name": "Gemini",
+                "GunType": "Repeater",
+                "Guild": "S&S Munitions",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c84301544fbda7e98f_613cb44f0d6422323cf8f6c5_Gemini%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Glob Gun",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Uncommon",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c9d399e501c1caf90a_613cb406ba5cf7f32e97390f_Glob%2520Gun%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Guardian",
+                "GunType": "AssaultRifle",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51ca70024aefb2e4bc9c_613cb3e8a8682835b9a3fc1d_Guardian%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Hammer",
+                "GunType": "Shotgun",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51cad25b708c06b15bf9_613cb46c7b270d0a38e1982c_Hammer%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Hellfire",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51cb01ad81edafc88998_613cb483e28f9c70daa526a9_Hellfire%2520(SMG-BL1).png"
+            },
+            {
+                "Name": "Hive Mind",
+                "GunType": "RocketLauncher",
+                "Guild": "Gearbox",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51cb698914241bc34167_613cb40ac3defc0baf24a16b_Hive%2520Mind%2520(Launcher-BL1).png"
+            },
+            {
+                "Name": "Hornet",
+                "GunType": "Repeater",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51ccad5dea2c34f0ded0_613cb44c7ef3602e5f88a8f2_Hornet%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Hydra",
+                "GunType": "Shotgun",
+                "Guild": "Alas!",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51cd797490547e9e2bc0_613cb46cca838d8610543adf_Hydra%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Invader",
+                "GunType": "Repeater",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51ce4301543d9ea7e9d9_613cb44cc3defc138c24a331_Invader%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Invader (Executioner)",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51c3a47a6b30d8e4b346_613cb49b3a89b82295f04f85_Executioner%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Jackal",
+                "GunType": "Shotgun",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51cfa868280ed5aade5f_613cb46cc50d3cc8006040c5_Jackal%2520(Shotgun-BL1).png"
+            },
+            {
+                "Name": "Knoxx's Gold",
+                "GunType": "Repeater",
+                "Guild": "S&S Munitions",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d0c50d3cfbb966ad58_613cb42590cfe791bfcd7431_Konxx%2527s%2520Gold%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Krom's Sidearm",
+                "GunType": "Repeater",
+                "Guild": "Alas!",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d170024a42fde4bca0_613cb44cff6479250186317a_Krom%2527s%2520Sidearm%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Kyros' Power",
+                "GunType": "SniperRifle",
+                "Guild": "Alas!",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d179fcdf2355abb1bf_613cb49b90cfe7df8acd744d_Kyros%2527%2520Power%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Lady Finger",
+                "GunType": "Repeater",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d215c9a423ccc7e469_613cb44f5b97f2f9f124da36_Lady%2520Finger%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Leviathan",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d2d399e552abcaf914_613cb40a32771e1e7f951035_Leviathan%2520(Launcher-BL1).png"
+            },
+            {
+                "Name": "Lightning",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Uncommon",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d361d453620ca234ea_613cb3eed23ae13ceec7ec3b_Lightning%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Madjack",
+                "GunType": "Pistol",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d485f55e5279c0623a_613cb454e34aaf4c0385c0e9_Madjack%2520(Revolver-BL1).png"
+            },
+            {
+                "Name": "Mega Cannon",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d4088107733a03fa22_613cb3efd399e57703c3c5d9_Mega%2520Cannon%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Mongol",
+                "GunType": "RocketLauncher",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d515c9a4d056c7e470_613cb40dd23ae1437cc7ec41_Mongol%2520(Launcher-BL1).png"
+            },
+            {
+                "Name": "Mug Shot",
+                "GunType": "AssaultRifle",
+                "Guild": "Gearbox",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d6c3defcdccd2b80c4_613cb3de3a89b8f2acf04b63_Mug%2520Shot%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Nailer",
+                "GunType": "SniperRifle",
+                "Guild": "DAHL",
+                "Rarity": "Rare",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d7ed32ba8779f05dae_613cb49bb7c25fb9a81645b1_Nailer%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Nemesis",
+                "GunType": "Repeater",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d879749072249e2bc6_613cb44c2375616d6eac3330_Nemesis%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Nidhogg",
+                "GunType": "RocketLauncher",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51d9540d8f1c4aa98253_613cb40d09bd535f00e07464_Nidhogg%2520(Launcher-BL1).png"
+            },
+            {
+                "Name": "Ogre",
+                "GunType": "AssaultRifle",
+                "Guild": "Alas!",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51da85f55e163bc0626f_613cb3de1a0cf00fa13c594e_Ogre%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Orion",
+                "GunType": "SniperRifle",
+                "Guild": "S&S Munitions",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51daedac677d6262fca9_613cb4899900f8b7eb201a11_Orion%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Patton",
+                "GunType": "Pistol",
+                "Guild": "Alas!",
+                "Rarity": "Rare",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51db36aa8c0fac715035_613cb4599900f816b8201759_Patton%2520(Revolver-BL1).png"
+            },
+            {
+                "Name": "Penetrator",
+                "GunType": "SniperRifle",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51dc3ae59b369c37d6e4_613cb4921ac7a9d4ae1609d8_Penetrator%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Protector",
+                "GunType": "Repeater",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51dde34aaf580a8ce69b_613cb41fedac674cfa5c0577_Protector%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Raven",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51de69891408efc34171_613cb3de90cfe75da1cd7412_Raven%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Reaper",
+                "GunType": "Repeater",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51deafce94c5b48309cf_613cb4258bba3633f4cb1ea9_Reaper%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Reaver's Edge",
+                "GunType": "SniperRifle",
+                "Guild": "DAHL",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51dfb24c431ea78a7e23_613cb492956cf32295d46f8f_Reaver%2527s%2520Edge%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Rebel",
+                "GunType": "Repeater",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51df7af83a02e125f7ce_613cb44c206f3043f3634f71_Rebel%2520(Repeater-BL1).png"
+            },
+            {
+                "Name": "Redemption",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51e1ff64796ad88cda19_613cb40d90cfe7c7b9cd742e_Redemption%2520(Launcher-BL1).png"
+            },
+            {
+                "Name": "Revolution",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51e2ad5deaec5cf0df23_613cb3deb7c25f32da163be6_Revolution%2520(AR-BL1).png"
+            },
+            {
+                "Name": "Rhino",
+                "GunType": "RocketLauncher",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51e2b24c437afc8a7e3e_613cb40dedac67c63f5c04fb_Rhino%2520(Launcher-BL1).png"
+            },
+            {
+                "Name": "Rider",
+                "GunType": "SniperRifle",
+                "Guild": "Gearbox",
+                "Rarity": "Rare",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51e323f558caa0ee4bea_613cb492e28f9c6739a526b0_Rider%2520(Sniper-BL1).png"
+            },
+            {
+                "Name": "Rifle",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Uncommon",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51e3a86828288caade87_613cb3ee20cefae11774aa06_Rifle%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "Rolling Spatter Gun",
+                "GunType": "Eridian",
+                "Guild": "Eridian",
+                "Rarity": "Uncommon",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613e51e49900f8868c26e9d0_613cb3ee3a89b813f7f04c0d_Rolling%2520Splatter%2520Gun%2520(Eridian-BL1).png"
+            },
+            {
+                "Name": "12 Pounder",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849e28f8d011a_12-Pounder-BL2.png"
+            },
+            {
+                "Name": "Actualizer",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849738e8d0168_Actualizer-BL2.png"
+            },
+            {
+                "Name": "Ahab",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849628f8d011b_Ahab-BL2.png"
+            },
+            {
+                "Name": "Amigo Sincero",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108491dea8d0180_Amigo-Sincero-BL2.png"
+            },
+            {
+                "Name": "Avenger",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084911ec8d0169_Avenger-BL2.png"
+            },
+            {
+                "Name": "Baby Maker",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849b85f8d016a_Baby-Maker-BL2.png"
+            },
+            {
+                "Name": "Bad Touch",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084905d58d016b_Bad-Touch-BL2.png"
+            },
+            {
+                "Name": "Badaboom",
+                "GunType": "RocketLauncher",
+                "Guild": "Rare",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849218f8d011c_Badaboom-BL2.png"
+            },
+            {
+                "Name": "Bane",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108490bd78d016c_Bane-BL2.png"
+            },
+            {
+                "Name": "Bearcat",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084950008d0100_Bearcat-BL2.png"
+            },
+            {
+                "Name": "Bekah",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084949c38d0102_Bekah-BL2.png"
+            },
+            {
+                "Name": "Bitch",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849f4ea8d016d_Bitch-BL2.png"
+            },
+            {
+                "Name": "Blockhead",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084966e08d014b_Blockhead-BL2.png"
+            },
+            {
+                "Name": "Bone Shredder",
+                "GunType": "SubmachineGun",
+                "Guild": "Rare",
+                "Rarity": "Epic",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084958b88d016e_Bone-Shredder-BL2.png"
+            },
+            {
+                "Name": "Boom Puppy",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849718a8d0105_Boom-Puppy-BL2.png"
+            },
+            {
+                "Name": "Buffalo",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108492ca38d0181_Buffalo-BL2.png"
+            },
+            {
+                "Name": "Bunny",
+                "GunType": "RocketLauncher",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084947e08d011d_Bunny-BL2.png"
+            },
+            {
+                "Name": "Butcher",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108496c088d014d_Butcher-BL2.png"
+            },
+            {
+                "Name": "CHOPPER",
+                "GunType": "AssaultRifle",
+                "Guild": "Rare",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108496fe88d0106_CHOPPER-BL2.png"
+            },
+            {
+                "Name": "Carnage",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849255d8d014e_Carnage-BL2.png"
+            },
+            {
+                "Name": "Chulainn",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084958318d016f_Chulainn-BL2.png"
+            },
+            {
+                "Name": "Ch\u00c3\u00a8re-amie",
+                "GunType": "SniperRifle",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108490fec8d0182_Ch%C3%A8re-amie-BL2.png"
+            },
+            {
+                "Name": "Cobra",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084980918d0183_Cobra-BL2.png"
+            },
+            {
+                "Name": "Commerce",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849cb8a8d0170_Commerce-BL2.png"
+            },
+            {
+                "Name": "Conference Call",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084986438d014f_Conference-Call-BL2.png"
+            },
+            {
+                "Name": "Creamer",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108499cd48d011e_Creamer-BL2.png"
+            },
+            {
+                "Name": "Crit",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849413e8d0171_Crit-BL2.png"
+            },
+            {
+                "Name": "Dahlminator",
+                "GunType": "Pistol",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108494f6f8d012c_Dahlminator-BL2.png"
+            },
+            {
+                "Name": "Damned Cowboy",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108496f678d0107_Damned-Cowboy-BL2.png"
+            },
+            {
+                "Name": "Deliverance",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108493fa98d0150_Deliverance-BL2.png"
+            },
+            {
+                "Name": "Devastator",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084906058d012d_Devastator-BL2.png"
+            },
+            {
+                "Name": "Dog",
+                "GunType": "Shotgun",
+                "Guild": "Rare",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108493d708d0151_Dog-BL2.png"
+            },
+            {
+                "Name": "ERROR MESSAGE",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849f28c8d069a_ERROR%20MESSAGE%20(Launcher-BL2).png"
+            },
+            {
+                "Name": "Elephant Gun",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084944fe8d0184_Elephant-Gun-BL2.png"
+            },
+            {
+                "Name": "Emperor",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084908888d0172_Emperor-BL2.png"
+            },
+            {
+                "Name": "Evil Smasher",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108490c228d0108_Evil-Smasher-BL2.png"
+            },
+            {
+                "Name": "Fibber",
+                "GunType": "Pistol",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084909238d012e_Fibber-BL2.png"
+            },
+            {
+                "Name": "Fire Drill",
+                "GunType": "Pistol",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084950918d069d_Fire%20Drill%20(Pistol-BL2).png"
+            },
+            {
+                "Name": "Flakker",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108492d0e8d0152_Flakker-BL2.png"
+            },
+            {
+                "Name": "Florentine",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084904bc8d0173_Florentine-BL2.png"
+            },
+            {
+                "Name": "Fremington's Edge",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084986c38d0185_Fremington%27s-Edge-BL2.png"
+            },
+            {
+                "Name": "Godfinger",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849bab08d0186_Godfinger-BL2.png"
+            },
+            {
+                "Name": "Good Touch",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849622d8d0174_Good-Touch-BL2.png"
+            },
+            {
+                "Name": "Greed",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108495a8c8d012f_Greed-BL2.png"
+            },
+            {
+                "Name": "Grog Nozzle",
+                "GunType": "Pistol",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108495d0e8d0130_Grog-Nozzle-BL2.png"
+            },
+            {
+                "Name": "Gub",
+                "GunType": "Pistol",
+                "Guild": "Rare",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084949f58d0131_Gub-BL2.png"
+            },
+            {
+                "Name": "Gunerang",
+                "GunType": "Pistol",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849646f8d0132_Gunerang-BL2.png"
+            },
+            {
+                "Name": "Gwen's Head",
+                "GunType": "Pistol",
+                "Guild": "DAHL",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084929258d0133_Gwen%27s-Head-BL2.png"
+            },
+            {
+                "Name": "Hail",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108495fc28d0109_Hail-BL2.png"
+            },
+            {
+                "Name": "Hammer Buster",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108495dd78d010a_M2828-Thumpson-BL2.png"
+            },
+            {
+                "Name": "Hawk Eye",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849da0e8d0187_Hawk-Eye-BL2.png"
+            },
+            {
+                "Name": "Heart Breaker",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108491da78d0153_Heart-Breaker-BL2.png"
+            },
+            {
+                "Name": "Hector's Paradise",
+                "GunType": "Pistol",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108498d058d0134_Hector%27s-Paradise-BL2.png"
+            },
+            {
+                "Name": "Hellfire",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849117e8d0175_Hellfire-BL2.png"
+            },
+            {
+                "Name": "Hive",
+                "GunType": "RocketLauncher",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084906e68d011f_Hive-BL2.png"
+            },
+            {
+                "Name": "Hornet",
+                "GunType": "Pistol",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849510e8d0135_Hornet-BL2.png"
+            },
+            {
+                "Name": "Hot Mama",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084954c58d0188_Hot-Mama-BL2.png"
+            },
+            {
+                "Name": "Hydra",
+                "GunType": "Shotgun",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108490f658d0154_Hydra-BL2.png"
+            },
+            {
+                "Name": "Infection",
+                "GunType": "Pistol",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849c3668d0136_Infection-BL2.png"
+            },
+            {
+                "Name": "Infection Cleaner",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108490c638d0176_Infection-Cleaner-BL2.png"
+            },
+            {
+                "Name": "Infinity",
+                "GunType": "Pistol",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108499a4e8d0137_Infinity-BL2.png"
+            },
+            {
+                "Name": "Interfacer",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849105e8d0155_Interfacer-BL2.png"
+            },
+            {
+                "Name": "Invader",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849f4358d018a_Invader-BL2.png"
+            },
+            {
+                "Name": "Jolly Roger",
+                "GunType": "Shotgun",
+                "Guild": "Rare",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084940888d0156_Jolly-Roger-BL2.png"
+            },
+            {
+                "Name": "Judge",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849993a8d0138_Judge-BL2.png"
+            },
+            {
+                "Name": "KerBlaster",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849596f8d010b_KerBlaster-BL2.png"
+            },
+            {
+                "Name": "Kitten",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849732f8d010c_Kitten-BL2.png"
+            },
+            {
+                "Name": "Lady Fist",
+                "GunType": "Pistol",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084931628d0139_Lady-Fist-BL2.png"
+            },
+            {
+                "Name": "Landscaper",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849a52c8d0157_Landscaper-BL2.png"
+            },
+            {
+                "Name": "Lascaux",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHL",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084931c58d0177_Lascaux-BL2.png"
+            },
+            {
+                "Name": "Law",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084924048d013a_Law-BL2.png"
+            },
+            {
+                "Name": "%Cu+ie^_^killer",
+                "GunType": "SubmachineGun",
+                "Guild": "Scav",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7cedb4ae4851bc6add1_60cf6ff3707f44a578fc08d2_%2525Cu%252Bie%255E_%255Ekiller%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "/He4rtf;ull Spl0Dge..r",
+                "GunType": "Laser",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb79fd0238c1e8a41e0fc_60cf70297a99882c72d0aa03_He4rtf%253Bull%2520Spl0Dge..r%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "88 Fragnum",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7b3dee7a616dbea10cf_60cf7015db4ae44416c576eb_88%2520Fragnum%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Absolute Zero",
+                "GunType": "Laser",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a2347c39b5431b4d2a_60cf7024d1bfb1e994fc56be_Absolute%2520Zero%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Bad Touch",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d7e3936474e9063320_60cf6ff3dee7a62b3de91bd5_Bad%2520Touch%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Badaboom",
+                "GunType": "RocketLauncher",
+                "Guild": "Scav",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a7fc9b05e97bac76d1_60cf701f32cf132104257cca_Badaboom%2520(Launcher-TPS).png"
+            },
+            {
+                "Name": "Berrigan",
+                "GunType": "RocketLauncher",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a6a776ab5cc516e01e_60cf701fe3936400c904f4f8_Berrigan%2520(Launcher-TPS).png"
+            },
+            {
+                "Name": "Black Snake",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d207fddba7473adb4b_60cf6ff2347c39fc7619ffca_Black%2520Snake%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Blowfly",
+                "GunType": "Pistol",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7b755b051162d397099_60cf70155b505d37ff0e161e_Blowfly%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Boganella",
+                "GunType": "Shotgun",
+                "Guild": "Scav",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7bc577c34723920b6ba_60cf7006195f0eca5b74c0c0_Boganella%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Boomacorn",
+                "GunType": "Shotgun",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7c4061e1e4e14b39189_60cf70067d6b2275e3080a55_Boomacorn%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Boss Nova",
+                "GunType": "AssaultRifle",
+                "Guild": "Scav",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb78fe52fc5193399ce7b_60cf7030558b6c70b469cfcb_Boss%2520Nova%2520(AR-TPS).png"
+            },
+            {
+                "Name": "Boxxy Gunn",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60d02b2806d8359ee0a9de22_Boxxy%20Gunn%20(SMG-TPS).png"
+            },
+            {
+                "Name": "Bullpup",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7c2347c39315b1b4d46_60cf7006148b7b457c29f616_Bullup%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Cat o' Nine Tails",
+                "GunType": "Laser",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb79f36f3d27abbd64ad1_60cf70276e441f7490b77145_Cat%2520o%2527Nine%2520Tails%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Cheat Code",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d006d835e65ea85848_60cf6ff41548f83269ad7974_Cheat%2520Code%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Ch\u00c3\u00a8re-amie",
+                "GunType": "SniperRifle",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7e3525314caf23cc615_60cf6ffedb4ae44f5ac576d1_Ch%25C3%25A8re-amie%2520(Sniper-TPS).png"
+            },
+            {
+                "Name": "Company Man",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7c25b485d4fbcc46d57_60cf70065efaf14aa6fbdb55_Company%2520Man%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Creamer",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7ad195f0e34a175d6e0_60cf702121c7156cd45b9661_Creamer%2520(Launcher-TPS).png"
+            },
+            {
+                "Name": "Cry Baby",
+                "GunType": "AssaultRifle",
+                "Guild": "Scav",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/610039ec2857ba4deb2eb47b_Cry%20Baby%20(AR-TPS).png"
+            },
+            {
+                "Name": "Cryophobia",
+                "GunType": "RocketLauncher",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a8681c890f8af09c2a_60cf702286a4ade7d4289b6e_Cryophobia%2520(Launcher-TPS).png"
+            },
+            {
+                "Name": "Cyber Eagle",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7ae36f3d22d93d64aed_60cf7015148b7b3c1a29f63f_Cyber%2520Eagle%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "E-GUN",
+                "GunType": "Laser",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7972b49360b73587819_60cf702782c9a81fc74f28f7_E-GUN%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Excalibastard",
+                "GunType": "Laser",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb79d7d6b22c896095667_60cf7027b0f8737ee71ab7c6_Excalibastard%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Fast Talker",
+                "GunType": "SubmachineGun",
+                "Guild": "Scav",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d106d835b883a85850_60cf6ff6525314a5ad3bc14f_Fast%2520Talker%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Fatale",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d31609523731e0d4d3_60cf6ff632cf136a57257be4_Fatale%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Fibber",
+                "GunType": "Pistol",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7bbdb4ae42f36c6adc9_60cf701506d83535c1a72790_Fibber%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Firestarta",
+                "GunType": "Laser",
+                "Guild": "DAHL",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb79806d835ac4da85778_60cf7027fc485a159c778d7d_Firestarta%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Flakker",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7caae9f4e1af2b84f67_60cf7007347c391d4519ffd0_Flakker%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Flayer",
+                "GunType": "Shotgun",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7cb30b8910071919e00_60cf70081d5ffe5c91f99fa9_Flayer%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Fremington's Edge",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d986a4ad22c829c976_60cf6ffe32cf13815b257be7_Fremington%2527s%2520Edge%2520(Sniper-TPS).png"
+            },
+            {
+                "Name": "Fridgia",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHL",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7cde3936452a506330f_60cf6ff61548f82631ad7975_Fridgia%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Frostfire",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7cdc01a1030a9decad9_60cf6ff7525314d0d73bc150_Frostfire%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Fusillade",
+                "GunType": "AssaultRifle",
+                "Guild": "Scav",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb79671570a95a6291ace_60cf7032fc9b05f5a4ab3ea0_Fusillade%2520(AR-TPS).png"
+            },
+            {
+                "Name": "Globber",
+                "GunType": "Pistol",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7ae38e06c4b2b23b63f_60cf701730b8915d78907b54_Globber%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Good Touch",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d82b49365109587903_60cf6ff8db4ae43304c576cf_Good%2520Touch%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Gwen's Other Head",
+                "GunType": "Pistol",
+                "Guild": "DAHL",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7b27a99881d86d1d0ff_60cf7017681c898497ef724d_Gwen%2527s%2520Other%2520Head%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Hail",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb795681c890c8ff09c20_60cf703255b051dc2e380b4f_Hail%2520(AR-TPS).png"
+            },
+            {
+                "Name": "Hammer Buster II",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb790fc485a86da78ea3f_60cf703236f3d28348d51e24_Hammer%2520Buster%2520II%2520(AR-TPS).png"
+            },
+            {
+                "Name": "Hard Reboot",
+                "GunType": "Pistol",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7af2b4936c95758786c_60cf7017347c39394819ffe0_Hard%2520Reboot%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Heart Breaker",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7cb681c89cb80f09c53_60cf70085b505d5f470e160a_Heart%2520Breaker%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "HellFire",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d2987e291e5d788675_60cf6ff8b0f873aba51ab734_HellFire%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "IVF",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d4fc9b05df43ac76e5_60cf6ff87d6b225c56080a53_IVF%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Ice Scream",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb78d3ed9bd3e98feaf7f_60cf7033681c89bf01ef72b7_Ice%2520Scream%2520(AR-TPS).png"
+            },
+            {
+                "Name": "Invader",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7db1609524572e0d4d8_60cf6ffe558b6caa7569ceb6_Invader%2520(Sniper-TPS).png"
+            },
+            {
+                "Name": "Jack-o'-Cannon",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7c5771e48038368335e_60cf700906d83563eba7278c_Jack-o%2527-Cannon%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Kaneda's Laser",
+                "GunType": "RocketLauncher",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7ac061e1e4eb3b390cf_60cf7021681c8948c7ef7293_Kaneda%2527s%2520Laser%2520(Launcher-TPS).png"
+            },
+            {
+                "Name": "KerBoom",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb795fc485a578f78ea46_60cf7034a776ab0e13158b5d_KerBoom%2520(AR-TPS).png"
+            },
+            {
+                "Name": "Lady Fist",
+                "GunType": "Pistol",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7bb0978a224a0437e32_60cf70176e441f712fb77011_Lady%2520Fist%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Laser Disker",
+                "GunType": "Laser",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a338e06c87e523b639_60cf7029fc485ad5ac778d91_Laser%2520Disker%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Lazlo's Freezeasy",
+                "GunType": "Laser",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a05b485d4acbc46d50_60cf7029061e1e6dc6b25059_Lazlo%2527s%2520Freezeasy%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Logan's Gun",
+                "GunType": "Pistol",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7b4a6dc447914ad0c68_60cf701b3ce5aed601cdf5b8_Logan%2527s%2520Gun%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Longest Yard",
+                "GunType": "Laser",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a355b051dd9339707c_60cf7029d03ed9583bcd8572_Longest%2520Yard%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Longnail",
+                "GunType": "SniperRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7dfae9f4e205fb84f71_60cf6ffe6e441ff651b76fad_Longnail%2520(Sniper-TPS).png"
+            },
+            {
+                "Name": "Luck Cannon",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7b8000a6d6f8de0a06b_60cf701b681c89a867ef7252_Lucky%2520Cannon%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "MINAC's Atonement",
+                "GunType": "Laser",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb79bae9f4e1a70b84c95_60cf702b1548f809d8ad7b44_MINAC%2527s%2520Atonement%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Maggie",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7b6c01a106d8edecad2_60cf701ba776aba182158b2e_Maggie%2520(Pistol-TPS).png"
+            },
+            {
+                "Name": "Magma",
+                "GunType": "SniperRifle",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7dd16095213dee0d4e1_60cf6fffd6d7331a5afe4fc3_Magma%2520(Sniper-TPS).png"
+            },
+            {
+                "Name": "Major Tom",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7937a998856e7d1d0e8_60cf7035347c3965e019ffed_Major%2520Tom%2520(AR-TPS).png"
+            },
+            {
+                "Name": "Marek's Mouth",
+                "GunType": "SubmachineGun",
+                "Guild": "Scav",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d5c01a10cabedecadf_60cf6ff9fc485a534a778d2b_Marek%2527s%2520Mouth%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Meat Grinder",
+                "GunType": "SubmachineGun",
+                "Guild": "Scav",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7d5d03ed923e1cec5a7_60cf6ffa5efaf190e0fbdafe_Meat%2520Grinder%2520(SMG-TPS).png"
+            },
+            {
+                "Name": "Min Min Lighter",
+                "GunType": "Laser",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a0ae9f4e023db84ccb_60cf702b5b485d6961c33135_Min%2520Min%2520Lighter%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Mining Laser",
+                "GunType": "Laser",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7993d107fa88686b2d8_60cf702b30b8916bc6907bc8_Mining%2520Laser%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Mongol",
+                "GunType": "RocketLauncher",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7a8987e299d7178866e_60cf7021dee7a62119e91c8a_Mongol%2520(Launcher-TPS).png"
+            },
+            {
+                "Name": "Moonface",
+                "GunType": "Shotgun",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7bda776ab3e5816e0ee_60cf700a061e1e0dbbb2504d_Moonface%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Moonscaper",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7c3000a6d0bcce0a0b2_60cf700bfc485a1c6a778d73_Moonscaper%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Nukem",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7aa0978a21350437d52_60cf70242b49366405574ffc_Nukem%2520(Launcher-TPS).png"
+            },
+            {
+                "Name": "Octo",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7bed1bfb11890fd805d_60cf700b3fb64c05362dd748_Octo%2520(Shotgun-TPS).png"
+            },
+            {
+                "Name": "Ol' Painful",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7931548f8da44aed13f_60cf7034369bcbe245d11dc2_Ol%2527%2520Painful%2520(AR-TPS).png"
+            },
+            {
+                "Name": "Ol' Rosie",
+                "GunType": "Laser",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7995b485d0cd8c46d49_60cf702d5253143fdf3bc19b_Thorny%2520Ol%2527%2520Rosie%2520(Laser-TPS).png"
+            },
+            {
+                "Name": "Omni-Cannon",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cfb7e2db4ae4f01ec6addb_60cf6fff347c393cf219ffcf_Omni-Cannon%2520(Sniper-TPS).png"
+            },
+            {
+                "Name": "9-Volt",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd0cdd6736d4a1bbf5fbe_9-Volt%20(SMG-BL3).png"
+            },
+            {
+                "Name": "AAA",
+                "GunType": "Pistol",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618ee951fa3c222860f2719a_AAA%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "ASMD",
+                "GunType": "SniperRifle",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fdb2ba46a319996036633_ASMD%20(Sniper-BL3).png"
+            },
+            {
+                "Name": "Agonizer 1500",
+                "GunType": "RocketLauncher",
+                "Guild": "Rare",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e63e2872852009485a516_Agonizer%201500%20(Launcher-BL3).png"
+            },
+            {
+                "Name": "Alchemist",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e5842f3906e597f350e4e_Alchemist%20(AR-BL3).png"
+            },
+            {
+                "Name": "Amazing Grace",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeae55a0f53e5f39e6f03_Amazing%20Grace%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Amber Management",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e5885ed27fd2e6139d7af_Amber%20Managment%20(AR-BL3).png"
+            },
+            {
+                "Name": "Anarchy",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fc90046278051dbc6d2c0_Anarchy%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Ashen Beast",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHL",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd0df6ce76641f8f10858_Ashen%20Beast%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Atlas Replay",
+                "GunType": "Pistol",
+                "Guild": "Alas!",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeaf13f7286f8d048502e_Atlas%20Replay%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "AutoAim\u00c3\u00a8",
+                "GunType": "SniperRifle",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fdb41f6c6e0fe877694ae_AutoAim%C3%A8%20(Sniper-BL3).png"
+            },
+            {
+                "Name": "Baby Maker",
+                "GunType": "Pistol",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeafe3f728658ff485048_Baby%20Maker%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Backburner",
+                "GunType": "RocketLauncher",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e64001df32e56e33547fa_Backburner%20(Launcher-BL3).png"
+            },
+            {
+                "Name": "Bangarang",
+                "GunType": "Pistol",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb0a08769dab258df5ee_Bangarang%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Barrage",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e58948d6d0a350ee44e41_Barrage%20(AR-BL3).png"
+            },
+            {
+                "Name": "Beacon",
+                "GunType": "Pistol",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb92cc880721f0c7425b_Beacon%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Bearcat",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e5908d4fd657d25ad22de_Bearcat%20(AR-BL3).png"
+            },
+            {
+                "Name": "Bekah",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e59144e9167a1d9f2022c_Bekah%20(AR-BL3).png"
+            },
+            {
+                "Name": "Bird of Prey",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fdb4ea0adfa11ea7ef94c_Bird%20of%20Prey%20(Sniper-BL3).png"
+            },
+            {
+                "Name": "Bitch",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd0ec0a1b035f6b750d28_Bitch%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Bite Size",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb2366e5603f4a1dd18a_Bite%20Size%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Black Flame",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fc9140a1b0347d574d835_Black%20Flame%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Blade Fury",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/61fbaf2b5434708faa1c0b1e_Blade%20Fury%20(AR-BL3).png"
+            },
+            {
+                "Name": "Blind Bandit",
+                "GunType": "Shotgun",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fc9207849be7c336422f2_Blind%20Bandit%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Blind Sage",
+                "GunType": "Shotgun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fc936539c5ec9088fe926_Blind%20Sage%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Blood-Starved Beast",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd0f87ca5fb4b3a659818_Blood-Starved%20Beast%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Bloom",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb2fe872ccf5a3441cdc_Bloom%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Bone Shredder",
+                "GunType": "Pistol",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb3bdf40fc29f1552452_Bone%20Shredder%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Boogeyman",
+                "GunType": "SniperRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fdb5a1f12a01e2b107d03_Boogeyman%20(Sniper-BL3).png"
+            },
+            {
+                "Name": "Boomer",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd10468034f1505942b70_Boomer%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Brad Luck",
+                "GunType": "AssaultRifle",
+                "Guild": "Rare",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e5920ad6e2f6b6ed4e63e_Brad%20Luck%20(AR-BL3).png"
+            },
+            {
+                "Name": "Brainstormer",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca26b5d4b31843ba01cc_Brainstormer%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Brashi's Dedication",
+                "GunType": "SniperRifle",
+                "Guild": "DAHL",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fdb665710e1dd060cb0c5_Brashi%27s%20Dedication%20(Sniper-BL3).png"
+            },
+            {
+                "Name": "Breath of the Dying",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e592dad6e2f2c7cd4e678_Breath%20of%20the%20Dying%20(AR-BL3).png"
+            },
+            {
+                "Name": "Breeder",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb481f8da13ad2d71596_Breeder%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Brightside",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca338fa52f1cf28040ac_Brightside%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Bubble Blaster",
+                "GunType": "Pistol",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb547a7659218e987a72_Bubble%20Blaster%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Buttplug",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb616960b1ba9de7484b_Buttplug%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Carrier",
+                "GunType": "AssaultRifle",
+                "Guild": "Alas!",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e59395c48ea16ec8dffb1_Carrier%20(AR-BL3).png"
+            },
+            {
+                "Name": "Chandelier",
+                "GunType": "Shotgun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca3f94f49c7993757c08_Chandelier%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Cheap Tips",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd110b5d4b360c2ba3649_Cheap%20Tips%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Chomper",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca4b6ce766bf88f0efc9_Chomper%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Clairvoyance",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e59466fe81a3117c4ad46_Clairvoyance%20(AR-BL3).png"
+            },
+            {
+                "Name": "Cloud Kill",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd11cb5d4b31250ba36be_Cloud%20Kill%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Cocky Bastard",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fdb734bdf48e1c1f38c54_Cocky%20Bastard%20(Sniper-BL3).png"
+            },
+            {
+                "Name": "Cold Shoulder",
+                "GunType": "SniperRifle",
+                "Guild": "Stoker",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fdb7e7849be77c4646b88_Cold%20Shoulder%20(Sniper-BL3).png"
+            },
+            {
+                "Name": "Complex Root",
+                "GunType": "SniperRifle",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fdc4bf6c6e077c87697d5_Complex%20Root%20(Sniper-BL3).png"
+            },
+            {
+                "Name": "Conference Call",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca57462780ffe6c6d493_Conference%20Call%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Contained Blast",
+                "GunType": "AssaultRifle",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e59520fb75d6e7571f179_Contained%20Blast%20(AR-BL3).png"
+            },
+            {
+                "Name": "Convergence",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca64c9396f2744ee7775_Convergence%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Crader's EM-P5",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd1296b5fd0d1dbf8bab5_Crader%27s%20EM-P5%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Craps",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/61990a0879ca2dd5bee6df9a_Craps%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Creamer",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e6439c4b1d60ea249f3e2_Creamer%20(Launcher-BL3).png"
+            },
+            {
+                "Name": "Creeping Corruption",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHL",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6199094d045c5778ed2c617e_Creeping%20Corruption%20(AR-BL3).png"
+            },
+            {
+                "Name": "Creeping Death",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca707849be1bdb642a7e_Creeping%20Death%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Crit",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd1367dd18be865eeacab_Crit%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Critical Mass",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeb86d89fa5bafe591baf_Critical%20Mass%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Critical Thug",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca7ddeee474a685eb9ad_Critical%20Thug%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Crossroad",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd141326861b3e73b0511_Crossroad%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Cutsman",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd14e3fb9e73973e25d7e_Cutsman%20(SMG-BL3).png"
+            },
+            {
+                "Name": "D.N.A.",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd15ab5d4b3162cba37a7_D.N.A.%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Dakota",
+                "GunType": "Shotgun",
+                "Guild": "Blackpowder",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca895710e158180c763b_Dakota%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Damned",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e597d6114dd67aff68c42_Damned%20(AR-BL3).png"
+            },
+            {
+                "Name": "Dark Army",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd16792067fb2b18aa318_Dark%20Army%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Dead Chamber",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeeaca51d173fd54984fa_Dead%20Chamber%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Destructo Spinner",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd255098c65fdce1d5c65_Destructo%20Spinner%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Devastator",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/61990a22ca0cb37c2d76a5a8_Devastator%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Devil's Foursum",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/61990a5b1619b71d2fed4971_Devils%20Foursum%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Devoted",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd2603fb9e7498fe265b3_Devoted%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Digby's Smooth Tube",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHL",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e598903b74a5f4051c2f4_Digby%27s%20Smooth%20Tube%20(AR-BL3).png"
+            },
+            {
+                "Name": "Dowsing Rod",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e5995872852f724856cd0_Dowsing%20Rod%20(AR-BL3).png"
+            },
+            {
+                "Name": "E-Gone",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd26d09868d0c561071ab_E-Gone%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Earworm",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHL",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e59a26114dd75ccf68dde_Earworm%20(AR-BL3).png"
+            },
+            {
+                "Name": "Echo",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/61990a86ca0cb3840076a89b_Echo%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Ember's Purge",
+                "GunType": "SubmachineGun",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fd2799e94525526a2a603_Ember%27s%20Purge%20(SMG-BL3).png"
+            },
+            {
+                "Name": "Embrace the Pain",
+                "GunType": "AssaultRifle",
+                "Guild": "Rare",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e59ae2a7d739ae40c4a17_Embrace%20the%20Pain%20(AR-BL3).png"
+            },
+            {
+                "Name": "Eridian Fabricator",
+                "GunType": "RocketLauncher",
+                "Guild": "Eridian",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e644603b74a2e9c5203d2_Eridian%20Fabricator%20(Launcher-BL3).png"
+            },
+            {
+                "Name": "Extreme Hangin' Chadd",
+                "GunType": "Pistol",
+                "Guild": "Rare",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618eeede6e8d9040946c90da_Extreme%20Hangin%27%20Chadd%20(Pistol-BL3).png"
+            },
+            {
+                "Name": "Face-puncher",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fca951f12a0c23a102691_Face-Puncher%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Faisor",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618e59bd0614ffcc9f21e46c_Faisor%20(AR-BL3).png"
+            },
+            {
+                "Name": "Fearmonger",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fcaa2d9f120ff4242a583_Fearmonger%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Fingerbiter",
+                "GunType": "Shotgun",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fcaaeaaba4d80f4cac59d_Fingerbiter%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "Firecracker",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/618fcabb35868a2a018c10ad_Firecracker%20(Shotgun-BL3).png"
+            },
+            {
+                "Name": "AUTOMAGIC.exe",
+                "GunType": "Pistol",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653a8dc6c1fb82f3aef71d_AUTOMAGIC.exe%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Anchor",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626538b9fd624c2c05bffc68_Anchor%20(Launcher-WL).png"
+            },
+            {
+                "Name": "Antique Greatbow",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af4b0f314608f9b12df0_Antique%20Greatbow%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Apex",
+                "GunType": "Pistol",
+                "Guild": "DAHLIA",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653a95fd624ca9c6bfff5c_Apex%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Birthright",
+                "GunType": "Pistol",
+                "Guild": "Stoker",
+                "Rarity": "Epic",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653a9c8d38bcfdd65ce8ca_Birthright%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Blazing Volley",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ace2b08454595f162eef_Blazing%20Volley%20(SMG-WL).png"
+            },
+            {
+                "Name": "Blue Cake",
+                "GunType": "RocketLauncher",
+                "Guild": "Skuldugger",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626536a2800e39c75b4a7b66_Blue%20Cake%20(Launcher-WL).png"
+            },
+            {
+                "Name": "Boniface's Soul",
+                "GunType": "Pistol",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653aa430a5c2de82e97eef_Boniface%27s%20Soul%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Borea's Breath",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265acf076dd5ba887320636_Borea%27s%20Breath%20(SMG-WL).png"
+            },
+            {
+                "Name": "Butterboom",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62920581e9025cbe6a283900_Butterboom%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Cannonballer",
+                "GunType": "RocketLauncher",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626538c7732d38702c28fd26_Cannonballer%20(Launcher-WL).png"
+            },
+            {
+                "Name": "Carrouser",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af5ab67c336900a4b5dc_Carrouser%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Catatumbo",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653aaba9da5b22aa2cf6d6_Catatumbo%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Circuitous Gyre",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ac6fd7c509f1a6063e1e_Circuitus%20Gyre%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Crossblade",
+                "GunType": "Shotgun",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ac7d45767bfb7e5787ee_Crossblade%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Crossbolt Generator",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653936b1845a1a0007f013_Crossbolt%20Generator%20(AR-WL).png"
+            },
+            {
+                "Name": "Die-Vergent",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ac838d38bc2a605fe759_Die-Vergent%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Donkey",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265395ad7e9e7c14d915d5f_Donkey%20(AR-WL).png"
+            },
+            {
+                "Name": "Dreadlord's Finest",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653963b08454027b12db80_Dreadlord%27s%20Finest%20(AR-WL).png"
+            },
+            {
+                "Name": "Dry'l's Fury",
+                "GunType": "SniperRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af61d71f1c81d659b974_Dry%27l%27s%20Fury%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Dry'l's Legacy",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265acf70215f660a10e97b5_Dry%27l%27s%20Legacy%20(SMG-WL).png"
+            },
+            {
+                "Name": "Echoing Phoenix",
+                "GunType": "AssaultRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62b743ae19e99b4444404b25_Echoing%20Phoenix%20(AR-WL).png"
+            },
+            {
+                "Name": "Eight Piece",
+                "GunType": "AssaultRifle",
+                "Guild": "Skuldugger",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265396a6f38db7840604460_Eight%20Piece%20(AR-WL).png"
+            },
+            {
+                "Name": "Envy",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af6849337b59cf36202c_Envy%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Fragment Rain",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265acfd0f3146fffeb11308_Fragment%20Rain%20(SMG-WL).png"
+            },
+            {
+                "Name": "Gluttony",
+                "GunType": "Pistol",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653ab2a4cc8fcebecf9654_Gluttony%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Goblin Repellant",
+                "GunType": "Pistol",
+                "Guild": "Skuldugger",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653abbac537429c279a27e_Goblin%20Repellant%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Hawkins' Wrath",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ac8a30a5c260d5ecd7b3_Hawkins%27%20Wrath%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Headcanon",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Epic",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653ac47852972720b0f9b2_Headcanon%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Heckwader",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHLIA",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ad0423fd21894a1e4c32_Heckwader%20(SMG-WL).png"
+            },
+            {
+                "Name": "Ironsides",
+                "GunType": "SniperRifle",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af6f82be7a0c7a709172_Ironsides%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Kao Khan",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af76aa34ea695b7422e8_Kao%20Khan%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Last Rites",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ac91b084545b14162d63_Last%20Rites%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Lil K's Bread Slicer",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653973beb21a38491fe488_Lil%20K%27s%20Bread%20Slicer%20(AR-WL).png"
+            },
+            {
+                "Name": "Liquid Cooling",
+                "GunType": "Pistol",
+                "Guild": "Skuldugger",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653acb0f314645f4ad4b84_Liquid%20Cooling%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Live Wire",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHLIA",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ad0bb67c33e8dca49844_Live%20Wire%20(SMG-WL).png"
+            },
+            {
+                "Name": "Love Leopard",
+                "GunType": "RocketLauncher",
+                "Guild": "Skuldugger",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626538ce58a08c7643e2561e_Love%20Leopard%20(Launcher-WL).png"
+            },
+            {
+                "Name": "Manual Transmission",
+                "GunType": "AssaultRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265398156a98b297de0a027_Manual%20Transmission%20(AR-WL).png"
+            },
+            {
+                "Name": "Masterwork Handbow",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653ad282be7a0dad6cadc5_Masterwork%20Handbow%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Message",
+                "GunType": "Pistol",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653ad9059766780d08f094_Message%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Mistrial",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHLIA",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626539870f3146c9f6ad4706_Mistrial%20(AR-WL).png"
+            },
+            {
+                "Name": "Moleman",
+                "GunType": "RocketLauncher",
+                "Guild": "Stoker",
+                "Rarity": "Epic",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626538d523fd2140c51b046d_Moleman%20(Launcher-WL).png"
+            },
+            {
+                "Name": "Negotiator",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ac98b3a08847641c687c_Negotiator%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Oil and Spice",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHLIA",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6291e9640e183258845879f6_Oil%20and%20Spice%20(SMG-WL).png"
+            },
+            {
+                "Name": "Perceiver",
+                "GunType": "Pistol",
+                "Guild": "DAHLIA",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653ae066bcd647c1f06842_Perceiver%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Pookie's Chew Toy",
+                "GunType": "Pistol",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653ae5b3a088ec0018d6b3_Pookie%27s%20Chew%20Toy%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Portable Sawmill",
+                "GunType": "SniperRifle",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af7dfd624c0edbc3d18e_Portable%20Sawmill%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Quad Bow",
+                "GunType": "AssaultRifle",
+                "Guild": "DAHLIA",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265398f8e039c799a4c609a_Quad%20Bow%20(AR-WL).png"
+            },
+            {
+                "Name": "Queen's Cry",
+                "GunType": "Pistol",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653aecb5b386743e4411c3_Queen%27s%20Cry%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Red Hellion",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ac9f66bcd6a42af3ca1e_Red%20Hellion%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Reign of Arrows",
+                "GunType": "Shotgun",
+                "Guild": "Blackpowder",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265aca682be7a3bbc707713_Reign%20of%20Arrows%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Rogue Imp",
+                "GunType": "AssaultRifle",
+                "Guild": "Skuldugger",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653996800e394ef34a9fbf_Rogue%20Imp%20(AR-WL).png"
+            },
+            {
+                "Name": "Ruby's Spite",
+                "GunType": "Pistol",
+                "Guild": "DAHLIA",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653af37852970503b0fb2e_Ruby%27s%20Spite%20(Pistol-WL).png"
+            },
+            {
+                "Name": "Shadowfire",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ad1288660faf5a5c41e3_Shadowfire%20(SMG-WL).png"
+            },
+            {
+                "Name": "Skeep Prod",
+                "GunType": "SniperRifle",
+                "Guild": "DAHLIA",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af84cdca6d16f894d34c_Skeep%20Prod%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Stab-O-Matic",
+                "GunType": "Shotgun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62b743c43b83086c23ad18c2_Stab-O-Matic%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Sworderang",
+                "GunType": "Shotgun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265acad732d38cb302c8fd2_Sworderang%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Swordsplosion",
+                "GunType": "Shotgun",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265acb42ae74356c0ec2dfe_Swordsplosion%20(Shotgun-WL).png"
+            },
+            {
+                "Name": "Throwable Hole",
+                "GunType": "SubmachineGun",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ad1958a08c864de59860_Throwable%20Hole%20(SMG-WL).png"
+            },
+            {
+                "Name": "Thunder Anima",
+                "GunType": "AssaultRifle",
+                "Guild": "Skuldugger",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265399c30a5c21239e973b0_Thunder%20Anima%20(AR-WL).png"
+            },
+            {
+                "Name": "Tootherator",
+                "GunType": "SniperRifle",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265af8b0f3146612ab12e7e_Tootherator%20(Sniper-WL).png"
+            },
+            {
+                "Name": "Twisted Delugeon",
+                "GunType": "RocketLauncher",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626538db8e039c21a94c5b06_Twisted%20Delugeon%20(Launcher-WL).png"
+            },
+            {
+                "Name": "White Rider",
+                "GunType": "SubmachineGun",
+                "Guild": "DAHLIA",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ad20a9da5be34e30aae9_White%20Rider%20(SMG-WL).png"
+            },
+            {
+                "Name": "Wizard's Pipe",
+                "GunType": "SubmachineGun",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265ad27800e395ca74df45a_Wizard%27s%20Pipe%20(SMG-WL).png"
+            }
+        ]
+    }
+}

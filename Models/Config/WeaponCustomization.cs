@@ -15,5 +15,7 @@ namespace Models.Config
         public RedText[] RedText {get; set;}   
 
         public ElementalChance[] ElementalTable { get; set; }
+
+        public WeaponGallerySpec[] WeaponGallery { get; set; }
     }
 }

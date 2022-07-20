@@ -60,7 +60,7 @@ namespace Business.Factories
                 gun.Bonuses.Add($"({gunType.GetDescription()}) {archetype.Bonus}");
             }
 
-            gun.Name = GetName(archetype);
+            GetName(gun, archetype);
 
             var gunStats = archetype.WeaponSpecs.First(x => x.MinLevel <= builderArguments.PlayerLevel && builderArguments.PlayerLevel <= x.MaxLevel);
             gun.Range  = gunStats.Range;
@@ -105,9 +105,23 @@ namespace Business.Factories
             };
         }
 
-        private string GetName(WeaponArchetype archetype)
+        private void GetName(Gun gun, WeaponArchetype archetype)
         {
-            return archetype.Names[RandomNumberGenerator.GetInt32(0, archetype.Names.Length)];
+            if (gun.Rarity != Rarity.Common)
+            {
+                var matchingWeapons = _weaponCustomization.WeaponGallery.Where(x => x.Guild == gun.Guild && x.GunType == gun.GunType && x.Rarity == gun.Rarity );
+
+                if (matchingWeapons.Any())
+                {
+                    var weaponGallerySpec = matchingWeapons.ElementAt(RandomNumberGenerator.GetInt32(0, matchingWeapons.Count()));
+                    gun.Name = weaponGallerySpec.Name;
+                    gun.ImageUrl = weaponGallerySpec.ImageUrl;
+                    gun.Source = weaponGallerySpec.Source;
+                    return;
+                }
+            }
+
+            gun.Name = archetype.Names[RandomNumberGenerator.GetInt32(0, archetype.Names.Length)];
         }
 
         private (Element?, string) RollElement(Rarity? rarity, int? rollModifier)
