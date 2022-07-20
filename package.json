@@ -4,9 +4,8 @@
     "private": true,
     "description": "Bunkers and Badasses Loot Generator",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/amvi88/BunkersAndBadasses.git"
+        "type": "git",
+        "url": "https://github.com/amvi88/BunkersAndBadasses.git"
     },
-    "scripts": {
-    }
-  }
+    "scripts": {}
+}

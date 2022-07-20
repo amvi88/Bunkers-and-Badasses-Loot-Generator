@@ -15,6 +15,7 @@
     "snowpack": "3.0.11"
   },
   "dependencies": {
+    "dom-to-image-more": "^2.11.1",
     "html-to-image": "^1.9.0"
   }
 }
