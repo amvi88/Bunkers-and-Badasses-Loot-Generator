@@ -11,6 +11,8 @@ namespace Models.Builder
 
         public GunType GunType {get; set;} = GunType.CombatRifle;
 
+        public string Guild  {get; set;}
+
         public bool AllowPrefixes {get; set; }
 
         public bool AllowRedTexts {get; set; }

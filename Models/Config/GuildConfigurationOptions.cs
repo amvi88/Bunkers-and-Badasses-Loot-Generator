@@ -2,7 +2,7 @@ namespace Models.Config
 {
     public class GuildConfigurationOptions
     {
-        public List<Guild> Guilds {get; set;}
+        public List<GuildSpec> Guilds {get; set;}
     }
 
 }

@@ -4,7 +4,7 @@
 @using Models.Builder;
 @inherits BaseItemViewer;
 
-    <figure class="@GetCardCssClass" id="@GetElementId()" @onclick="Download">
+    <figure class="@GetCardCssClass" id="@GetElementId()" @onclick="Copy">
       <div class="card__image-container">
         <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">   
       </div>
@@ -102,7 +102,7 @@
 
     public override string GetElementId()
     {
-      return $"Gun_{CraftedGun.Guild}_{CraftedGun.Name.Replace(" ","_")}";
+      return $"Gun-{Guid.NewGuid()}";
     }
 
     public override string GetFileName()

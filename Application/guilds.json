@@ -82,7 +82,8 @@
             },
             {
                 "Name": "Alas!",
-                "SupportedItemTypes": "CombatRifle, Pistol, Shotgun, SniperRifle, Shield",
+                "SupportedItemTypes": "Gun, Shield",
+                "SupportedGunTypes": "CombatRifle, Pistol, Shotgun, SniperRifle",
                 "GrenadeSpecs": [],
                 "ShieldSpecs": [
                     {
@@ -156,7 +157,8 @@
             },
             {
                 "Name": "Skuldugger",
-                "SupportedItemTypes": "Pistol, SubmachineGun, Shotgun, SniperRifle",
+                "SupportedItemTypes": "Gun",
+                "SupportedGunTypes": "Pistol, SubmachineGun, Shotgun, SniperRifle",
                 "GrenadeSpecs": [],
                 "ShieldSpecs": [],
                 "WeaponSpecs": [

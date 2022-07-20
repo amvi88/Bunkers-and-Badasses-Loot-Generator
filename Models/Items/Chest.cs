@@ -1,5 +1,6 @@
 namespace Models.Builder
 {
+
     public class Chest
     {
         public int Roll { get; set; }

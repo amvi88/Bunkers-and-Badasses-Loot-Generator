@@ -20,7 +20,7 @@ namespace Business.Factories
 
         public abstract ItemWrapper<I> Manufacture(P factoryParameters);
 
-        protected Guild GetGuild(string guildName, ItemType itemType, out int roll)
+        protected GuildSpec GetGuild(string guildName, ItemType itemType, out int roll)
         {
             var guildsThatProduceItemType = _guildConfiguration.Guilds.Where(x => x.CanBuild(itemType));
 
@@ -35,7 +35,7 @@ namespace Business.Factories
         }
 
 
-        protected Guild GetGuild(string guildName, ItemType itemType, GunType gunType, out int roll)
+        protected GuildSpec GetGuild(string guildName, ItemType itemType, GunType gunType, out int roll)
         {
             var guildsThatProduceItemType = _guildConfiguration.Guilds.Where(x => x.CanBuild(itemType) && x.CanProduceGunType(gunType));
 

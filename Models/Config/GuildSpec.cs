@@ -2,7 +2,7 @@ using Models.Common;
 
 namespace Models.Config
 {
-    public class Guild
+    public class GuildSpec
     {
         public string Name { get; set; }
 

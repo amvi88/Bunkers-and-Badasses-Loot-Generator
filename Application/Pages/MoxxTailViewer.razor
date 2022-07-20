@@ -32,7 +32,7 @@
 
     public override string GetElementId()
     {
-      return $"MoxxTail_{CraftedMoxxTail.Name.Replace(" ","_")}";
+      return $"MoxxTail-{Guid.NewGuid()}";
     }
 
     public override string GetFileName()

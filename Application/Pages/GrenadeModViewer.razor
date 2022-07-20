@@ -53,11 +53,11 @@
 
     public override string GetElementId()
     {
-      return $"Grenade_{CraftedGrenadeMod.Guild}_{CraftedGrenadeMod.GrenadeType}";
+      return $"GrenadeMod-{Guid.NewGuid()}";
     }
 
     public override string GetFileName()
     {
-      return $"Grenade_{CraftedGrenadeMod.Guild}_{CraftedGrenadeMod.GrenadeType}.png";
+      return $"GrenadeMod_{CraftedGrenadeMod.Guild}_{CraftedGrenadeMod.GrenadeType}.png";
     }
 }

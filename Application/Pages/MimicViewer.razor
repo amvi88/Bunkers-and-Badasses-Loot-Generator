@@ -1,7 +1,7 @@
 @namespace Application.Pages
 
 @inherits BaseItemViewer;
-    <figure class="card card--mimic" id="mimic">
+    <figure class="card card--mimic" id="@GetElementId()">
       <div class="card__image-container">
         <img src=@GetMimicImage alt="mimic" class="card__image">   
       </div>
@@ -19,4 +19,14 @@
 
 @code {
     public string GetMimicImage => $"images/resources/chests/mimic.png";
+
+    public override string GetElementId()
+    {
+      return "mimic";
+    }
+
+    public override string GetFileName()
+    {
+      return "mimic.png";
+    }
 }

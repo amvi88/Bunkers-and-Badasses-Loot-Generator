@@ -26,6 +26,11 @@ namespace Application.Pages
             result = await DownloadImage(GetElementId(), GetFileName());
         }
 
+        protected async Task Copy()
+        {
+            result = await CopyImageToClipboard(GetElementId());
+        }
+
         public virtual string GetElementId()
         {
             return string.Empty;
@@ -39,6 +44,10 @@ namespace Application.Pages
         protected async ValueTask<string?> DownloadImage(string id, string fileName) =>
             module is not null ?
                 await module.InvokeAsync<string>("downloadCard", id, fileName) : null;
+
+        protected async ValueTask<string?> CopyImageToClipboard(string id) =>
+            module is not null ?
+                await module.InvokeAsync<string>("copyCard", id) : null;
 
         async ValueTask IAsyncDisposable.DisposeAsync()
         {

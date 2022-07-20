@@ -5,7 +5,7 @@
 
 @inherits BaseItemViewer;
 
-    <figure class="card card--normal" id="lewt">
+    <figure class="card card--normal" id="@GetElementId()">
       <div class="card__image-container">
         <img src=@GetGrenadeImage alt="gold" class="card__image">   
       </div>
@@ -21,4 +21,15 @@
 @code {
 
     public string GetGrenadeImage => $"images/resources/grenades/grenade.png";
+
+
+    public override string GetElementId()
+    {
+      return $"Grenade-{Guid.NewGuid()}";
+    }
+
+    public override string GetFileName()
+    {
+      return "grenade.png";
+    }
 }

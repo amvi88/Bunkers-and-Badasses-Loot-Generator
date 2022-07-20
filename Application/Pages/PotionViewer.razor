@@ -42,7 +42,7 @@ else
 
     public override string GetElementId()
     {
-      return $"Potion_{CraftedPotion.Name.Replace(" ","_")}";
+      return $"Potion-{Guid.NewGuid()}";
     }
 
     public override string GetFileName()
