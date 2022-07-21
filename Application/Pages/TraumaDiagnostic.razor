@@ -6,6 +6,7 @@
 @using Models.Common;
 @using System.Linq;
 
+@inherits BaseItemViewer
 @inject ITraumatizingService service;
 @inject ILogger<TraumaDiagnostic> logger
 
@@ -15,47 +16,63 @@
 <hr />
 
 <EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
-  <DataAnnotationsValidator />  
+  <DataAnnotationsValidator />
   <ValidationSummary />
 
- <div class="form-group">
-     <label class="col-md-4 control-label">Rarity</label>
-     <div class="col-md-8">
-        <InputSelect @bind-Value="parameters.TraumaType" class="form-control" aria-label="Trauma Type">
-              @foreach (var traumaType in Enum.GetValues(typeof(TraumaType)))
-              {
-                 <option value="@traumaType" selected>@traumaType</option>                              
-              }
-          </InputSelect>
-      </div>
-  </div>
-  <hr class="divider">
   <div class="form-group">
-    <input type="submit" class="btn btn-primary" value="Roll"/>
-  </div>
-</EditForm>
+    <label class="col-md-4 control-label">Rarity</label>
+    <div class="col-md-8">
+      <InputSelect @bind-Value="parameters.TraumaType" class="form-control" aria-label="Trauma Type">
+        @foreach (var traumaType in Enum.GetValues(typeof(TraumaType)))
+        {
+                  <option value="@traumaType" selected>@traumaType</option>
+        }
+              </InputSelect>
+            </div>
+          </div>
+          <hr class="divider">
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Roll" />
+          </div>
+        </EditForm>
 
-@if (traumas != null && traumas.Any())
-{
-  foreach(var trauma in traumas)
-  {
-    <br/>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <h4 class="list-group-item-heading">@trauma.Name (@trauma.TraumaType.ToString())</h4>
-        <p class="list-group-item-text">@trauma.Effect</p>      
-      </li>
-    </ul>
-  }
-}
+        @if (traumas != null && traumas.Any())
+        {
+          <div id="@GetElementId()" class="trauma-container">
+            <ContextMenuTrigger MenuId="@GetMenuId()">
+            @for (int index = 0; index < traumas.Count; index++)
+              {
+                <div class="speech-bubble @GetSpeechBubbleClass(index)">
+                  <h4 class="trauma-heading">@traumas[index].Name (@traumas[index].TraumaType.ToString())</h4>
+                  <p class="trauma-text">@traumas[index].Effect</p>
+                </div>
+              }
+            </ContextMenuTrigger>
+          </div>
+
+          <ContextMenu Id="@GetMenuId()">
+            <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+            <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+          </ContextMenu>
+        }
 
 @code {
   TraumaServiceParameters parameters = new TraumaServiceParameters();
   List<Trauma> traumas = null;
 
+  public string GetSpeechBubbleClass(int index)
+  {
+    return (index % 2 == 0) ? "sb-right" : "sb-left";
+  }
+
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
     traumas = service.GetTrauma(parameters);
+  }
+
+  public override string GetFileName()
+  {
+    return "traumas.png";
   }
 }
