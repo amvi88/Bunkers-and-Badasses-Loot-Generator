@@ -27,3 +27,9 @@ h1, h2, h3, h4, h5 {
 .card--tinytina .card__type {
   background-color: #ff2cc3;
 }
+
+img {
+  max-height: 150px;
+  margin: auto;
+  display: inline-block;
+}
