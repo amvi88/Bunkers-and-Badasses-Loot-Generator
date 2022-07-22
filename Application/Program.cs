@@ -22,6 +22,7 @@ builder.Configuration.AddJsonFile("traumas.json", true);
 builder.Configuration.AddJsonFile("dicechests.json", true);
 builder.Configuration.AddJsonFile("unassumingchests.json", true);
 builder.Configuration.AddJsonFile("cacherolls.json", true);
+builder.Configuration.AddJsonFile("enemydrops.json", true);
 
 // Add services to the container.
 builder.Services.Configure<JsonOptions>(options =>
@@ -50,6 +51,7 @@ builder.Services.AddTransient<IPotionFinderService, PotionFinderService>();
 builder.Services.AddTransient<IChestService<DiceChestServiceParameters>,DiceChestService>();
 builder.Services.AddTransient<IChestService<UnassumingChestServiceParameters>,UnassumingChestService>();
 builder.Services.AddTransient<IChestService<CacheRollServiceParameters>, CacheRollService>();
+builder.Services.AddTransient<IChestService<EnemyDropServiceParameters>, EnemyDropService>();
 builder.Services.AddTransient<IGuildService, GuildService>();
 builder.Services.AddBlazorContextMenu();
 

@@ -1,0 +1,112 @@
+﻿@page "/enemy-drops"
+@namespace Application.Pages
+@using Business;
+@using Business.Services;
+@using Models.Builder;
+@using Models.Common;
+@using System.Linq;
+
+@inject IChestService<EnemyDropServiceParameters> service;
+@inject ILogger<EnemyDropCrafter> logger
+
+
+<PageTitle>B&B: Mine!!!</PageTitle>
+<h1>Enemy Drops</h1>
+<hr />
+
+<EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+
+   <div class="form-group" >
+     <label class="col-md-4 control-label">Player Level:</label>
+     <div class="col-md-8">
+         <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
+     </div>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Enemy Badass Rank</label>
+     <div class="col-md-8">
+       <InputSelect @bind-Value="parameters.LootPiles" class="form-control" aria-label="Gun Type">
+              <option value=1 selected>1-3</option>
+              <option value=2>4-6</option>
+              <option value=3>7-12</option>
+              <option value=4>13-18</option>
+              <option value=5>19-24</option>
+              <option value=6>25+</option>
+        </InputSelect>
+    </div>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Use Prefixes <input type="checkbox" @bind="parameters.AllowPrefixes" aria-label="Allows Prefixes"/></label>
+  </div>
+  <div class="form-group">
+     <label class="col-md-4 control-label">Use RedTexts <input type="checkbox" @bind="parameters.AllowRedTexts" aria-label="Allows RedText"/></label>
+  </div>
+  <hr class="divider">
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Roll"/>
+  </div>
+</EditForm>
+
+<div id="cards"  class="chest_container"> 
+@if (chest != null && chest.Items != null && chest.Items.Any())
+{
+  foreach(var item in chest.Items)
+  {
+    if (item is Gold)
+    {
+      <div class="chest_wrapper">
+        <GoldViewer Gold=@((Gold)item)/>
+      </div>
+    }
+    else if (item is Gun)
+    {
+      <div class="chest_wrapper">
+        <GunViewer CraftedGun=@((Gun)item)/>
+      </div>
+    }
+    else if (item is Grenade)
+    {
+      <div class="chest_wrapper">
+        <GrenadeViewer/>
+      </div>
+    }
+    else if (item is GrenadeMod)
+    {
+      <div class="chest_wrapper">
+        <GrenadeModViewer CraftedGrenadeMod=@((GrenadeMod)item)/>
+      </div>
+    }
+    else if (item is Potion)
+    {
+      <div class="chest_wrapper">
+        <PotionViewer CraftedPotion=@((Potion)item)/>
+      </div>
+    }
+    else if (item is Shield)
+    {
+      <div class="chest_wrapper">
+       <ShieldViewer CraftedShield=@((Shield)item)/>
+      </div>
+    }
+    else if (item is Relic)
+    {
+      <div class="chest_wrapper">
+        <RelicViewer CraftedRelic=@((Relic)item)/>
+      </div>
+    }
+  }
+}
+</div>
+
+@code {
+  EnemyDropServiceParameters parameters = new EnemyDropServiceParameters();
+  Chest chest = null;
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    chest = service.OpenChest(parameters);
+  }
+}
