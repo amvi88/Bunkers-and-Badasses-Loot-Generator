@@ -9,6 +9,8 @@ namespace Models.Builder
         [Range(1, 30)]
         public int PlayerLevel {get; set;} = 1;
         
+        [Required]
+        [Range(1,32)]
         public int BatchSize {get; set;} = 1;
     }
 }

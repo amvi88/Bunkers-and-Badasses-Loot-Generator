@@ -373,12 +373,8 @@
                 "Effect": "Max 1 Hit. Deal an additional 3 Damage for each unused Hit."
             },
             {
-                "Name": "",
-                "Effect": "Enemies Hit are considered to be under a legally binding"
-            },
-            {
                 "Name": "Legal",
-                "Effect": "contract to drop 1 extra Loot Pile when they die."
+                "Effect": "Enemies Hit are considered to be under a legally binding contract to drop 1 extra Loot Pile when they die."
             },
             {
                 "Name": "Abiding",
