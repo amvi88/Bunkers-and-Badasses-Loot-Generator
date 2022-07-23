@@ -20,17 +20,22 @@ h5 {
 }
 
 .card__redtexts {
-  margin: 1em 0;
   width: 100%;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
 }
 
-.card__redtext>.card__label[b-62go5clab6] {
+.card__redtext>.card__label {
   color: #f0061f;
   font-weight: 500;
   font-size: .75em;
+}
+
+.card__stats {
+  margin: 0;
+  margin-bottom: .5em;
+  width: 100%;
 }
 
 .card__hits {
@@ -54,6 +59,11 @@ h5 {
 .card__hits td {
   width: 33%;
   padding: 0.25em 0.5em 0;
+}
+
+.card__abilities
+{
+  margin-top: .5em;
 }
 
 .card__ability {
