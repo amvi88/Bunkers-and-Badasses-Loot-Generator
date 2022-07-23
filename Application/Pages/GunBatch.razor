@@ -1,0 +1,60 @@
+﻿@page "/gunxplosion"
+@namespace Application.Pages
+@using Business;
+@using Business.Services;
+@using Models.Builder;
+@using Models.Common;
+@using System.Linq;
+
+@inject IGunBatchService service;
+@inject ILogger<GunBatch> logger
+
+
+<PageTitle>B&B: Shop for Guns</PageTitle>
+<h1>Batches of Guns</h1>
+<hr />
+
+<EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+
+   <div class="form-group" >
+     <label class="col-md-4 control-label">Player Level:</label>
+     <div class="col-md-8">
+         <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
+     </div>
+  </div>
+  <div class="form-group" >
+     <label class="col-md-4 control-label">Batch Size:</label>
+     <div class="col-md-8">
+         <InputNumber @bind-Value="parameters.BatchSize" name="BatchSize" class="form-control" aria-label="BatchSize"/>
+     </div>
+  </div>
+  <hr class="divider">
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Roll"/>
+  </div>
+</EditForm>
+
+<div id="cards"  class="chest_container"> 
+@if (guns != null && guns.Any())
+{
+  foreach(var gun in guns)
+  {
+    <div class="chest_wrapper">
+        <GunViewer CraftedGun=@gun/>
+    </div>
+  }
+}
+</div>
+
+@code {
+  GunBatchServiceParameters parameters = new GunBatchServiceParameters();
+  IEnumerable<Gun> guns = null;
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    guns = service.GenerateBatch(parameters);
+  }
+}

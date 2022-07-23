@@ -53,6 +53,7 @@ builder.Services.AddTransient<IChestService<UnassumingChestServiceParameters>,Un
 builder.Services.AddTransient<IChestService<CacheRollServiceParameters>, CacheRollService>();
 builder.Services.AddTransient<IChestService<EnemyDropServiceParameters>, EnemyDropService>();
 builder.Services.AddTransient<IGuildService, GuildService>();
+builder.Services.AddTransient<IGunBatchService,GunBatchService>();
 builder.Services.AddBlazorContextMenu();
 
 var app = builder.Build();

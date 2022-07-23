@@ -20,5 +20,11 @@ namespace Models.Builder
         public bool AllowPrefixes {get; set; }
 
         public bool AllowRedTexts {get; set; }
+
+        public bool BatchMode {get; set;}
+
+        public int BatchSize {get; set;} = 1;
+
+
     }
 }
