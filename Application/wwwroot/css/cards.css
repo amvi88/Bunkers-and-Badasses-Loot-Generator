@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'SpaceMarine';
+  src: url('SM.ttf')  format('truetype');
+} 
+ 
  .card_container {
    margin-top: 2em;
  }
@@ -38,7 +43,7 @@
    transform: translateY(-50%);
    color: #ffffff;
    text-transform: uppercase;
-   font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+   font-family: "SpaceMarine","Open Sans Condensed", "Open Sans", helvetica, sans-serif;
    letter-spacing: 0.1em;
    padding: 0.25em;
    line-height: 1;
@@ -56,7 +61,7 @@
  }
 
  .card__name {
-   font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+   font-family: "SpaceMarine", "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
    text-align: center;
    font-size: 1.5em;
    font-weight: 700;

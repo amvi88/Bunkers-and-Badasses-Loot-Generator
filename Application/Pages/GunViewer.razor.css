@@ -30,6 +30,8 @@ h5 {
   color: #f0061f;
   font-weight: 500;
   font-size: .75em;
+  text-align: center;
+  font-family: "Space Marine";
 }
 
 .card__stats {

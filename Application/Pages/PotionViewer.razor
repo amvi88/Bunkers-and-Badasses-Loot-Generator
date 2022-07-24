@@ -9,10 +9,12 @@
           <img src=@GetPotionImage alt="potion" class="card__image">   
         </div>
         <figcaption class="card__caption">
-          <h1 class="card__name"> @CraftedPotion.Effect</h1>
+          <h1 class="card__name"> @CraftedPotion.Name</h1>
           
+          <div class="card_label">@CraftedPotion.Effect</div>
+
           <h3 class="@GetCssClassCardType">
-          @CraftedPotion.Name
+            @GetPotionType
           </h3>
 
           <table class="card__stats">
@@ -47,6 +49,7 @@
 
     public string GetPotionImage => CraftedPotion.IsTinyTinasPotion? "images/resources/potions/tinytina.png" :"images/resources/potions/potion.png";
 
+    public string GetPotionType => CraftedPotion.IsTinyTinasPotion? "Tiny Tina's Potion" : "Potion";
 
     public override string GetFileName()
     {

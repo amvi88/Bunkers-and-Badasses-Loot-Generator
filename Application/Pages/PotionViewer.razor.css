@@ -16,16 +16,17 @@ h1, h2, h3, h4, h5 {
   margin-left: .2em 
 }
 
-.card__name {
-  font-size: .9em;  
-}
-
 .card--tinytina {
   background: linear-gradient(140deg, rgba(255,167,249,1) 0%, rgba(255,44,195,1) 39%, rgba(255,227,167,1) 100%)
 }
 
 .card--tinytina .card__type {
   background-color: #ff2cc3;
+}
+
+.card_label
+{
+  text-align: center;
 }
 
 img {
