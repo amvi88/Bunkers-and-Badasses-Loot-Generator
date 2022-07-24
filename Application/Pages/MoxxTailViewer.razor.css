@@ -1,0 +1,20 @@
+.card_effect
+{
+  text-align: justify;
+}
+
+img {
+  max-height: 150px;
+  margin: auto;
+  display: inline-block;
+}
+
+.card--moxxtail {
+  background: rgb(108,166,90);
+  background: linear-gradient(90deg, rgba(108,166,90,1) 0%, rgba(4,195,121,1) 35%, rgba(0,212,255,1) 100%);  
+}
+
+.card--moxxtail .card__type {
+  background: rgb(108,166,90);
+  background: linear-gradient(90deg, rgba(108,166,90,1) 0%, rgba(4,195,121,1) 35%, rgba(0,212,255,1) 100%); 
+}

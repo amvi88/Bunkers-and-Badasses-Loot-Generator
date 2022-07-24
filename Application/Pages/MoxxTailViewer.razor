@@ -6,22 +6,20 @@
 <div>
     <figure class=@GetCardCssClass id="@GetElementId()">
       <ContextMenuTrigger MenuId="@GetMenuId()">
-      <figcaption class="card__caption">
-        <h1 class="card__name"> Moxx-Tail</h1>
-        
-        <h3 class="card__type">
-         @CraftedMoxxTail.Name
-        </h3>
+        <div class="card__image-container">
+          <img src=@GetImage alt="potion" class="card__image">   
+        </div>
+        <figcaption class="card__caption">
+          <h1 class="card__name"> Moxx-Tail</h1>
+          
+          <h3 class="card__type">
+          @CraftedMoxxTail.Name
+          </h3>
 
-        <table class="card__stats">
-          <tbody>            
-            <tr>
-              <th>Effect</th>
-              <td>@CraftedMoxxTail.Effect</td>   
-            </tr>            
-          </tbody>
-        </table>        
-      </figcaption>
+          <span class="card_effect">
+            @CraftedMoxxTail.Effect
+          </span>        
+        </figcaption>
       </ContextMenuTrigger>
     </figure>
 
@@ -37,7 +35,9 @@
     [Parameter]
     public MoxxTail CraftedMoxxTail { get; set; }
 
-    public string @GetCardCssClass => "card card--normal";
+    public string @GetCardCssClass => "card card--moxxtail";
+
+    public string GetImage => "images/resources/moxxtails/moxxtail.png";
 
     public override string GetFileName()
     {
