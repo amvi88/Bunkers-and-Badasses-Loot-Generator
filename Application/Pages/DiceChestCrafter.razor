@@ -54,59 +54,71 @@
   </div>
 </EditForm>
 
-<div id="cards"  class="chest_container"> 
-@if (chest != null && chest.Items != null && chest.Items.Any())
+@if (!loading)
 {
-  foreach(var item in chest.Items)
+  <div id="cards"  class="chest_container"> 
+  @if (chest != null && chest.Items != null && chest.Items.Any())
   {
-    
-    if (item is Gun)
+    foreach(var item in chest.Items)
     {
-      <div class="chest_wrapper">
-        <GunViewer CraftedGun=@((Gun)item)/>
-      </div>
-    }
-    else if (item is Grenade)
-    {
-      <div class="chest_wrapper">
-        <GrenadeViewer/>
-      </div>
-    }
-    else if (item is GrenadeMod)
-    {
-      <div class="chest_wrapper">
-        <GrenadeModViewer CraftedGrenadeMod=@((GrenadeMod)item)/>
-      </div>
-    }
-    else if (item is Potion)
-    {
-      <div class="chest_wrapper">
-        <PotionViewer CraftedPotion=@((Potion)item)/>
-      </div>
-    }
-    else if (item is Shield)
-    {
-      <div class="chest_wrapper">
-       <ShieldViewer CraftedShield=@((Shield)item)/>
-      </div>
-    }
-    else if (item is Relic)
-    {
-      <div class="chest_wrapper">
-        <RelicViewer CraftedRelic=@((Relic)item)/>
-      </div>
+      
+      if (item is Gun)
+      {
+        <div class="chest_wrapper">
+          <GunViewer CraftedGun=@((Gun)item)/>
+        </div>
+      }
+      else if (item is Grenade)
+      {
+        <div class="chest_wrapper">
+          <GrenadeViewer/>
+        </div>
+      }
+      else if (item is GrenadeMod)
+      {
+        <div class="chest_wrapper">
+          <GrenadeModViewer CraftedGrenadeMod=@((GrenadeMod)item)/>
+        </div>
+      }
+      else if (item is Potion)
+      {
+        <div class="chest_wrapper">
+          <PotionViewer CraftedPotion=@((Potion)item)/>
+        </div>
+      }
+      else if (item is Shield)
+      {
+        <div class="chest_wrapper">
+        <ShieldViewer CraftedShield=@((Shield)item)/>
+        </div>
+      }
+      else if (item is Relic)
+      {
+        <div class="chest_wrapper">
+          <RelicViewer CraftedRelic=@((Relic)item)/>
+        </div>
+      }
     }
   }
+  </div>
 }
-</div>
+else{
+  <Loader></Loader>
+}
 
 @code {
   DiceChestServiceParameters parameters = new DiceChestServiceParameters();
   Chest chest = null;
+  
+  bool loading = false;
 
-  void Roll(EditContext editContext)
+  async Task Roll(EditContext editContext)
   {
-    logger.LogDebug("Roll");
+    loading = true;
     chest = service.OpenChest(parameters);
+
+    await Task.Delay(500);
+    loading = false;
+    this.StateHasChanged(); 
   }
 }

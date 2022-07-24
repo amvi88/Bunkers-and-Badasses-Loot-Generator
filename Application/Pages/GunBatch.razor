@@ -36,25 +36,37 @@
   </div>
 </EditForm>
 
+@if (!loading){
 <div id="cards"  class="chest_container"> 
-@if (guns != null && guns.Any())
-{
-  foreach(var gun in guns)
+  @if (guns != null && guns.Any())
   {
-    <div class="chest_wrapper">
-        <GunViewer CraftedGun=@gun/>
-    </div>
+    foreach(var gun in guns)
+    {
+      <div class="chest_wrapper">
+          <GunViewer CraftedGun=@gun/>
+      </div>
+    }
   }
+  </div>
 }
-</div>
+else
+{
+  <Loader/>
+}
 
 @code {
   GunBatchServiceParameters parameters = new GunBatchServiceParameters();
   IEnumerable<Gun> guns = null;
 
-  void Roll(EditContext editContext)
+  bool loading = false;
+
+  async Task Roll(EditContext editContext)
   {
-    logger.LogDebug("Roll");
+    loading = true;
+    this.StateHasChanged();
     guns = service.GenerateBatch(parameters);
+    await Task.Delay(500);
+    loading = false;    
+    this.StateHasChanged();
   }
 }
