@@ -43,9 +43,9 @@
      <div class="col-md-4">
        <NullableEnumSelect Value="@gunBuilder.GunType" ValueExpression="@(() => gunBuilder.GunType)"  class="form-control" aria-label="Gun Type" ValueChanged="@((GunType? value) => FilterByGunTypes(value))">
               <option value="">Random</option>              
-              @foreach (var rarity in Enum.GetValues(typeof(GunType)))
+              @foreach (var gunType in Enum.GetValues(typeof(GunType)))
               {
-                  <option value="@rarity">@(((GunType)rarity).GetDescription())</option>
+                  <option value="@gunType">@(((GunType)gunType).GetDescription())</option>
               }
         </NullableEnumSelect>
     </div>

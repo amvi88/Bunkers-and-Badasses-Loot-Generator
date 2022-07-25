@@ -27,6 +27,12 @@ figure
     gap: 5px;
 }
 
+.card_label {
+    text-transform: none;
+    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+    text-align: justify;
+}
+
 .card--side
 {
     background: rgb(81,152,172);
