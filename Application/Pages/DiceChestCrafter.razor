@@ -20,13 +20,13 @@
 
    <div class="form-group" >
      <label class="col-md-4 control-label">Player Level:</label>
-     <div class="col-md-8">
+     <div class="col-md-4">
          <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
      </div>
   </div>
   <div class="form-group">
      <label class="col-md-4 control-label">Favored Gun Type</label>
-     <div class="col-md-8">
+     <div class="col-md-4">
        <InputSelect @bind-Value="parameters.GunType" class="form-control" aria-label="Gun Type">
               @foreach (var gunType in Enum.GetValues(typeof(GunType)))
               {

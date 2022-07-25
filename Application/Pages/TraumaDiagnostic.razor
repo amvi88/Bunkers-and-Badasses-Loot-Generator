@@ -21,7 +21,7 @@
 
   <div class="form-group">
     <label class="col-md-4 control-label">Rarity</label>
-    <div class="col-md-8">
+    <div class="col-md-4">
       <InputSelect @bind-Value="parameters.TraumaType" class="form-control" aria-label="Trauma Type">
         @foreach (var traumaType in Enum.GetValues(typeof(TraumaType)))
         {

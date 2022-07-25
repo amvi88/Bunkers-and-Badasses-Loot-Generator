@@ -1,0 +1,61 @@
+img {
+    max-height: 150px;
+    margin: auto;
+    display: inline-block;
+  }
+
+figure
+{
+    font-family: "SpaceMarine","Open Sans Condensed", "Open Sans", helvetica, sans-serif;    
+}
+
+.quest_info
+{
+    letter-spacing: 0.1em;
+    padding: 0.25em;
+    line-height: 1;
+    border-radius: 2px;
+    font-size: medium;
+    text-align: center;
+}
+
+.card_rewards
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: column;
+    gap: 5px;
+}
+
+.card--side
+{
+    background: rgb(81,152,172);
+    background: linear-gradient(90deg, rgba(81,152,172,1) 0%, rgba(42,154,186,1) 25%, rgba(39,167,203,1) 100%);
+}
+
+.side{
+    background: rgb(81,152,172);
+    background: linear-gradient(90deg, rgba(81,152,172,1) 0%, rgba(42,154,186,1) 25%, rgba(39,167,203,1) 100%);
+}
+
+.card--event
+{
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.event{
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.card--main
+{
+    background: rgb(232,232,94);
+    background: linear-gradient(90deg, rgba(232,232,94,1) 0%, rgba(200,176,28,1) 100%);
+}
+
+.main{
+    background: rgb(232,232,94);
+    background: linear-gradient(90deg, rgba(232,232,94,1) 0%, rgba(200,176,28,1) 100%);
+}

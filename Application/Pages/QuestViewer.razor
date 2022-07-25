@@ -1,0 +1,61 @@
+@namespace Application.Pages
+@using Models.Builder;
+
+@inherits BaseItemViewer
+
+<div>
+        <figure class=@GetCardCssClass id="@GetElementId()">
+            <ContextMenuTrigger MenuId="@GetMenuId()">
+                <div class="card__image-container">
+                    <img src=@GetCardImage alt="potion" class="card__image">   
+                </div>
+                <figcaption class="card__caption">
+                <h1 class="card__name">@QuestParameters.QuestName</h1>
+                <h3 class="quest_info">
+                    <span class="oi oi-map-marker"></span> @QuestParameters.Location
+                </h3>
+                <div class="card_label">@QuestParameters.Summary</div>
+                
+                <div class="card_rewards">
+                    <div>XP</div>
+                    <div>+@QuestParameters.XpReward</div>
+                    <div>Gold</div>
+                    <div>+@QuestParameters.GoldReward</div>
+                </div>
+
+                <h3 class="@GetCssClassCardType">
+                    @GetQuestType
+                </h3>
+                        
+                </figcaption>
+            </ContextMenuTrigger>
+        </figure>
+
+        <ContextMenu Id="@GetMenuId()">
+        <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+        </ContextMenu>
+
+    </div>
+
+@code
+{
+    [Parameter]
+    public QuestBuilderParameters QuestParameters {get; set;}
+
+    public string GetCardCssClass => $"card card--{QuestParameters.QuestType.ToString().ToLower()}";
+
+    public string GetCssClassCardType =>  $"card__type {QuestParameters.QuestType.ToString().ToLower()}";
+
+    public string GetCardImage => !string.IsNullOrWhiteSpace(QuestParameters.ImageUrl)
+                ? QuestParameters.ImageUrl
+                : "images/resources/quests/virtual-marker.png";
+
+    public string GetQuestType => $"{QuestParameters.QuestType} quest";
+
+    public override string GetFileName()
+    {
+      return $"Quest_{QuestParameters.QuestName.Replace(" ","_")}.png";
+    }
+
+}

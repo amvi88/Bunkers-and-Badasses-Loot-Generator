@@ -1,0 +1,46 @@
+@namespace Application.Pages
+@using Models.Builder;
+
+@inherits BaseItemViewer
+
+<div>
+        <figure class=@GetCardCssClass id="@GetElementId()">
+            <ContextMenuTrigger MenuId="@GetMenuId()">
+                <figcaption class="card__caption">
+                <h1 class="card__name"> @QuestParameters.QuestName</h1>
+                <h3 class="quest_info"> From @QuestParameters.QuestGiver</h3>
+                
+                <div class="card_label">@QuestParameters.ReadAloudText</div>
+                        
+                </figcaption>
+            </ContextMenuTrigger>
+        </figure>
+
+        <ContextMenu Id="@GetMenuId()">
+        <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+        </ContextMenu>
+
+    </div>
+
+@code
+{
+    [Parameter]
+    public QuestBuilderParameters QuestParameters {get; set;}
+
+    public string GetCardCssClass => $"card card--{QuestParameters.QuestType.ToString().ToLower()}";
+
+    public string GetCssClassCardType =>  $"card__type {QuestParameters.QuestType.ToString().ToLower()}";
+
+    public string GetCardImage => !string.IsNullOrWhiteSpace(QuestParameters.ImageUrl)
+                ? QuestParameters.ImageUrl
+                : "images/resources/quests/virtual-marker.png";
+
+    public string GetQuestType => $"{QuestParameters.QuestType} quest";
+
+    public override string GetFileName()
+    {
+      return $"Quest_{QuestParameters.QuestName.Replace(" ","_")}.png";
+    }
+
+}

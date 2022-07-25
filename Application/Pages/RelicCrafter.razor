@@ -19,7 +19,7 @@
 
  <div class="form-group">
      <label class="col-md-4 control-label">Rarity</label>
-     <div class="col-md-8">
+     <div class="col-md-4">
         <InputSelect @bind-Value="relicBuilder.Rarity" class="form-control" aria-label="Rarity">
               <option value="null">Random</option>
               @foreach (var rarity in Enum.GetValues(typeof(Rarity)))

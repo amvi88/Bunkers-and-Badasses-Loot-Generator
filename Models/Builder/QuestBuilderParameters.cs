@@ -13,11 +13,15 @@ namespace Models.Builder
 
         public QuestType QuestType  {get; set;} = QuestType.Main;
 
-        public string QuestGiver {get; set;} = "Quest Giver";
+        public string ImageUrl {get; set;}
+
+        public string QuestGiver {get; set;}
 
         public string QuestName {get; set;} = "Quest Name";
 
         public string Summary {get; set;} = "Summary";
+
+        public string ReadAloudText {get; set;}
 
         public string Difficulty {get; set;} = "Chaos";
 

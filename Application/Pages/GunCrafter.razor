@@ -22,13 +22,13 @@
 
   <div class="form-group" >
      <label class="col-md-4 control-label">Player Level:</label>
-     <div class="col-md-8">
+     <div class="col-md-4">
          <InputNumber @bind-Value="gunBuilder.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
      </div>
   </div>
   <div class="form-group">
      <label class="col-md-4 control-label">Rarity</label>
-     <div class="col-md-8">
+     <div class="col-md-4">
         <NullableEnumSelect @bind-Value="gunBuilder.Rarity" class="form-control" aria-label="Rarity">
               <option value="">Random</option>
               @foreach (var rarity in Enum.GetValues(typeof(Rarity)))
@@ -40,7 +40,7 @@
   </div>
   <div class="form-group">
      <label class="col-md-4 control-label">Gun Type</label>
-     <div class="col-md-8">
+     <div class="col-md-4">
        <NullableEnumSelect Value="@gunBuilder.GunType" ValueExpression="@(() => gunBuilder.GunType)"  class="form-control" aria-label="Gun Type" ValueChanged="@((GunType? value) => FilterByGunTypes(value))">
               <option value="">Random</option>              
               @foreach (var rarity in Enum.GetValues(typeof(GunType)))
@@ -55,7 +55,7 @@
   {
     <div class="form-group">
      <label class="col-md-4 control-label">Preferred Guild</label>
-     <div class="col-md-8">
+     <div class="col-md-4">
        <InputSelect @bind-Value="gunBuilder.Guild" class="form-control" aria-label="Preferred Guild">
               <option value="">Random</option>              
               @foreach (var guild in guilds)
