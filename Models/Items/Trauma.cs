@@ -6,8 +6,8 @@ namespace Models.Builder
     {
 
         public int Roll  {get; set;}
-        public string Name {get; set;}
-        public string Effect {get; set;}
+        public string? Name {get; set;}
+        public string? Effect {get; set;}
         public TraumaType TraumaType {get; set;}
 
     }

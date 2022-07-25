@@ -1,0 +1,137 @@
+@page "/quest-builder"
+@namespace Application.Pages
+@using Business;
+@using Models;
+@using Models.Common;
+@using Models.Builder;
+
+@inherits BaseItemViewer
+
+<h1>Quests</h1>
+<hr />
+<PageTitle>B&B: Quest-a-palooza!</PageTitle>
+
+<div class="row">
+    <div class="col-md-8">
+        <EditForm Model=@parameters class="well form-horizontal class-md-8">
+        <DataAnnotationsValidator />  
+        <ValidationSummary />
+
+        <div class="form-group" >
+            <label class="col-md-4 control-label">Player Level:</label>
+            <div class="col-md-8">
+                <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+            <label class="col-md-4 control-label">Location:</label>
+            <div class="col-md-8">
+                <InputText @bind-Value="parameters.Location" name="Location" class="form-control" aria-label="Location"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+            <label class="col-md-4 control-label">Quest Giver:</label>
+            <div class="col-md-8">
+                <InputText @bind-Value="parameters.QuestGiver" name="Quest Giver" class="form-control" aria-label="Quest Giver"/>
+            </div>
+        </div>
+
+            <div class="form-group" >
+            <label class="col-md-4 control-label">Quest Name:</label>
+            <div class="col-md-8">
+                <InputText @bind-Value="parameters.QuestName" name="Quest Name" class="form-control" aria-label="Quest Name"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+            <label class="col-md-4 control-label">Summary</label>
+            <div class="col-md-8">
+                <InputTextArea @bind-Value="parameters.Summary" name="Summary" class="form-control" aria-label="Summary"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+            <label class="col-md-4 control-label">XP Reward</label>
+            <div class="col-md-8">
+                <InputNumber @bind-Value="parameters.XpReward" name="XP Reward" class="form-control" aria-label="XP Reward"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+            <label class="col-md-4 control-label">Gold Reward</label>
+            <div class="col-md-8">
+                <InputNumber @bind-Value="parameters.GoldReward" name="Gold Reward" class="form-control" aria-label="Gold Reward"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+            <label class="col-md-4 control-label">Quest Type</label>
+            <div class="col-md-8">
+                <InputRadioGroup @bind-Value="parameters.QuestType">
+                @foreach (var questType in (QuestType[])Enum.GetValues(typeof(QuestType)))
+                {
+                    <InputRadio Value="@questType" checked/>
+                    <text>&nbsp;</text>@questType<br>
+                }
+            </InputRadioGroup>
+            </div>
+        </div>
+        </EditForm>
+    </div>
+
+    <div class="col-md-4">
+    <figure class=@GetCardCssClass id="@GetElementId()">
+        <ContextMenuTrigger MenuId="@GetMenuId()">
+            <div class="card__image-container">
+            <img src=@GetPotionImage alt="potion" class="card__image">   
+            </div>
+            <figcaption class="card__caption">
+            <h1 class="card__name"> @parameters.QuestName</h1>
+            <h3 class="quest_info"> @parameters.Location, given by @parameters.QuestGiver</h3>
+            
+            <div class="card_label">@parameters.Summary</div>
+
+            
+            <div class="card_rewards">
+                <div>XP</div>
+                <div>+@parameters.XpReward</div>
+                <div>Gold</div>
+                <div>+@parameters.GoldReward</div>
+            </div>
+
+            <h3 class="@GetCssClassCardType">
+                @GetQuestType
+            </h3>
+                    
+            </figcaption>
+        </ContextMenuTrigger>
+        </figure>
+
+        <ContextMenu Id="@GetMenuId()">
+        <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+        </ContextMenu>
+
+    </div>
+</div>
+
+@code
+{
+    QuestBuilderParameters parameters = new QuestBuilderParameters();
+
+    public string GetCardCssClass => $"card card--{parameters.QuestType.ToString().ToLower()}";
+
+    public string GetCssClassCardType =>  $"card__type {parameters.QuestType.ToString().ToLower()}";
+
+    public string GetPotionImage => "images/resources/quests/virtual-marker.png";
+
+    public string GetQuestType => $"{parameters.QuestType} quest";
+
+    public override string GetFileName()
+    {
+      return $"Quest_{parameters.QuestName.Replace(" ","_")}.png";
+    }
+
+}
