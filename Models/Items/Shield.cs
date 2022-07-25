@@ -13,6 +13,7 @@ namespace Models.Builder
         public int RechargeRate {get; set;}  
 
         public string Effect {get; set;}
-
+        public string ImageUrl { get; set; }
+        public string Source { get; set; }
     }
 }

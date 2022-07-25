@@ -13,6 +13,7 @@ builder.Configuration.AddJsonFile("weaponcustomization.json", true);
 builder.Configuration.AddJsonFile("weaponprefixes.json", true);
 builder.Configuration.AddJsonFile("weaponredtext.json", true);
 builder.Configuration.AddJsonFile("weapongallery.json", true);
+builder.Configuration.AddJsonFile("shieldgallery.json", true);
 builder.Configuration.AddJsonFile("guilds.json", true);
 builder.Configuration.AddJsonFile("potions.json", true);
 builder.Configuration.AddJsonFile("tinytinaspotions.json", true);
@@ -40,6 +41,7 @@ builder.Services.Configure<RelicConfigurationOptions>(builder.Configuration.GetS
 builder.Services.Configure<MoxxTailConfigurationOptions>(builder.Configuration.GetSection("MoxxTailConfiguration"));
 builder.Services.Configure<TraumasConfigurationOptions>(builder.Configuration.GetSection("TraumasConfiguration"));
 builder.Services.Configure<ChestConfigurationOptions>(builder.Configuration.GetSection("ChestConfiguration"));
+builder.Services.Configure<ShieldCustomizationOptions>(builder.Configuration.GetSection("ShieldCustomization"));
 builder.Services.AddTransient<IItemFactory<GrenadeMod, GrenadeModFactoryParameters>, GrenadeModFactory>();
 builder.Services.AddTransient<IItemFactory<Shield, ShieldFactoryParameters>, ShieldFactory>();
 builder.Services.AddTransient<IItemFactory<Gun, GunFactoryParameters>, GunFactory>();

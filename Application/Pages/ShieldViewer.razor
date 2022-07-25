@@ -8,11 +8,17 @@
     <figure class="card card--normal" id="@GetElementId()">
       <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
+        @if (!string.IsNullOrWhiteSpace(CraftedShield.Source))
+        {
+          <img src="@GetSourceImage" alt="@CraftedShield.Source" class="card__game_icon"> 
+        }        
         <img src=@GetShieldImage alt="shield" class="card__image">   
       </div>
       
       <figcaption class="card__caption">
-        <h1 class="card__name"></h1>
+        @if (!string.IsNullOrWhiteSpace(CraftedShield.Name)){
+          <h1 class="card__name">@CraftedShield.Name</h1>
+        }
 
         <h3 class="card__type">
          Shield
@@ -49,7 +55,11 @@
 @code {
     [Parameter]
     public Shield CraftedShield { get; set; }
-    public string GetShieldImage => $"images/resources/shields/{CraftedShield.Guild}.png";
+    public string GetShieldImage => !string.IsNullOrWhiteSpace(CraftedShield.ImageUrl) 
+          ? CraftedShield.ImageUrl 
+          : $"images/resources/shields/{CraftedShield.Guild}.png";
+
+    public string GetSourceImage => $"images/resources/game-icons/{CraftedShield.Source}.png";
 
     public override string GetFileName()
     {

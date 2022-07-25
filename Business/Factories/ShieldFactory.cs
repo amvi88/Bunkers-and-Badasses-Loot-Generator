@@ -9,9 +9,12 @@ namespace Business.Factories
 {
     public class ShieldFactory : GuildDrivenFactory<Shield, ShieldFactoryParameters>
     {
-        public ShieldFactory(IOptions<GuildConfigurationOptions> guildOptions)
+        private readonly ShieldCustomizationOptions _shieldCustomizationOptions;
+
+        public ShieldFactory(IOptions<GuildConfigurationOptions> guildOptions, IOptions<ShieldCustomizationOptions> shieldCustomizationOptions)
         : base(guildOptions)
-        {            
+        {
+            _shieldCustomizationOptions = shieldCustomizationOptions.Value ?? throw new ArgumentNullException(nameof(shieldCustomizationOptions));
         }
 
         public override ItemWrapper<Shield> Manufacture(ShieldFactoryParameters parameters)
@@ -27,6 +30,16 @@ namespace Business.Factories
                 RechargeRate = specs.RechargeRate,
                 Effect = specs.Effect                
             };
+
+            var matchingShields = _shieldCustomizationOptions.ShieldGallery.Where(x => x.Guild.Equals(shield.Guild, StringComparison.InvariantCultureIgnoreCase));
+
+            if (matchingShields.Any())
+            {
+                var shieldGallerySpec = matchingShields.ElementAt(RandomNumberGenerator.GetInt32(0, matchingShields.Count()));
+                shield.Name = shieldGallerySpec.Name;
+                shield.ImageUrl = shieldGallerySpec.ImageUrl;
+                shield.Source = shieldGallerySpec.Source;
+            }
 
             return new ItemWrapper<Shield>
             {
