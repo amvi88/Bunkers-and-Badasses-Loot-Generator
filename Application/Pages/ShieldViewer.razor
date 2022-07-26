@@ -13,6 +13,7 @@
           <img src="@GetSourceImage" alt="@CraftedShield.Source" class="card__game_icon"> 
         }        
         <img src=@GetShieldImage alt="shield" class="card__image">   
+        <img src="@GetGuildImage" alt="@CraftedShield.Guild" class="card__guild_image">
       </div>
       
       <figcaption class="card__caption">
@@ -22,10 +23,6 @@
 
         <h3 class="card__type">
          Shield
-        </h3>
-        
-        <h3 class="card__guild">
-          @CraftedShield.Guild
         </h3>
 
         <div class="card_label">@CraftedShield.Effect</div>
@@ -60,6 +57,9 @@
           : $"images/resources/shields/{CraftedShield.Guild}.png";
 
     public string GetSourceImage => $"images/resources/game-icons/{CraftedShield.Source}.png";
+
+    public string GetGuildImage => $"images/resources/guilds/{CraftedShield.Guild}.png";
+
 
     public override string GetFileName()
     {

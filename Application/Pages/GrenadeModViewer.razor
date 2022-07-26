@@ -8,7 +8,8 @@
   <figure class=@GetCardCssClass id="@GetElementId()">
       <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
-        <img src=@GetGrenadeImage alt="grenade" class="card__image">   
+        <img src=@GetGrenadeImage alt="grenade" class="card__image"> 
+        <img src="@GetGuildImage" alt="@CraftedGrenadeMod.Guild" class="card__guild_image"> 
       </div>
       
       <figcaption class="card__caption">
@@ -16,10 +17,6 @@
 
         <h3 class="@GetCssClassCardType">
           Grenade Mod
-        </h3>
-
-        <h3 class="card__guild">
-          @CraftedGrenadeMod.Guild
         </h3>
 
         <div class="card_label">@CraftedGrenadeMod.Effect</div>
@@ -61,6 +58,8 @@
     public string GetDiceImage => $"images/resources/dice/{CraftedGrenadeMod.DiceType}.png";
 
     public string GetGrenadeImage => $"images/resources/grenades/{CraftedGrenadeMod.Guild}.png";
+
+    public string GetGuildImage => $"images/resources/guilds/{CraftedGrenadeMod.Guild}.png";
 
     public override string GetFileName()
     {

@@ -7,7 +7,7 @@ body {
 img {
   max-height: 150px;
   margin: auto;
-  display: inline-block;
+  display: block;
 }
 
 h1, h2, h3, h4, h5 {
@@ -33,4 +33,11 @@ h1, h2, h3, h4, h5 {
   float: right;
   left: .99em;
   top: 1.2em
+}
+
+.card__guild_image{
+  position: relative;
+  bottom: 20px;
+  left: 0;
+  max-height: 40px;
 }

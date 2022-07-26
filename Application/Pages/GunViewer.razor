@@ -12,7 +12,8 @@
         {
           <img src="@GetSourceImage" alt="@CraftedGun.Source" class="card__game_icon"> 
         }
-        <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">   
+        <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">  
+        <img src="@GetGuildImage" alt="@CraftedGun.Guild" class="card__guild_image"> 
       </div>
       
       <figcaption class="card__caption">
@@ -20,10 +21,6 @@
         
         <h3 class="@GetCssClassCardType">
           @CraftedGun.Element.ToString()
-        </h3>
-
-        <h3 class="card__guild">
-          @CraftedGun.Guild
         </h3>
 
         @if (CraftedGun.RedText != null)
@@ -102,6 +99,9 @@
                  : $"images/resources/guns/{CraftedGun.GunType}.png";
 
     public string GetSourceImage => $"images/resources/game-icons/{CraftedGun.Source}.png";
+
+    public string GetGuildImage => $"images/resources/guilds/{CraftedGun.Guild}.png";
+
 
     public string GetWeaponTypeImage => $"images/resources/gun-icons/{CraftedGun.GunType.ToString().ToLower()}.png";
     
