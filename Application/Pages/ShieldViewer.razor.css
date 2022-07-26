@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5 {
   margin-left: .2em 
 }
 
+.icon {
+  display: inline-block;
+}
+
 .card_label
 {
   text-align: center;
