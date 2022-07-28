@@ -58,6 +58,11 @@ h5 {
   text-align: center;
 }
 
+.card_hits_caption{
+  font-family: "SpaceMarine", "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+  font-size: medium;
+}
+
 .card__hits th {
   font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
   text-align: right;
@@ -82,6 +87,11 @@ h5 {
 }
 
 img.dice_small {
+  width: 32px;
+  height: 32px;
+}
+
+img.icon_small {
   width: 32px;
   height: 32px;
 }

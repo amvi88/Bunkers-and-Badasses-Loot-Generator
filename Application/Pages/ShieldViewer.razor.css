@@ -10,7 +10,11 @@ img {
   display: block;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   font-weight: 400;
 }
@@ -19,16 +23,35 @@ h1, h2, h3, h4, h5 {
   width: 1em;
   vertical-align: text-top;
   margin-top: .1em;
-  margin-left: .2em 
+  margin-left: .2em
 }
 
 .icon {
   display: inline-block;
 }
 
-.card_label
-{
+.card_label {
   text-align: center;
+}
+
+.card__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: .5em;
+  font-family: "SpaceMarine", "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+  text-transform: capitalize;
+  font-size: medium;
+}
+
+.stat_label {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+img.icon_small {
+  width: 24px;
+  height: 24px;
+  align-self: right;
 }
 
 .card__game_icon {
@@ -39,7 +62,7 @@ h1, h2, h3, h4, h5 {
   top: 1.2em
 }
 
-.card__guild_image{
+.card__guild_image {
   position: relative;
   bottom: 20px;
   left: 0;
