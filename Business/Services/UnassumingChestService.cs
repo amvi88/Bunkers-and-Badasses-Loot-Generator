@@ -12,12 +12,12 @@ namespace Business.Services
         private readonly ChestConfigurationOptions _chestConfiguration;
         private readonly IItemFactory<GrenadeMod, GrenadeModFactoryParameters> _grenadeFactory;
         private readonly IItemFactory<Shield, ShieldFactoryParameters> _shieldFactory;
-        private readonly IItemFactory<Gun, GunFactoryParameters> _gunFactory;
-        private readonly IItemFactory<Relic, RelicFactoryParameters> _relicFactory;
+        private readonly IItemFactory<Gun, GunRandomizerFactoryParameters> _gunFactory;
+        private readonly IItemFactory<Relic, RelicRandomizerFactoryParameters> _relicFactory;
         private readonly IPotionFinderService _potionFinderService;
 
 
-        public UnassumingChestService(IOptions<ChestConfigurationOptions> chestConfiguration, IItemFactory<GrenadeMod, GrenadeModFactoryParameters> grenadeFactory, IItemFactory<Shield, ShieldFactoryParameters> shieldFactory, IItemFactory<Gun, GunFactoryParameters> gunFactory, IItemFactory<Relic, RelicFactoryParameters> relicFactory, IPotionFinderService potionFinderService)
+        public UnassumingChestService(IOptions<ChestConfigurationOptions> chestConfiguration, IItemFactory<GrenadeMod, GrenadeModFactoryParameters> grenadeFactory, IItemFactory<Shield, ShieldFactoryParameters> shieldFactory, IItemFactory<Gun, GunRandomizerFactoryParameters> gunFactory, IItemFactory<Relic, RelicRandomizerFactoryParameters> relicFactory, IPotionFinderService potionFinderService)
         {
             _chestConfiguration = chestConfiguration.Value ?? throw new ArgumentNullException(nameof(chestConfiguration));
             _grenadeFactory = grenadeFactory ?? throw new ArgumentNullException(nameof(grenadeFactory));
@@ -42,7 +42,7 @@ namespace Business.Services
             
             foreach (var weaponSpec in spec.WeaponSpecs)
             {
-                var weaponBuildParameters = new GunFactoryParameters { PlayerLevel = parameters.PlayerLevel, Rarity = weaponSpec.Rarity, AllowPrefixes = parameters.AllowPrefixes, AllowRedTexts = parameters.AllowPrefixes };
+                var weaponBuildParameters = new GunRandomizerFactoryParameters { PlayerLevel = parameters.PlayerLevel, Rarity = weaponSpec.Rarity, AllowPrefixes = parameters.AllowPrefixes, AllowRedTexts = parameters.AllowPrefixes };
   
                 if (weaponSpec.IsFavored)
                 {
@@ -59,7 +59,7 @@ namespace Business.Services
 
             foreach (var relicSpec in spec.RelicSpecs)
             {
-                items.Add(_relicFactory.Manufacture(new RelicFactoryParameters { Rarity = relicSpec.Rarity }).Item);
+                items.Add(_relicFactory.Manufacture(new RelicRandomizerFactoryParameters { Rarity = relicSpec.Rarity }).Item);
             }
 
             for (int index = 0; index < spec.AmountOfGrenadeMods; index++)

@@ -2,7 +2,7 @@ using Models.Common;
 
 namespace Models.Builder
 {
-    public class RelicFactoryParameters : BaseFactoryParameters
+    public class RelicRandomizerFactoryParameters : BaseFactoryParameters
     {
         public Rarity? Rarity {get; set;}
     }

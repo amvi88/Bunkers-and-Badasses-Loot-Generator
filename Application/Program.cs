@@ -44,9 +44,9 @@ builder.Services.Configure<ChestConfigurationOptions>(builder.Configuration.GetS
 builder.Services.Configure<ShieldCustomizationOptions>(builder.Configuration.GetSection("ShieldCustomization"));
 builder.Services.AddTransient<IItemFactory<GrenadeMod, GrenadeModFactoryParameters>, GrenadeModFactory>();
 builder.Services.AddTransient<IItemFactory<Shield, ShieldFactoryParameters>, ShieldFactory>();
-builder.Services.AddTransient<IItemFactory<Gun, GunFactoryParameters>, GunFactory>();
+builder.Services.AddTransient<IItemFactory<Gun, GunRandomizerFactoryParameters>, GunFactory>();
 builder.Services.AddTransient<IItemFactory<Potion, BaseFactoryParameters>,PotionFactory>();
-builder.Services.AddTransient<IItemFactory<Relic, RelicFactoryParameters>,RelicFactory>();
+builder.Services.AddTransient<IItemFactory<Relic, RelicRandomizerFactoryParameters>,RelicFactory>();
 builder.Services.AddTransient<IItemFactory<MoxxTail, BaseFactoryParameters>,MoxxTailFactory>();
 builder.Services.AddTransient<ITraumatizingService,TraumatizingService>();
 builder.Services.AddTransient<IPotionFinderService, PotionFinderService>();
