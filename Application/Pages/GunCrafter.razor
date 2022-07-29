@@ -31,9 +31,12 @@
      <div class="col-md-4">
         <NullableEnumSelect @bind-Value="gunBuilder.Rarity" class="form-control" aria-label="Rarity">
               <option value="">Random</option>
-              @foreach (var rarity in Enum.GetValues(typeof(Rarity)))
+              @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
               {
+                @if (rarity != Rarity.Pearlescent)
+                {
                   <option value="@rarity">@rarity</option>
+                }
               }
           </NullableEnumSelect>
       </div>
