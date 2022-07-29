@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 
 namespace Business.Factories
 {
-    public class RelicFactory : IItemFactory<Relic, RelicFactoryParameters>
+    public class RelicFactory : IItemFactory<Relic, RelicRandomizerFactoryParameters>
     {
         private readonly RelicConfigurationOptions _relicConfiguration;
 
@@ -15,7 +15,7 @@ namespace Business.Factories
             _relicConfiguration = relicConfiguration.Value ?? throw new ArgumentException(nameof(relicConfiguration));
         }
 
-        public ItemWrapper<Relic> Manufacture(RelicFactoryParameters factoryParameters)
+        public ItemWrapper<Relic> Manufacture(RelicRandomizerFactoryParameters factoryParameters)
         {
             var maxRoll = 101;
             var minRoll = 1;

@@ -3,7 +3,7 @@ using Models.Common;
 
 namespace Models.Builder
 {
-    public class GunFactoryParameters : BaseFactoryParameters
+    public class GunRandomizerFactoryParameters : BaseFactoryParameters
     {
         [Required]
         [Range(1, 30)]

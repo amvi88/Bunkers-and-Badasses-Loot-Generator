@@ -1,4 +1,4 @@
-﻿@page "/relic-crafter"
+﻿@page "/relic-randomizer"
 @namespace Application.Pages
 @using Application.Components;
 @using Business;
@@ -7,11 +7,11 @@
 @using Business.Factories;
 
 @inject IItemFactory<Relic, RelicRandomizerFactoryParameters> factory;
-@inject ILogger<RelicCrafter> logger
+@inject ILogger<RelicRandomizer> logger
 
 
 <PageTitle>B&B: How Mysterious</PageTitle>
-<h1>Relics</h1>
+<h1>Relic Randomizer</h1>
 <hr />
 
 <EditForm Model=@relicBuilder OnValidSubmit="Roll" class="well form-horizontal">

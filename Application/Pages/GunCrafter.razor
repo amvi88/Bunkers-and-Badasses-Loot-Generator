@@ -8,7 +8,7 @@
 @using Models.Builder;
 @using Business.Factories;
 
-@inject IItemFactory<Gun, GunFactoryParameters> factory
+@inject IItemFactory<Gun, GunRandomizerFactoryParameters> factory
 @inject ILogger<GunCrafter> logger
 @inject IGuildService guildService
 
@@ -87,7 +87,7 @@
 }
 
 @code {
-  GunFactoryParameters gunBuilder = new GunFactoryParameters();
+  GunRandomizerFactoryParameters gunBuilder = new GunRandomizerFactoryParameters();
 
   List<Guild> guilds = null;
 

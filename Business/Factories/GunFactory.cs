@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 
 namespace Business.Factories
 {
-    public class GunFactory : GuildDrivenFactory<Gun, GunFactoryParameters>
+    public class GunFactory : GuildDrivenFactory<Gun, GunRandomizerFactoryParameters>
     {
         private readonly WeaponCustomizationOptions _weaponCustomization;
         private readonly WeaponArchetypesOptions _weaponArchetypesOptions;
@@ -18,7 +18,7 @@ namespace Business.Factories
             _weaponArchetypesOptions = weaponArchetypesOptions.Value ?? throw new ArgumentNullException(nameof(weaponArchetypesOptions));
         }
        
-        public override ItemWrapper<Gun> Manufacture(GunFactoryParameters builderArguments)
+        public override ItemWrapper<Gun> Manufacture(GunRandomizerFactoryParameters builderArguments)
         {
             
             var rarity = GetRarity(builderArguments.Rarity);  
