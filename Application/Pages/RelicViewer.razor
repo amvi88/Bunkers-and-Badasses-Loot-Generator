@@ -40,7 +40,9 @@
 @code {
     [Parameter]
     public Relic CraftedRelic { get; set; }
-    public string GetRelicImage => $"images/resources/relics/{CraftedRelic.Rarity}.png";
+    public string GetRelicImage => string.IsNullOrWhiteSpace(CraftedRelic.ImageUrl)
+            ? $"images/resources/relics/{CraftedRelic.Rarity}.png"
+            : CraftedRelic.ImageUrl;
     public string GetCardCssClass => $"card card--{CraftedRelic.Rarity.ToString().ToLower()}";
 
     public override string GetFileName()
