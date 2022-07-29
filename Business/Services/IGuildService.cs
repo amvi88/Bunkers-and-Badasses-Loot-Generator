@@ -8,5 +8,6 @@ namespace Business.Services
         List<Guild> GetGuilds();
         List<Guild> GetGuildsThatProduce(ItemType itemType);
         List<Guild> GetGuildsThatProduceGunType(GunType? gunType);
+        GuildWeaponModifier GetWeaponModifiers(string guildName, Rarity rarity);
     }
 }

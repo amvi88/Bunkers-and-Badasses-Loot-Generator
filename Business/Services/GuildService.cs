@@ -55,5 +55,20 @@ namespace Business.Services
 
             return guildsThatProduceGuns.Where(g => g.CanProduceGunType(gunType.GetValueOrDefault())).ToList();
         }
+
+        public GuildWeaponModifier GetWeaponModifiers(string guildName, Rarity rarity)
+        {
+            var specs = _guildConfigurationOptions.Guilds
+            .Where(g => g.Name.Equals(guildName, StringComparison.InvariantCultureIgnoreCase))
+            .SelectMany(g => g.WeaponSpecs)
+            .FirstOrDefault(ws => ws.Rarity == rarity);
+
+            return new GuildWeaponModifier
+            {
+                IsElemental = specs?.IsElemental ?? false,
+                Bonus = specs?.Bonus,
+                Effect = specs?.Effect
+            };
+        }
     }
 }
