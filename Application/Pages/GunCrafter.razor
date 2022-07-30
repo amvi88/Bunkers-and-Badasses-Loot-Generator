@@ -68,7 +68,7 @@
             ValueChanged="@((string value) => FavoriteGuildChanged(value))"class="form-control" aria-label="Preferred Guild">
             @foreach (var guild in guilds)
             {
-                   <option value="@guild.Name" selected>@guild.Name</option>
+                   <option value="@guild.Name" selected=@(guild.Name == gun.Guild)>@guild.Name</option>
             }
           </InputSelect>
         </div>
@@ -181,7 +181,7 @@
     redTexts = weaponCustomizationService.GetRedTexts();
     archetypeBonuses = weaponCustomizationService.GetWeaponArchetypeBonuses();
     gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gun.GunType, gun.Level);
-    guilds = guildService.GetGuildsThatProduceGunType(gun.GunType);
+    guilds = guildService.GetGuilds();
     gun.Guild = guilds.First().Name;
   }     
 
@@ -209,7 +209,6 @@
   void FilterByGunTypes(GunType gunType)
   {
     gun.GunType = gunType;
-    guilds = guildService.GetGuildsThatProduceGunType(gunType);
     gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gunType, gun.Level);
     gun.GunArchetypeBonus = archetypeBonuses[gunType];
     this.StateHasChanged();
@@ -217,9 +216,9 @@
 
   void FavoriteGuildChanged(string guild)
   {
-    var guildData = guildService.GetWeaponModifiers(guild, gun.Rarity);
     gun.Guild = guild;
-    gun.GuildBonus = guildData.Bonus;
+    var guildData = guildService.GetWeaponModifiers(guild, gun.Rarity);
+    gun.GuildBonus = guildData?.Bonus ?? string.Empty;
     this.StateHasChanged();
   }
 

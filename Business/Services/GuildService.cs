@@ -63,6 +63,11 @@ namespace Business.Services
             .SelectMany(g => g.WeaponSpecs)
             .FirstOrDefault(ws => ws.Rarity == rarity);
 
+            if (specs == null)
+            {
+                return null;
+            }
+
             return new GuildWeaponModifier
             {
                 IsElemental = specs?.IsElemental ?? false,
