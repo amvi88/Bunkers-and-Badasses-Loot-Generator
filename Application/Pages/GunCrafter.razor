@@ -26,7 +26,7 @@
       </div>
       <div class="form-group">
         <label for="text" class="control-label">Name:</label>
-        <InputText @bind-Value="gun.Name" name="WeaponName" class="form-control" aria-label="Weapon Name" />
+        <InputText @bind-Value="gun.Name" name="WeaponName" class="form-control" aria-label="Weapon Name" placeholder="Player Level"/>
       </div>
 
       <div class="form-group">
@@ -74,40 +74,66 @@
         </div>
       }
 
+      <hr/>
+      <h5>Prefixes and Red Texts</h5>
+      <div class="form-group">
+        <label class="control-label">Use Custom Prefixes?</label>
+        <input type="checkbox" checked="@(UseCustomPrefixes)" @onchange="eventArgs => { UseCustomPrefixes = !UseCustomPrefixes; }">
+      </div>  
+      
       <div class="form-group">
         <label class="control-label">Prefix:</label>
-        <InputSelect class="form-control" aria-label="Prefix" Value="PrefixName" ValueExpression="@(() => PrefixName)" ValueChanged="@((string prefix) => PrefixChanged(prefix))">
-          <option value="" selected>None</option>
-             @foreach (var kvp in prefixes)
-              {
-                    <option value="@kvp.Key" selected>@kvp.Key</option>
-              }
-          </InputSelect>
-          @if(!string.IsNullOrWhiteSpace(PrefixEffect))
-          {
-            <span>@PrefixEffect</span>
-          }
+        
+        @if (!UseCustomPrefixes){
+          <InputSelect class="form-control" aria-label="Prefix" Value="PrefixName" ValueExpression="@(() => PrefixName)" ValueChanged="@((string prefix) => PrefixChanged(prefix))">
+            <option value="" selected>None</option>
+              @foreach (var kvp in prefixes)
+                {
+                      <option value="@kvp.Key" selected>@kvp.Key</option>
+                }
+            </InputSelect>
+            @if(!string.IsNullOrWhiteSpace(PrefixEffect))
+            {
+              <span>@PrefixEffect</span>
+            }
+        }     
+       else{
+          <InputText @bind-Value="gun.Prefix.Name" name="PrefixName" class="form-control" aria-label="Prefix Name" aria-placeholder="Prefix Name" placeholder="Prefix Name"/>
+          <InputText @bind-Value="gun.Prefix.Effect" name="PrefixEffect" class="form-control" aria-label="Prefix Effect" aria-placeholder="Prefix Effect" placeholder="Prefix Effect"/>
+       }   
         </div>
 
+      <div class="form-group">
+        <label class="control-label">Use Custom Red Texts?</label>
+        <input type="checkbox" checked="@(UseCustomRedTexts)" @onchange="eventArgs => { UseCustomRedTexts = !UseCustomRedTexts; }">
+      </div> 
 
         <div class="form-group">
           <label class="control-label">Red Text:</label>
-          <InputSelect class="form-control" aria-label="RedText" Value="RedTextName" ValueExpression="@(() => RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
-            <option value="" selected>None</option>
-            @foreach (var kvp in redTexts)
-            {
-              <option value="@kvp.Key" selected>@kvp.Key</option>
-            }
-          </InputSelect>
-          @if(!string.IsNullOrWhiteSpace(RedTextEffect))
+          @if (!UseCustomRedTexts)
           {
-            <span>@RedTextEffect</span>
+            <InputSelect class="form-control" aria-label="RedText" Value="RedTextName" ValueExpression="@(() => RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
+              <option value="" selected>None</option>
+              @foreach (var kvp in redTexts)
+              {
+                <option value="@kvp.Key" selected>@kvp.Key</option>
+              }
+            </InputSelect>
+            @if(!string.IsNullOrWhiteSpace(RedTextEffect))
+            {
+              <span>@RedTextEffect</span>
+            }
+          }
+          else
+          {
+            <InputText @bind-Value="gun.RedText.Name" name="RedTextName" class="form-control" aria-label="RedText Name" aria-placeholder="RedText Name" placeholder="RedText Name"/>
+            <InputText @bind-Value="gun.RedText.Effect" name="RedTextEffect" class="form-control" aria-label="RedText Effect" aria-placeholder="RedText Effect" placeholder="RedText Effect"/>
           }
         </div> 
 
         <div class="form-group">
           <label class="control-label">Damage: (i.e: 1d10)</label>
-          <InputText @bind-Value="gun.Damage" name="Damage" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="1d4"/>
+          <InputText @bind-Value="gun.Damage" name="Damage" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
         </div>
 
         <div class="form-group">
@@ -135,7 +161,7 @@
 
         <div class="form-group">
           <label class="control-label">Additional Elemental Damage: (i.e: 1d10)</label>
-          <InputText @bind-Value="gun.ExtraDamage" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="d4"/>
+          <InputText @bind-Value="gun.ExtraDamage" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
         </div>
 
         <div class="form-group" >
@@ -166,6 +192,8 @@
   string RedTextEffect = "";
   string PrefixName = "";
   string PrefixEffect = "";
+  bool UseCustomPrefixes = false;
+  bool UseCustomRedTexts = false;
 
   List<Guild> guilds = null;
 
