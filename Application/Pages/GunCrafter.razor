@@ -121,6 +121,24 @@
         </div>
 
         <div class="form-group">
+                <label class="control-label">Elements:</label>
+                <div>
+                  @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+                    {
+                      @if (element == Element.None)
+                      {
+                        continue;
+                      }
+                      <label class="radio-inline label-separated">
+                         <input type="checkbox" @onchange="eventArgs => { ElementChanged(element, (bool)eventArgs.Value); }" />
+                         @element
+                      </label>
+                    }
+                </div>
+              </div>
+
+
+        <div class="form-group">
           <label class="control-label">Additional Elemental Damage:</label>
           <InputNumber @bind-Value="gunBuilder.ElementalDamageDice" name="Elemental Dice Number" class="form-control col-md-6" aria-label="Elemental Damage Dice Number" />
           <InputText @bind-Value="gunBuilder.ElementalDamageDiceType" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="d4"/>
@@ -155,6 +173,20 @@
     redTexts = weaponCustomizationService.GetRedTexts();
     archetypeBonuses = weaponCustomizationService.GetWeaponArchetypeBonuses();
   }     
+
+
+  void ElementChanged(Element element, bool changed)
+  {
+      if (changed)
+      {
+        gunBuilder.Element |= element;
+      }
+      else
+      {
+        gunBuilder.Element ^= element;
+      }
+      this.StateHasChanged();
+  }
 
   void LevelChanged(int level)
   {
