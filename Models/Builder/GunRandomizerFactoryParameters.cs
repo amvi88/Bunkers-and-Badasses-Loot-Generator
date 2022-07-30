@@ -24,7 +24,5 @@ namespace Models.Builder
         public bool BatchMode {get; set;}
 
         public int BatchSize {get; set;} = 1;
-
-
     }
 }

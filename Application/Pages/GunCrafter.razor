@@ -1,4 +1,4 @@
-﻿@page "/gun-randomizer"
+﻿@page "/gun-crafter"
 @namespace Application.Pages
 @using Application.Components;
 @using Business;
@@ -8,106 +8,190 @@
 @using Models.Builder;
 @using Business.Factories;
 
-@inject IItemFactory<Gun, GunRandomizerFactoryParameters> factory
+@inherits BaseItemViewer
 @inject ILogger<GunCrafter> logger
 @inject IGuildService guildService
+@inject IWeaponCustomizationService weaponCustomizationService
 
 <h1>Guns</h1>
 <hr />
 <PageTitle>B&B: Check out these guns!</PageTitle>
 
-<EditForm Model=@gunBuilder OnValidSubmit="Roll" class="well form-horizontal">
-  <DataAnnotationsValidator />  
-  <ValidationSummary />
+<div class="row">
+  <div class="col-md-8">
+    <EditForm Model=@gunBuilder>
+      <DataAnnotationsValidator />
+      <ValidationSummary />
 
-  <div class="form-group" >
-     <label class="col-md-4 control-label">Player Level:</label>
-     <div class="col-md-4">
-         <InputNumber @bind-Value="gunBuilder.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
-     </div>
-  </div>
-  <div class="form-group">
-     <label class="col-md-4 control-label">Rarity</label>
-     <div class="col-md-4">
-        <NullableEnumSelect @bind-Value="gunBuilder.Rarity" class="form-control" aria-label="Rarity">
-              <option value="">Random</option>
-              @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
-              {
-                @if (rarity != Rarity.Pearlescent)
-                {
-                  <option value="@rarity">@rarity</option>
-                }
-              }
-          </NullableEnumSelect>
+      <div class="form-group">
+        <label for="WeaponLevel" class="control-label">Level:</label>
+        <InputNumber Value="gunBuilder.Level" ValueExpression="@(() => gunBuilder.Level)"
+            ValueChanged="@((int value) => LevelChanged(value))" name="WeaponLevel" class="form-control" aria-label="Weapon Level" />
       </div>
-  </div>
-  <div class="form-group">
-     <label class="col-md-4 control-label">Gun Type</label>
-     <div class="col-md-4">
-       <NullableEnumSelect Value="@gunBuilder.GunType" ValueExpression="@(() => gunBuilder.GunType)"  class="form-control" aria-label="Gun Type" ValueChanged="@((GunType? value) => FilterByGunTypes(value))">
-              <option value="">Random</option>              
-              @foreach (var gunType in Enum.GetValues(typeof(GunType)))
-              {
-                  <option value="@gunType">@(((GunType)gunType).GetDescription())</option>
-              }
-        </NullableEnumSelect>
-    </div>
-  </div>
-
-  @if (gunBuilder.GunType != null && guilds != null && guilds.Any())
-  {
-    <div class="form-group">
-     <label class="col-md-4 control-label">Preferred Guild</label>
-     <div class="col-md-4">
-       <InputSelect @bind-Value="gunBuilder.Guild" class="form-control" aria-label="Preferred Guild">
-              <option value="">Random</option>              
-              @foreach (var guild in guilds)
-              {
-                  <option value="@guild.Name">@guild.Name</option>
-              }
-        </InputSelect>
+      <div class="form-group">
+        <label for="text" class="control-label">Name:</label>
+        <InputText @bind-Value="gunBuilder.Name" name="WeaponName" class="form-control" aria-label="Weapon Name" />
       </div>
-    </div>
-  }
 
-  <div class="form-group">
-     <label class="col-md-4 control-label">Use Prefixes <input type="checkbox" @bind="gunBuilder.AllowPrefixes" aria-label="Allows Prefixes"/></label>
-  </div>
-  <div class="form-group">
-     <label class="col-md-4 control-label">Use RedTexts <input type="checkbox" @bind="gunBuilder.AllowRedTexts" aria-label="Allows RedText"/></label>
-  </div>
-  <hr class="divider">
-  <div class="form-group">
-    <input type="submit" class="btn btn-primary" value="Roll"/>
-  </div>
-</EditForm>
+      <div class="form-group">
+        <label class="control-label">Rarity:</label>
+        <div>
+          <InputRadioGroup @bind-Value="gunBuilder.Rarity">
+            @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
+            {
+                      <label class="radio-inline label-separated">
+                        <InputRadio Value="@rarity" checked="@(rarity == gunBuilder.Rarity)" />
+                        @rarity
+                      </label>
+            }
+                  </InputRadioGroup>
+                </div>
+              </div>
 
-@if (gun != null)
-{
-  <div id="cards"  class="card_container">  
-    <GunViewer CraftedGun=@gun.Item/>
+              <div class="form-group">
+                <label class="control-label">Gun Type:</label>
+                <div>
+                  <InputRadioGroup Value="gunBuilder.GunType" ValueExpression="@(() => gunBuilder.GunType)"
+            ValueChanged="@((GunType value) => FilterByGunTypes(value))">
+                    @foreach (var gunType in (GunType[])Enum.GetValues(typeof(GunType)))
+                    {
+                      <label class="radio-inline label-separated">
+                        <InputRadio Value="@gunType" checked="@(gunType == gunBuilder.GunType)" />
+                        @gunType
+                      </label>
+                    }
+                  </InputRadioGroup>
+                </div>
+              </div>
+
+      @if (guilds != null && guilds.Any())
+      {
+        <div class="form-group">
+          <label class="control-label">Preferred Guild:</label>
+          <InputSelect Value="gunBuilder.Guild" ValueExpression="@(() => gunBuilder.Guild)"
+            ValueChanged="@((string value) => FavoriteGuildChanged(value))"class="form-control" aria-label="Preferred Guild">
+            @foreach (var guild in guilds)
+            {
+                   <option value="@guild.Name" selected>@guild.Name</option>
+            }
+          </InputSelect>
+        </div>
+      }
+
+      <div class="form-group">
+        <label class="control-label">Prefix:</label>
+        <InputSelect class="form-control" aria-label="Prefix" Value="gunBuilder.PrefixName" ValueExpression="@(() => gunBuilder.PrefixName)" ValueChanged="@((string prefix) => PrefixChanged(prefix))">
+          <option value="" selected>None</option>
+             @foreach (var kvp in prefixes)
+              {
+                    <option value="@kvp.Key" selected>@kvp.Key</option>
+              }
+          </InputSelect>
+          @if(!string.IsNullOrWhiteSpace(gunBuilder.PrefixEffect))
+          {
+            <span>@gunBuilder.PrefixEffect</span>
+          }
+        </div>
+
+
+        <div class="form-group">
+          <label class="control-label">Red Text:</label>
+          <InputSelect class="form-control" aria-label="RedText" Value="gunBuilder.RedTextName" ValueExpression="@(() => gunBuilder.RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
+            <option value="" selected>None</option>
+            @foreach (var kvp in redTexts)
+            {
+              <option value="@kvp.Key" selected>@kvp.Key</option>
+            }
+          </InputSelect>
+          @if(!string.IsNullOrWhiteSpace(gunBuilder.RedTextEffect))
+          {
+            <span>@gunBuilder.RedTextEffect</span>
+          }
+        </div> 
+
+        <div class="form-group">
+          <label class="control-label">Damage:</label>
+          <InputNumber @bind-Value="gunBuilder.DamageDice" name="Damage Dice Number" class="form-control col-md-6" aria-label="Damage Dice Number" />
+          <InputText @bind-Value="gunBuilder.DamageDiceType" name="Damage Dice Type" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="d4"/>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Range:</label>
+          <InputNumber @bind-Value="gunBuilder.Range" name="Range" class="form-control" aria-label="Range" />
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Additional Elemental Damage:</label>
+          <InputNumber @bind-Value="gunBuilder.ElementalDamageDice" name="Elemental Dice Number" class="form-control col-md-6" aria-label="Elemental Damage Dice Number" />
+          <InputText @bind-Value="gunBuilder.ElementalDamageDiceType" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="d4"/>
+        </div>
+
+        <div class="form-group" >
+            <label class="col-md-4 control-label">Card Image URL (Optional):</label>
+            <div class="col-md-8">
+                <InputText @bind-Value="gunBuilder.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+            </div>
+        </div>
+    </EditForm>
   </div>
-}
+</div>
 
 @code {
-  GunRandomizerFactoryParameters gunBuilder = new GunRandomizerFactoryParameters();
+  GunCrafterParameters gunBuilder = new GunCrafterParameters();
+
+  Gun gun = new Gun();
 
   List<Guild> guilds = null;
 
-  ItemWrapper<Gun> gun = null;
+  Dictionary<string, Prefix> prefixes = null; 
+  
+  Dictionary<string, RedText> redTexts = null;
+    
+  Dictionary<GunType, string> archetypeBonuses = null;
 
+  protected override void OnInitialized()
+  {
+    prefixes = weaponCustomizationService.GetPrefixes();
+    redTexts = weaponCustomizationService.GetRedTexts();
+    archetypeBonuses = weaponCustomizationService.GetWeaponArchetypeBonuses();
+  }     
 
-  void FilterByGunTypes(GunType? gunType)
+  void LevelChanged(int level)
+  {
+    gunBuilder.Level = level;
+    gunBuilder.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gunBuilder.GunType, level);
+    this.StateHasChanged();
+  }
+
+  void FilterByGunTypes(GunType gunType)
   {
     gunBuilder.GunType = gunType;
     guilds = guildService.GetGuildsThatProduceGunType(gunType);
+    gunBuilder.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gunType, gunBuilder.Level);
+    gunBuilder.WeaponTypeBonus = archetypeBonuses[gunType];
     this.StateHasChanged();
-  } 
+  }
 
-  void Roll(EditContext editContext)
+  void FavoriteGuildChanged(string guild)
   {
-    logger.LogDebug("Roll");
-    System.Diagnostics.Debug.WriteLine("Roll");
-    gun = factory.Manufacture(gunBuilder);
+    var guildData = guildService.GetWeaponModifiers(guild, gunBuilder.Rarity);
+    gunBuilder.Guild = guild;
+    gunBuilder.GuildBonus = guildData.Bonus;
+    gunBuilder.GuildEffect = guildData.Effect;
+    this.StateHasChanged();
+  }
+
+  void PrefixChanged(string prefix)
+  {
+      gunBuilder.PrefixName = prefix;
+      gunBuilder.PrefixEffect = string.IsNullOrWhiteSpace(prefix)? null :prefixes[prefix]?.Effect;
+      this.StateHasChanged();
+  }
+
+  void RedTextChanged(string redText)
+  {
+      gunBuilder.RedTextName = redText;
+      gunBuilder.RedTextEffect = string.IsNullOrWhiteSpace(redText)? null : redTexts[redText].Effect;
+      this.StateHasChanged();
   }
 }

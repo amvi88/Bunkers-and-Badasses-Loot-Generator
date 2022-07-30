@@ -56,7 +56,7 @@ builder.Services.AddTransient<IChestService<CacheRollServiceParameters>, CacheRo
 builder.Services.AddTransient<IChestService<EnemyDropServiceParameters>, EnemyDropService>();
 builder.Services.AddTransient<IGuildService, GuildService>();
 builder.Services.AddTransient<IGunBatchService,GunBatchService>();
-builder.Services.AddTransient<IWeaponCustomizationService, WeaponCustomizationService>();
+builder.Services.AddSingleton<IWeaponCustomizationService, WeaponCustomizationService>();
 builder.Services.AddBlazorContextMenu();
 
 var app = builder.Build();

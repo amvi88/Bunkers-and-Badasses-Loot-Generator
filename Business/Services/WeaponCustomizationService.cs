@@ -17,19 +17,19 @@ namespace Business.Services
             _weaponArchetypesOptions = weaponArchetypesOptions.Value ?? throw new ArgumentNullException(nameof(weaponArchetypesOptions));
         }
 
-        public Dictionary<string, string> GetPrefixes()
+        public Dictionary<string, Prefix> GetPrefixes()
         {
             return _weaponCustomizationOptions.Prefixes.ToDictionary(
                 p => p.Name,
-                p => p.Effect
+                p => p
             );
         }
 
-        public Dictionary<string, string> GetRedText()
+        public Dictionary<string, RedText> GetRedTexts()
         {
             return _weaponCustomizationOptions.RedText.ToDictionary(
                 p => p.Name,
-                p => p.Effect
+                p => p
             );
         }
 
@@ -39,6 +39,14 @@ namespace Business.Services
                 a => a.GunType,
                 a => a.Bonus
             );
+        }
+
+        public List<WeaponHits> GetWeaponArchetypeHits(GunType gunType, int playerLevel)
+        {
+            return _weaponArchetypesOptions.Archetypes
+            .First(a => a.GunType == gunType)
+            .WeaponSpecs.First(x => x.MinLevel <= playerLevel && playerLevel <= x.MaxLevel)
+            .HitsByAccuracy;
         }
     }
 }
