@@ -15,11 +15,13 @@
             },
              {
                 "Name": "I never freeze",
-                "Effect": "Adds Cryo Element type."
+                "Effect": "Adds Cryo Element type.",
+                "Element":"Cryo"
             },
              {
                 "Name": "Toasty!",
-                "Effect": "Adds Incendiary Element type."
+                "Effect": "Adds Incendiary Element type.",
+                "Element":"Incendiary"
             },
              {
                 "Name": "Was he slow?",
@@ -39,15 +41,18 @@
             },
              {
                 "Name": "Envision Wyverns",
-                "Effect": "Adds Radiation Element type."
+                "Effect": "Adds Radiation Element type.",
+                "Element":"Radiation"
             },
              {
                 "Name": "I'm melting!",
-                "Effect": "Adds Corrosive Element type."
+                "Effect": "Adds Corrosive Element type.",
+                "Element":"Corrosive"
             },
              {
                 "Name": "The same thing that happens to everything else.",
-                "Effect": "Adds Shock Element type."
+                "Effect": "Adds Shock Element type.",
+                "Element":"Shock"
             },
              {
                 "Name": "360 quickscope",
