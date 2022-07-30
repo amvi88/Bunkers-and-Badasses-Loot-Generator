@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Models.Common;
 using Models.Config;
 
@@ -9,13 +10,14 @@ namespace Models.Builder
 
         public Element Element {get; set; }
 
-        public int Level {get; set; }
+        [Range(1,30)]
+        public int Level {get; set; } = 1;
 
         public string Damage {get; set; }
         
-        public int AmountOfDice => int.Parse(Damage.Substring(0,1));
+        public int AmountOfDice => string.IsNullOrWhiteSpace(Damage)? 0 :  int.Parse(Damage.Substring(0,1));
 
-        public string DiceType => Damage.Substring(1);
+        public string DiceType => string.IsNullOrWhiteSpace(Damage)? string.Empty :  Damage.Substring(1);
 
         public int ExtraAmountOfDice => string.IsNullOrWhiteSpace(ExtraDamage) ? 0 : int.Parse(ExtraDamage.Substring(0,1));
 
@@ -25,13 +27,20 @@ namespace Models.Builder
 
         public string Name { get; set; }
 
-        public string GunType { get; set; }
+        public GunType GunType { get; set; }
 
         public RedText RedText {get; set;}
 
-        public List<string> Bonuses {get; set;}
-
+        public Prefix Prefix { get; set; }
+ 
+        public string GunArchetypeBonus { get; set; }
+ 
+        public string ElementalBonus { get; set; }
+ 
+        public string GuildBonus { get; set; }
+ 
         public List<WeaponHits> HitsByAccuracy { get; set; }
+ 
         public string ExtraDamage { get; set; }
 
         public string Source { get; set; }

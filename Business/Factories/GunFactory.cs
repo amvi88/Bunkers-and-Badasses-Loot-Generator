@@ -34,8 +34,8 @@ namespace Business.Factories
                 Guild =  chosenGuild.Name,
                 Element = Element.None,
                 Rarity = rarity,
-                Bonuses = new List<string>{ $"(Guild) {specs.Bonus}" },
-                GunType = gunType.ToString()                         
+                GuildBonus = specs.Bonus,
+                GunType = gunType                         
             };
 
             // Roll for elemental type if any and bonus damage if it may be
@@ -48,7 +48,7 @@ namespace Business.Factories
 
                 if (! string.IsNullOrWhiteSpace(elementValues.Item2) && elementValues.Item1 != Element.None)
                 {
-                    gun.Bonuses.Append( $"(Elemental) +{elementValues.Item2} {elementValues.Item1} DMG");
+                    gun.ElementalBonus = $"+{elementValues.Item2} {elementValues.Item1} DMG";
                     gun.ExtraDamage = elementValues.Item2;
                 }
             }
@@ -57,7 +57,7 @@ namespace Business.Factories
             var archetype = _weaponArchetypesOptions.Archetypes.First(x => x.GunType == gunType);
             if (!string.IsNullOrEmpty(archetype.Bonus))
             {
-                gun.Bonuses.Add($"({gunType.GetDescription()}) {archetype.Bonus}");
+                gun.GunArchetypeBonus = archetype.Bonus;
             }
 
             GetName(gun, archetype);
@@ -74,8 +74,7 @@ namespace Business.Factories
                 if (calculatedPrefixChance <= _weaponCustomization.PrefixChance[rarity])
                 {
                     var prefix = _weaponCustomization.Prefixes[RandomNumberGenerator.GetInt32(0, _weaponCustomization.Prefixes.Length)];
-                    gun.Bonuses.Add($"(Prefix) {prefix.Effect}");
-                    gun.Name = $"{prefix.Name} {gun.Name}";
+                    gun.Prefix = prefix;
                 }
             }
 
@@ -85,8 +84,12 @@ namespace Business.Factories
                 if (calculatedRedTextChance  <= _weaponCustomization.RedTextChance[rarity])
                 {
                     var redText = _weaponCustomization.RedText[RandomNumberGenerator.GetInt32(0, _weaponCustomization.RedText.Length)];
-                    gun.Bonuses.Add($"(RedText) {redText.Effect}"); 
                     gun.RedText = redText;
+
+                    if (redText.Element != null)
+                    {
+                        gun.Element |= redText.Element.Value;
+                    }
                 }
             }
 
@@ -109,7 +112,7 @@ namespace Business.Factories
         {
             if (gun.Rarity != Rarity.Common)
             {
-                var matchingWeapons = _weaponCustomization.WeaponGallery.Where(x => x.Guild == gun.Guild && x.GunType == gun.GunType && x.Rarity == gun.Rarity );
+                var matchingWeapons = _weaponCustomization.WeaponGallery.Where(x => x.Guild == gun.Guild && x.GunType == gun.GunType.ToString() && x.Rarity == gun.Rarity );
 
                 if (matchingWeapons.Any())
                 {

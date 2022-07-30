@@ -1,34 +1,6 @@
 ﻿@page "/relic"
 @namespace Application.Pages
-@using Application.Components;
-@using Business;
-@using Models.Builder;
-@using Models.Common;
-@using Business.Factories;
-
-@inject ILogger<RelicSelector> logger
 @inject NavigationManager navigationManager
 
-
-<PageTitle>B&B: How Mysterious</PageTitle>
-<div class="crafting-selector-container">
-  <div class="crafting-selector" onclick="@CraftIt">
-    <img class="selection-icon" src="images/resources/selector-icons/build.png" alt="Craft It" aria-label="Craft It"/>
-    <h1>Craft</h1>
-  </div>
-  <div class="crafting-selector" onclick="@RandomizeIt">
-    <img class="selection-icon" src="images/resources/selector-icons/roll.png" alt="Craft It" aria-label="Craft It"/>
-    <h1>Random</h1>
-  </div>
-</div>
-
-@code {
-  void CraftIt()
-  {
-    navigationManager.NavigateTo("relic-crafter");
-  }
-  void RandomizeIt()
-  {
-    navigationManager.NavigateTo("relic-randomizer");
-  }
-}
+<PageTitle>B&B: Looking for relics</PageTitle>
+<Selector CraftPage="relic-crafter" RandomizerPage="relic-randomizer"/>

@@ -1,0 +1,30 @@
+﻿@namespace Application.Pages
+@inject NavigationManager navigationManager
+
+<div class="crafting-selector-container">
+  <div class="crafting-selector" onclick="@CraftIt">
+    <img class="selection-icon" src="images/resources/selector-icons/build.png" alt="Craft It" aria-label="Craft It"/>
+    <h1>Craft</h1>
+  </div>
+  <div class="crafting-selector" onclick="@RandomizeIt">
+    <img class="selection-icon" src="images/resources/selector-icons/roll.png" alt="Craft It" aria-label="Craft It"/>
+    <h1>Random</h1>
+  </div>
+</div>
+
+@code {
+  [Parameter]
+  public string CraftPage {get; set;}
+
+  [Parameter]
+  public string RandomizerPage {get; set;}
+
+  void CraftIt()
+  {
+    navigationManager.NavigateTo(CraftPage);
+  }
+  void RandomizeIt()
+  {
+    navigationManager.NavigateTo(RandomizerPage);
+  }
+}

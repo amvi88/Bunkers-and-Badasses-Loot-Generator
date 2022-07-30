@@ -1,7 +1,6 @@
 ﻿@page "/relic-randomizer"
 @namespace Application.Pages
 @using Application.Components;
-@using Business;
 @using Models.Builder;
 @using Models.Common;
 @using Business.Factories;
@@ -23,9 +22,12 @@
      <div class="col-md-4">
         <NullableEnumSelect @bind-Value="relicBuilder.Rarity" class="form-control" aria-label="Rarity">
               <option value="">Random</option>
-              @foreach (var rarity in Enum.GetValues(typeof(Rarity)))
+              @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
               {
-                  <option value="@rarity">@rarity</option>
+                 @if (rarity != Rarity.Pearlescent)
+                 {
+                    <option value="@rarity">@rarity</option>
+                 }                  
               }
           </NullableEnumSelect>
       </div>

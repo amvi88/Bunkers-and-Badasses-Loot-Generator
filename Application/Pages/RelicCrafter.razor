@@ -1,7 +1,5 @@
 ﻿@page "/relic-crafter"
 @namespace Application.Pages
-@using Application.Components;
-@using Business;
 @using Models.Builder;
 @using Models.Common;
 @using Models.Config;
@@ -65,10 +63,13 @@
                     <InputRadioGroup @bind-Value="relic.Rarity">
                         @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
                         {
+                          @if (rarity != Rarity.Pearlescent)
+                          {
                             <InputRadio Value="@rarity" checked="@(rarity == Rarity.Common)"/>
                             <text>&nbsp;</text>
                             @rarity
                             <text>&nbsp;</text>
+                          }
                         }
                     </InputRadioGroup>
                 </div>

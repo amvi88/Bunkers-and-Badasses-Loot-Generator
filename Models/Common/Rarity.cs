@@ -6,6 +6,7 @@ namespace Models.Common
         Uncommon,
         Rare,
         Epic,
-        Legendary
+        Legendary,
+        Pearlescent
     }
 }
