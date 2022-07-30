@@ -169,3 +169,8 @@ img.icon_small {
   max-width: 48px;
   max-height: 48px;
 }
+
+.accuracy-icon {
+  max-width: 32px;
+  max-height: 32px;
+}

@@ -85,8 +85,8 @@
                 @foreach(var hit in CraftedGun.HitsByAccuracy)
                 {
                     <div class="accuracy">@hit.Label</div>
-                    <div class="hits">@hit.Hits<img class="icon icon-header" src="images/open-iconic/svg/header.svg" alt="Header"></div>
-                    <div class="critical">@hit.Crits<img class="icon icon-aperture" src="images/open-iconic/svg/aperture.svg" alt="Aperture"></div>
+                    <div class="hits">@hit.Hits<img class="accuracy-icon" src="images/resources/card-icons/hit.png" alt="Hits"></div>
+                    <div class="critical">@hit.Crits<img class="accuracy-icon" src="images/resources/card-icons/crit.png" alt="Crits"></div>
                 }
             </div>
           </div>

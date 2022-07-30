@@ -15,11 +15,30 @@ namespace Models.Builder
 
         public string Damage {get; set; }
         
-        public int AmountOfDice => string.IsNullOrWhiteSpace(Damage)? 0 :  int.Parse(Damage.Substring(0,1));
+        public int AmountOfDice {
+            get {
+                if (string.IsNullOrWhiteSpace(Damage))
+                {
+                    return 0;
+                }
 
+                return int.TryParse(Damage.Substring(0,1), out var result)? result : 0;
+            }
+        }
+        
         public string DiceType => string.IsNullOrWhiteSpace(Damage)? string.Empty :  Damage.Substring(1);
 
-        public int ExtraAmountOfDice => string.IsNullOrWhiteSpace(ExtraDamage) ? 0 : int.Parse(ExtraDamage.Substring(0,1));
+        public int ExtraAmountOfDice
+        { 
+            get {
+                if (string.IsNullOrWhiteSpace(ExtraDamage))
+                {
+                    return 0;
+                }
+
+                return int.TryParse(ExtraDamage.Substring(0,1), out var result)? result : 0;
+            }
+        }
 
         public string ExtraDiceType =>  string.IsNullOrWhiteSpace(ExtraDamage)? string.Empty : ExtraDamage.Substring(1);
 
