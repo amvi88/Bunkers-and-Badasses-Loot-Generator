@@ -87,6 +87,11 @@ namespace Business.Factories
                     var redText = _weaponCustomization.RedText[RandomNumberGenerator.GetInt32(0, _weaponCustomization.RedText.Length)];
                     gun.Bonuses.Add($"(RedText) {redText.Effect}"); 
                     gun.RedText = redText;
+
+                    if (redText.Element != null)
+                    {
+                        gun.Element |= redText.Element.Value;
+                    }
                 }
             }
 

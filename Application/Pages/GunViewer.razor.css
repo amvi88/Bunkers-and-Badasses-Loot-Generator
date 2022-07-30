@@ -26,6 +26,10 @@ h5 {
   max-height: 30px;
 }
 
+.card__name {
+  font-size: larger;
+}
+
 .card__redtexts {
   width: 100%;
   display: flex;
@@ -33,18 +37,24 @@ h5 {
   text-transform: uppercase;
 }
 
+.card__redtext {
+  text-align: center;
+}
+
 .card__redtext>.card__label {
   color: #f0061f;
   font-weight: 500;
   font-size: .75em;
   text-align: center;
-  font-family: "Space Marine";
+  font-family: "SpaceMarine";
 }
 
 .card__stats {
   margin: 0;
   margin-bottom: .5em;
   width: 100%;
+  font-size: small;
+  text-transform: uppercase;
 }
 
 .card__hits {
@@ -67,6 +77,8 @@ h5 {
   font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
   text-align: right;
   font-weight: 300;
+  font-size: small;
+  text-transform: uppercase;
 }
 
 .card__hits th,
@@ -78,6 +90,7 @@ h5 {
 .card__abilities
 {
   margin-top: .5em;
+  padding-bottom: 10px;
 }
 
 .card__ability {
@@ -110,6 +123,7 @@ img.icon_small {
 .card-hits-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  font-size: medium;
 }
 
 .card__game_icon {
@@ -136,4 +150,22 @@ img.icon_small {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.bonus {
+  text-transform: uppercase;
+  font-size: 12.5px;
+  text-align: justify;
+}
+
+.element-container
+{
+  display: grid;
+  justify-content: center;
+}
+
+.element
+{
+  max-width: 48px;
+  max-height: 48px;
 }

@@ -2,6 +2,7 @@
 @using Business
 @using Models;
 @using Models.Builder;
+@using Models.Common;
 @inherits BaseItemViewer;
 
 <div>
@@ -20,7 +21,7 @@
         <h1 class="@GetCssClassCardCaption">@CraftedGun.Name</h1>        
         
         <h3 class="@GetCssClassCardType">
-          @CraftedGun.Element.ToString()
+          @CraftedGun.Rarity.ToString()
         </h3>
 
         @if (CraftedGun.RedText != null)
@@ -31,6 +32,26 @@
             </h4>
           </div>
         }        
+
+        @if (CraftedGun.Element != Element.None){
+        <div class="element-container">
+          <div>
+                @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+                {
+                   @if (element == Element.None)
+                   {
+                     continue;
+                   }
+                    @if (CraftedGun.Element.HasFlag(element))
+                    {
+                      <img src="@GetElementImage(element.ToString())" alt="@element" class="element"> 
+                    }
+
+                }  
+          </div>
+        </div>
+        }
+
 
         <table class="card__stats">
           <tbody>            
@@ -69,9 +90,10 @@
         </div>
         
         <div class="card__abilities">
+          <div class="card_hits_caption">Abilities</div>
           @foreach(var bonus in CraftedGun.Bonuses)
           {
-            <span class="card__label">@bonus</span>            
+            <span class="card__label bonus">@bonus</span>            
           }
         </div>
  
@@ -107,11 +129,13 @@
     
     public string GetCssClassCardCaption => $"card__name";
 
-    public string GetCssClassCardType => $"card__type {CraftedGun.Element.ToString().ToLower().Replace(", ","-")}";
+    public string GetCssClassCardType => $"card__type normal";
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGun.DiceType}.png";
 
     public string GetExtraDiceImage => $"images/resources/dice/{CraftedGun.ExtraDiceType}.png";
+
+    public string GetElementImage(string elementId) =>  $"images/resources/elements/{elementId}.png";
 
     public override string GetFileName()
     {

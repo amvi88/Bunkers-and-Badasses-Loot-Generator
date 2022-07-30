@@ -236,7 +236,7 @@
 
  .card--pearlescent {
   background: rgb(45,235,206);
-  background: linear-gradient(90deg, rgba(45,235,206,1) 0%, rgba(0,255,216,1) 100%);
+  background: linear-gradient(90deg, #2debce 0%, #00ffd8 100%);
  }
 
  .card--gold {
