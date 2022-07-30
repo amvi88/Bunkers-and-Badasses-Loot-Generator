@@ -1,12 +1,8 @@
 ﻿@page "/gun-crafter"
 @namespace Application.Pages
-@using Application.Components;
-@using Business;
 @using Business.Services;
-@using Models;
 @using Models.Common;
 @using Models.Builder;
-@using Business.Factories;
 
 @inherits BaseItemViewer
 @inject ILogger<GunCrafter> logger
@@ -19,28 +15,28 @@
 
 <div class="row">
   <div class="col-md-8">
-    <EditForm Model=@gunBuilder>
+    <EditForm Model=@gun>
       <DataAnnotationsValidator />
       <ValidationSummary />
 
       <div class="form-group">
         <label for="WeaponLevel" class="control-label">Level:</label>
-        <InputNumber Value="gunBuilder.Level" ValueExpression="@(() => gunBuilder.Level)"
+        <InputNumber Value="gun.Level" ValueExpression="@(() => gun.Level)"
             ValueChanged="@((int value) => LevelChanged(value))" name="WeaponLevel" class="form-control" aria-label="Weapon Level" />
       </div>
       <div class="form-group">
         <label for="text" class="control-label">Name:</label>
-        <InputText @bind-Value="gunBuilder.Name" name="WeaponName" class="form-control" aria-label="Weapon Name" />
+        <InputText @bind-Value="gun.Name" name="WeaponName" class="form-control" aria-label="Weapon Name" />
       </div>
 
       <div class="form-group">
         <label class="control-label">Rarity:</label>
         <div>
-          <InputRadioGroup @bind-Value="gunBuilder.Rarity">
+          <InputRadioGroup @bind-Value="gun.Rarity">
             @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
             {
                       <label class="radio-inline label-separated">
-                        <InputRadio Value="@rarity" checked="@(rarity == gunBuilder.Rarity)" />
+                        <InputRadio Value="@rarity" checked="@(rarity == gun.Rarity)" />
                         @rarity
                       </label>
             }
@@ -51,12 +47,12 @@
               <div class="form-group">
                 <label class="control-label">Gun Type:</label>
                 <div>
-                  <InputRadioGroup Value="gunBuilder.GunType" ValueExpression="@(() => gunBuilder.GunType)"
+                  <InputRadioGroup Value="gun.GunType" ValueExpression="@(() => gun.GunType)"
             ValueChanged="@((GunType value) => FilterByGunTypes(value))">
                     @foreach (var gunType in (GunType[])Enum.GetValues(typeof(GunType)))
                     {
                       <label class="radio-inline label-separated">
-                        <InputRadio Value="@gunType" checked="@(gunType == gunBuilder.GunType)" />
+                        <InputRadio Value="@gunType" checked="@(gunType == gun.GunType)" />
                         @gunType
                       </label>
                     }
@@ -68,7 +64,7 @@
       {
         <div class="form-group">
           <label class="control-label">Preferred Guild:</label>
-          <InputSelect Value="gunBuilder.Guild" ValueExpression="@(() => gunBuilder.Guild)"
+          <InputSelect Value="gun.Guild" ValueExpression="@(() => gun.Guild)"
             ValueChanged="@((string value) => FavoriteGuildChanged(value))"class="form-control" aria-label="Preferred Guild">
             @foreach (var guild in guilds)
             {
@@ -80,44 +76,43 @@
 
       <div class="form-group">
         <label class="control-label">Prefix:</label>
-        <InputSelect class="form-control" aria-label="Prefix" Value="gunBuilder.PrefixName" ValueExpression="@(() => gunBuilder.PrefixName)" ValueChanged="@((string prefix) => PrefixChanged(prefix))">
+        <InputSelect class="form-control" aria-label="Prefix" Value="PrefixName" ValueExpression="@(() => PrefixName)" ValueChanged="@((string prefix) => PrefixChanged(prefix))">
           <option value="" selected>None</option>
              @foreach (var kvp in prefixes)
               {
                     <option value="@kvp.Key" selected>@kvp.Key</option>
               }
           </InputSelect>
-          @if(!string.IsNullOrWhiteSpace(gunBuilder.PrefixEffect))
+          @if(!string.IsNullOrWhiteSpace(PrefixEffect))
           {
-            <span>@gunBuilder.PrefixEffect</span>
+            <span>@PrefixEffect</span>
           }
         </div>
 
 
         <div class="form-group">
           <label class="control-label">Red Text:</label>
-          <InputSelect class="form-control" aria-label="RedText" Value="gunBuilder.RedTextName" ValueExpression="@(() => gunBuilder.RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
+          <InputSelect class="form-control" aria-label="RedText" Value="RedTextName" ValueExpression="@(() => RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
             <option value="" selected>None</option>
             @foreach (var kvp in redTexts)
             {
               <option value="@kvp.Key" selected>@kvp.Key</option>
             }
           </InputSelect>
-          @if(!string.IsNullOrWhiteSpace(gunBuilder.RedTextEffect))
+          @if(!string.IsNullOrWhiteSpace(RedTextEffect))
           {
-            <span>@gunBuilder.RedTextEffect</span>
+            <span>@RedTextEffect</span>
           }
         </div> 
 
         <div class="form-group">
           <label class="control-label">Damage:</label>
-          <InputNumber @bind-Value="gunBuilder.DamageDice" name="Damage Dice Number" class="form-control col-md-6" aria-label="Damage Dice Number" />
-          <InputText @bind-Value="gunBuilder.DamageDiceType" name="Damage Dice Type" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="d4"/>
+          <InputText @bind-Value="gun.Damage" name="Damage" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="1d4"/>
         </div>
 
         <div class="form-group">
           <label class="control-label">Range:</label>
-          <InputNumber @bind-Value="gunBuilder.Range" name="Range" class="form-control" aria-label="Range" />
+          <InputNumber @bind-Value="gun.Range" name="Range" class="form-control" aria-label="Range" />
         </div>
 
         <div class="form-group">
@@ -140,24 +135,37 @@
 
         <div class="form-group">
           <label class="control-label">Additional Elemental Damage:</label>
-          <InputNumber @bind-Value="gunBuilder.ElementalDamageDice" name="Elemental Dice Number" class="form-control col-md-6" aria-label="Elemental Damage Dice Number" />
-          <InputText @bind-Value="gunBuilder.ElementalDamageDiceType" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="d4"/>
+          <InputText @bind-Value="gun.ExtraDamage" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="d4"/>
         </div>
 
         <div class="form-group" >
             <label class="col-md-4 control-label">Card Image URL (Optional):</label>
             <div class="col-md-8">
-                <InputText @bind-Value="gunBuilder.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+                <InputText @bind-Value="gun.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
             </div>
         </div>
     </EditForm>
   </div>
+
+  <div class="col-md-4">
+        <GunViewer CraftedGun=@gun/>
+  </div>
 </div>
 
 @code {
-  GunCrafterParameters gunBuilder = new GunCrafterParameters();
+  Gun gun = new Gun
+  {
+    GunType = GunType.CombatRifle,
+    Element = Element.None,
+    Rarity = Rarity.Common,
+    RedText = new RedText(),
+    Prefix = new Prefix()
+  };
 
-  Gun gun = new Gun();
+  string RedTextName = "";
+  string RedTextEffect = "";
+  string PrefixName = "";
+  string PrefixEffect = "";
 
   List<Guild> guilds = null;
 
@@ -172,6 +180,9 @@
     prefixes = weaponCustomizationService.GetPrefixes();
     redTexts = weaponCustomizationService.GetRedTexts();
     archetypeBonuses = weaponCustomizationService.GetWeaponArchetypeBonuses();
+    gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gun.GunType, gun.Level);
+    guilds = guildService.GetGuildsThatProduceGunType(gun.GunType);
+    gun.Guild = guilds.First().Name;
   }     
 
 
@@ -179,51 +190,81 @@
   {
       if (changed)
       {
-        gunBuilder.Element |= element;
+        gun.Element |= element;
       }
       else
       {
-        gunBuilder.Element ^= element;
+        gun.Element ^= element;
       }
       this.StateHasChanged();
   }
 
   void LevelChanged(int level)
   {
-    gunBuilder.Level = level;
-    gunBuilder.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gunBuilder.GunType, level);
+    gun.Level = level;
+    gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gun.GunType, level);
     this.StateHasChanged();
   }
 
   void FilterByGunTypes(GunType gunType)
   {
-    gunBuilder.GunType = gunType;
+    gun.GunType = gunType;
     guilds = guildService.GetGuildsThatProduceGunType(gunType);
-    gunBuilder.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gunType, gunBuilder.Level);
-    gunBuilder.WeaponTypeBonus = archetypeBonuses[gunType];
+    gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gunType, gun.Level);
+    gun.GunArchetypeBonus = archetypeBonuses[gunType];
     this.StateHasChanged();
   }
 
   void FavoriteGuildChanged(string guild)
   {
-    var guildData = guildService.GetWeaponModifiers(guild, gunBuilder.Rarity);
-    gunBuilder.Guild = guild;
-    gunBuilder.GuildBonus = guildData.Bonus;
-    gunBuilder.GuildEffect = guildData.Effect;
+    var guildData = guildService.GetWeaponModifiers(guild, gun.Rarity);
+    gun.Guild = guild;
+    gun.GuildBonus = guildData.Bonus;
     this.StateHasChanged();
   }
 
   void PrefixChanged(string prefix)
   {
-      gunBuilder.PrefixName = prefix;
-      gunBuilder.PrefixEffect = string.IsNullOrWhiteSpace(prefix)? null :prefixes[prefix]?.Effect;
+      if (string.IsNullOrWhiteSpace(prefix))
+      {
+        gun.Prefix = new Prefix();
+        PrefixEffect = string.Empty;
+        PrefixName = string.Empty;
+      }
+      else
+      {
+        gun.Prefix = prefixes[prefix];
+        PrefixEffect = gun.Prefix.Effect;
+        PrefixName = gun.Prefix.Name;
+      }
+      
       this.StateHasChanged();
   }
 
   void RedTextChanged(string redText)
   {
-      gunBuilder.RedTextName = redText;
-      gunBuilder.RedTextEffect = string.IsNullOrWhiteSpace(redText)? null : redTexts[redText].Effect;
+      if (gun.RedText.Element.HasValue)
+      {
+        gun.Element ^= gun.RedText.Element.Value;
+      }
+
+      if (string.IsNullOrWhiteSpace(redText))
+      {
+        gun.RedText = new RedText();
+        RedTextName = string.Empty;
+        RedTextEffect = string.Empty;
+      }
+      else
+      {
+        gun.RedText = redTexts[redText];
+        RedTextName = gun.RedText.Name;
+        RedTextEffect = gun.RedText.Effect;
+        if (gun.RedText.Element.HasValue)
+        {
+          gun.Element |= gun.RedText.Element.Value;
+        }
+      }
+      
       this.StateHasChanged();
   }
 }
