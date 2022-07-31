@@ -35,30 +35,30 @@
           <InputRadioGroup @bind-Value="gun.Rarity">
             @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
             {
-                      <label class="radio-inline label-separated">
-                        <InputRadio Value="@rarity" checked="@(rarity == gun.Rarity)" />
-                        @rarity
-                      </label>
+              <label class="radio-inline label-separated">
+                <InputRadio Value="@rarity" checked="@(rarity == gun.Rarity)" />
+                @rarity
+              </label>
             }
-                  </InputRadioGroup>
-                </div>
-              </div>
+          </InputRadioGroup>
+        </div>
+      </div>
 
-              <div class="form-group">
-                <label class="control-label">Gun Type:</label>
-                <div>
-                  <InputRadioGroup Value="gun.GunType" ValueExpression="@(() => gun.GunType)"
+      <div class="form-group">
+        <label class="control-label">Gun Type:</label>
+        <div>
+          <InputRadioGroup Value="gun.GunType" ValueExpression="@(() => gun.GunType)"
             ValueChanged="@((GunType value) => FilterByGunTypes(value))">
-                    @foreach (var gunType in (GunType[])Enum.GetValues(typeof(GunType)))
-                    {
-                      <label class="radio-inline label-separated">
-                        <InputRadio Value="@gunType" checked="@(gunType == gun.GunType)" />
-                        @gunType
-                      </label>
-                    }
-                  </InputRadioGroup>
-                </div>
-              </div>
+            @foreach (var gunType in (GunType[])Enum.GetValues(typeof(GunType)))
+            {
+              <label class="radio-inline label-separated">
+                <InputRadio Value="@gunType" checked="@(gunType == gun.GunType)" />
+                @gunType
+              </label>
+            }
+          </InputRadioGroup>
+        </div>
+      </div>
 
       @if (guilds != null && guilds.Any())
       {
@@ -108,8 +108,8 @@
         <input type="checkbox" checked="@(UseCustomRedTexts)" @onchange="eventArgs => { UseCustomRedTexts = !UseCustomRedTexts; }">
       </div> 
 
-        <div class="form-group">
-          <label class="control-label">Red Text:</label>
+      <div class="form-group">
+        <label class="control-label">Red Text:</label>
           @if (!UseCustomRedTexts)
           {
             <InputSelect class="form-control" aria-label="RedText" Value="RedTextName" ValueExpression="@(() => RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
@@ -142,27 +142,63 @@
         </div>
 
         <div class="form-group">
-                <label class="control-label">Elements:</label>
-                <div>
-                  @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
-                    {
-                      @if (element == Element.None)
-                      {
-                        continue;
-                      }
-                      <label class="radio-inline label-separated">
-                         <input type="checkbox" @onchange="eventArgs => { ElementChanged(element, (bool)eventArgs.Value); }" />
-                         @element
-                      </label>
-                    }
-                </div>
-              </div>
+          <label class="control-label">Elements:</label>
+            <div>
+            @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+            {
+              @if (element == Element.None)
+              {
+                continue;
+              }
+              <label class="radio-inline label-separated">
+                <input type="checkbox" @onchange="eventArgs => { ElementChanged(element, (bool)eventArgs.Value); }" />
+                @element
+              </label>
+            }
+          </div>
+        </div>
 
 
         <div class="form-group">
           <label class="control-label">Additional Elemental Damage: (i.e: 1d10)</label>
           <InputText @bind-Value="gun.ExtraDamage" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
         </div>
+
+        <hr/>
+        <h5>Accuracy and Hits/Crits</h5>
+        <div class="form-group">
+          <label class="control-label">Use Custom Hits and Crits?</label>
+          <input type="checkbox" checked="@(UseCustomHitsByAccuracy)" @onchange="eventArgs => { UseCustomHitsByAccuracy = !UseCustomHitsByAccuracy; }">
+        </div>  
+      
+        @if (UseCustomHitsByAccuracy)
+        {
+          <div>
+            @foreach(var hba in gun.HitsByAccuracy)
+            {
+                <div class="row">
+                    <div class="col-sm-1">
+                        @hba.Label:
+                    </div>
+                    <div class="col-sm-1">
+                        Hits:
+                    </div>
+                    <div class="col-sm-4">
+                        <InputNumber @bind-Value="hba.Hits" name="Hits" class="form-control" aria-label="Hits" />
+                    </div>
+                    <div class="col-sm-1">
+                        Crits:
+                    </div>
+                    <div class="col-sm-4">
+                        <InputNumber @bind-Value="hba.Crits" name="Crits" class="form-control" aria-label="Crits" />
+                    </div>
+                </div>
+            }
+          </div>
+        }
+
+        <hr/>
+        <h5>Card Image</h5>
 
         <div class="form-group" >
             <label class="col-md-4 control-label">Card Image URL (Optional):</label>
@@ -194,6 +230,7 @@
   string PrefixEffect = "";
   bool UseCustomPrefixes = false;
   bool UseCustomRedTexts = false;
+  bool UseCustomHitsByAccuracy = false;
 
   List<Guild> guilds = null;
 
@@ -230,15 +267,21 @@
   void LevelChanged(int level)
   {
     gun.Level = level;
-    gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gun.GunType, level);
+    if (!UseCustomHitsByAccuracy)
+    {
+      gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gun.GunType, level);
+    }
     this.StateHasChanged();
   }
 
   void FilterByGunTypes(GunType gunType)
   {
     gun.GunType = gunType;
-    gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gunType, gun.Level);
     gun.GunArchetypeBonus = archetypeBonuses[gunType];
+    if (!UseCustomHitsByAccuracy)
+    {
+      gun.HitsByAccuracy = weaponCustomizationService.GetWeaponArchetypeHits(gunType, gun.Level);
+    }
     this.StateHasChanged();
   }
 
