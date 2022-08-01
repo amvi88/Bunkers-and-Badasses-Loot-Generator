@@ -1,86 +1,85 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<nav class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">Bunkers and Badasses</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+            <div class="nav-item">
+                <NavLink class="nav-link" href="gun">
+                    <span class="oi oi-fire" aria-hidden="true"></span> Generate Guns
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="gunxplosion">
+                    <span class="oi oi-basket" aria-hidden="true"></span> Buckets of Gun
+                </NavLink>
+            </div>        
+            <div class="nav-item">
+                <NavLink class="nav-link" href="shield">
+                    <span class="oi oi-shield" aria-hidden="true"></span> Generate Shields
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="grenade">
+                    <span class="oi oi-sun" aria-hidden="true"></span> Generate Grenades
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="potion">
+                    <span class="oi oi-beaker" aria-hidden="true"></span> Generate Potions
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="moxxtails">
+                    <span class="oi oi-droplet" aria-hidden="true"></span> Grab a Moxx-Tail
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="relic">
+                    <span class="oi oi-script" aria-hidden="true"></span> Dig for Relics
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="enemy-drops">
+                    <span class="oi oi-target" aria-hidden="true"></span> Enemy Drops
+                </NavLink>
+            </div>        
+            <div class="nav-item">
+                <NavLink class="nav-link" href="dice-chest">
+                    <span class="oi oi-envelope-open" aria-hidden="true"></span> Dice Chests
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="unassuming-chest">
+                    <span class="oi oi-envelope-open" aria-hidden="true"></span> Unassuming Chests
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="cache-rolls">
+                    <span class="oi oi-yen" aria-hidden="true"></span> Cache Rolls
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="trauma">
+                    <span class="oi oi-medical-cross" aria-hidden="true"></span> Trauma-tize-me
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="quest-builder">
+                    <span class="oi oi-puzzle-piece" aria-hidden="true"></span> Quest Builder
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="https://github.com/amvi88/BunkersAndBadasses">
+                    <span class="oi oi-fork" aria-hidden="true"></span> See the source
+                </NavLink>
+            </div>
+        </div>
     </div>
-</div>
+</nav>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="gun">
-                <span class="oi oi-fire" aria-hidden="true"></span> Generate Guns
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="gunxplosion">
-                <span class="oi oi-basket" aria-hidden="true"></span> Buckets of Gun
-            </NavLink>
-        </div>        
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="shield">
-                <span class="oi oi-shield" aria-hidden="true"></span> Generate Shields
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="grenade">
-                <span class="oi oi-sun" aria-hidden="true"></span> Generate Grenades
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="potion">
-                <span class="oi oi-beaker" aria-hidden="true"></span> Generate Potions
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="moxxtails">
-                <span class="oi oi-droplet" aria-hidden="true"></span> Grab a Moxx-Tail
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="relic">
-                <span class="oi oi-script" aria-hidden="true"></span> Dig for Relics
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="enemy-drops">
-                <span class="oi oi-target" aria-hidden="true"></span> Enemy Drops
-            </NavLink>
-        </div>        
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="dice-chest">
-                <span class="oi oi-envelope-open" aria-hidden="true"></span> Dice Chests
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="unassuming-chest">
-                <span class="oi oi-envelope-open" aria-hidden="true"></span> Unassuming Chests
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="cache-rolls">
-                <span class="oi oi-yen" aria-hidden="true"></span> Cache Rolls
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="trauma">
-                <span class="oi oi-medical-cross" aria-hidden="true"></span> Trauma-tize-me
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="quest-builder">
-                <span class="oi oi-puzzle-piece" aria-hidden="true"></span> Quest Builder
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="https://github.com/amvi88/BunkersAndBadasses">
-                <span class="oi oi-fork" aria-hidden="true"></span> See the source
-            </NavLink>
-        </div>
-    </nav>
-</div>
+
 
 @code {
     private bool collapseNavMenu = true;
