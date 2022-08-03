@@ -8,22 +8,22 @@ using Business.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration.AddJsonFile("weaponarchetypes.json", true);
-builder.Configuration.AddJsonFile("weaponcustomization.json", true);
-builder.Configuration.AddJsonFile("weaponprefixes.json", true);
-builder.Configuration.AddJsonFile("weaponredtext.json", true);
-builder.Configuration.AddJsonFile("weapongallery.json", true);
-builder.Configuration.AddJsonFile("shieldgallery.json", true);
-builder.Configuration.AddJsonFile("guilds.json", true);
-builder.Configuration.AddJsonFile("potions.json", true);
-builder.Configuration.AddJsonFile("tinytinaspotions.json", true);
-builder.Configuration.AddJsonFile("relics.json", true);
-builder.Configuration.AddJsonFile("moxxtails.json", true);
-builder.Configuration.AddJsonFile("traumas.json", true);
-builder.Configuration.AddJsonFile("dicechests.json", true);
-builder.Configuration.AddJsonFile("unassumingchests.json", true);
-builder.Configuration.AddJsonFile("cacherolls.json", true);
-builder.Configuration.AddJsonFile("enemydrops.json", true);
+builder.Configuration.AddJsonFile("Configuration/weaponarchetypes.json", true);
+builder.Configuration.AddJsonFile("Configuration/weaponcustomization.json", true);
+builder.Configuration.AddJsonFile("Configuration/weaponprefixes.json", true);
+builder.Configuration.AddJsonFile("Configuration/weaponredtext.json", true);
+builder.Configuration.AddJsonFile("Configuration/weapongallery.json", true);
+builder.Configuration.AddJsonFile("Configuration/shieldgallery.json", true);
+builder.Configuration.AddJsonFile("Configuration/guilds.json", true);
+builder.Configuration.AddJsonFile("Configuration/potions.json", true);
+builder.Configuration.AddJsonFile("Configuration/tinytinaspotions.json", true);
+builder.Configuration.AddJsonFile("Configuration/relics.json", true);
+builder.Configuration.AddJsonFile("Configuration/moxxtails.json", true);
+builder.Configuration.AddJsonFile("Configuration/traumas.json", true);
+builder.Configuration.AddJsonFile("Configuration/dicechests.json", true);
+builder.Configuration.AddJsonFile("Configuration/unassumingchests.json", true);
+builder.Configuration.AddJsonFile("Configuration/cacherolls.json", true);
+builder.Configuration.AddJsonFile("Configuration/enemydrops.json", true);
 
 // Add services to the container.
 builder.Services.Configure<JsonOptions>(options =>
