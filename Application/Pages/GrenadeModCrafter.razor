@@ -1,12 +1,9 @@
 ﻿@page "/grenade"
 @namespace Application.Pages
-@using Business;
-@using Models;
-@using Models.Common;
+@using Business.Services;
 @using Models.Builder;
-@using Business.Factories;
 
-@inject IItemFactory<GrenadeMod, GrenadeModFactoryParameters> factory;
+@inject IGrenadeModService service;
 @inject ILogger<GrenadeModCrafter> logger
 
 
@@ -43,6 +40,6 @@
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    grenadeMod = factory.Manufacture(grenadeBuilder);
+    grenadeMod = service.RandomizeGrenadeMod(grenadeBuilder);
   }
 }

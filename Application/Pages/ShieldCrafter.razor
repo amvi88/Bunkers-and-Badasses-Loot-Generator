@@ -1,9 +1,9 @@
 ﻿@page "/shield"
 @namespace Application.Pages
 @using Models.Builder;
-@using Business.Factories;
+@using Business.Services;
 
-@inject IItemFactory<Shield, ShieldFactoryParameters> factory;
+@inject IShieldService service;
 @inject ILogger<ShieldCrafter> logger
 
 
@@ -40,6 +40,6 @@
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    shield = factory.Manufacture(shieldBuilder);
+    shield = service.RandomizeShield(shieldBuilder);
   }
 }

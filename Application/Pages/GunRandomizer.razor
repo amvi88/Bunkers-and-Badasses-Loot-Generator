@@ -7,7 +7,7 @@
 @using Models.Builder;
 @using Business.Factories;
 
-@inject IItemFactory<Gun, GunRandomizerFactoryParameters> factory
+@inject IGunService service
 @inject ILogger<GunRandomizer> logger
 @inject IGuildService guildService
 
@@ -107,6 +107,6 @@
   {
     logger.LogDebug("Roll");
     System.Diagnostics.Debug.WriteLine("Roll");
-    gun = factory.Manufacture(gunBuilder);
+    gun = service.RandomizeGun(gunBuilder);
   }
 }

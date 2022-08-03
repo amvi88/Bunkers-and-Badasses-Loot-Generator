@@ -1,13 +1,10 @@
 ﻿@page "/moxxtails"
 @namespace Application.Pages
-@using Business;
-@using Models;
-@using Models.Common;
+@using Business.Services;
 @using Models.Builder;
-@using Business.Factories;
 
 
-@inject IItemFactory<MoxxTail, BaseFactoryParameters> factory
+@inject IMoxxTailService service;
 @inject ILogger<MoxxTailsCrafter> logger
 
 
@@ -29,6 +26,6 @@
   void Roll()
   {
     logger.LogDebug("Roll");
-    moxxtail = factory.Manufacture(null);
+    moxxtail = service.RandomizeDrink((BaseFactoryParameters)null);
   }
 }

@@ -56,6 +56,11 @@ builder.Services.AddTransient<IChestService<CacheRollServiceParameters>, CacheRo
 builder.Services.AddTransient<IChestService<EnemyDropServiceParameters>, EnemyDropService>();
 builder.Services.AddTransient<IGuildService, GuildService>();
 builder.Services.AddTransient<IGunBatchService,GunBatchService>();
+builder.Services.AddTransient<IShieldService,ShieldService>();
+builder.Services.AddTransient<IGrenadeModService,GrenadeModService>();
+builder.Services.AddTransient<IRelicService,RelicService>();
+builder.Services.AddTransient<IGunService,GunService>();
+builder.Services.AddTransient<IMoxxTailService,MoxxTailService>();
 builder.Services.AddSingleton<IWeaponCustomizationService, WeaponCustomizationService>();
 builder.Services.AddBlazorContextMenu();
 

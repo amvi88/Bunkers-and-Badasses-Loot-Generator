@@ -5,7 +5,6 @@ using Models.Config;
 
 namespace Business.Services
 {
-
     public class GuildService : IGuildService
     {
         private readonly GuildConfigurationOptions _guildConfigurationOptions;

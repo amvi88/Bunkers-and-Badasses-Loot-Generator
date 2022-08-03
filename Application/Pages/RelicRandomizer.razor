@@ -3,9 +3,9 @@
 @using Application.Components;
 @using Models.Builder;
 @using Models.Common;
-@using Business.Factories;
+@using Business.Services;
 
-@inject IItemFactory<Relic, RelicRandomizerFactoryParameters> factory;
+@inject IRelicService service;
 @inject ILogger<RelicRandomizer> logger
 
 
@@ -52,6 +52,6 @@
   void Roll(EditContext editContext)
   {
     logger.LogDebug("Roll");
-    relic = factory.Manufacture(relicBuilder);
+    relic = service.RandomizeRelic(relicBuilder);
   }
 }
