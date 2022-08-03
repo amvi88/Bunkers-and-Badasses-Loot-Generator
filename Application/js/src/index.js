@@ -19,7 +19,8 @@ const snapshotCreator = (id) => {
             transformOrigin: "top left",
             width: element.offsetWidth + "px",
             height: element.offsetHeight + "px",
-          }
+          },
+          useCorsEverywhereProxy: true
         })
         .then((blob) => {
           resolve(blob);
