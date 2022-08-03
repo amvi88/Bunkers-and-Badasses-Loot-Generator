@@ -22,11 +22,11 @@
       <div class="accordion accordion-flush" id="accordionFlush">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionOne data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
               Weapon Archetypes
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse open" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseOne" class="accordion-collapse @accordionOneClass" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
                <div class="mb-3">
                   <label for="WeaponLevel" class="control-label">Level:</label>
@@ -87,11 +87,11 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionTwo data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
               Red Texts and Prefixes
             </button>
           </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseTwo" class="accordion-collapse @accordionTwoClass" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="control-label">Use Custom Prefixes?</label>
@@ -152,11 +152,11 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionThree data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
               Damage, Range and Elements
             </button>
           </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseThree" class="accordion-collapse @accordionThreeClass" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="control-label">Damage: (i.e: 1d10)</label>
@@ -194,11 +194,11 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionFour data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
               Accuracy and Hits/Crits
             </button>
           </h2>
-          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseFour" class="accordion-collapse @accordionFourClass" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="control-label">Use Custom Hits and Crits?</label>
@@ -235,11 +235,11 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            <button class="accordion-button collapsed" @onclick=ToggleAccordionFive type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
               Custom Image
             </button>
           </h2>
-          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseFive" class="accordion-collapse @accordionFiveClass" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                     <label class="col-md-4 control-label">Card Image URL (Optional):</label>
@@ -278,6 +278,12 @@
   bool UseCustomRedTexts = false;
   bool UseCustomHitsByAccuracy = false;
 
+  bool accordionOneCollapsed = false;
+  bool accordionTwoCollapsed = true;
+  bool accordionThreeCollapsed = true;
+  bool accordionFourCollapsed = true;
+  bool accordionFiveCollapsed = true;
+  
   List<Guild> guilds = null;
 
   Dictionary<string, Prefix> prefixes = null; 
@@ -383,4 +389,40 @@
       
       this.StateHasChanged();
   }
+
+  void ToggleAccordionOne()
+  {
+    accordionOneCollapsed = !accordionOneCollapsed;
+    this.StateHasChanged();
+  }
+  
+  void ToggleAccordionTwo()
+  {
+    accordionTwoCollapsed = !accordionTwoCollapsed;
+    this.StateHasChanged();
+  }
+  
+  void ToggleAccordionThree()
+  {
+    accordionThreeCollapsed = !accordionThreeCollapsed;
+    this.StateHasChanged();  
+  }
+  
+  void ToggleAccordionFour()
+  {
+    accordionFourCollapsed = !accordionFourCollapsed;
+    this.StateHasChanged();  
+  }
+  
+  void ToggleAccordionFive()
+  {
+    accordionFiveCollapsed = !accordionFiveCollapsed;
+    this.StateHasChanged();  
+  }
+
+  string accordionOneClass=> !accordionOneCollapsed? "collapse show": "collapse";
+  string accordionTwoClass=> !accordionTwoCollapsed? "collapse show": "collapse";
+  string accordionThreeClass=> !accordionThreeCollapsed? "collapse show": "collapse";
+  string accordionFourClass=> !accordionFourCollapsed? "collapse show": "collapse";
+  string accordionFiveClass=> !accordionFiveCollapsed? "collapse show": "collapse";
 }
