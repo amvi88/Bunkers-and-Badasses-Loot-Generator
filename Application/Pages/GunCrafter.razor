@@ -417,8 +417,9 @@
 
         if (file.ContentType == "image/png")
         {
-          var buf = new byte[file.Size];
-          using (var stream = file.OpenReadStream())
+          var resizedFile = await file.RequestImageFileAsync(file.ContentType, 267, 150);
+          var buf = new byte[resizedFile.Size];
+          using (var stream = resizedFile.OpenReadStream())
           {
             await stream.ReadAsync(buf);
           }
