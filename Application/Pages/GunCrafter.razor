@@ -19,198 +19,244 @@
       <DataAnnotationsValidator />
       <ValidationSummary />
 
-      <div class="mb-3">
-        <label for="WeaponLevel" class="control-label">Level:</label>
-        <InputNumber Value="gun.Level" ValueExpression="@(() => gun.Level)"
-            ValueChanged="@((int value) => LevelChanged(value))" name="WeaponLevel" class="form-control" aria-label="Weapon Level" />
-      </div>
-      <div class="mb-3">
-        <label for="text" class="control-label">Name:</label>
-        <InputText @bind-Value="gun.Name" name="WeaponName" class="form-control" aria-label="Weapon Name" placeholder="Player Level"/>
-      </div>
-
-      <div class="mb-3">
-        <label class="control-label">Rarity:</label>
-        <div>
-          <InputRadioGroup @bind-Value="gun.Rarity">
-            @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
-            {
-              <label class="radio-inline label-separated">
-                <InputRadio Value="@rarity" checked="@(rarity == gun.Rarity)" />
-                @rarity
-              </label>
-            }
-          </InputRadioGroup>
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <label class="control-label">Gun Type:</label>
-        <div>
-          <InputRadioGroup Value="gun.GunType" ValueExpression="@(() => gun.GunType)"
-            ValueChanged="@((GunType value) => FilterByGunTypes(value))">
-            @foreach (var gunType in (GunType[])Enum.GetValues(typeof(GunType)))
-            {
-              <label class="radio-inline label-separated">
-                <InputRadio Value="@gunType" checked="@(gunType == gun.GunType)" />
-                @gunType
-              </label>
-            }
-          </InputRadioGroup>
-        </div>
-      </div>
-
-      @if (guilds != null && guilds.Any())
-      {
-        <div class="mb-3">
-          <label class="control-label">Preferred Guild:</label>
-          <InputSelect Value="gun.Guild" ValueExpression="@(() => gun.Guild)"
-            ValueChanged="@((string value) => FavoriteGuildChanged(value))"class="form-control" aria-label="Preferred Guild">
-            @foreach (var guild in guilds)
-            {
-                   <option value="@guild.Name" selected=@(guild.Name == gun.Guild)>@guild.Name</option>
-            }
-          </InputSelect>
-        </div>
-      }
-
-      <hr/>
-      <h5>Prefixes and Red Texts</h5>
-      <div class="mb-3">
-        <label class="control-label">Use Custom Prefixes?</label>
-        <input type="checkbox" checked="@(UseCustomPrefixes)" @onchange="eventArgs => { UseCustomPrefixes = !UseCustomPrefixes; }">
-      </div>  
-      
-      <div class="mb-3">
-        <label class="control-label">Prefix:</label>
-        
-        @if (!UseCustomPrefixes){
-          <InputSelect class="form-control" aria-label="Prefix" Value="PrefixName" ValueExpression="@(() => PrefixName)" ValueChanged="@((string prefix) => PrefixChanged(prefix))">
-            <option value="" selected>None</option>
-              @foreach (var kvp in prefixes)
-                {
-                      <option value="@kvp.Key" selected>@kvp.Key</option>
-                }
-            </InputSelect>
-            @if(!string.IsNullOrWhiteSpace(PrefixEffect))
-            {
-              <span class="form-text">@PrefixEffect</span>
-            }
-        }     
-       else{
-          <InputText @bind-Value="gun.Prefix.Name" name="PrefixName" class="form-control" aria-label="Prefix Name" aria-placeholder="Prefix Name" placeholder="Prefix Name"/>
-          <InputText @bind-Value="gun.Prefix.Effect" name="PrefixEffect" class="form-control" aria-label="Prefix Effect" aria-placeholder="Prefix Effect" placeholder="Prefix Effect"/>
-       }   
-        </div>
-
-      <div class="mb-3">
-        <label class="control-label">Use Custom Red Texts?</label>
-        <input type="checkbox" checked="@(UseCustomRedTexts)" @onchange="eventArgs => { UseCustomRedTexts = !UseCustomRedTexts; }">
-      </div> 
-
-      <div class="mb-3">
-        <label class="control-label">Red Text:</label>
-          @if (!UseCustomRedTexts)
-          {
-            <InputSelect class="form-control" aria-label="RedText" Value="RedTextName" ValueExpression="@(() => RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
-              <option value="" selected>None</option>
-              @foreach (var kvp in redTexts)
-              {
-                <option value="@kvp.Key" selected>@kvp.Key</option>
-              }
-            </InputSelect>
-            @if(!string.IsNullOrWhiteSpace(RedTextEffect))
-            {
-              <span class="form-text">@RedTextEffect</span>
-            }
-          }
-          else
-          {
-            <InputText @bind-Value="gun.RedText.Name" name="RedTextName" class="form-control" aria-label="RedText Name" aria-placeholder="RedText Name" placeholder="RedText Name"/>
-            <InputText @bind-Value="gun.RedText.Effect" name="RedTextEffect" class="form-control" aria-label="RedText Effect" aria-placeholder="RedText Effect" placeholder="RedText Effect"/>
-          }
-        </div> 
-
-        <div class="mb-3">
-          <label class="control-label">Damage: (i.e: 1d10)</label>
-          <InputText @bind-Value="gun.Damage" name="Damage" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
-        </div>
-
-        <div class="mb-3">
-          <label class="control-label">Range:</label>
-          <InputNumber @bind-Value="gun.Range" name="Range" class="form-control" aria-label="Range" />
-        </div>
-
-        <div class="mb-3">
-          <label class="control-label">Elements:</label>
-            <div>
-            @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
-            {
-              @if (element == Element.None)
-              {
-                continue;
-              }
-              <label class="radio-inline label-separated">
-                <input type="checkbox" @onchange="eventArgs => { ElementChanged(element, (bool)eventArgs.Value); }" />
-                @element
-              </label>
-            }
-          </div>
-        </div>
-
-
-        <div class="mb-3">
-          <label class="control-label">Additional Elemental Damage: (i.e: 1d10)</label>
-          <InputText @bind-Value="gun.ExtraDamage" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
-        </div>
-
-        <hr/>
-        <h5>Accuracy and Hits/Crits</h5>
-        <div class="mb-3">
-          <label class="control-label">Use Custom Hits and Crits?</label>
-          <input type="checkbox" checked="@(UseCustomHitsByAccuracy)" @onchange="eventArgs => { UseCustomHitsByAccuracy = !UseCustomHitsByAccuracy; }">
-        </div>  
-      
-        @if (UseCustomHitsByAccuracy)
-        {
-          <div>
-            @foreach(var hba in gun.HitsByAccuracy)
-            {
-                <div class="row">
-                    <div class="col-sm-1">
-                        @hba.Label:
-                    </div>
-                    <div class="col-sm-1">
-                        Hits:
-                    </div>
-                    <div class="col-sm-4">
-                        <InputNumber @bind-Value="hba.Hits" name="Hits" class="form-control" aria-label="Hits" />
-                    </div>
-                    <div class="col-sm-1">
-                        Crits:
-                    </div>
-                    <div class="col-sm-4">
-                        <InputNumber @bind-Value="hba.Crits" name="Crits" class="form-control" aria-label="Crits" />
-                    </div>
+      <div class="accordion accordion-flush" id="accordionFlush">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Weapon Archetypes
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse open" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+            <div class="accordion-body">
+               <div class="mb-3">
+                  <label for="WeaponLevel" class="control-label">Level:</label>
+                  <InputNumber Value="gun.Level" ValueExpression="@(() => gun.Level)"
+                      ValueChanged="@((int value) => LevelChanged(value))" name="WeaponLevel" class="form-control" aria-label="Weapon Level" />
                 </div>
-            }
-          </div>
-        }
+                <div class="mb-3">
+                  <label for="text" class="control-label">Name:</label>
+                  <InputText @bind-Value="gun.Name" name="WeaponName" class="form-control" aria-label="Weapon Name" placeholder="Player Level"/>
+                </div>
 
-        <hr/>
-        <h5>Card Image</h5>
+                <div class="mb-3">
+                  <label class="control-label">Rarity:</label>
+                  <div>
+                    <InputRadioGroup @bind-Value="gun.Rarity">
+                      @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
+                      {
+                        <label class="radio-inline label-separated">
+                          <InputRadio Value="@rarity" checked="@(rarity == gun.Rarity)" />
+                          @rarity
+                        </label>
+                      }
+                    </InputRadioGroup>
+                  </div>
+                </div>
 
-        <div class="mb-3" >
-            <label class="col-md-4 control-label">Card Image URL (Optional):</label>
-            <div class="col-md-8">
-                <InputText @bind-Value="gun.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+                <div class="mb-3">
+                  <label class="control-label">Gun Type:</label>
+                  <div>
+                    <InputRadioGroup Value="gun.GunType" ValueExpression="@(() => gun.GunType)"
+                      ValueChanged="@((GunType value) => FilterByGunTypes(value))">
+                      @foreach (var gunType in (GunType[])Enum.GetValues(typeof(GunType)))
+                      {
+                        <label class="radio-inline label-separated">
+                          <InputRadio Value="@gunType" checked="@(gunType == gun.GunType)" />
+                          @gunType
+                        </label>
+                      }
+                    </InputRadioGroup>
+                  </div>
+                </div>
+
+                @if (guilds != null && guilds.Any())
+                {
+                  <div class="mb-3">
+                    <label class="control-label">Preferred Guild:</label>
+                    <InputSelect Value="gun.Guild" ValueExpression="@(() => gun.Guild)"
+                      ValueChanged="@((string value) => FavoriteGuildChanged(value))"class="form-control" aria-label="Preferred Guild">
+                      @foreach (var guild in guilds)
+                      {
+                            <option value="@guild.Name" selected=@(guild.Name == gun.Guild)>@guild.Name</option>
+                      }
+                    </InputSelect>
+                  </div>
+                }
             </div>
+          </div>
         </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Red Texts and Prefixes
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label class="control-label">Use Custom Prefixes?</label>
+                <input type="checkbox" checked="@(UseCustomPrefixes)" @onchange="eventArgs => { UseCustomPrefixes = !UseCustomPrefixes; }">
+              </div>  
+              
+              <div class="mb-3">
+                <label class="control-label">Prefix:</label>
+                
+                @if (!UseCustomPrefixes){
+                  <InputSelect class="form-control" aria-label="Prefix" Value="PrefixName" ValueExpression="@(() => PrefixName)" ValueChanged="@((string prefix) => PrefixChanged(prefix))">
+                    <option value="" selected>None</option>
+                      @foreach (var kvp in prefixes)
+                        {
+                              <option value="@kvp.Key" selected>@kvp.Key</option>
+                        }
+                    </InputSelect>
+                    @if(!string.IsNullOrWhiteSpace(PrefixEffect))
+                    {
+                      <span class="form-text">@PrefixEffect</span>
+                    }
+                }     
+              else{
+                  <InputText @bind-Value="gun.Prefix.Name" name="PrefixName" class="form-control" aria-label="Prefix Name" aria-placeholder="Prefix Name" placeholder="Prefix Name"/>
+                  <InputText @bind-Value="gun.Prefix.Effect" name="PrefixEffect" class="form-control" aria-label="Prefix Effect" aria-placeholder="Prefix Effect" placeholder="Prefix Effect"/>
+              }   
+                </div>
+
+              <div class="mb-3">
+                <label class="control-label">Use Custom Red Texts?</label>
+                <input type="checkbox" checked="@(UseCustomRedTexts)" @onchange="eventArgs => { UseCustomRedTexts = !UseCustomRedTexts; }">
+              </div> 
+
+              <div class="mb-3">
+                <label class="control-label">Red Text:</label>
+                  @if (!UseCustomRedTexts)
+                  {
+                    <InputSelect class="form-control" aria-label="RedText" Value="RedTextName" ValueExpression="@(() => RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
+                      <option value="" selected>None</option>
+                      @foreach (var kvp in redTexts)
+                      {
+                        <option value="@kvp.Key" selected>@kvp.Key</option>
+                      }
+                    </InputSelect>
+                    @if(!string.IsNullOrWhiteSpace(RedTextEffect))
+                    {
+                      <span class="form-text">@RedTextEffect</span>
+                    }
+                  }
+                  else
+                  {
+                    <InputText @bind-Value="gun.RedText.Name" name="RedTextName" class="form-control" aria-label="RedText Name" aria-placeholder="RedText Name" placeholder="RedText Name"/>
+                    <InputText @bind-Value="gun.RedText.Effect" name="RedTextEffect" class="form-control" aria-label="RedText Effect" aria-placeholder="RedText Effect" placeholder="RedText Effect"/>
+                  }
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Damage, Range and Elements
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label class="control-label">Damage: (i.e: 1d10)</label>
+                <InputText @bind-Value="gun.Damage" name="Damage" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
+              </div>
+
+              <div class="mb-3">
+                <label class="control-label">Range:</label>
+                <InputNumber @bind-Value="gun.Range" name="Range" class="form-control" aria-label="Range" />
+              </div>
+
+              <div class="mb-3">
+                <label class="control-label">Elements:</label>
+                  <div>
+                  @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+                  {
+                    @if (element == Element.None)
+                    {
+                      continue;
+                    }
+                    <label class="radio-inline label-separated">
+                      <input type="checkbox" @onchange="eventArgs => { ElementChanged(element, (bool)eventArgs.Value); }" />
+                      @element
+                    </label>
+                  }
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="control-label">Additional Elemental Damage: (i.e: 1d10)</label>
+                <InputText @bind-Value="gun.ExtraDamage" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Accuracy and Hits/Crits
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlush">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label class="control-label">Use Custom Hits and Crits?</label>
+                <input type="checkbox" checked="@(UseCustomHitsByAccuracy)" @onchange="eventArgs => { UseCustomHitsByAccuracy = !UseCustomHitsByAccuracy; }">
+              </div>  
+            
+              @if (UseCustomHitsByAccuracy)
+              {
+                <div>
+                  @foreach(var hba in gun.HitsByAccuracy)
+                  {
+                      <div class="row">
+                          <div class="col-sm-1">
+                              @hba.Label:
+                          </div>
+                          <div class="col-sm-1">
+                              Hits:
+                          </div>
+                          <div class="col-sm-4">
+                              <InputNumber @bind-Value="hba.Hits" name="Hits" class="form-control" aria-label="Hits" />
+                          </div>
+                          <div class="col-sm-1">
+                              Crits:
+                          </div>
+                          <div class="col-sm-4">
+                              <InputNumber @bind-Value="hba.Crits" name="Crits" class="form-control" aria-label="Crits" />
+                          </div>
+                      </div>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              Custom Image
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
+            <div class="accordion-body">
+              <div class="mb-3">
+                    <label class="col-md-4 control-label">Card Image URL (Optional):</label>
+                    <div class="col-md-8">
+                        <InputText @bind-Value="gun.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </EditForm>
   </div>
 
   <div class="col-md-4">
-        <GunViewer CraftedGun=@gun/>
+    <GunViewer CraftedGun=@gun/>
   </div>
 </div>
 
