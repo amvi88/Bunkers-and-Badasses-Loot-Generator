@@ -42,12 +42,14 @@
 
 .nav-item ::deep a.active {
     background-color: rgba(255,255,255,0.25);
-    color: white;
+    color: #fc5dc5;
+    font-family: "NanumPenScript";
+    font-size: x-large;
 }
 
 .nav-item ::deep a:hover {
     background-color: rgba(255,255,255,0.25);
-    color: #fc5dc5;
+    color: white;
 }
 
 @media (min-width: 641px) {
