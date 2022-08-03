@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'SpaceMarine';
-  src: url('SM.ttf')  format('truetype');
-} 
- 
  .card_container {
    margin-top: 2em;
  }

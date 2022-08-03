@@ -1,5 +1,6 @@
 ﻿@page "/gun-crafter"
 @namespace Application.Pages
+@using Business;
 @using Business.Services;
 @using Models.Common;
 @using Models.Builder;
@@ -62,7 +63,7 @@
                       {
                         <label class="radio-inline label-separated">
                           <InputRadio Value="@gunType" checked="@(gunType == gun.GunType)" />
-                          @gunType
+                          @gunType.GetDescription()
                         </label>
                       }
                     </InputRadioGroup>

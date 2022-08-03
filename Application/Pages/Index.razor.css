@@ -96,3 +96,11 @@
         transform: translateX(0em) rotateY(0deg);
     }
 }
+
+.bottom-right
+{
+    position:fixed;
+    bottom:0;
+    right:0;
+}
+
