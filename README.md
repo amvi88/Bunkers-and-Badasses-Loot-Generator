@@ -1,15 +1,6 @@
 # BunkersAndBadasses
 
-This is an (ALPHA) unoficial [Loot Generator](https://bunkers-n-badasses-loot.herokuapp.com/) for 2K and Nerdvana Games <a href="https://nerdvanagames.myshopify.com/">Bunkers and Badasses</a> TTRPG Game. 
-All of the data has been painstakingly transcribed by hand from the Book, to avoid having to stop the game just to generate loot.
-
-Guns and Mods Images are taken from [Lootlemon](https://lootlemon.com)
-Dice icons available on [Icon Icons](https://icon-icons.com/)
-
-* Todo
-  * Relics
-  * Moxx-tails
-  * Better less generic names
+This is an unofficial [Loot Generator](https://bunkers-n-badasses-loot.herokuapp.com/) for 2K and Nerdvana Games <a href="https://nerdvanagames.myshopify.com/">Bunkers and Badasses</a> TTRPG Game. 
   
 ## Running it locally 
 You'll need both [NodeJs](https://nodejs.org/en/download/) and [Net Core 6.0](https://dotnet.microsoft.com/en-us/download).
