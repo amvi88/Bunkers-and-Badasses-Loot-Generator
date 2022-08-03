@@ -17,42 +17,42 @@
         <DataAnnotationsValidator />  
         <ValidationSummary />
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-4 control-label">Location:</label>
             <div class="col-md-8">
                 <InputText @bind-Value="parameters.Location" name="Location" class="form-control" aria-label="Location"/>
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-4 control-label">Quest Name:</label>
             <div class="col-md-8">
                 <InputText @bind-Value="parameters.QuestName" name="Quest Name" class="form-control" aria-label="Quest Name"/>
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-8 control-label">Summary:</label>
             <div class="col-md-8">
                 <InputTextArea rows="4" @bind-Value="parameters.Summary" name="Summary" class="form-control" aria-label="Summary"/>
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-8 control-label">XP Reward:</label>
             <div class="col-md-8">
                 <InputNumber @bind-Value="parameters.XpReward" name="XP Reward" class="form-control" aria-label="XP Reward"/>
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-8 control-label">Gold Reward:</label>
             <div class="col-md-8">
                 <InputNumber @bind-Value="parameters.GoldReward" name="Gold Reward" class="form-control" aria-label="Gold Reward"/>
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
             <label class="col-md-4 control-label">Quest Type:</label>
             <div class="col-md-8">
                 <InputRadioGroup @bind-Value="parameters.QuestType">
@@ -67,28 +67,28 @@
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-4 control-label">Player Level:</label>
             <div class="col-md-8">
                 <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-4 control-label">Quest Giver (Optional):</label>
             <div class="col-md-8">
                 <InputText @bind-Value="parameters.QuestGiver" name="Quest Giver" class="form-control" aria-label="Quest Giver"/>
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-8 control-label">Read Aloud (Optional):</label>
             <div class="col-md-8">
                 <InputTextArea rows="4" @bind-Value="parameters.ReadAloudText" name="ReadAloud" class="form-control" aria-label="Read Aloud"/>
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-4 control-label">Card Image URL (Optional):</label>
             <div class="col-md-8">
                 <InputText @bind-Value="parameters.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>

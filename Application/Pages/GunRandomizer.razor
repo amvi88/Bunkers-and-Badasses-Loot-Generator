@@ -19,13 +19,13 @@
   <DataAnnotationsValidator />  
   <ValidationSummary />
 
-  <div class="form-group" >
+  <div class="mb-3" >
      <label class="col-md-4 control-label">Player Level:</label>
      <div class="col-md-4">
          <InputNumber @bind-Value="gunBuilder.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
      </div>
   </div>
-  <div class="form-group">
+  <div class="mb-3">
      <label class="col-md-4 control-label">Rarity</label>
      <div class="col-md-4">
         <NullableEnumSelect @bind-Value="gunBuilder.Rarity" class="form-control" aria-label="Rarity">
@@ -40,7 +40,7 @@
           </NullableEnumSelect>
       </div>
   </div>
-  <div class="form-group">
+  <div class="mb-3">
      <label class="col-md-4 control-label">Gun Type</label>
      <div class="col-md-4">
        <NullableEnumSelect Value="@gunBuilder.GunType" ValueExpression="@(() => gunBuilder.GunType)"  class="form-control" aria-label="Gun Type" ValueChanged="@((GunType? value) => FilterByGunTypes(value))">
@@ -55,7 +55,7 @@
 
   @if (gunBuilder.GunType != null && guilds != null && guilds.Any())
   {
-    <div class="form-group">
+    <div class="mb-3">
      <label class="col-md-4 control-label">Preferred Guild</label>
      <div class="col-md-4">
        <InputSelect @bind-Value="gunBuilder.Guild" class="form-control" aria-label="Preferred Guild">
@@ -69,14 +69,14 @@
     </div>
   }
 
-  <div class="form-group">
+  <div class="mb-3">
      <label class="col-md-4 control-label">Use Prefixes <input type="checkbox" @bind="gunBuilder.AllowPrefixes" aria-label="Allows Prefixes"/></label>
   </div>
-  <div class="form-group">
+  <div class="mb-3">
      <label class="col-md-4 control-label">Use RedTexts <input type="checkbox" @bind="gunBuilder.AllowRedTexts" aria-label="Allows RedText"/></label>
   </div>
   <hr class="divider">
-  <div class="form-group">
+  <div class="mb-3">
     <input type="submit" class="btn btn-primary" value="Roll"/>
   </div>
 </EditForm>

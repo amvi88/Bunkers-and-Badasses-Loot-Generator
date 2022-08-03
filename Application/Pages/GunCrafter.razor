@@ -19,17 +19,17 @@
       <DataAnnotationsValidator />
       <ValidationSummary />
 
-      <div class="form-group">
+      <div class="mb-3">
         <label for="WeaponLevel" class="control-label">Level:</label>
         <InputNumber Value="gun.Level" ValueExpression="@(() => gun.Level)"
             ValueChanged="@((int value) => LevelChanged(value))" name="WeaponLevel" class="form-control" aria-label="Weapon Level" />
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="text" class="control-label">Name:</label>
         <InputText @bind-Value="gun.Name" name="WeaponName" class="form-control" aria-label="Weapon Name" placeholder="Player Level"/>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3">
         <label class="control-label">Rarity:</label>
         <div>
           <InputRadioGroup @bind-Value="gun.Rarity">
@@ -44,7 +44,7 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3">
         <label class="control-label">Gun Type:</label>
         <div>
           <InputRadioGroup Value="gun.GunType" ValueExpression="@(() => gun.GunType)"
@@ -62,7 +62,7 @@
 
       @if (guilds != null && guilds.Any())
       {
-        <div class="form-group">
+        <div class="mb-3">
           <label class="control-label">Preferred Guild:</label>
           <InputSelect Value="gun.Guild" ValueExpression="@(() => gun.Guild)"
             ValueChanged="@((string value) => FavoriteGuildChanged(value))"class="form-control" aria-label="Preferred Guild">
@@ -76,12 +76,12 @@
 
       <hr/>
       <h5>Prefixes and Red Texts</h5>
-      <div class="form-group">
+      <div class="mb-3">
         <label class="control-label">Use Custom Prefixes?</label>
         <input type="checkbox" checked="@(UseCustomPrefixes)" @onchange="eventArgs => { UseCustomPrefixes = !UseCustomPrefixes; }">
       </div>  
       
-      <div class="form-group">
+      <div class="mb-3">
         <label class="control-label">Prefix:</label>
         
         @if (!UseCustomPrefixes){
@@ -94,7 +94,7 @@
             </InputSelect>
             @if(!string.IsNullOrWhiteSpace(PrefixEffect))
             {
-              <span>@PrefixEffect</span>
+              <span class="form-text">@PrefixEffect</span>
             }
         }     
        else{
@@ -103,12 +103,12 @@
        }   
         </div>
 
-      <div class="form-group">
+      <div class="mb-3">
         <label class="control-label">Use Custom Red Texts?</label>
         <input type="checkbox" checked="@(UseCustomRedTexts)" @onchange="eventArgs => { UseCustomRedTexts = !UseCustomRedTexts; }">
       </div> 
 
-      <div class="form-group">
+      <div class="mb-3">
         <label class="control-label">Red Text:</label>
           @if (!UseCustomRedTexts)
           {
@@ -121,7 +121,7 @@
             </InputSelect>
             @if(!string.IsNullOrWhiteSpace(RedTextEffect))
             {
-              <span>@RedTextEffect</span>
+              <span class="form-text">@RedTextEffect</span>
             }
           }
           else
@@ -131,17 +131,17 @@
           }
         </div> 
 
-        <div class="form-group">
+        <div class="mb-3">
           <label class="control-label">Damage: (i.e: 1d10)</label>
           <InputText @bind-Value="gun.Damage" name="Damage" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
           <label class="control-label">Range:</label>
           <InputNumber @bind-Value="gun.Range" name="Range" class="form-control" aria-label="Range" />
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
           <label class="control-label">Elements:</label>
             <div>
             @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
@@ -159,14 +159,14 @@
         </div>
 
 
-        <div class="form-group">
+        <div class="mb-3">
           <label class="control-label">Additional Elemental Damage: (i.e: 1d10)</label>
           <InputText @bind-Value="gun.ExtraDamage" name="Elemental Damage Dice Type" class="form-control col-md-6" aria-label="Elemental Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
         </div>
 
         <hr/>
         <h5>Accuracy and Hits/Crits</h5>
-        <div class="form-group">
+        <div class="mb-3">
           <label class="control-label">Use Custom Hits and Crits?</label>
           <input type="checkbox" checked="@(UseCustomHitsByAccuracy)" @onchange="eventArgs => { UseCustomHitsByAccuracy = !UseCustomHitsByAccuracy; }">
         </div>  
@@ -200,7 +200,7 @@
         <hr/>
         <h5>Card Image</h5>
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-4 control-label">Card Image URL (Optional):</label>
             <div class="col-md-8">
                 <InputText @bind-Value="gun.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>

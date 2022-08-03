@@ -18,13 +18,13 @@
   <DataAnnotationsValidator />  
   <ValidationSummary />
 
-   <div class="form-group" >
+   <div class="mb-3" >
      <label class="col-md-4 control-label">Player Level:</label>
      <div class="col-md-4">
          <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
      </div>
   </div>
-  <div class="form-group">
+  <div class="mb-3">
      <label class="col-md-4 control-label">Cache Size</label>
      <div class="col-md-4">
        <InputSelect @bind-Value="parameters.CacheRollSize" class="form-control" aria-label="Gun Type">
@@ -42,17 +42,17 @@
         </InputSelect>
     </div>
   </div>
-  <div class="form-group">
+  <div class="mb-3">
      <label class="col-md-4 control-label">Apply Gold Farmer Potion Bonus?  <input type="checkbox" @bind="parameters.GoldFarmerBonus" aria-label="Apply Gold Farmer Bonus"/></label>
   </div>
-  <div class="form-group">
+  <div class="mb-3">
      <label class="col-md-4 control-label">Use Prefixes <input type="checkbox" @bind="parameters.AllowPrefixes" aria-label="Allows Prefixes"/></label>
   </div>
-  <div class="form-group">
+  <div class="mb-3">
      <label class="col-md-4 control-label">Use RedTexts <input type="checkbox" @bind="parameters.AllowRedTexts" aria-label="Allows RedText"/></label>
   </div>
   <hr class="divider">
-  <div class="form-group">
+  <div class="mb-3">
     <input type="submit" class="btn btn-primary" value="Roll"/>
   </div>
 </EditForm>

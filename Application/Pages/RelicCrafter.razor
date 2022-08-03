@@ -21,21 +21,21 @@
       <DataAnnotationsValidator />  
       <ValidationSummary />
 
-     <div class="form-group" >
+     <div class="mb-3" >
             <label class="col-md-8 control-label">Relic Name:</label>
             <div class="col-md-8">
                 <InputText @bind-Value="relic.Type" name="Relic Name" class="form-control" aria-label="Relic Name"/>
             </div>
         </div>
 
-      <div class="form-group" >
+      <div class="mb-3" >
             <label class="col-md-8 control-label">Relic Effect:</label>
             <div class="col-md-8">
                 <InputText @bind-Value="relic.Effect" name="Relic Effect" class="form-control" aria-label="Relic Effect"/>
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
         <label class="col-md-8 control-label">Preferred Class:</label>
         <div class="col-md-8">
             <InputSelect Value="@relic.PreferredClass" ValueExpression="@(() => relic.PreferredClass)" ValueChanged="@((string value) => UpdatePreferredClass(value))" class="form-control" aria-label="Preferred Class">
@@ -48,7 +48,7 @@
       </div>
 
 
-        <div class="form-group" >
+        <div class="mb-3" >
             <label class="col-md-8 control-label">Class Effect:</label>
             <div class="col-md-8">
                 <InputText @bind-Value="relic.ClassEffect" name="Class Effect" class="form-control" aria-label="Class Effect"/>
@@ -57,7 +57,7 @@
 
 
         <div class="col-md-8">
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="col-md-8 control-label">Rarity:</label>
                 <div>
                     <InputRadioGroup @bind-Value="relic.Rarity">
@@ -76,7 +76,7 @@
             </div>
           </div>
 
-    <div class="form-group" >
+    <div class="mb-3" >
             <label class="col-md-8 control-label">Card Image URL (Optional):</label>
             <div class="col-md-8">
                 <InputText @bind-Value="relic.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
