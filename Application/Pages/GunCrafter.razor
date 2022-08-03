@@ -242,10 +242,24 @@
           <div id="flush-collapseFive" class="accordion-collapse @accordionFiveClass" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
-                    <label class="col-md-4 control-label">Card Image URL (Optional):</label>
-                    <div class="col-md-8">
-                        <InputText @bind-Value="gun.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+                    <div class="mb-3">
+                      <label class="control-label">Upload Custom Image</label>
+                      <input type="checkbox" checked="@(UseCustomImage)" @onchange="eventArgs => { UseCustomImage = !UseCustomImage; }">
                     </div>
+                    @if (!UseCustomImage)
+                    {
+                      <div class="mb-3">
+                          <label class="control-label">Card Image URL (Optional):</label>
+                          <InputText @bind-Value="gun.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+                      </div>
+                    }
+                    else
+                    {
+                      <div class="mb-3">
+                          <label class="control-label">Select an Image:</label>
+                          <InputFile OnChange="OnFileChange" class="form-control" accept=".png" />                          
+                      </div> 
+                    }
               </div>
             </div>
           </div>
@@ -278,6 +292,7 @@
   bool UseCustomPrefixes = false;
   bool UseCustomRedTexts = false;
   bool UseCustomHitsByAccuracy = false;
+  bool UseCustomImage = false;
 
   bool accordionOneCollapsed = false;
   bool accordionTwoCollapsed = true;
@@ -390,6 +405,26 @@
       
       this.StateHasChanged();
   }
+
+  async Task OnFileChange(InputFileChangeEventArgs eventArgs)
+    {
+        var files = eventArgs.GetMultipleFiles(1);
+        var file = files.FirstOrDefault();
+        if (file == null)
+        {
+            return;
+        }
+
+        if (file.ContentType == "image/png")
+        {
+          var buf = new byte[file.Size];
+          using (var stream = file.OpenReadStream())
+          {
+            await stream.ReadAsync(buf);
+          }
+          gun.ImageUrl = $"data:image/png;base64, {Convert.ToBase64String(buf)}";
+        }
+    }
 
   void ToggleAccordionOne()
   {
