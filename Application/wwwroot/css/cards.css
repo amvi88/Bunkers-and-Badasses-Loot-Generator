@@ -21,6 +21,7 @@
    padding: 1em;
    position: relative;
    border-radius: 0 0 3px 3px;
+   min-height: 200px;
  }
 
  .card__image-container {
