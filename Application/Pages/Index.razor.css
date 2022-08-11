@@ -104,3 +104,15 @@
     right:0;
 }
 
+@media only screen and (max-width: 1000px) {
+    .animation-container  {
+      visibility: hidden;
+      display: none;
+    }
+
+    .bottom-right
+    {
+        display: none;
+    }
+}
+
