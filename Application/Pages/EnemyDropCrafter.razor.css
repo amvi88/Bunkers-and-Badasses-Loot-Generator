@@ -6,13 +6,18 @@
   gap: 1rem;
 }
 
+/* Screen lesser than 600px? 1 column */
+@media (max-width: 600px) {
+  .chest_container { grid-template-columns: repeat(1, 1fr); }
+}
+
 /* Screen larger than 600px? 2 column */
-@media (min-width: 600px) {
+@media (max-width: 1000px) {
   .chest_container { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Screen larger than 900px? 3 columns */
-@media (min-width: 900px) {
+@media (min-width: 1000) {
   .chest_container { grid-template-columns: repeat(3, 1fr); }
 }
 

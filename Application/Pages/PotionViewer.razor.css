@@ -34,3 +34,7 @@ img {
   margin: auto;
   display: inline-block;
 }
+
+.potion-cost{
+  text-align: center;
+}
