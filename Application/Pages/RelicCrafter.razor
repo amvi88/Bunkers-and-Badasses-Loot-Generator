@@ -22,22 +22,22 @@
       <ValidationSummary />
 
      <div class="mb-3" >
-            <label class="col-md-8 control-label">Relic Name:</label>
-            <div class="col-md-8">
+            <label class=" control-label">Relic Name:</label>
+            <div>
                 <InputText @bind-Value="relic.Type" name="Relic Name" class="form-control" aria-label="Relic Name"/>
             </div>
         </div>
 
       <div class="mb-3" >
-            <label class="col-md-8 control-label">Relic Effect:</label>
-            <div class="col-md-8">
+            <label class=" control-label">Relic Effect:</label>
+            <div>
                 <InputText @bind-Value="relic.Effect" name="Relic Effect" class="form-control" aria-label="Relic Effect"/>
             </div>
         </div>
 
         <div class="mb-3">
-        <label class="col-md-8 control-label">Preferred Class:</label>
-        <div class="col-md-8">
+        <label class=" control-label">Preferred Class:</label>
+        <div>
             <InputSelect Value="@relic.PreferredClass" ValueExpression="@(() => relic.PreferredClass)" ValueChanged="@((string value) => UpdatePreferredClass(value))" class="form-control" aria-label="Preferred Class">
                   @foreach (var pcClass in relicConfiguration.Value.Classes)
                   {
@@ -49,16 +49,16 @@
 
 
         <div class="mb-3" >
-            <label class="col-md-8 control-label">Class Effect:</label>
-            <div class="col-md-8">
+            <label class=" control-label">Class Effect:</label>
+            <div>
                 <InputText @bind-Value="relic.ClassEffect" name="Class Effect" class="form-control" aria-label="Class Effect"/>
             </div>
         </div>
 
 
-        <div class="col-md-8">
+        <div>
             <div class="mb-3">
-                <label class="col-md-8 control-label">Rarity:</label>
+                <label class=" control-label">Rarity:</label>
                 <div>
                     <InputRadioGroup @bind-Value="relic.Rarity">
                         @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
@@ -76,12 +76,39 @@
             </div>
           </div>
 
-    <div class="mb-3" >
-            <label class="col-md-8 control-label">Card Image URL (Optional):</label>
-            <div class="col-md-8">
-                <InputText @bind-Value="relic.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+    <div id="accordionFlush">
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading">
+            <button class="accordion-button collapsed" @onclick=ToggleAccordion type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
+              Custom Image
+            </button>
+          </h2>
+          <div id="flush-collapse" class="accordion-collapse @accordionClass" aria-labelledby="flush-heading" data-bs-parent="#accordionFlush">
+            <div class="accordion-body">
+              <div class="mb-3">
+                    <div class="mb-3">
+                      <label class="control-label">Upload Custom Image</label>
+                      <input type="checkbox" checked="@(UseCustomImage)" @onchange="eventArgs => { UseCustomImage = !UseCustomImage; }">
+                    </div>
+                    @if (!UseCustomImage)
+                    {
+                      <div class="mb-3">
+                          <label class="control-label">Card Image URL (Optional):</label>
+                          <InputText @bind-Value="relic.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+                      </div>
+                    }
+                    else
+                    {
+                      <div class="mb-3">
+                          <label class="control-label">Select an Image:</label>
+                          <InputFile OnChange="OnFileChange" class="form-control" accept=".png" />                          
+                      </div> 
+                    }
+              </div>
             </div>
-    </div>    
+          </div>
+        </div>  
+      </div> 
     </EditForm>
   </div>
 
@@ -92,6 +119,40 @@
 
 @code {
   Relic relic = new Relic();
+
+  bool UseCustomImage {get; set;}
+
+  bool accordionCollapsed = false;
+
+  string accordionClass=> !accordionCollapsed? "collapse show": "collapse";
+  
+
+  async Task OnFileChange(InputFileChangeEventArgs eventArgs)
+    {
+        var files = eventArgs.GetMultipleFiles(1);
+        var file = files.FirstOrDefault();
+        if (file == null)
+        {
+            return;
+        }
+
+        if (file.ContentType == "image/png")
+        {
+          var resizedFile = await file.RequestImageFileAsync(file.ContentType, 267, 150);
+          var buf = new byte[resizedFile.Size];
+          using (var stream = resizedFile.OpenReadStream())
+          {
+            await stream.ReadAsync(buf);
+          }
+          relic.ImageUrl = $"data:image/png;base64, {Convert.ToBase64String(buf)}";
+        }
+    }
+
+  void ToggleAccordion()
+  {
+    accordionCollapsed = !accordionCollapsed;
+    this.StateHasChanged();
+  }
 
   void UpdatePreferredClass(string preferredClass)
   {

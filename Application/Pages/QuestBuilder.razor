@@ -19,28 +19,28 @@
 
         <div class="mb-3" >
             <label class="col-md-4 control-label">Location:</label>
-            <div class="col-md-8">
+            <div >
                 <InputText @bind-Value="parameters.Location" name="Location" class="form-control" aria-label="Location"/>
             </div>
         </div>
 
         <div class="mb-3" >
             <label class="col-md-4 control-label">Quest Name:</label>
-            <div class="col-md-8">
+            <div >
                 <InputText @bind-Value="parameters.QuestName" name="Quest Name" class="form-control" aria-label="Quest Name"/>
             </div>
         </div>
 
         <div class="mb-3" >
             <label class="col-md-8 control-label">Summary:</label>
-            <div class="col-md-8">
+            <div >
                 <InputTextArea rows="4" @bind-Value="parameters.Summary" name="Summary" class="form-control" aria-label="Summary"/>
             </div>
         </div>
 
         <div class="mb-3" >
             <label class="col-md-8 control-label">XP Reward:</label>
-            <div class="col-md-8">
+            <div >
                 <InputNumber @bind-Value="parameters.XpReward" name="XP Reward" class="form-control" aria-label="XP Reward"/>
             </div>
             <div class="form-text">Refer to page 68 of the Bunkers and Badasses book to check recommended XP and Gold rewards</div>
@@ -48,14 +48,14 @@
 
         <div class="mb-3" >
             <label class="col-md-8 control-label">Gold Reward:</label>
-            <div class="col-md-8">
+            <div >
                 <InputNumber @bind-Value="parameters.GoldReward" name="Gold Reward" class="form-control" aria-label="Gold Reward"/>
             </div>
         </div>
 
         <div class="mb-3">
             <label class="col-md-4 control-label">Quest Type:</label>
-            <div class="col-md-8">
+            <div >
                 <InputRadioGroup @bind-Value="parameters.QuestType">
                     @foreach (var questType in (QuestType[])Enum.GetValues(typeof(QuestType)))
                     {
@@ -70,31 +70,59 @@
 
         <div class="mb-3" >
             <label class="col-md-4 control-label">Player Level:</label>
-            <div class="col-md-8">
+            <div >
                 <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
             </div>
         </div>
 
         <div class="mb-3" >
             <label class="col-md-4 control-label">Quest Giver (Optional):</label>
-            <div class="col-md-8">
+            <div >
                 <InputText @bind-Value="parameters.QuestGiver" name="Quest Giver" class="form-control" aria-label="Quest Giver"/>
             </div>
         </div>
 
         <div class="mb-3" >
             <label class="col-md-8 control-label">Read Aloud (Optional):</label>
-            <div class="col-md-8">
+            <div >
                 <InputTextArea rows="4" @bind-Value="parameters.ReadAloudText" name="ReadAloud" class="form-control" aria-label="Read Aloud"/>
             </div>
         </div>
 
-        <div class="mb-3" >
-            <label class="col-md-4 control-label">Card Image URL (Optional):</label>
-            <div class="col-md-8">
-                <InputText @bind-Value="parameters.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+        <div id="accordionFlush">
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading">
+            <button class="accordion-button collapsed" @onclick=ToggleAccordion type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
+              Custom Image
+            </button>
+          </h2>
+          <div id="flush-collapse" class="accordion-collapse @accordionClass" aria-labelledby="flush-heading" data-bs-parent="#accordionFlush">
+            <div class="accordion-body">
+              <div class="mb-3">
+                    <div class="mb-3">
+                      <label class="control-label">Upload Custom Image</label>
+                      <input type="checkbox" checked="@(UseCustomImage)" @onchange="eventArgs => { UseCustomImage = !UseCustomImage; }">
+                    </div>
+                    @if (!UseCustomImage)
+                    {
+                      <div class="mb-3">
+                          <label class="control-label">Card Image URL (Optional):</label>
+                          <InputText @bind-Value="parameters.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
+                      </div>
+                    }
+                    else
+                    {
+                      <div class="mb-3">
+                          <label class="control-label">Select an Image:</label>
+                          <InputFile OnChange="OnFileChange" class="form-control" accept=".png" />                          
+                      </div> 
+                    }
+              </div>
             </div>
-        </div>
+          </div>
+        </div>  
+      </div> 
+    
 
         </EditForm>
     </div>
@@ -121,6 +149,40 @@
                 : "images/resources/quests/virtual-marker.png";
 
     public string GetQuestType => $"{parameters.QuestType} quest";
+
+    bool UseCustomImage {get; set;}
+
+  bool accordionCollapsed = false;
+
+  string accordionClass=> !accordionCollapsed? "collapse show": "collapse";
+  
+
+  async Task OnFileChange(InputFileChangeEventArgs eventArgs)
+    {
+        var files = eventArgs.GetMultipleFiles(1);
+        var file = files.FirstOrDefault();
+        if (file == null)
+        {
+            return;
+        }
+
+        if (file.ContentType == "image/png")
+        {
+          var resizedFile = await file.RequestImageFileAsync(file.ContentType, 267, 150);
+          var buf = new byte[resizedFile.Size];
+          using (var stream = resizedFile.OpenReadStream())
+          {
+            await stream.ReadAsync(buf);
+          }
+          parameters.ImageUrl = $"data:image/png;base64, {Convert.ToBase64String(buf)}";
+        }
+    }
+
+  void ToggleAccordion()
+  {
+    accordionCollapsed = !accordionCollapsed;
+    this.StateHasChanged();
+  }
 
     public override string GetFileName()
     {
