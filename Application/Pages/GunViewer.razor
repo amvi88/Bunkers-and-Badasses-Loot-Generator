@@ -31,12 +31,25 @@
               <span class="card__label">@CraftedGun.RedText.Name</span>            
             </h4>
           </div>
-        }        
+        }
 
-        @if (CraftedGun.Element != Element.None){
-        <div class="element-container">
-          <div>
-                @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+        <table class="card__stats">
+          <tbody>            
+            <tr>
+              <th>Damage</th>
+              <td>
+                @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
+                {
+                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedGun.DiceType">
+                }
+              </td>
+            </tr>
+
+            @if (CraftedGun.Element != Element.None){
+              <tr>
+                <th>Elemental</th>
+                <td>
+                  @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
                 {
                    @if (element == Element.None)
                    {
@@ -51,23 +64,10 @@
                 @for (int index = 0; index < CraftedGun.ExtraAmountOfDice; index++)
                 {
                   <img class="element" src="@GetExtraDiceImage" alt="@CraftedGun.ExtraDiceType">
-                } 
-          </div>
-        </div>
-        }
-
-
-        <table class="card__stats">
-          <tbody>            
-            <tr>
-              <th>Damage</th>
-              <td>
-                @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
-                {
-                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedGun.DiceType">
                 }
-              </td>
-            </tr>
+                </td>
+              </tr>
+            }
             
             <tr>
               <th>Range</th>
