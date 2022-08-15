@@ -65,3 +65,7 @@ figure
     background: rgb(232,232,94);
     background: linear-gradient(90deg, rgba(232,232,94,1) 0%, rgba(200,176,28,1) 100%);
 }
+
+.extended_caption {
+    min-height: 350px;
+}
