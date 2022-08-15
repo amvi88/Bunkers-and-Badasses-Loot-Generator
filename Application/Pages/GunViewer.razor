@@ -46,8 +46,12 @@
                     {
                       <img src="@GetElementImage(element.ToString())" alt="@element" class="element"> 
                     }
-
                 }  
+
+                @for (int index = 0; index < CraftedGun.ExtraAmountOfDice; index++)
+                {
+                  <img class="element" src="@GetExtraDiceImage" alt="@CraftedGun.ExtraDiceType">
+                } 
           </div>
         </div>
         }
@@ -62,11 +66,6 @@
                 {
                   <img class="dice_small" src="@GetDiceImage" alt="@CraftedGun.DiceType">
                 }
-                @for (int index = 0; index < CraftedGun.ExtraAmountOfDice; index++)
-                {
-                  <img class="dice_small" src="@GetExtraDiceImage" alt="@CraftedGun.ExtraDiceType">
-                }
-                
               </td>
             </tr>
             
