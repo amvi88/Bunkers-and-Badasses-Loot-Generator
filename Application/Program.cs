@@ -1,10 +1,12 @@
-using Microsoft.AspNetCore.Http.Json;
-
 using Business.Factories;
 using Models.Config;
 using Models.Builder;
 using Models;
 using Business.Services;
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Http.Json;
+using MvcJsonOptions = Microsoft.AspNetCore.Mvc.JsonOptions;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,11 +30,14 @@ builder.Configuration.AddJsonFile("Configuration/enemydrops.json", true);
 // Add services to the container.
 builder.Services.Configure<JsonOptions>(options =>
 {
-    var enumConverter = new System.Text.Json.Serialization.JsonStringEnumConverter();
+    var enumConverter = new JsonStringEnumConverter();
     options.SerializerOptions.Converters.Add(enumConverter);
 });
+builder.Services.Configure<MvcJsonOptions>(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddControllers();
 builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetSection("GuildConfiguration"));
 builder.Services.Configure<WeaponCustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));
 builder.Services.Configure<WeaponArchetypesOptions>(builder.Configuration.GetSection("WeaponArchetypes"));
@@ -62,7 +67,21 @@ builder.Services.AddTransient<IRelicService,RelicService>();
 builder.Services.AddTransient<IGunService,GunService>();
 builder.Services.AddTransient<IMoxxTailService,MoxxTailService>();
 builder.Services.AddSingleton<IWeaponCustomizationService, WeaponCustomizationService>();
+builder.Services.AddScoped(sp => new HttpClient());
 builder.Services.AddBlazorContextMenu();
+builder.Services.AddSwaggerGen(options => {
+     options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "B&B Loot Generator API",
+        Description = "An API for generating loot for B&B TTRPG",
+        License = new OpenApiLicense
+        {
+            Name = "MIT License",
+            Url = new Uri("https://en.wikipedia.org/wiki/MIT_License")
+        }
+    });
+});
 
 var app = builder.Build();
 
@@ -74,10 +93,17 @@ if (!app.Environment.IsDevelopment())
 
 
 app.UseStaticFiles();
-
 app.UseRouting();
-
-app.MapBlazorHub();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+    endpoints.MapBlazorHub();
+});
 app.MapFallbackToPage("/_Host");
-
+app.UseSwagger();  
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+    options.RoutePrefix = string.Empty;
+});
 app.Run();

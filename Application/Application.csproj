@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Blazor.ContextMenu" Version="1.14.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
