@@ -9,5 +9,6 @@ namespace Models.Config
         public string Bonus {get; set;}
         public string Effect {get; set;}        
         public int? IncreasedElementalRollPercentage {get; set;}
+        public bool MustBeElemental {get; set;}
     }
 }

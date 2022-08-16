@@ -43,13 +43,38 @@ namespace Business.Factories
             {
                 var elementalValues = Enum.GetValues(typeof(Element));
 
-                var elementValues = RollElement(rarity, specs.IncreasedElementalRollPercentage);
-                gun.Element = elementValues.Item1 ?? Element.None;
-
-                if (! string.IsNullOrWhiteSpace(elementValues.Item2) && elementValues.Item1 != Element.None)
+                if (!specs.MustBeElemental)
                 {
-                    gun.ElementalBonus = $"+{elementValues.Item2} {elementValues.Item1} DMG";
-                    gun.ExtraDamage = elementValues.Item2;
+                    var elementValues = RollElement(rarity, specs.IncreasedElementalRollPercentage);
+                    gun.Element = elementValues.Item1 ?? Element.None;
+
+                    if (! string.IsNullOrWhiteSpace(elementValues.Item2) && elementValues.Item1 != Element.None)
+                    {
+                        gun.ElementalBonus = $"+{elementValues.Item2} {elementValues.Item1} DMG";
+                        gun.ExtraDamage = elementValues.Item2;
+                    }
+                }
+                else
+                {
+                    var maxIterations = 30;
+                    while (gun.Element == Element.None)
+                    {
+                        if (maxIterations == 0)
+                        {
+                            break;
+                        }
+
+                        var elementValues = RollElement(rarity, specs.IncreasedElementalRollPercentage);
+                        gun.Element = elementValues.Item1 ?? Element.None;
+
+                        if (! string.IsNullOrWhiteSpace(elementValues.Item2) && elementValues.Item1 != Element.None)
+                        {
+                            gun.ElementalBonus = $"+{elementValues.Item2} {elementValues.Item1} DMG";
+                            gun.ExtraDamage = elementValues.Item2;
+                        }
+
+                        maxIterations--;
+                    }
                 }
             }
 
@@ -62,7 +87,7 @@ namespace Business.Factories
 
             GetName(gun, archetype);
 
-            var gunStats = archetype.WeaponSpecs.First(x => x.MinLevel <= builderArguments.PlayerLevel && builderArguments.PlayerLevel <= x.MaxLevel);
+            var gunStats = archetype.WeaponSpecs.First(x => builderArguments.PlayerLevel >=  x.MinLevel  && builderArguments.PlayerLevel <= x.MaxLevel);
             gun.Range  = gunStats.Range;
             gun.Damage = gunStats.Damage;
             gun.HitsByAccuracy = gunStats.HitsByAccuracy;  
