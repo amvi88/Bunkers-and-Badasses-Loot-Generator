@@ -1,0 +1,165 @@
+{
+    "ChestConfiguration":
+    {
+        "UnassumingChests":
+        [
+            {
+                "Roll": 1,
+                "IsMimic": true
+            },
+            {
+                "Roll": 2,
+                "IsMimic": true
+            },
+            {
+                "Roll": 3,
+                "PotionSpecs":[
+                    {
+                        "Name": "Health Potion (Common)"
+                    }
+                ]
+            },
+            {
+                "Roll": 4,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Common"
+                    }
+                ]
+            },
+            {
+                "Roll": 5,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Common",
+                        "IsFavored":true
+                    }
+                ]
+            },
+            {
+                "Roll": 6,
+                "AmountOfGrenades":2
+            },
+            {
+                "Roll": 7,
+                "AmountOfShieldMods":1
+            },
+            {
+                "Roll": 8,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ]
+            },
+            {
+                "Roll": 9,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ]
+            },
+            {
+                "Roll": 10,
+                "PotionSpecs":[
+                    {
+                        "Name": "Health Potion (Uncommon)"
+                    }
+                ]
+            },
+            {
+                "Roll": 11,
+                "PotionSpecs":[
+                    {
+                        "Name": "Shield Potion (Uncommon)"
+                    }
+                ]
+            },
+            {
+                "Roll": 12,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Rare"
+                    }
+                ]
+            },
+            {
+                "Roll": 13,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Rare",
+                        "IsFavored":true
+                    }
+                ]
+            },
+            {
+                "Roll": 14,
+                "AmountOfGrenadeMods":1,
+                "AmountOfShieldMods":1
+            },
+            {
+                "Roll": 15,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Epic"
+                    }
+                ]
+            },
+            {
+                "Roll": 16,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Epic",
+                        "IsFavored": true
+                    }
+                ]
+            },
+            {
+                "Roll": 17,
+                "PotionSpecs":[
+                    {
+                        "Name": "Health Potion (Epic)"
+                    }
+                ]
+            },
+            {
+                "Roll": 18,
+                "RelicSpecs":[
+                    {
+                        "Rarity": "Rare"
+                    }
+                ]
+            },
+            {
+                "Roll": 19,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Legendary"
+                    }
+                ]
+            },
+            {
+                "Roll": 20,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Legendary",
+                        "IsFavored":true
+                    }
+                ]
+            }
+        ]
+    }
+}

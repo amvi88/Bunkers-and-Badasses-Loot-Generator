@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\Configuration\**" LinkBase="Configuration\" CopyToOutputDirectory="Always" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj" />
   </ItemGroup>
 

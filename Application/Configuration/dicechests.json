@@ -1,0 +1,267 @@
+{
+    "ChestConfiguration":
+    {
+        "DiceChests":
+        [
+            {
+                "Roll": 1,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon"
+                    }
+                ]
+            },
+            {
+                "Roll": 2,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ]
+            },
+            {
+                "Roll": 3,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ],
+                "PotionSpecs":[
+                    {
+                        "Name": "Health Potion (Rare)"
+                    }
+                ]
+            },
+            {
+                "Roll": 4,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ],
+                "RelicSpecs":[
+                    {
+                        "Rarity": "Common"
+                    }
+                ]
+            },
+            {
+                "Roll": 5,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ],
+                "PotionSpecs":[
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    }
+                ]
+            },
+            {
+                "Roll": 6,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Rare"
+                    }
+                ]
+            },
+            {
+                "Roll": 7,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Rare",
+                        "IsFavored":true
+                    }
+                ]
+            },
+            {
+                "Roll": 8,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Rare",
+                        "IsFavored":true
+                    }
+                ],
+                "AmountOfGrenades":2
+            },
+            {
+                "Roll": 9,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Rare",
+                        "IsFavored":true
+                    }
+                ],
+                "RelicSpecs":[
+                    {
+                        "Rarity": "Uncommon"
+                    }
+                ]
+            },
+            {
+                "Roll": 10,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Uncommon",
+                        "IsFavored":true
+                    }
+                ],
+                "AmountOfGrenades":2,
+                "AmountOfShieldMods":1
+            },
+            {
+                "Roll": 11,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Epic"
+                    }
+                ]
+            },
+            {
+                "Roll": 12,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Epic",
+                        "IsFavored":true
+                    }
+                ]
+            },
+            {
+                "Roll": 13,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Epic",
+                        "IsFavored":true
+                    }
+                ],
+                "PotionSpecs":[
+                    {
+                        "Name": "Health Potion (Epic)"
+                    }
+                ]
+            },
+            {
+                "Roll": 14,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Epic",
+                        "IsFavored":true
+                    }
+                ],
+                "RelicSpecs":[
+                    {
+                        "Rarity": "Rare"
+                    }
+                ]
+            },
+            {
+                "Roll": 15,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Rare",
+                        "IsFavored":true
+                    }
+                ],
+                "AmountOfGrenades":3,
+                "AmountOfShieldMods":1
+            },
+            {
+                "Roll": 16,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Legendary"
+                    }
+                ]
+            },
+            {
+                "Roll": 17,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Legendary",
+                        "IsFavored":true
+                    }
+                ],
+                "AmountOfGrenades":1
+            },
+            {
+                "Roll": 18,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Legendary",
+                        "IsFavored":true
+                    }
+                ],
+                "AmountOfGrenadeMods":1
+            },
+            {
+                "Roll": 19,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Legendary",
+                        "IsFavored":true
+                    }
+                ],
+                "RelicSpecs":[
+                    {
+                        "Rarity": "Epic"
+                    }
+                ],
+                "PotionSpecs":[
+                    {
+                        "Name": "Health Potion (Legendary)"
+                    }
+                ]
+            },
+            {
+                "Roll": 20,
+                "WeaponSpecs":
+                [
+                    {
+                        "Rarity":"Legendary",
+                        "IsFavored":true
+                    }
+                ],
+                "PotionSpecs":[
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    },
+                    {
+                        "IsRandomPotion": true
+                    }
+                ],
+                "AmountOfGrenadeMods":1,
+                "AmountOfShieldMods":1
+            }
+        ]
+    }
+}

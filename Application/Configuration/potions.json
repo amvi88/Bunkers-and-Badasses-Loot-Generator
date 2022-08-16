@@ -1,0 +1,186 @@
+{
+    "PotionConfiguration": {
+        "RegularPotions": [
+            {
+                "MinRoll": 1,
+                "MaxRoll": 5,
+                "Name": "Tina Potion (Common)",
+                "Effect": null,
+                "RollTinasPotions": true,
+                "RollModifier": 0,
+                "Cost": 15
+            },
+            {
+                "MinRoll": 6,
+                "MaxRoll": 10,
+                "Name": "Health Potion (Common)",
+                "Effect": "Regens 1d8 Health.",
+                "Cost": 20
+            },
+            {
+                "MinRoll": 11,
+                "MaxRoll": 15,
+                "Name": "Shield Potion (Common)",
+                "Effect": "Recharges 1d8 Shield.",
+                "Cost": 15
+            },
+            {
+                "MinRoll": 16,
+                "MaxRoll": 20,
+                "Name": "Check Potion",
+                "Effect": "+5 to x Checks for 1 hour.",
+                "Cost": 20
+            },
+            {
+                "MinRoll": 21,
+                "MaxRoll": 25,
+                "Name": "Element Potion",
+                "Effect": "Protection from {0} Element for 2 turns.",
+                "Cost": 15,
+                "IsElemental": true
+            },
+            {
+                "MinRoll": 25,
+                "MaxRoll": 30,
+                "Name": "Tina Potion (Rare)",
+                "Effect": null,
+                "RollTinasPotions": true,
+                "RollModifier": 3,
+                "Cost": 25,
+                "Rarity":"Rare"
+            },
+            {
+                "MinRoll": 31,
+                "MaxRoll": 35,
+                "Name": "Health Potion (Rare)",
+                "Effect": "Regens 2d8+5 Health.",
+                "Cost": 40,
+                "Rarity":"Rare"
+            },
+            {
+                "MinRoll": 36,
+                "MaxRoll": 40,
+                "Name": "Shield Potion (Rare)",
+                "Effect": "Recharges 2d8+5 Shield.",
+                "Cost": 30,
+                "Rarity":"Rare"                
+            },
+            {
+                "MinRoll": 41,
+                "MaxRoll": 45,
+                "Name": "Stat Potion",
+                "Effect": "3 to x Stat Mod for 1 hour.",
+                "Cost": 40,
+                "Rarity":"Rare"
+            },
+            {
+                "MinRoll": 46,
+                "MaxRoll": 50,
+                "Name": "Twofer Potion",
+                "Effect": "Gain 1d8 +3 Health and Shields.",
+                "Cost": 70,
+                "Rarity":"Rare"
+            },
+            {
+                "MinRoll": 51,
+                "MaxRoll": 55,
+                "Name": "Tina Potion (Epic)",
+                "Effect": null,
+                "RollTinasPotions": true,
+                "RollModifier": 5,
+                "Cost": 80,
+                "Rarity":"Epic"
+            },
+            {
+                "MinRoll": 56,
+                "MaxRoll": 60,
+                "Name": "Health Potion (Epic)",
+                "Effect": "Regen 3d8+10 Health.",
+                "Cost": 100,
+                "Rarity":"Epic"
+            },
+            {
+                "MinRoll": 61,
+                "MaxRoll": 65,
+                "Name": "Shield Potion (Epic)",
+                "Effect": "Recharges 3d8+10 Shield.",
+                "Cost": 80,
+                "Rarity":"Epic"
+            },
+            {
+                "MinRoll": 66,
+                "MaxRoll": 70,
+                "Name": "Lucky Potion",
+                "Effect": "Re-roll 1 die per Attack for 2 turns.",
+                "Cost": 100,
+                "Rarity":"Epic"
+            },
+            {
+                "MinRoll": 71,
+                "MaxRoll": 75,
+                "Name": "Invisibility Potion",
+                "Effect": "Become Cloaked for 3 turns.",
+                "Cost": 120,
+                "Rarity":"Epic"
+            },
+            {
+                "MinRoll": 76,
+                "MaxRoll": 80,
+                "Name": "Tina Potion (Legendary)",
+                "Effect": null,
+                "Cost": 200,
+                "RollTinasPotions": true,
+                "RollModifier": 10,
+                "Rarity":"Legendary"
+            },
+            {
+                "MinRoll": 81,
+                "MaxRoll": 85,
+                "Name": "Health Potion (Legendary)",
+                "Effect": "Regens 4d8+20 Health.",
+                "Cost": 250,
+                "Rarity":"Legendary"
+            },
+            {
+                "MinRoll": 86,
+                "MaxRoll": 90,
+                "Name": "Shield Potion (Legendary)",
+                "Effect": "Recharges 4d8+20 Shields.",
+                "Cost": 230,
+                "Rarity":"Legendary"
+            },
+            {
+                "MinRoll": 91,
+                "MaxRoll": 95,
+                "Name": "Fumble Potion",
+                "Effect": "All 1's become 20's for 2 hours.",
+                "Cost": 250,
+                "Rarity":"Legendary"
+            },
+            {
+                "MinRoll": 96,
+                "MaxRoll": 100,
+                "Name": "Gold Farmer Potion",
+                "Effect": "+2d6 to all Cache Rolls for 2 hours.",
+                "Cost": 270,
+                "Rarity":"Legendary"
+            },
+            {
+                "MinRoll": 101,
+                "MaxRoll": 101,
+                "Name": "Health Potion (Uncommon)",
+                "Effect": "Regens 2d8 Health.",
+                "Cost": 20,
+                "Rarity":"Uncommon"
+            },
+            {
+                "MinRoll": 102,
+                "MaxRoll": 102,
+                "Name": "Shield Potion (Uncommon)",
+                "Effect": "Recharges 2d8 Shield.",
+                "Cost": 15,
+                "Rarity":"Uncommon"
+            }
+        ]
+    }
+}

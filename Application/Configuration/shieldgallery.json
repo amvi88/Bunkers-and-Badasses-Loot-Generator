@@ -1,0 +1,1070 @@
+{
+    "ShieldCustomization": {
+        "ShieldGallery": [
+            {
+                "Name": "Nova",
+                "Guild": "S&S Munitions",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb15b3d78bd025ede3637_613cac067b270d22dde17d61_Acid%2520Nova%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Ashen",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb15cb24c4301968359a2_613cac06a47a6b94daddbba5_Ambush%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Resistance",
+                "Guild": "Alas!",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb15c20cefa4e69749d35_613cac087b270db3c0e17d6d_Cationic%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Ashen",
+                "Rarity": "Uncommon",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb15d8dff86dc8d5c02d2_613cac085b97f27a5224c497_Cracked%2520Sash%2520(BL1).png"
+            },
+            {
+                "Name": "Resistance",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb15e01ad81454ec17944_613cac08e28f9c8354a50855_Endothermic%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Stoker",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb15eedac67e8bb5bf1f7_613cabea270e9b28649a7520_Fire%2520Nova%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Pangoblin",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb15fa47a6bd85bddd636_613cabea3ae59b6ff530a9cb_Fortified%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Resistance",
+                "Guild": "Dahlia",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb16039123ecfa3db82cf_613cabe97ef3605f7d88732e_Hazmat%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb1607b270d0d07e19577_613cabea0d64221d9df8dec9_Ironclad%2520(BL1).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Torgue",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb16179fcdf18cba40149_613cabebd839667fa3016aa0_Macho%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Resistance",
+                "Guild": "Alas!",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb162b24c4356878359fb_613cabecf12e2e1efa2a7175_Omega%2520(BL1).png"
+            },
+            {
+                "Name": "Heal",
+                "Guild": "Feriore",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb162540d8fc42ca2464f_613cabecba5cf7207596fdf4_Panacea%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Heal",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb1633d78bd42f3de36da_613cabec3d78bd49d1de1f2e_Rose%2520(BL1).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Malefactor",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb163c3defcaccc2491a0_613cac065b97f2c98b24c494_Shock%2520Nova%2520Shield%2520(BL1).png"
+            },
+            {
+                "Name": "Heal",
+                "Guild": "Pangoblin",
+                "Rarity": "Epic",
+                "Source": "borderlands-1",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/613cb1643ae59bac3d30c98e_613cac06ca838d5098541e10_Wee%2520Wee%2527s%2520Super%2520Booste%2520(BL1).png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084993368d00e3_1340-Shield-BL2.png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Stoker",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108492d8e8d00e4_Aequitas-BL2.png"
+            },
+            {
+                "Name": "Reflect",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108493d958d00e5_Antagonist-BL2.png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Torgue",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108497c5f8d00e6_Big-Boom-Blaster-BL2.png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849e0288d00e7_Black-Hole-BL2.png"
+            },
+            {
+                "Name": "Adaptive",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849800d8d00e8_Blockade-BL2.png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Feriore",
+                "Rarity": "Epic",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084954848d00e9_Cracked-Sash-BL2.png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Torgue",
+                "Rarity": "Epic",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084953778d00ea_Deadly-Bloom-BL2.png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084979ba8d00eb_Easy-Mode-BL2.png"
+            },
+            {
+                "Name": "Adaptive",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849fa3c8d00ec_Evolution-BL2.png"
+            },
+            {
+                "Name": "Turtle",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084925ff8d00ed_Fabled-Tortoise-BL2.png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849825e8d00ee_Flame-of-the-Firehawk-BL2.png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Rare",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108496c248d00ef_Hide-of-Terramorphous-BL2.png"
+            },
+            {
+                "Name": "Turtle",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108498ee28d00f0_Hoplite-BL2.png"
+            },
+            {
+                "Name": "Spike",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084976d68d00f3_Impaler-BL2.png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Rare",
+                "Rarity": "Epic",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108497e4f8d00f1_Love-Thumper-BL2.png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108495c438d00f2_Manly-Man-Shield-BL2.png"
+            },
+            {
+                "Name": "Adaptive",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108497e618d00f5_Neogenator-BL2.png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Rare",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084903288d00f4_Order-BL2.png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Rare",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084965968d00f6_Pot-O%27-Gold-BL2.png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Rare",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849857c8d00f7_Pun-chee-BL2.png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108497ace8d00f8_Retainer-BL2.png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084916378d00f9_Sponge-BL2.png"
+            },
+            {
+                "Name": "Amplify",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108495f4e8d00fa_The-Bee-BL2.png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849eb518d00fb_The-Cradle-BL2.png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Blackpowder",
+                "Rarity": "Rare",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108499eda8d00fc_The-Rough-Rider-BL2.png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084960b78d00fd_The-Sham-BL2.png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849c4438d00fe_The-Transformer-BL2.png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Dahlia",
+                "Rarity": "Legendary",
+                "Source": "borderlands-2",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108494d298d00ff_Whisky-Tango-Foxtrot-BL2.png"
+            },
+            {
+                "Name": "Spike",
+                "Guild": "Torgue",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f203fb64c20ca2dd1df_60cf5b42195f0eaff4746381_Asteroid%2520Belt%2520(TPS).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f21707f442673fc065f_60cf5b42db4ae41dc4c50b7f_Avalanche%2520(TPS).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Scav",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f22d6d733e92afe4c80_60cf5b423ce5aeada7cd8057_Bigg%2520Thumppr%2520(TPS).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f23148b7b5f6129f414_60cf5b473ce5ae2cedcd8058_Black%2520Hole%2520(TPS).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Feriore",
+                "Rarity": "Epic",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f233ce5ae2a35cdf3ea_60cf5b52ae9f4e44a3b6c241_Cracked%2520Sash%2520(TPS).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Torgue",
+                "Rarity": "Epic",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f24d6d733abd0fe4c86_60cf5b52771e488da46687d7_Deadly%2520Bloom%2520(TPS).png"
+            },
+            {
+                "Name": "Turtle",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f24d6d733d3f1fe4c8a_60cf5b50ae9f4e3e9eb6c230_Fabled%2520Tortoise%2520(TPS).png"
+            },
+            {
+                "Name": "Spike",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2536f3d2b237d51983_60cf5b54d6d7334deafde7ed_Flyin%2527%2520Maiden%2520(TPS).png"
+            },
+            {
+                "Name": "Adaptive",
+                "Guild": "Dahlia",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f26a776ab29901587b5_60cf5b60771e48b3426687ea_Haymaker%2520(TPS).png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f27b0f8731ba01ab2d6_60cf5b5e577c343f0a1f324b_Kala%2520(TPS).png"
+            },
+            {
+                "Name": "Adaptive",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2721c7156b5e5b9136_60cf5b60061e1e3b16b20d69_MORQ%2520(TPS).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Feriore",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f28987e29ad5977656e_60cf5b6082c9a822cf4ed04f_Naught%2520(TPS).png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f283fb64c22a72dd218_60cf5b6c3ed9bd229dfd1e13_Prismatic%2520Bulwark%2520(TPS).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Malefactor",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2982c9a8c63a4f255f_60cf5b6c55b05103a037b892_Rapid%2520Release%2520(TPS).png"
+            },
+            {
+                "Name": "Adaptive",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2b987e293bc9776576_60cf5b6e52531468533b6c28_Reogenator%2520(TPS).png"
+            },
+            {
+                "Name": "Amplify",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2b2b49364b36574b8d_60cf5b7038e06c43d12222f8_Rerouter%2520(TPS).png"
+            },
+            {
+                "Name": "Turtle",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2cfc9b05b7daab3ab2_60cf5b7c86a4adea06284931_Shield%2520of%2520Ages%2520(TPS).png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Ashen",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2c148b7b518a29f419_60cf5b7a061e1e67a1b20dee_Slammer%2520(TPS).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Dahlia",
+                "Rarity": "Rare",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2db0f87331d11ab32a_60cf5b7cd1bfb19c33fbfd1a_Sunshine%2520(TPS).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Malefactor",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2e3ce5ae6b89cdf3f3_60cf5b7ed6d7335514fde85d_Supernova%2520(TPS).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Feriore",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f2f7d6b223f1e080799_60cf5b8a681c897f21ef22e4_The%2520Cradle%2520(TPS).png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Stoker",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f30e393644c0804f2a3_60cf5b8a681c89e659ef22e3_The%2520Sham%2520(TPS).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Scav",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f3082c9a8726d4f2565_60cf5b8a102e0b9d864d409a_The%2520Shooting%2520Star%2520(TPS).png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Dahlia",
+                "Rarity": "Legendary",
+                "Source": "borderlands-tps",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/60cf6f312b4936ac5e574b9f_60cf5b8c5b505d624f0dd259_Whisky%2520Tango%2520Foxtrot%2520(TPS).png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Ashen",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108495c1c8cff4d_All-in%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108491f188cff4f_Asclepius%20(BL3).png"
+            },
+            {
+                "Name": "Reflect",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084922cb8cff50_Back%20Ham%20(BL3).png"
+            },
+            {
+                "Name": "Damage",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108499bd38cff51_Band%20of%20Sitorak%20(BL3).png"
+            },
+            {
+                "Name": "Reflect",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108492bc98d065a_Beskar%20(BL3).png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108496c008cff53_Big%20Boom%20Blaster%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084906698cff54_Black%20Hole%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084918358cff55_Deluxe%20Badass%20Combustor%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084908508cff56_Double%20Downer%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084982148cff57_Ember%27s%20Blaze%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108493cee8cff58_Faulty%20Star%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849600f8cff59_Firewall%20(BL3).png"
+            },
+            {
+                "Name": "Turtle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849e3308cff5a_Front%20Loader%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849eb358cff5b_Frozen%20Heart%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849844a8d0657_Gas%20Mask%20(BL3).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Pangoblin",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849583d8cff4e_Golden%20Touch%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108498be48cff5c_Guilty%20Spark%20(BL3).png"
+            },
+            {
+                "Name": "Spike",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108494e578cff5d_Impaler%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6074470493ae9773c60c6f23_Infernal%20Wish%20(BL3).png"
+            },
+            {
+                "Name": "Damage",
+                "Guild": "Ashen",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084957548cff5e_Initiative%20(BL3).png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Pangoblin",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849b14d8cff5f_Limit%20Break%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849645f8cff60_Loop%20of%204N631%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108499c6f8cff61_M.E.A.T.%20Shield%20(BL3).png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849b3878cff66_MSRC%20Auto-Dispensary%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084999b28d0654_Madcap%20(BL3).png"
+            },
+            {
+                "Name": "Damage",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/619908e9e2be7c92943b34aa_Mana%20Well%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Hyperius",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849284f8cff62_Mendel%27s%20Multivitamin%20Shield%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084920128cff63_Messy%20Breakup%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Ashen",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108499e988cff64_Moxxi%27s%20Embrace%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Pangoblin",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084920408cff65_Mr%20Caffeine%20Shield%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084912758cff67_Nova%20Berner%20(BL3).png"
+            },
+            {
+                "Name": "Damage",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849c44d8cff68_Old%20God%20(BL3).png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849f4df8cff69_Plus%20Ultra%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084920b58cff6a_Re-Charge%20Berner%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849772d8cff6b_Re-Charger%20(BL3).png"
+            },
+            {
+                "Name": "Amplify",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084952c08cff6d_Re-Router%20(BL3).png"
+            },
+            {
+                "Name": "Damage",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/607203ea03d59783d3416336_Re-Volter%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084974fc8cff6c_Rectifier%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084964948cff6e_Red%20Card%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849b0f28cff6f_Red%20Card%20Re-Charger%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108499e5f8cff70_Red%20Suit%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Pangoblin",
+                "Rarity": "Rare",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084909088cff71_Revengenader%20(BL3).png"
+            },
+            {
+                "Name": "Reflect",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084932e98cff72_Rico%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849572e8cff73_Rough%20Rider%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849263e8cff74_Scream%20of%20Terror%20(BL3).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849e7598cff75_Shooting%20Star%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849b2f28d00b1_Snowshoe%20(BL3).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108498f588cff76_Stinger%20(BL3).png"
+            },
+            {
+                "Name": "Standard",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849de058cff78_Stop-Gap%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/607203f2bc149d4aea87a075_Super%20Soldier%20(BL3).png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084941c28cff77_The%20Transformer%20(BL3).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849bfef8cff79_Torch%20(BL3).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Pangoblin",
+                "Rarity": "Epic",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084966148cff7a_Unpaler%20(BL3).png"
+            },
+            {
+                "Name": "Amplify",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849351b8cff7b_Version%200.m%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849e0338cff7c_Void%20Rift%20(BL3).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a1084933538cff7d_Ward%20(BL3).png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a108498d328cff7e_Wattson%20(BL3).png"
+            },
+            {
+                "Name": "Booster",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "borderlands-3",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/5ff36780a10849e8588cff7f_Whiskey%20Tango%20Foxtrot%20(BL3).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626534bd732d38c8e428e321_Afterburner%20(WL).png"
+            },
+            {
+                "Name": "Damage",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626534ceb67c336f3ca0d695_Ancient%20Deity%20(WL).png"
+            },
+            {
+                "Name": "Roid",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626534d530a5c25d02e94e89_Bad%20Egg%20(WL).png"
+            },
+            {
+                "Name": "Rune",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626534dce8ee777d59ea710a_Body%20Rune%20(WL).png"
+            },
+            {
+                "Name": "Heal",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626534e32fe0499b2812f151_Bronco%20Buster%20(WL).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626534eaaa34ea3e65707a2e_Counterfeint%20(WL).png"
+            },
+            {
+                "Name": "Nova",
+                "Guild": "Ashen",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626534f1f9496bf60cc56861_Crying%20Apple%20(WL).png"
+            },
+            {
+                "Name": "Damage",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265341ffd624c9172bfeaf2_Undead%20Pact%20(WL).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626534ffb67c3336dba0d86b_Dusa%27s%20Visage%20(WL).png"
+            },
+            {
+                "Name": "Spike",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265350649337b0d6332864f_Full%20Battery%20(WL).png"
+            },
+            {
+                "Name": "Spike",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533b18d38bc19135cb972_Hammer%20and%20Anvil%20(WL).png"
+            },
+            {
+                "Name": "Resistance",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533c1fd624c61a1bfea75_High%20Tolerance%20(WL).png"
+            },
+            {
+                "Name": "Heal",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533c849337b16293279ff_Kinetic%20Friction%20(WL).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533cf2fe04945f512e8bb_Last%20Gasp%20(WL).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6291e94f75262d2812cd547d_Lich%27s%20Augur%20(WL).png"
+            },
+            {
+                "Name": "Spike",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533d6b5b386620e43f001_Maced%20Wardu%20(WL).png"
+            },
+            {
+                "Name": "Rune",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533decdca6d4db8914b66_Master%20Rune%20(WL).png"
+            },
+            {
+                "Name": "Rune",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533e50597666aa008d190_Mind%20Rune%20(WL).png"
+            },
+            {
+                "Name": "Heal",
+                "Guild": "Hyperius",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533ec8e039ce0de4c4032_Rivote%27s%20Shield%20(WL).png"
+            },
+            {
+                "Name": "Absorb",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533f3fd624c3298bfeabe_Shamwai%20(WL).png"
+            },
+            {
+                "Name": "Rune",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/626533fb82be7a7a316c6604_Spirit%20Rune%20(WL).png"
+            },
+            {
+                "Name": "Turtle",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265340276dd5bfb6f2e5813_Static%20Charge%20(WL).png"
+            },
+            {
+                "Name": "Amplify",
+                "Guild": "Pangoblin",
+                "Rarity": "Rare",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265340976dd5b7cfd2e5825_Sweet%20Dreams%20(WL).png"
+            },
+            {
+                "Name": "Damage",
+                "Guild": "Hyperius",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653411c6c1fbea78aedc6b_Transistor%20(WL).png"
+            },
+            {
+                "Name": "Reflect",
+                "Guild": "Ashen",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/62653418e8ee7747c0ea691d_Trick%20Mirror%20(WL).png"
+            },
+            {
+                "Name": "Unique",
+                "Guild": "Pangoblin",
+                "Rarity": "Legendary",
+                "Source": "wonderlands",
+                "ImageUrl": "https://global-uploads.webflow.com/5ff36780a1084987868ce198/6265341ffd624c9172bfeaf2_Undead%20Pact%20(WL).png"
+            }
+        ]
+    }
+}
