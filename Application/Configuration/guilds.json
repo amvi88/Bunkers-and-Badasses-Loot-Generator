@@ -431,35 +431,40 @@
                         "IsElemental": true,
                         "Bonus": "Element Roll. -2 DMG Mod",
                         "IncreasedElementalRollPercentage": 0,
-                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities"
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
                     },
                     {
                         "Rarity": "Uncommon",
                         "IsElemental": true,
                         "Bonus": "Element Roll. -1 DMG Mod",
                         "IncreasedElementalRollPercentage": 0,
-                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities"
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
                     },
                     {
                         "Rarity": "Rare",
                         "IsElemental": true,
                         "Bonus": "+10 Element Roll",
                         "IncreasedElementalRollPercentage": 10,
-                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities"
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
                     },
                     {
                         "Rarity": "Epic",
                         "IsElemental": true,
                         "Bonus": "+15 Element Roll",
                         "IncreasedElementalRollPercentage": 15,
-                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities"
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
                     },
                     {
                         "Rarity": "Legendary",
                         "IsElemental": true,
                         "Bonus": "+20 Element Roll",
                         "IncreasedElementalRollPercentage": 20,
-                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities"
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
                     }
                 ]
             },
