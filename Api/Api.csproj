@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\Configuration\*.json" Link="*.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\Configuration\**" LinkBase="Configuration\" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
   <ItemGroup>

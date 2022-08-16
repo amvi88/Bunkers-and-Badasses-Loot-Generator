@@ -57,6 +57,7 @@ namespace Api
                 options.SerializerOptions.Converters.Add(enumConverter);
             });
             builder.Services.Configure<MvcJsonOptions>(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+            builder.Services.AddHealthChecks();
 
             builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetSection("GuildConfiguration"));
             builder.Services.Configure<WeaponCustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));
@@ -99,6 +100,7 @@ namespace Api
             }
 
             app.UseHttpsRedirection();
+            app.MapHealthChecks("/health");
             app.UseAuthorization();
             app.MapControllers();
             app.Run();
