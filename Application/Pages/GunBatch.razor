@@ -30,6 +30,11 @@
          <InputNumber @bind-Value="parameters.BatchSize" name="BatchSize" class="form-control" aria-label="BatchSize"/>
      </div>
   </div>
+  <div class="mb-3">
+    <label class="control-label">Use Borderlands Manufacturers?</label>
+    <input type="checkbox" checked="@(UseBorderlandsManufacturers)" @onchange="eventArgs => { UseBorderlandsManufacturers = !UseBorderlandsManufacturers; }">
+  </div> 
+
   <hr class="divider">
   <div class="mb-3">
     <input type="submit" class="btn btn-primary" value="Roll"/>
@@ -43,7 +48,7 @@
     foreach(var gun in guns)
     {
       <div class="chest_wrapper">
-          <GunViewer CraftedGun=@gun/>
+          <GunViewer CraftedGun=@gun UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
       </div>
     }
   }
@@ -56,6 +61,8 @@ else
 
 @code {
   GunBatchServiceParameters parameters = new GunBatchServiceParameters();
+
+  bool UseBorderlandsManufacturers = false;
   IEnumerable<Gun> guns = null;
 
   bool loading = false;

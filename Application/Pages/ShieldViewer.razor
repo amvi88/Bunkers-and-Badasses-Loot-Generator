@@ -52,13 +52,16 @@
 @code {
     [Parameter]
     public Shield CraftedShield { get; set; }
+
+    [Parameter]
+    public bool UseBorderlandsManufacturers { get; set; } = false;
     public string GetShieldImage => !string.IsNullOrWhiteSpace(CraftedShield.ImageUrl) 
           ? CraftedShield.ImageUrl 
           : $"images/resources/shields/{CraftedShield.Guild}.png";
 
     public string GetSourceImage => $"images/resources/game-icons/{CraftedShield.Source}.png";
 
-    public string GetGuildImage => $"images/resources/guilds/{CraftedShield.Guild}.png";
+    public string GetGuildImage => $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedShield.AlternateGuildName : CraftedShield.Guild)}.png";
 
 
     public override string GetFileName()

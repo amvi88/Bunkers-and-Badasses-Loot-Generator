@@ -49,6 +49,9 @@
     [Parameter]
     public GrenadeMod CraftedGrenadeMod { get; set; }
 
+    [Parameter]
+    public bool UseBorderlandsManufacturers { get; set; } = false;
+
     public string GetCardCssClass => $"card card--normal";
 
     public string GetCardLabel => CraftedGrenadeMod.Element != Element.None ? CraftedGrenadeMod.Element.ToString() : CraftedGrenadeMod.GrenadeType;
@@ -59,7 +62,7 @@
 
     public string GetGrenadeImage => $"images/resources/grenades/{CraftedGrenadeMod.Guild}.png";
 
-    public string GetGuildImage => $"images/resources/guilds/{CraftedGrenadeMod.Guild}.png";
+    public string GetGuildImage => $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedGrenadeMod.AlternateGuildName : CraftedGrenadeMod.Guild)}.png";
 
     public override string GetFileName()
     {

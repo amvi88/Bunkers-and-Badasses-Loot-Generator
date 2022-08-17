@@ -20,6 +20,10 @@
          <InputNumber @bind-Value="shieldBuilder.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
      </div>
   </div>
+  <div class="mb-3">
+    <label class="control-label">Use Borderlands Manufacturers?</label>
+    <input type="checkbox" checked="@(UseBorderlandsManufacturers)" @onchange="eventArgs => { UseBorderlandsManufacturers = !UseBorderlandsManufacturers; }">
+  </div>  
   <hr class="divider">
   <div class="mb-3">
     <input type="submit" class="btn btn-primary" value="Roll"/>
@@ -29,12 +33,15 @@
 @if (shield != null)
 {
   <div id="cards"  class="card_container">  
-    <ShieldViewer CraftedShield=@shield.Item/>
+    <ShieldViewer CraftedShield=@shield.Item UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
   </div>
 }
 
 @code {
   ShieldFactoryParameters shieldBuilder = new ShieldFactoryParameters();
+
+  bool UseBorderlandsManufacturers = false;
+
   ItemWrapper<Shield> shield = null;
 
   void Roll(EditContext editContext)
