@@ -311,7 +311,7 @@
             },
             {
                 "Name": "Blackpowder",
-                "AlternateName":"Jacobs",
+                "AlternateName":"Jakobs",
                 "SupportedItemTypes": "Gun",
                 "SupportedGunTypes": "Pistol, Shotgun, SniperRifle",
                 "GrenadeSpecs": [],

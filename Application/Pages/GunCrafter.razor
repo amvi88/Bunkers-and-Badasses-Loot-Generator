@@ -361,8 +361,10 @@
 
   void FavoriteGuildChanged(string guild)
   {
-    gun.Guild = guild;
-    var guildData = guildService.GetWeaponModifiers(guild, gun.Rarity);
+    var selectedGuild = guilds.First(x => x.Name == guild);
+    gun.Guild = selectedGuild.Name;
+    gun.AlternateGuildName = selectedGuild.AlternameName;
+    var guildData = guildService.GetWeaponModifiers(selectedGuild.Name, gun.Rarity);
     gun.GuildBonus = guildData?.Bonus ?? string.Empty;
     this.StateHasChanged();
   }

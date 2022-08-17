@@ -19,6 +19,7 @@ namespace Business.Services
             return _guildConfigurationOptions.Guilds.Select(g => new Guild
             {
                 Name = g.Name,
+                AlternameName = g.AlternateName,
                 SupportedGunTypes = g.SupportedGunTypes,
                 SupportedItemTypes = g.SupportedItemTypes
             }).ToList();
