@@ -601,7 +601,7 @@
       },
       {
         "GunType": "SniperRifle",
-        "Bonus": "If Range 3+ or Less +3 ACC",
+        "Bonus": "If Range 3+:  +3 ACC",
         "Names": [
           "Gamble",
           "Hawkeye",

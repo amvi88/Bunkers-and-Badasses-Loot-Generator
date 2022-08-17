@@ -6,6 +6,8 @@ namespace Models.Config
     {
         public string Name { get; set; }
 
+        public string AlternateName { get; set; }
+
         public List<ShieldSpec> ShieldSpecs { get; set; } 
 
         public List<GrenadeSpec> GrenadeSpecs { get; set; } 

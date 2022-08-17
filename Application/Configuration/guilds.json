@@ -3,6 +3,7 @@
         "Guilds": [
             {
                 "Name": "Ashen",
+                "AlternateName":"Anshin",
                 "SupportedItemTypes": "Grenade, Shield",
                 "GrenadeSpecs": [
                     {
@@ -82,6 +83,7 @@
             },
             {
                 "Name": "Alas!",
+                "AlternateName":"Atlas",
                 "SupportedItemTypes": "Gun, Shield",
                 "SupportedGunTypes": "CombatRifle, Pistol, Shotgun, SniperRifle",
                 "GrenadeSpecs": [],
@@ -157,6 +159,7 @@
             },
             {
                 "Name": "Skuldugger",
+                "AlternateName":"COV",
                 "SupportedItemTypes": "Gun",
                 "SupportedGunTypes": "Pistol, SubmachineGun, Shotgun, SniperRifle",
                 "GrenadeSpecs": [],
@@ -196,6 +199,7 @@
             },
             {
                 "Name": "Dahlia",
+                "AlternateName":"Dahl",
                 "SupportedItemTypes": "Gun, Grenade, Shield",
                 "SupportedGunTypes": "CombatRifle, Pistol, SubmachineGun, Shotgun, SniperRifle",
                 "GrenadeSpecs": [
@@ -307,6 +311,7 @@
             },
             {
                 "Name": "Blackpowder",
+                "AlternateName":"Jacobs",
                 "SupportedItemTypes": "Gun",
                 "SupportedGunTypes": "Pistol, Shotgun, SniperRifle",
                 "GrenadeSpecs": [],
@@ -346,6 +351,7 @@
             },
             {
                 "Name": "Malefactor",
+                "AlternateName":"Maliwan",
                 "SupportedItemTypes": "Gun, Grenade, Shield",
                 "SupportedGunTypes": "Pistol, SubmachineGun, SniperRifle, RocketLauncher",
                 "GrenadeSpecs": [
@@ -470,6 +476,7 @@
             },
             {
                 "Name": "Pangoblin",
+                "AlternateName":"Pangolin",
                 "SupportedItemTypes": "Shield, Grenade",
                 "GrenadeSpecs": [
                     {
@@ -549,6 +556,7 @@
             },
             {
                 "Name": "Hyperius",
+                "AlternateName":"Hyperion",
                 "SupportedItemTypes": "Gun, Grenade",
                 "SupportedGunTypes": "CombatRifle, Pistol, SubmachineGun, Shotgun, SniperRifle, RocketLauncher",
                 "GrenadeSpecs": [
@@ -624,6 +632,7 @@
             },
             {
                 "Name": "Feriore",
+                "AlternateName":"Tediore",
                 "SupportedItemTypes": "Gun, Shield, Grenade",
                 "SupportedGunTypes": "CombatRifle, Pistol, SubmachineGun, Shotgun",
                 "GrenadeSpecs": [
@@ -735,6 +744,7 @@
             },
             {
                 "Name": "Torgue",
+                "AlternateName":"Torgue",
                 "SupportedItemTypes": "Gun, Shield, Grenade",
                 "SupportedGunTypes": "CombatRifle, Pistol, SubmachineGun, Shotgun, SniperRifle, RocketLauncher",
                 "GrenadeSpecs": [
@@ -846,6 +856,7 @@
             },
             {
                 "Name": "Stoker",
+                "AlternateName":"Vladof",
                 "SupportedItemTypes": "Gun, Shield, Grenade",
                 "SupportedGunTypes": "CombatRifle, Pistol, Shotgun, SniperRifle, RocketLauncher",
                 "GrenadeSpecs": [

@@ -32,6 +32,7 @@ namespace Business.Factories
             {
                 Level = builderArguments.PlayerLevel,
                 Guild =  chosenGuild.Name,
+                AlternateGuildName = chosenGuild.AlternateName,
                 Element = Element.None,
                 Rarity = rarity,
                 GuildBonus = specs.Bonus,

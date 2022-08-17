@@ -24,6 +24,7 @@ namespace Business.Factories
             {
                 Level = factoryParameters.PlayerLevel,
                 Guild =  chosenGuild.Name,
+                AlternateGuildName = chosenGuild.AlternateName,
                 GrenadeType = specs.GrenadeType,
                 Damage = specs.Damage,
                 Effect = specs.Effect,

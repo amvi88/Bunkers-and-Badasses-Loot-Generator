@@ -26,6 +26,7 @@ namespace Business.Factories
             {
                 Level = parameters.PlayerLevel,
                 Guild =  chosenGuild.Name,
+                AlternateGuildName = chosenGuild.AlternateName,
                 Capacity = specs.Capacity,
                 RechargeRate = specs.RechargeRate,
                 Effect = specs.Effect                
