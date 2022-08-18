@@ -55,56 +55,7 @@
 
 @if (!loading)
 {
-  <div id="cards"  class="chest_container"> 
-  @if (chest != null && chest.Items != null && chest.Items.Any())
-  {
-    foreach(var item in chest.Items)
-    {
-      if (item is Gold)
-      {
-        <div class="chest_wrapper">
-          <GoldViewer Gold=@((Gold)item)/>
-        </div>
-      }
-      else if (item is Gun)
-      {
-        <div class="chest_wrapper">
-          <GunViewer CraftedGun=@((Gun)item) UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
-        </div>
-      }
-      else if (item is Grenade)
-      {
-        <div class="chest_wrapper">
-          <GrenadeViewer/>
-        </div>
-      }
-      else if (item is GrenadeMod)
-      {
-        <div class="chest_wrapper">
-          <GrenadeModViewer CraftedGrenadeMod=@((GrenadeMod)item) UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
-        </div>
-      }
-      else if (item is Potion)
-      {
-        <div class="chest_wrapper">
-          <PotionViewer CraftedPotion=@((Potion)item)/>
-        </div>
-      }
-      else if (item is Shield)
-      {
-        <div class="chest_wrapper">
-        <ShieldViewer CraftedShield=@((Shield)item) UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
-        </div>
-      }
-      else if (item is Relic)
-      {
-        <div class="chest_wrapper">
-          <RelicViewer CraftedRelic=@((Relic)item)/>
-        </div>
-      }
-    }
-  }
-  </div>
+  <ItemListRenderer chest=@chest UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
 }
 else
 {

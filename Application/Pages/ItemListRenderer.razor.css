@@ -1,4 +1,4 @@
-﻿.chest_container
+.chest_container
 {
   margin: 0 auto;
   margin-top: 1em;
@@ -12,12 +12,12 @@
 }
 
 /* Screen larger than 600px? 2 column */
-@media (man-width: 1000px) {
+@media (max-width: 1000px) {
   .chest_container { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Screen larger than 900px? 3 columns */
-@media (min-width: 900px) {
+@media (min-width: 1000) {
   .chest_container { grid-template-columns: repeat(3, 1fr); }
 }
 
