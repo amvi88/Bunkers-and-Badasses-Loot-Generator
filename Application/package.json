@@ -7,5 +7,7 @@
         "type": "git",
         "url": "https://github.com/amvi88/BunkersAndBadasses.git"
     },
-    "scripts": {}
+    "scripts": {
+        "build": "echo 'Build will not happen here'"
+    }
 }
