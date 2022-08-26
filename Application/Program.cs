@@ -29,6 +29,8 @@ public class Program
         builder.Configuration.AddJsonFile("Configuration/cacherolls.json", true);
         builder.Configuration.AddJsonFile("Configuration/enemydrops.json", true);
 
+        builder.Logging.AddAzureWebAppDiagnostics();
+
         // Add services to the container.
         builder.Services.Configure<JsonOptions>(options =>
         {
