@@ -21,7 +21,8 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
-            docker build Application/ -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
+            docker-compose build
+            docket tag application ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
 
         - name: 'Deploy to Azure Container Instances'
