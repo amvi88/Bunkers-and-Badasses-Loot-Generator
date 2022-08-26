@@ -23,4 +23,5 @@ jobs:
         - run: |
             docker-compose build
             docker tag application ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
-            docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
+            docker tag application ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:latest
+            docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:latest
