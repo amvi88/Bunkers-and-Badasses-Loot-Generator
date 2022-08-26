@@ -24,15 +24,3 @@ jobs:
             docker-compose build
             docker tag application ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
-
-        - name: 'Deploy to Azure Container Instances'
-          uses: 'azure/aci-deploy@v1'
-          with:
-            resource-group: ${{ secrets.RESOURCE_GROUP }}
-            dns-name-label: bunkers-and-badasses-app
-            image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
-            registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
-            registry-username: ${{ secrets.REGISTRY_USERNAME }}
-            registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-            name: bunkers-and-badasses-app
-            location: 'west us'
