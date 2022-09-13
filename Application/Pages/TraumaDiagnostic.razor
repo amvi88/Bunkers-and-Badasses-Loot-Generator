@@ -25,7 +25,7 @@
       <InputSelect @bind-Value="parameters.TraumaType" class="form-control" aria-label="Trauma Type">
         @foreach (var traumaType in Enum.GetValues(typeof(TraumaType)))
         {
-                  <option value="@traumaType" selected>@traumaType</option>
+            <option value="@traumaType" selected="@((TraumaType)traumaType == parameters.TraumaType)">@traumaType</option>
         }
               </InputSelect>
             </div>
