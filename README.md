@@ -4,7 +4,7 @@ This is an unofficial [Loot Generator](https://bunkers-n-badasses-loot.herokuapp
   
 ## Running it locally 
 You'll need both [NodeJs](https://nodejs.org/en/download/) and [Net Core 6.0](https://dotnet.microsoft.com/en-us/download).
-This project was an excuse to play a bit with Blazor, so I recommend using Visual Studio Code in case you'd like to debug
+This project was an excuse to play a bit with Blazor, so I recommend using Visual Studio Code in case you'd like to debug.
 
 ## Copyright
 Copyright 2022 Alberto Malavassi Viales
