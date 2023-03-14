@@ -1,6 +1,6 @@
 # BunkersAndBadasses
 
-This is an unofficial [Loot Generator](https://bunkers-n-badasses-loot.herokuapp.com/) for 2K and Nerdvana Games <a href="https://nerdvanagames.myshopify.com/">Bunkers and Badasses</a> TTRPG Game. 
+This is an unofficial [Loot Generator](https://bunkers-and-badasses-app.azurewebsites.net/) for 2K and Nerdvana Games <a href="https://nerdvanagames.myshopify.com/">Bunkers and Badasses</a> TTRPG Game. 
   
 ## Running it locally 
 You'll need both [NodeJs](https://nodejs.org/en/download/) and [Net Core 6.0](https://dotnet.microsoft.com/en-us/download).
