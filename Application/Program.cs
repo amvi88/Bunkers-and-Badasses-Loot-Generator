@@ -38,7 +38,9 @@ public class Program
             options.SerializerOptions.Converters.Add(enumConverter);
         });
         builder.Services.AddRazorPages();
-        builder.Services.AddServerSideBlazor();
+        builder.Services.AddServerSideBlazor()
+        .AddCircuitOptions(options => {  options.DetailedErrors = true; });
+        
         builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetSection("GuildConfiguration"));
         builder.Services.Configure<WeaponCustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));
         builder.Services.Configure<WeaponArchetypesOptions>(builder.Configuration.GetSection("WeaponArchetypes"));
