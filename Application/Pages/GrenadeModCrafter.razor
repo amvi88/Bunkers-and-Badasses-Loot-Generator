@@ -8,7 +8,6 @@
 @inherits BaseItemViewer
 @inject ILogger<GrenadeModCrafter> logger
 @inject IGuildService guildService
-@inject IWeaponCustomizationService weaponCustomizationService
 
 <h1>Grenade Mods</h1>
 <hr />
@@ -139,8 +138,8 @@
 @code {
   GrenadeMod grenadeMod = new GrenadeMod
   {
-    GrenadeType = "Grenade",
-    Effect = "None",
+    GrenadeType = "My Grenade Mod",
+    Effect = "My Effect",
     Element = Element.None,
     Damage = "1d4"    
   };

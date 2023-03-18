@@ -1,0 +1,11 @@
+﻿@page "/shield"
+@namespace Application.Pages
+@using Business.Services;
+@using Models.Builder;
+@using Business.Factories;
+
+@inject ILogger<GunSelector> logger
+
+
+<PageTitle>B&B: You need shield, we have them</PageTitle>
+<Selector CraftPage="shield-crafter" RandomizerPage="shield-randomizer"/>
