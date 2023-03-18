@@ -1,4 +1,5 @@
 using Models.Builder;
+using Models.Common;
 
 namespace Models.Builder
 {
@@ -15,5 +16,7 @@ namespace Models.Builder
         public string Effect {get; set;}
 
         public string Source { get; set; }
+
+        public Rarity Rarity { get; set; } = Rarity.Common;
     }
 }

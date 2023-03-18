@@ -5,7 +5,7 @@
 
 @inherits BaseItemViewer;
 <div>
-    <figure class="card card--normal" id="@GetElementId()">
+    <figure class="@GetCardCssClass" id="@GetElementId()">
       <ContextMenuTrigger MenuId="@GetMenuId()">
       <div class="card__image-container">
         @if (!string.IsNullOrWhiteSpace(CraftedShield.Source))
@@ -55,6 +55,9 @@
 
     [Parameter]
     public bool UseBorderlandsManufacturers { get; set; } = false;
+
+    public string GetCardCssClass => $"card card--{CraftedShield.Rarity.ToString().ToLower()}";
+    
     public string GetShieldImage => !string.IsNullOrWhiteSpace(CraftedShield.ImageUrl) 
           ? CraftedShield.ImageUrl 
           : $"images/resources/shields/{CraftedShield.Guild}.png";

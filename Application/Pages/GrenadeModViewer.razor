@@ -52,7 +52,7 @@
     [Parameter]
     public bool UseBorderlandsManufacturers { get; set; } = false;
 
-    public string GetCardCssClass => $"card card--normal";
+    public string GetCardCssClass => $"card card--{CraftedGrenadeMod.Rarity.ToString().ToLower()}";
 
     public string GetCardLabel => CraftedGrenadeMod.Element != Element.None ? CraftedGrenadeMod.Element.ToString() : CraftedGrenadeMod.GrenadeType;
 

@@ -55,6 +55,21 @@
                     </InputSelect>
                   </div>
                 }
+
+                <div class="mb-3">
+                  <label class="control-label">Rarity:</label>
+                  <div>
+                    <InputRadioGroup @bind-Value="grenadeMod.Rarity">
+                      @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
+                      {
+                        <label class="radio-inline label-separated">
+                          <InputRadio Value="@rarity" checked="@(rarity == grenadeMod.Rarity)" />
+                          @rarity
+                        </label>
+                      }
+                    </InputRadioGroup>
+                  </div>
+                </div>
             </div>
           </div>
         </div>

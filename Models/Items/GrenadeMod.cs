@@ -17,5 +17,8 @@ namespace Models.Builder
         public string Effect { get; set; }
 
         public Element Element { get; set; }
+
+        public Rarity Rarity { get; set; } = Rarity.Common;
+
     }
 }

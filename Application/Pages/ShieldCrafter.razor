@@ -23,7 +23,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionOne data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Grenade Mod Archetypes
+              Shield Specifications
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse @accordionOneClass" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
@@ -34,8 +34,12 @@
                       name="ShieldLevel" class="form-control" aria-label="Shield Mod Level" />
                 </div>
                 <div class="mb-3">
+                  <label for="text" class="control-label">Name:</label>
+                  <InputText @bind-Value="shield.Name" name="ShieldName" class="form-control" aria-label="Shield Name" placeholder="Shield Name"/>
+                </div>
+                <div class="mb-3">
                   <label for="text" class="control-label">Effect:</label>
-                  <InputText @bind-Value="shield.Effect" name="ShieldEffect" class="form-control" aria-label="Weapon Name" placeholder="Player Level"/>
+                  <InputText @bind-Value="shield.Effect" name="ShieldEffect" class="form-control" aria-label="Shield Effect" placeholder="Shield Effect"/>
                 </div>
 
                 @if (guilds != null && guilds.Any())
@@ -51,6 +55,21 @@
                     </InputSelect>
                   </div>
                 }
+
+                <div class="mb-3">
+                  <label class="control-label">Rarity:</label>
+                  <div>
+                    <InputRadioGroup @bind-Value="shield.Rarity">
+                      @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
+                      {
+                        <label class="radio-inline label-separated">
+                          <InputRadio Value="@rarity" checked="@(rarity == shield.Rarity)" />
+                          @rarity
+                        </label>
+                      }
+                    </InputRadioGroup>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
