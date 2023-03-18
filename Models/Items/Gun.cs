@@ -62,8 +62,6 @@ namespace Models.Builder
  
         public string ExtraDamage { get; set; }
 
-        public string Source { get; set; }
-
-        public string ImageUrl { get; set; }
+        public string Source { get; set; }        
     }
 }
