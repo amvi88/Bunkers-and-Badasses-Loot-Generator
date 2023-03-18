@@ -16,16 +16,27 @@
         @CraftedRelic.Rarity Relic 
         </h3>
 
-        <table class="card__stats">
-          <tr>
-              <th>Effect</th>
-              <td>@CraftedRelic.Effect</td>   
-           </tr>
-           <tr>
-              <th>@CraftedRelic.PreferredClass</th>
-              <td>@CraftedRelic.ClassEffect</td>   
-           </tr>      
-        </table>        
+        <div>
+          <div class="card_effect">
+            <h4>
+              <span class="card__label">Effect</span>            
+            </h4>
+
+            <span>@CraftedRelic.Effect</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="card_stats">
+            <h4>
+              <span class="card__label">Preferred Class</span>            
+            </h4>
+
+            <span>@CraftedRelic.PreferredClass</span>
+            <span>@CraftedRelic.ClassEffect</span>
+          </div>
+        </div>
+        
       </figcaption>
       </ContextMenuTrigger>
     </figure>

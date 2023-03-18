@@ -36,16 +36,11 @@
         </div>
 
         <div class="mb-3">
-        <label class=" control-label">Preferred Class:</label>
-        <div>
-            <InputSelect Value="@relic.PreferredClass" ValueExpression="@(() => relic.PreferredClass)" ValueChanged="@((string value) => UpdatePreferredClass(value))" class="form-control" aria-label="Preferred Class">
-                  @foreach (var pcClass in relicConfiguration.Value.Classes)
-                  {
-                      <option value="@pcClass" selected>@pcClass</option>
-                  }
-              </InputSelect>
+          <label class=" control-label">Preferred Class:</label>
+          <div>
+                  <InputText @bind-Value="relic.PreferredClass" name="Preferred Class" class="form-control" aria-label="Preferred Class"/>
           </div>
-      </div>
+        </div>
 
 
         <div class="mb-3" >
