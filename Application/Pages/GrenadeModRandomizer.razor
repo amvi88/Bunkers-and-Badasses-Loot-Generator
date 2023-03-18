@@ -1,0 +1,52 @@
+﻿@page "/grenade-randomizer"
+@namespace Application.Pages
+@using Business.Services;
+@using Models.Builder;
+
+@inject IGrenadeModService service;
+@inject ILogger<GrenadeModRandomizer> logger
+
+
+<PageTitle>B&B: Find-a-boom</PageTitle>
+<h1>Grenade Mods</h1>
+<hr />
+<EditForm Model=@grenadeBuilder OnValidSubmit="Roll" class="well form-horizontal">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+
+  <div class="mb-3" >
+     <label class="col-md-4 control-label">Player Level:</label>
+     <div class="col-md-4">
+         <InputNumber @bind-Value="grenadeBuilder.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
+     </div>
+  </div>
+  <div class="mb-3">
+    <label class="control-label">Use Borderlands Manufacturers?</label>
+    <input type="checkbox" checked="@(UseBorderlandsManufacturers)" @onchange="eventArgs => { UseBorderlandsManufacturers = !UseBorderlandsManufacturers; }">
+  </div>  
+  <hr class="divider">
+  <div class="mb-3">
+    <input type="submit" class="btn btn-primary" value="Roll"/>
+  </div>
+</EditForm>
+
+@if (grenadeMod != null)
+{
+  <div id="cards"  class="card_container"> 
+    <GrenadeModViewer CraftedGrenadeMod=@grenadeMod.Item UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
+  </div>
+}
+
+@code {
+  GrenadeModFactoryParameters grenadeBuilder = new GrenadeModFactoryParameters();
+
+  bool UseBorderlandsManufacturers = false;
+
+  ItemWrapper<GrenadeMod> grenadeMod = null;
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    grenadeMod = service.RandomizeGrenadeMod(grenadeBuilder);
+  }
+}

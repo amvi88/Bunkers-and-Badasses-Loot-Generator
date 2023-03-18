@@ -5,5 +5,7 @@ namespace Models.Builder
         public string Guild { get; set; }
 
         public string AlternateGuildName { get; set; }
+
+        public string ImageUrl { get; set; }
     }
 }
