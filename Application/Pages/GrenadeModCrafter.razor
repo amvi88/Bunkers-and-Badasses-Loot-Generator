@@ -5,7 +5,7 @@
 @using Models.Common;
 @using Models.Builder;
 
-@inherits BaseItemViewer
+@inherits BaseItemCrafter
 @inject ILogger<GrenadeModCrafter> logger
 @inject IGuildService guildService
 
@@ -200,23 +200,7 @@
 
   async Task OnFileChange(InputFileChangeEventArgs eventArgs)
     {
-        var files = eventArgs.GetMultipleFiles(1);
-        var file = files.FirstOrDefault();
-        if (file == null)
-        {
-            return;
-        }
-
-        if (file.ContentType == "image/png")
-        {
-          var resizedFile = await file.RequestImageFileAsync(file.ContentType, 267, 150);
-          var buf = new byte[resizedFile.Size];
-          using (var stream = resizedFile.OpenReadStream())
-          {
-            await stream.ReadAsync(buf);
-          }
-          grenadeMod.ImageUrl = $"data:image/png;base64, {Convert.ToBase64String(buf)}";
-        }
+        grenadeMod.ImageUrl = await EncodeImageFile(eventArgs);
     }
 
   void ToggleAccordionOne()
