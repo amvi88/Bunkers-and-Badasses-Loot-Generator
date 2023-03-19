@@ -26,7 +26,7 @@
               Grenade Mod Archetypes
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse @accordionOneClass" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseOne" class="accordion-collapse @AccordionOneClass" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
                <div class="mb-3">
                   <label for="GrenadeModLevel" class="control-label">Level:</label>
@@ -79,7 +79,7 @@
               Damage and Elements
             </button>
           </h2>
-          <div id="flush-collapseThree" class="accordion-collapse @accordionThreeClass" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseThree" class="accordion-collapse @AccordionThreeClass" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="control-label">Damage: (i.e: 1d10)</label>
@@ -111,7 +111,7 @@
               Custom Image
             </button>
           </h2>
-          <div id="flush-collapseFive" class="accordion-collapse @accordionFiveClass" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseFive" class="accordion-collapse @AccordionFiveClass" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                     <div class="mb-3">
@@ -158,18 +158,7 @@
     Element = Element.None,
     Damage = "1d4"    
   };
-
-  bool UseCustomImage = false;
-
-  bool accordionOneCollapsed = false;
-  bool accordionTwoCollapsed = true;
-  bool accordionThreeCollapsed = true;
-  bool accordionFourCollapsed = true;
-  bool accordionFiveCollapsed = true;
-  bool UseBorderlandsManufacturers = false;
-  
-  List<Guild> guilds = null;
-
+ 
   protected override void OnInitialized()
   {
     guilds = guildService.GetGuilds();
@@ -203,39 +192,5 @@
         grenadeMod.ImageUrl = await EncodeImageFile(eventArgs);
     }
 
-  void ToggleAccordionOne()
-  {
-    accordionOneCollapsed = !accordionOneCollapsed;
-    this.StateHasChanged();
-  }
   
-  void ToggleAccordionTwo()
-  {
-    accordionTwoCollapsed = !accordionTwoCollapsed;
-    this.StateHasChanged();
-  }
-  
-  void ToggleAccordionThree()
-  {
-    accordionThreeCollapsed = !accordionThreeCollapsed;
-    this.StateHasChanged();  
-  }
-  
-  void ToggleAccordionFour()
-  {
-    accordionFourCollapsed = !accordionFourCollapsed;
-    this.StateHasChanged();  
-  }
-  
-  void ToggleAccordionFive()
-  {
-    accordionFiveCollapsed = !accordionFiveCollapsed;
-    this.StateHasChanged();  
-  }
-
-  string accordionOneClass=> !accordionOneCollapsed? "collapse show": "collapse";
-  string accordionTwoClass=> !accordionTwoCollapsed? "collapse show": "collapse";
-  string accordionThreeClass=> !accordionThreeCollapsed? "collapse show": "collapse";
-  string accordionFourClass=> !accordionFourCollapsed? "collapse show": "collapse";
-  string accordionFiveClass=> !accordionFiveCollapsed? "collapse show": "collapse";
 }

@@ -26,7 +26,7 @@
               Shield Specifications
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse @accordionOneClass" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseOne" class="accordion-collapse @AccordionOneClass" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
                <div class="mb-3">
                   <label for="ShieldLevel" class="control-label">Level:</label>
@@ -79,18 +79,18 @@
               Capacity and Recharge Rate
             </button>
           </h2>
-          <div id="flush-collapseThree" class="accordion-collapse @accordionThreeClass" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseThree" class="accordion-collapse @AccordionThreeClass" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="control-label">Capacity:</label>
                 <InputNumber Value="shield.Capacity" ValueExpression="@(() => shield.Capacity)"
-                      name="Capacity" class="form-control" aria-label="Shield Capacity" />
+                    ValueChanged="@((int value) => shield.Capacity = value)"  name="Capacity" class="form-control" aria-label="Shield Capacity" />
               </div>
 
               <div class="mb-3">
                 <label class="control-label">Recharge Rate:</label>
                 <InputNumber Value="shield.RechargeRate" ValueExpression="@(() => shield.RechargeRate)"
-                      name="Recharge Rate" class="form-control" aria-label="Shield Recharge Rate" />
+                   ValueChanged="@((int value) => shield.RechargeRate = value)" name="Recharge Rate" class="form-control" aria-label="Shield Recharge Rate" />
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@
               Custom Image
             </button>
           </h2>
-          <div id="flush-collapseFive" class="accordion-collapse @accordionFiveClass" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
+          <div id="flush-collapseFive" class="accordion-collapse @AccordionFiveClass" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                     <div class="mb-3">
@@ -149,17 +149,6 @@
     Capacity = 0
   };
 
-  bool UseCustomImage = false;
-
-  bool accordionOneCollapsed = false;
-  bool accordionTwoCollapsed = true;
-  bool accordionThreeCollapsed = true;
-  bool accordionFourCollapsed = true;
-  bool accordionFiveCollapsed = true;
-  bool UseBorderlandsManufacturers = false;
-  
-  List<Guild> guilds = null;
-
   protected override void OnInitialized()
   {
     guilds = guildService.GetGuilds();
@@ -178,40 +167,4 @@
     {
         shield.ImageUrl = await EncodeImageFile(eventArgs);
     }
-
-  void ToggleAccordionOne()
-  {
-    accordionOneCollapsed = !accordionOneCollapsed;
-    this.StateHasChanged();
-  }
-  
-  void ToggleAccordionTwo()
-  {
-    accordionTwoCollapsed = !accordionTwoCollapsed;
-    this.StateHasChanged();
-  }
-  
-  void ToggleAccordionThree()
-  {
-    accordionThreeCollapsed = !accordionThreeCollapsed;
-    this.StateHasChanged();  
-  }
-  
-  void ToggleAccordionFour()
-  {
-    accordionFourCollapsed = !accordionFourCollapsed;
-    this.StateHasChanged();  
-  }
-  
-  void ToggleAccordionFive()
-  {
-    accordionFiveCollapsed = !accordionFiveCollapsed;
-    this.StateHasChanged();  
-  }
-
-  string accordionOneClass=> !accordionOneCollapsed? "collapse show": "collapse";
-  string accordionTwoClass=> !accordionTwoCollapsed? "collapse show": "collapse";
-  string accordionThreeClass=> !accordionThreeCollapsed? "collapse show": "collapse";
-  string accordionFourClass=> !accordionFourCollapsed? "collapse show": "collapse";
-  string accordionFiveClass=> !accordionFiveCollapsed? "collapse show": "collapse";
 }

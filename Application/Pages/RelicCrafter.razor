@@ -75,11 +75,11 @@
     <div id="accordionFlush">
       <div class="accordion-item">
           <h2 class="accordion-header" id="flush-heading">
-            <button class="accordion-button collapsed" @onclick=ToggleAccordion type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
+            <button class="accordion-button collapsed" @onclick=ToggleAccordionOne type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapse">
               Custom Image
             </button>
           </h2>
-          <div id="flush-collapse" class="accordion-collapse @accordionClass" aria-labelledby="flush-heading" data-bs-parent="#accordionFlush">
+          <div id="flush-collapse" class="accordion-collapse @AccordionOneClass" aria-labelledby="flush-heading" data-bs-parent="#accordionFlush">
             <div class="accordion-body">
               <div class="mb-3">
                     <div class="mb-3">
@@ -116,27 +116,8 @@
 @code {
   Relic relic = new Relic();
 
-  bool UseCustomImage {get; set;}
-
-  bool accordionCollapsed = false;
-
-  string accordionClass=> !accordionCollapsed? "collapse show": "collapse";
-  
-
   async Task OnFileChange(InputFileChangeEventArgs eventArgs)
   {
     relic.ImageUrl = await EncodeImageFile(eventArgs);
-  }
-
-  void ToggleAccordion()
-  {
-    accordionCollapsed = !accordionCollapsed;
-    this.StateHasChanged();
-  }
-
-  void UpdatePreferredClass(string preferredClass)
-  {
-    relic.PreferredClass = preferredClass;
-    this.StateHasChanged();
   }
 }
