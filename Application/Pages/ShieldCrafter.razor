@@ -31,7 +31,7 @@
                <div class="mb-3">
                   <label for="ShieldLevel" class="control-label">Level:</label>
                   <InputNumber Value="shield.Level" ValueExpression="@(() => shield.Level)"
-                      name="ShieldLevel" class="form-control" aria-label="Shield Mod Level" />
+                     ValueChanged="@((int value) => shield.Level = value)" name="ShieldLevel" class="form-control" aria-label="Shield Mod Level" />
                 </div>
                 <div class="mb-3">
                   <label for="text" class="control-label">Name:</label>

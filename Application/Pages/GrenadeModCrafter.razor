@@ -31,7 +31,7 @@
                <div class="mb-3">
                   <label for="GrenadeModLevel" class="control-label">Level:</label>
                   <InputNumber Value="grenadeMod.Level" ValueExpression="@(() => grenadeMod.Level)"
-                      name="GrenadeModLevel" class="form-control" aria-label="Grenade Mod Level" />
+                      ValueChanged="@((int value) => grenadeMod.Level = value)" name="GrenadeModLevel" class="form-control" aria-label="Grenade Mod Level" />
                 </div>
                 <div class="mb-3">
                   <label for="text" class="control-label">Type:</label>

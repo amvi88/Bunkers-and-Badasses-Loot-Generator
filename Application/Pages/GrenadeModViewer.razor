@@ -32,6 +32,24 @@
                 }                
               </td>
             </tr>
+            @if (CraftedGrenadeMod.Element != Element.None){
+              <tr>
+                <th>Elemental</th>
+                <td>
+                  @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+                {
+                   @if (element == Element.None)
+                   {
+                     continue;
+                   }
+                    @if (CraftedGrenadeMod.Element.HasFlag(element))
+                    {
+                      <img src="@GetElementImage(element.ToString())" alt="@element" class="element"> 
+                    }
+                }  
+                </td>
+              </tr>
+            }
           </tbody>
         </table>        
       </figcaption>
@@ -54,7 +72,7 @@
 
     public string GetCardCssClass => $"card card--{CraftedGrenadeMod.Rarity.ToString().ToLower()}";
 
-    public string GetCardLabel => CraftedGrenadeMod.Element != Element.None ? CraftedGrenadeMod.Element.ToString() : CraftedGrenadeMod.GrenadeType;
+    public string GetCardLabel => CraftedGrenadeMod.GrenadeType;
 
     public string GetCssClassCardType => $"card__type {(CraftedGrenadeMod.Element != Element.None ? CraftedGrenadeMod.Element.ToString().ToLower() : "normal")}";
 
@@ -68,4 +86,7 @@
     {
       return $"GrenadeMod_{CraftedGrenadeMod.Guild}_{CraftedGrenadeMod.GrenadeType}.png";
     }
+
+    public string GetElementImage(string elementId) =>  $"images/resources/elements/{elementId}.png";
+
 }
