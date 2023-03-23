@@ -2,7 +2,7 @@
   "SpellConfiguration": {    
     "Spells": [
       {
-        "SpellType": "Arc",
+        "SpellType": "ArcTorrent",
         "Effect": "Call down bolts of lightning on your enemies to smite them from above with Shock Damage",
         "SpellDamageSpecs": [
           {

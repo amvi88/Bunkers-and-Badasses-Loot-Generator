@@ -16,6 +16,8 @@ namespace Models.Config
 
         public List<SpellSpec> SpellSpecs { get; set; }
 
+        public List<SpellEffectSpec> SpellEffectSpecs { get; set; }
+
         public ItemType SupportedItemTypes { get; set; }
 
         public GunType? SupportedGunTypes { get; set; }

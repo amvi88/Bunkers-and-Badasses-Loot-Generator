@@ -965,6 +965,303 @@
                         "Effect": "Extra Attack Action, Extra Movement Action"
                     }
                 ]
+            },
+            {
+                "Name": "Conjura",
+                "AlternateName":"Conjura",
+                "SupportedItemTypes": "Spell",
+                "SpellEffectSpecs":[
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "+1 Bonus Damage Per Die"            
+                      },
+                      {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "+2 Bonus Damage Per Die"
+                      },
+                      {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "+3 Bonus Damage Per Die"
+                      },
+                      {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "+4 Bonus Damage Per Die"
+                      },
+                      {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "+5 Bonus Damage Per Die"
+                      }
+                ],
+                "SpellSpecs":[
+                    {
+                        "SpellType" : "ArcTorrent",
+                        "Effect": "Damage Dice become d10’s. Call down a Lightning Bolt, dealing Damage in a target square"
+                    },
+                    {
+                        "SpellType" : "Sigil",
+                        "Effect": "Damages and Slows enemies in a 5x5 area centered on you"
+                    },
+                    {
+                        "SpellType" : "Eruption",
+                        "Effect": "Target Square explodes, dealing damage"
+                    },
+                    {
+                        "SpellType" : "Fireball",
+                        "Effect": "Toss a Fireball that damages enemies and ignores cover in a 3x3 area"
+                    },
+                    {
+                        "SpellType" : "Sunder",
+                        "Effect": "Send out a fissure that damages enemies on the ground"
+                    },
+                    {
+                        "SpellType" : "Talon",
+                        "Effect": "Send out a spectral Wyvern that Damages all enemies in a straight line"
+                    },
+                    {
+                        "SpellType" : "Hydra",
+                        "Effect": "Conjure a Hydra Familiar for 2 Turns"
+                    },
+                    {
+                        "SpellType" : "IceSpike",
+                        "Effect": "Summon a spike of Ice from the ground, damaging enemies. Leaves a 3x3 Cryo Pool for 2 turns that deals spell damage"
+                    },
+                    {
+                        "SpellType" : "Barrage",
+                        "Effect": "Missiles seek enemies and deal damage. Damage Dice become D6’s"
+                    },
+                    {
+                        "SpellType" : "Calamity",
+                        "Effect": "Drop a meteor on Target Square, dealing high damage"
+                    }
+
+                ]
+            },
+            {
+                "Name": "Arken",
+                "AlternateName":"Arken",
+                "SupportedItemTypes": "Spell",
+                "SpellEffectSpecs":[
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 2 Charges, or cast a Charged spell"            
+                      },
+                      {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 3 Charges, or cast a Charged spell"
+                      },
+                      {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 4 Charges, or cast a Charged spell"
+                      },
+                      {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 5 Charges, or cast a Charged spell"
+                      },
+                      {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 6 Charges, or cast a Charged spell"
+                      }
+                ],
+                "SpellSpecs":[
+                    {
+                        "SpellType" : "ArcTorrent",
+                        "Effect": "Calls down a Bolt that does Damage when cast. Each time you Charge the spell, double the number of Bolts called on cast. Bolts can target the same square"
+                    },
+                    {
+                        "SpellType" : "Sigil",
+                        "Effect": "Allies in a 5x5 area centered on you gain Damage Reduction equal to the spell’s Damage for 1 turn per Charge"
+                    },
+                    {
+                        "SpellType" : "Eruption",
+                        "Effect": "Target Square explodes, dealing damage. Increase the radius of the explosion by 1 for each Charge. (1x1, 3x3, 5x5, 7x7, etc.)"
+                    },
+                    {
+                        "SpellType" : "Fireball",
+                        "Effect": "Pulls in enemies from 2 squares away per Charge before exploding, damaging enemies in a 3x3 area"
+                    },
+                    {
+                        "SpellType" : "Sunder",
+                        "Effect": "Send out a fissure that knocks back enemies and creates a wall that lasts 2 Turns per Charge"
+                    },
+                    {
+                        "SpellType" : "Talon",
+                        "Effect": "Send out a spectral Wyvern that releases two mini-Wyverns that deal half Damage. Each Charge doubles the number of mini-Wyverns released. Each Wyvern can target a different enemy"
+                    },
+                    {
+                        "SpellType" : "Hydra",
+                        "Effect": "Conjure a Hydra Familiar for 2 Turns. Each Charge gives it +1 Attack/Turn."
+                    },
+                    {
+                        "SpellType" : "IceSpike",
+                        "Effect": "Each turn you Charge the Spell, Melee Attackers take 1d8 Cryo Damage. Fires an Ice Spike at one Target when Cast"
+                    },
+                    {
+                        "SpellType" : "Barrage",
+                        "Effect": "Missiles seek enemies and deal damage. Each turn you Charge, gain +2 SPD Mod until your next turn"
+                    },
+                    {
+                        "SpellType" : "Calamity",
+                        "Effect": "Drop a meteor on a Target Square, dealing high damage. When cast, for each charge, pull all non-boss enemies 1sq towards that Target before the meteor hits"
+                    }
+                ]
+            },
+            {
+                "Name": "Wyrd Weaver",
+                "AlternateName":"Wyrd Weaver",
+                "SupportedItemTypes": "Spell",
+                "SpellEffectSpecs":[
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "You can choose to cast the spell multiple times, up to 1 Echo, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"            
+                      },
+                      {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "You can choose to cast the spell multiple times, up to 2 Echoes, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"
+                      },
+                      {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "You can choose to cast the spell multiple times, up to 3 Echoes, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"
+                      },
+                      {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "You can choose to cast the spell multiple times, up to 4 Echoes, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"
+                      },
+                      {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "You can choose to cast the spell multiple times, up to 5 Echoes, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"
+                      }
+                ],
+                "SpellSpecs":[
+                    {
+                        "SpellType" : "ArcTorrent",
+                        "Effect": "Calls down a Bolt that does Damage when cast. Each time you Charge the spell, double the number of Bolts called on cast. Bolts can target the same square"
+                    },
+                    {
+                        "SpellType" : "Sigil",
+                        "Effect": "Creates a 5x5 area centered on you that increases DMG Mod and ACC Mod of all allies in the area by +1 until your next Turn. Each Echo grants an additional +1"
+                    },
+                    {
+                        "SpellType" : "Eruption",
+                        "Effect": "Target Square explodes, dealing damage. Each Echo can target a different square"
+                    },
+                    {
+                        "SpellType" : "Fireball",
+                        "Effect": "Explodes and damages enemies in a 3x3 area"
+                    },
+                    {
+                        "SpellType" : "Sunder",
+                        "Effect": "Send out a fissure that explodes each time it Echoes, dealing Splash Damage"
+                    },
+                    {
+                        "SpellType" : "Talon",
+                        "Effect": "Damage Dice becomes d8’s. Release a spectral Wyvern that damages one enemy"
+                    },
+                    {
+                        "SpellType" : "Hydra",
+                        "Effect": "Conjura a Hydra Familiar for 2 Turns. Each Echo increases its duration by 2 Turns"
+                    },
+                    {
+                        "SpellType" : "IceSpike",
+                        "Effect": "Fires an Ice Knife that sticks into enemies until your next Turn. Each knife increases all damage to that Target by +2"
+                    },
+                    {
+                        "SpellType" : "Barrage",
+                        "Effect": "Missiles seek enemies and deal damage"
+                    },
+                    {
+                        "SpellType" : "Calamity",
+                        "Effect": "Change Damage Dice to d8’s. Calls down meteors that deal Damage"
+                    }
+                ]
+            },
+            {
+                "Name": "Miraculum",
+                "AlternateName":"Miraculum",
+                "SupportedItemTypes": "Spell",
+                "SpellEffectSpecs":[
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Creates an effect centered on you that lasts 2 turns"            
+                      },
+                      {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Creates an effect centered on you that lasts 3 turns"
+                      },
+                      {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Creates an effect centered on you that lasts 4 turns"
+                      },
+                      {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Creates an effect centered on you that lasts 5 turns"
+                      },
+                      {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Creates an effect centered on you that lasts 6 turns"
+                      }
+                ],
+                "SpellSpecs":[
+                    {
+                        "SpellType" : "ArcTorrent",
+                        "Effect": "Damage Dice become d6’s, but Bolts strike each adjacent enemy each turn. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Sigil",
+                        "Effect": "You and adjacent allies gain +2 SPD Mod and heal Spell’s Damage each turn instead of damaging enemies. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Eruption",
+                        "Effect": "Creates an explosion centered on you each Turn that damages and knocks adjacent enemies back 1 square. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Fireball",
+                        "Effect": "Surround yourself in a wall of fire, dealing damage to all adjacent each turn. Spell follows you and gives +1 DMG Mod for the duration"
+                    },
+                    {
+                        "SpellType" : "Sunder",
+                        "Effect": "Send out a fissure towards the nearest enemy each turn, damaging them and knocking them to the ground"
+                    },
+                    {
+                        "SpellType" : "Talon",
+                        "Effect": "Spectral Wyverns circle you, damaging adjacent enemies each Turn and giving enemies a -2 to hit you. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Hydra",
+                        "Effect": "Conjure 2 Hydra Familiars each turn in a 5x5 area centered on you. Spell Follows you"
+                    },
+                    {
+                        "SpellType" : "IceSpike",
+                        "Effect": "Creates a Blizzard centered on you. Damages all adjacent enemies each turn and reduces their Movement to 1. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Barrage",
+                        "Effect": "Missiles seek enemies and deal damage. Fires missiles each turn"
+                    },
+                    {
+                        "SpellType" : "Calamity",
+                        "Effect": "Damage Dice become d8’s, but meteors strike each adjacent square each turn. Spell follows you"
+                    }
+                ]
             }
         ]
     }
