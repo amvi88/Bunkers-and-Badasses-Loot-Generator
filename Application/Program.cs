@@ -32,6 +32,7 @@ public class Program
         builder.Services.AddTransient<IItemFactory<Potion, BaseFactoryParameters>, PotionFactory>();
         builder.Services.AddTransient<IItemFactory<Relic, RelicRandomizerFactoryParameters>, RelicFactory>();
         builder.Services.AddTransient<IItemFactory<MoxxTail, BaseFactoryParameters>, MoxxTailFactory>();
+        builder.Services.AddTransient<IItemFactory<Spell, SpellRandomizerFactoryParameters>, SpellFactory>();
         builder.Services.AddTransient<ITraumatizingService, TraumatizingService>();
         builder.Services.AddTransient<IPotionFinderService, PotionFinderService>();
         builder.Services.AddTransient<IChestService<DiceChestServiceParameters>, DiceChestService>();
@@ -41,6 +42,7 @@ public class Program
         builder.Services.AddTransient<IGuildService, GuildService>();
         builder.Services.AddTransient<IGunBatchService, GunBatchService>();
         builder.Services.AddTransient<IShieldService, ShieldService>();
+        builder.Services.AddTransient<ISpellService, SpellService>();
         builder.Services.AddTransient<IGrenadeModService, GrenadeModService>();
         builder.Services.AddTransient<IRelicService, RelicService>();
         builder.Services.AddTransient<IGunService, GunService>();

@@ -4,7 +4,7 @@ namespace Models.Config
 {
     public class SpellTypeSpec
     {
-        public SpellType Name { get; set; }
+        public SpellType SpellType { get; set; }
 
         public string Effect { get; set; }
 

@@ -1,0 +1,97 @@
+﻿@page "/spell"
+@namespace Application.Pages
+@using Application.Components;
+@using Business;
+@using Business.Services;
+@using Models.Common;
+@using Models.Builder;
+@using Business.Factories;
+
+@inject ISpellService service
+@inject ILogger<SpellRandomizer> logger
+@inject IGuildService guildService
+
+<h1>Guns</h1>
+<hr />
+<PageTitle>B&B: Wanna see a magiks trick?</PageTitle>
+
+<EditForm Model=@spellBuilder OnValidSubmit="Roll" class="well form-horizontal">
+  <DataAnnotationsValidator />  
+  <ValidationSummary />
+
+  <div class="mb-3" >
+     <label class="col-md-4 control-label">Player Level:</label>
+     <div class="col-md-4">
+         <InputNumber @bind-Value="spellBuilder.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level"/>
+     </div>
+  </div>
+  <div class="mb-3">
+     <label class="col-md-4 control-label">Rarity</label>
+     <div class="col-md-4">
+        <NullableEnumSelect @bind-Value="spellBuilder.Rarity" class="form-control" aria-label="Rarity">
+              <option value="">Random</option>
+              @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
+              {
+                @if (rarity != Rarity.Pearlescent)
+                {
+                  <option value="@rarity">@rarity</option>
+                }
+              }
+          </NullableEnumSelect>
+      </div>
+  </div>  
+  <div class="mb-3">
+    <label class="control-label">Use Borderlands Manufacturers?</label>
+    <input type="checkbox" checked="@(UseBorderlandsManufacturers)" @onchange="eventArgs => { UseBorderlandsManufacturers = !UseBorderlandsManufacturers; }">
+  </div>  
+
+  @if (guilds != null && guilds.Any())
+  {
+    <div class="mb-3">
+     <label class="col-md-4 control-label">Preferred Guild</label>
+     <div class="col-md-4">
+       <InputSelect @bind-Value="spellBuilder.Guild" class="form-control" aria-label="Preferred Guild">
+              <option value="">Random</option>              
+              @foreach (var guild in guilds)
+              {
+                  <option value="@guild.Name">@guild.Name</option>
+              }
+        </InputSelect>
+      </div>
+    </div>
+  }
+
+  @* <div class="mb-3">
+     <label class="col-md-4 control-label">Use Prefixes <input type="checkbox" @bind="spellBuilder.AllowPrefixes" aria-label="Allows Prefixes"/></label>
+  </div> *@
+
+  <hr class="divider">
+  <div class="mb-3">
+    <input type="submit" class="btn btn-primary" value="Roll"/>
+  </div>
+</EditForm>
+
+@if (spell != null)
+{
+  <div id="cards"  class="card_container">  
+    <SpellViewer CraftedSpell=@spell.Item UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
+  </div>
+}
+
+@code {
+  SpellRandomizerFactoryParameters spellBuilder = new SpellRandomizerFactoryParameters();
+
+  bool UseBorderlandsManufacturers = false;
+
+  List<Guild> guilds = null;
+
+  ItemWrapper<Spell> spell = null;
+
+
+  void Roll(EditContext editContext)
+  {
+    logger.LogDebug("Roll");
+    System.Diagnostics.Debug.WriteLine("Roll");
+    spell = service.RandomizeSpell(spellBuilder);
+  }
+}

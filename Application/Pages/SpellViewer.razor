@@ -1,0 +1,91 @@
+@namespace Application.Pages
+@using Business
+@using Models;
+@using Models.Builder;
+@using Models.Common;
+@inherits BaseItemViewer;
+
+<div>
+    <figure class="@GetCardCssClass" id="@GetElementId()">
+      <ContextMenuTrigger MenuId="@GetMenuId()">
+      <div class="card__image-container">
+        @if (!string.IsNullOrWhiteSpace(CraftedSpell.Source))
+        {
+          <img src="@GetSourceImage" alt="@CraftedSpell.Source" class="card__game_icon"> 
+        }
+        <img src="@GetGuildImage" alt="@CraftedSpell.Guild" class="card__guild_image"> 
+      </div>
+      
+      <figcaption class="card__caption">
+        <h1 class="@GetCssClassCardCaption">@GetSpellName</h1>        
+        
+        <h3 class="@GetCssClassCardType">
+          @CraftedSpell.Rarity.ToString()
+        </h3>
+        
+        <table class="card__stats">
+          <tbody>            
+            <tr>
+              <th>Damage</th>
+              <td>
+                @for (int index = 0; index < CraftedSpell.AmountOfDice; index++)
+                {
+                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedSpell.DiceType">
+                }
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+       <div class="card__abilities">
+          <div class="card_hits_caption">Abilities</div>
+         @if (!string.IsNullOrEmpty(CraftedSpell.Effect))
+          {
+            <span class="card__label bonus">(Guild) @CraftedSpell.Effect</span>            
+          }
+          @if (!string.IsNullOrEmpty(CraftedSpell.GuildEffect))
+          {
+            <span class="card__label bonus">(Archetype) @CraftedSpell.GuildEffect</span>            
+          }          
+        </div>       
+      </figcaption>
+      </ContextMenuTrigger>
+    </figure>
+
+    <ContextMenu Id="@GetMenuId()">
+      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+    </ContextMenu>
+</div>
+
+@code {
+    [Parameter]
+    public Spell CraftedSpell { get; set; }
+
+    [Parameter]
+    public bool UseBorderlandsManufacturers { get; set; } = false;
+
+    public string GetSpellName => string.IsNullOrWhiteSpace(CraftedSpell.Prefix?.Name)
+        ? CraftedSpell.Name  
+        : $"{CraftedSpell.Prefix?.Name} {CraftedSpell.Name}";
+
+    public string GetCardCssClass => $"card card--{CraftedSpell.Rarity.ToString().ToLower()}";
+    
+    public string GetGunImage => !string.IsNullOrWhiteSpace(CraftedSpell.ImageUrl) ? CraftedSpell.ImageUrl
+                 : $"images/resources/spells/{CraftedSpell.Name}.png";
+
+    public string GetSourceImage => $"images/resources/game-icons/{CraftedSpell.Source}.png";
+
+    public string GetGuildImage => $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedSpell.AlternateGuildName : CraftedSpell.Guild)}.png";
+   
+    public string GetCssClassCardCaption => $"card__name";
+
+    public string GetCssClassCardType => $"card__type normal";
+
+    public string GetDiceImage => $"images/resources/dice/{CraftedSpell.DiceType}.png";
+
+    public override string GetFileName()
+    {
+      return $"Spell_{CraftedSpell.Guild}_{CraftedSpell.Name.Replace(" ","_")}.png";
+    }
+}

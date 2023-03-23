@@ -219,7 +219,7 @@
         ]
       },
       {
-        "SpellType": "Ice Spike",
+        "SpellType": "IceSpike",
         "Effect": "Turn the battlefield into a frozen wasteland, summoning spikes and daggers of ice to freeze and murderize your enemies",
         "SpellDamageSpecs": [
           {
