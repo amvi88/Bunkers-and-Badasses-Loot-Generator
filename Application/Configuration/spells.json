@@ -1,0 +1,316 @@
+{
+  "SpellConfiguration": {    
+    "Spells": [
+      {
+        "SpellType": "Arc",
+        "Effect": "Call down bolts of lightning on your enemies to smite them from above with Shock Damage",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d8"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d8"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d8"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d8"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d8"
+          }
+        ]
+      },
+      {
+        "SpellType": "Sigil",
+        "Effect": "Summon circles of protection around you, buffing allies and hindering foes in a wide area",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d4"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d4"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d4"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d4"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d4"
+          }
+        ]
+      },
+      {
+        "SpellType": "Eruption",
+        "Effect": "Cause an explosion wherever you point the spell that knocks back foes",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d8"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d8"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d8"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d8"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d8"
+          }
+        ]
+      },
+      {
+        "SpellType": "Fireball",
+        "Effect": "Use fireball, just fireball ... JUST FIREBALL!",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d10"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d10"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d10"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d10"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d10"
+          }
+        ]
+      },
+      {
+        "SpellType": "Sunder",
+        "Effect": "Create fissures along the ground, damaging every enemy in their path, even if they’re hiding behind walls",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d8"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d8"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d8"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d8"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d8"
+          }
+        ]
+      },
+      {
+        "SpellType": "Talon",
+        "Effect": "Conjure spectral wyverns that fly around, harrying enemies",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d6"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d6"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d6"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d6"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d6"
+          }
+        ]
+      },
+      {
+        "SpellType": "Hydra",
+        "Effect": "Summon Hydra Familiars that attack the nearest enemy each turn",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d6"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d6"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d6"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d6"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d6"
+          }
+        ]
+      },
+      {
+        "SpellType": "Ice Spike",
+        "Effect": "Turn the battlefield into a frozen wasteland, summoning spikes and daggers of ice to freeze and murderize your enemies",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d8"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d8"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d8"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d8"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d8"
+          }
+        ]
+      },
+      {
+        "SpellType": "Barrage",
+        "Effect": "Pelt the hapless baddos with swarms of magic missiles, automatically seeking out the nearest enemies and pummeling them with arcane might.",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d4"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d4"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d4"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d4"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d4"
+          }
+        ]
+      },
+      {
+        "SpellType": "Calamity",
+        "Effect": "Call down chunks of elemental hate straight from the heavens",
+        "SpellDamageSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d12"            
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d12"
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "3d12"
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "4d12"
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "5d12"
+          }
+        ]
+      }
+    ]
+  }
+}

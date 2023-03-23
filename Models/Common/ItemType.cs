@@ -7,6 +7,8 @@ namespace Models.Common
     {
         Shield = 1,
         Grenade = 2,
-        Gun = 4
+        Gun = 4,
+        Spell = 8,
+        MeleeWeapon = 16
     }
 }

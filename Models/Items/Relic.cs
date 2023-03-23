@@ -14,7 +14,5 @@ namespace Models.Builder
         public Rarity Rarity { get; set; }
 
         public string PreferredClass {get; set;}
-
-        public string ImageUrl {get; set;}
     }
 }
