@@ -13,6 +13,7 @@
         {
           <img src="@GetSourceImage" alt="@CraftedSpell.Source" class="card__game_icon"> 
         }
+        <img src="@GetSpellImage" alt="@CraftedSpell.Name" class="card__image"> 
         <img src="@GetGuildImage" alt="@CraftedSpell.Guild" class="card__guild_image"> 
       </div>
       
@@ -71,8 +72,8 @@
 
     public string GetCardCssClass => $"card card--{CraftedSpell.Rarity.ToString().ToLower()}";
     
-    public string GetGunImage => !string.IsNullOrWhiteSpace(CraftedSpell.ImageUrl) ? CraftedSpell.ImageUrl
-                 : $"images/resources/spells/{CraftedSpell.Name}.png";
+    public string GetSpellImage => !string.IsNullOrWhiteSpace(CraftedSpell.ImageUrl) ? CraftedSpell.ImageUrl
+                 : $"images/resources/spells/Spell.png";
 
     public string GetSourceImage => $"images/resources/game-icons/{CraftedSpell.Source}.png";
 

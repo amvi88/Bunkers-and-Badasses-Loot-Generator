@@ -40,7 +40,8 @@ namespace Business.Factories
                 Damage = spellDamageSpec.Damage,
                 Effect = spellEffect.Effect,
                 GuildEffect = guildSpellEffect.Effect,
-                Name = spellType.ToString()              
+                Name = spellType.ToString(),
+                Source = "wonderlands"
             };
 
             return new ItemWrapper<Spell>
