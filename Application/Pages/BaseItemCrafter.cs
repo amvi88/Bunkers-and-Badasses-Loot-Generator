@@ -15,9 +15,9 @@ namespace Application.Pages
         public bool AccordionFiveCollapsed { get; set; } = true;
         public bool UseBorderlandsManufacturers { get; set; } = false;
 
-        public List<Guild> guilds = null;
+        public List<Guild> guilds = new List<Guild>();
 
-        public async Task<string> EncodeImageFile(InputFileChangeEventArgs eventArgs)
+        public async Task<string?> EncodeImageFile(InputFileChangeEventArgs eventArgs)
         {
             var files = eventArgs.GetMultipleFiles(1);
             var file = files.FirstOrDefault();
