@@ -1,0 +1,79 @@
+@namespace Application.Pages
+@using Business;
+@using Business.Services;
+@using Models.Builder;
+@using Models.Common;
+@using System.Linq;
+
+<div id="cards" class="chest_container">
+    @if (items != null && items.Any())
+    {
+        foreach (var item in items)
+        {
+            if (item is Mimic)
+            {
+                <div class="chest_wrapper">
+                    <MimicViewer />
+                </div>
+            }
+            else if (item is Gold)
+            {
+                <div class="chest_wrapper">
+                    <GoldViewer Gold=@((Gold)item) />
+                </div>
+            }
+            else if (item is Grenade)
+            {
+                <div class="chest_wrapper">
+                    <GrenadeViewer />
+                </div>
+            }
+            else if (item is GrenadeMod)
+            {
+                <div class="chest_wrapper">
+                    <GrenadeModViewer CraftedGrenadeMod=@((GrenadeMod)item) UseBorderlandsManufacturers=@UseBorderlandsManufacturers />
+                </div>
+            }
+            else if (item is Gun)
+            {
+                <div class="chest_wrapper">
+                    <GunViewer CraftedGun=@((Gun)item) UseBorderlandsManufacturers=@UseBorderlandsManufacturers />
+                </div>
+            }
+            else if (item is Grenade)
+            {
+                <div class="chest_wrapper">
+                    <GrenadeViewer />
+                </div>
+            }
+            else if (item is Potion)
+            {
+                <div class="chest_wrapper">
+                    <PotionViewer CraftedPotion=@((Potion)item) />
+                </div>
+            }
+            else if (item is Shield)
+            {
+                <div class="chest_wrapper">
+                    <ShieldViewer CraftedShield=@((Shield)item) UseBorderlandsManufacturers=@UseBorderlandsManufacturers />
+                </div>
+            }
+            else if (item is Relic)
+            {
+                <div class="chest_wrapper">
+                    <RelicViewer CraftedRelic=@((Relic)item) />
+                </div>
+            }
+        }
+    }
+</div>
+
+@code
+{
+    [Parameter]
+    public IEnumerable<Models.Builder.Item> items { get; set; } = null;
+
+    [Parameter]
+    public bool UseBorderlandsManufacturers { get; set; } = false;
+
+}

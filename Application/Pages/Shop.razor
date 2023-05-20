@@ -1,0 +1,95 @@
+﻿@page "/shop"
+@namespace Application.Pages
+@using Business;
+@using Business.Services;
+@using Models.Builder;
+@using Models.Common;
+@using System.Linq;
+
+@inject IShopService service;
+@inject ILogger<Shop> logger
+
+
+<PageTitle>B&B: Shop</PageTitle>
+<h1>No Backsies</h1>
+<hr />
+
+<EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label class="col-md-4 control-label">Player Level:</label>
+        <div class="col-md-4">
+            <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="col-md-4 control-label">Amount Of Guns:</label>
+        <div class="col-md-4">
+            <InputNumber @bind-Value="parameters.AmountOfGuns" name="AmountOfGuns" class="form-control" aria-label="Amount Of Guns" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="col-md-4 control-label">Amount Of Shield Mods:</label>
+        <div class="col-md-4">
+            <InputNumber @bind-Value="parameters.AmountOfShieldMods" name="AmountOfShieldMods" class="form-control" aria-label="Amount Of Shield Mods" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="col-md-4 control-label">Amount Of Grenade Mods:</label>
+        <div class="col-md-4">
+            <InputNumber @bind-Value="parameters.AmountOfGrenadeMods" name="AmountOfGrenadeMods" class="form-control" aria-label="Amount Of Grenade Mods" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="col-md-4 control-label">Amount Of Potions:</label>
+        <div class="col-md-4">
+            <InputNumber @bind-Value="parameters.AmountOfPotions" name="AmountOfPotions" class="form-control" aria-label="Amount Of Potions" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="control-label">Use Borderlands Manufacturers?</label>
+        <input type="checkbox" checked="@(UseBorderlandsManufacturers)" @onchange="eventArgs => { UseBorderlandsManufacturers = !UseBorderlandsManufacturers; }">
+    </div>
+
+    <hr class="divider">
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Roll" />
+    </div>
+</EditForm>
+
+@if (!loading)
+{
+    <div id="cards" class="chest_container">
+        @if (items != null && items.Any())
+        {
+            <div class="chest_wrapper">
+                <ItemListRenderer items=@items UseBorderlandsManufacturers=@UseBorderlandsManufacturers />
+            </div>
+        }
+    </div>
+}
+else
+{
+    <Loader />
+}
+
+@code {
+    ShopServiceParameters parameters = new ShopServiceParameters();
+
+    bool UseBorderlandsManufacturers = false;
+    IEnumerable<Models.Builder.Item> items = null;
+
+    bool loading = false;
+
+    async Task Roll(EditContext editContext)
+    {
+        loading = true;
+        this.StateHasChanged();
+        items = service.GenerateInventory(parameters);
+        await Task.Delay(500);
+        loading = false;
+        this.StateHasChanged();
+    }
+}
