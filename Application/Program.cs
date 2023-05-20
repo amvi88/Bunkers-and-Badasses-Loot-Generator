@@ -42,6 +42,7 @@ public class Program
         builder.Services.AddTransient<IGuildService, GuildService>();
         builder.Services.AddTransient<IGunBatchService, GunBatchService>();
         builder.Services.AddTransient<IShieldService, ShieldService>();
+        builder.Services.AddTransient<IShieldBatchService, ShieldBatchService>();
         builder.Services.AddTransient<ISpellService, SpellService>();
         builder.Services.AddTransient<IGrenadeModService, GrenadeModService>();
         builder.Services.AddTransient<IRelicService, RelicService>();

@@ -1,0 +1,80 @@
+﻿@page "/shieldxplosion"
+@namespace Application.Pages
+@using Business;
+@using Business.Services;
+@using Models.Builder;
+@using Models.Common;
+@using System.Linq;
+
+@inject IShieldBatchService service;
+@inject ILogger<ShieldBatch> logger
+
+
+<PageTitle>B&B: Shop for Shields</PageTitle>
+<h1>Batches of Guns</h1>
+<hr />
+
+<EditForm Model=@parameters OnValidSubmit="Roll" class="well form-horizontal">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label class="col-md-4 control-label">Player Level:</label>
+        <div class="col-md-4">
+            <InputNumber @bind-Value="parameters.PlayerLevel" name="PlayerLevel" class="form-control" aria-label="Player Level" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="col-md-4 control-label">Batch Size:</label>
+        <div class="col-md-4">
+            <InputNumber @bind-Value="parameters.BatchSize" name="BatchSize" class="form-control" aria-label="BatchSize" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="control-label">Use Borderlands Manufacturers?</label>
+        <input type="checkbox" checked="@(UseBorderlandsManufacturers)" @onchange="eventArgs => { UseBorderlandsManufacturers = !UseBorderlandsManufacturers; }">
+    </div>
+
+    <hr class="divider">
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Roll" />
+    </div>
+</EditForm>
+
+@if (!loading)
+{
+    <div id="cards" class="chest_container">
+        @if (shields != null && shields.Any())
+        {
+            foreach (var shield in shields)
+            {
+                <div class="chest_wrapper">
+                    <ShieldViewer CraftedShield=@shield UseBorderlandsManufacturers=@UseBorderlandsManufacturers />
+                </div>
+            }
+        }
+    </div>
+}
+else
+{
+    <Loader />
+}
+
+@code {
+    ShieldBatchServiceParameters parameters = new ShieldBatchServiceParameters();
+
+    bool UseBorderlandsManufacturers = false;
+    IEnumerable<Shield> shields = null;
+
+    bool loading = false;
+
+    async Task Roll(EditContext editContext)
+    {
+        loading = true;
+        this.StateHasChanged();
+        shields = service.GenerateBatch(parameters);
+        await Task.Delay(500);
+        loading = false;
+        this.StateHasChanged();
+    }
+}
