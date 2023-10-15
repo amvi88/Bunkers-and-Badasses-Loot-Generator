@@ -17,7 +17,7 @@ namespace Business.Factories
 
         public ItemWrapper<Potion> Manufacture(BaseFactoryParameters factoryParameters)
         {
-            var roll = RandomNumberGenerator.GetInt32(1,101);    
+            var roll = RandomNumberGenerator.GetInt32(1,103);    
             var specs = _potionConfiguration.RegularPotions.First(x => x.MinRoll <= roll && roll <= x.MaxRoll);
 
             var potion = new Potion
