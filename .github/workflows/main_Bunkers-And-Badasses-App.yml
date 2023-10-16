@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: bnbregistry.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_6e118645ccef48328214df47fd9bc51f }}/bunkers-and-badasses-app:${{ github.sha }}
-        file: ./Dockerfile
+        file: ./Application/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
