@@ -23,14 +23,20 @@ namespace Business.Services
                 return _potionFactory.Manufacture(new BaseFactoryParameters()).Item;
             }
 
-            var potionConfigSpec = _potionConfiguration.RegularPotions.First(x => x.Name.Equals(potionSpec.Name, StringComparison.InvariantCultureIgnoreCase));
-            return new Potion
+            var potionConfigSpec = _potionConfiguration.RegularPotions.FirstOrDefault(x => x.Name.Equals(potionSpec.Name, StringComparison.InvariantCultureIgnoreCase));
+
+            if (potionConfigSpec != null)
             {
-                Name = potionConfigSpec.Name,
-                Effect = potionConfigSpec.Effect,
-                Cost = potionConfigSpec.Cost,
-                Rarity = potionConfigSpec.Rarity
-            };
+                return new Potion
+                {
+                    Name = potionConfigSpec.Name,
+                    Effect = potionConfigSpec.Effect,
+                    Cost = potionConfigSpec.Cost,
+                    Rarity = potionConfigSpec.Rarity
+                };
+            }
+            
+            return null;
         }
 
     }

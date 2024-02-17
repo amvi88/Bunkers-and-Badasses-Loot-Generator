@@ -6,36 +6,33 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class GunsController : ControllerBase
+    public class GrenadeModsController : ControllerBase
     {
-        private readonly IGunService _gunService;
+        private readonly IGrenadeModService _grenadeModService;
         private readonly IGuildService _guildService;
 
-        public GunsController(IGunService gunService, IGuildService guildService)
+        public GrenadeModsController(IGrenadeModService grenadeModService, IGuildService guildService)
         {
-            _gunService = gunService ?? throw new ArgumentNullException(nameof(gunService));
+            _grenadeModService = grenadeModService ?? throw new ArgumentNullException(nameof(grenadeModService));
             _guildService = guildService ?? throw new ArgumentNullException(nameof(guildService));
         }
 
         [HttpPost]
-        public IActionResult CreateGun(GunRandomizerFactoryParameters randomizerFactoryParameters)
+        public IActionResult CreateGrenadeMod(GrenadeModFactoryParameters randomizerFactoryParameters)
         {
             if (randomizerFactoryParameters is null)
             {
                 throw new ArgumentNullException(nameof(randomizerFactoryParameters));
             }
 
-            var guilds = randomizerFactoryParameters.GunType == null
-                ? _guildService.GetGuildsThatProduce(Models.Common.ItemType.Gun)
-                : _guildService.GetGuildsThatProduceGunType(randomizerFactoryParameters.GunType);
+            var guilds = _guildService.GetGuildsThatProduce(Models.Common.ItemType.Grenade);
 
             if (!string.IsNullOrWhiteSpace(randomizerFactoryParameters.Guild) && !guilds.Any(g => randomizerFactoryParameters.Guild.Equals(g.Name) || randomizerFactoryParameters.Guild.Equals(g.AlternameName)))
             {
                 return new BadRequestObjectResult($"The guild {randomizerFactoryParameters.Guild} does not know how to build this.");
             }
 
-            var guns = Enumerable.Range(0, randomizerFactoryParameters.BatchSize).Select(i => _gunService.RandomizeGun(randomizerFactoryParameters).Item);
-            return new OkObjectResult(guns);
+            return new OkObjectResult(_grenadeModService.RandomizeGrenadeMod(randomizerFactoryParameters).Item);
         }
     }
 }

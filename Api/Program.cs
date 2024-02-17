@@ -1,9 +1,11 @@
 
 using Business.Factories;
 using Business.Services;
+using Microsoft.AspNetCore.RateLimiting;
 using Models.Builder;
 using Models.Config;
 using Newtonsoft.Json.Converters;
+using System.Threading.RateLimiting;
 
 namespace Api
 {
@@ -80,6 +82,18 @@ namespace Api
             builder.Services.AddTransient<IMoxxTailService, MoxxTailService>();
             builder.Services.AddSingleton<IWeaponCustomizationService, WeaponCustomizationService>();
 
+            builder.Services.AddRateLimiter(options => 
+            {
+                options.RejectionStatusCode = 429;
+                options.AddFixedWindowLimiter(policyName: "fixed", options => {
+                    options.PermitLimit = 20;
+                    options.Window = TimeSpan.FromSeconds(10);
+                    options.AutoReplenishment = true;
+                    options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+                    options.QueueLimit = 2;
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -89,13 +103,10 @@ namespace Api
                 app.UseSwaggerUI();
             }
 
+            app.UseRateLimiter();
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }
