@@ -1,0 +1,167 @@
+{
+    "ChestConfiguration":
+    {
+        "EnemyDrops":
+        [
+            [
+                {
+                    "Roll":1 ,
+                    "Gold": 10
+                },
+                {
+                    "Roll":2,
+                    "PotionSpecs":[
+                        {
+                            "Name": "Health Potion (Common)"
+                        }
+                    ]
+                },
+                {
+                    "Roll":3,
+                    "PotionSpecs":[
+                        {
+                            "Name": "Shield Potion (Common)"
+                        }
+                    ]
+                },
+                {
+                    "Roll":4,
+                    "AmountOfGrenades": 1
+                }
+            ],
+            [
+                {
+                    "Roll":1 ,
+                    "Gold": 30
+                },
+                {
+                    "Roll":2,
+                    "PotionSpecs":[
+                        {
+                            "Name": "Health Potion (Uncommon)"
+                        }
+                    ]
+                },
+                {
+                    "Roll":3,
+                    "PotionSpecs":[
+                        {
+                            "Name": "Shield Potion (Common)"
+                        }
+                    ]
+                },
+                {
+                    "Roll":4,
+                    "AmountOfGrenades": 2
+                }
+            ],
+            [
+                {
+                    "Roll":1 ,
+                    "PotionSpecs":[
+                        {
+                            "Name": "Health Potion (Epic)"
+                        }
+                    ]
+                },
+                {
+                    "Roll":2,
+                    "PotionSpecs":[
+                        {
+                            "Name": "Shield Potion (Epic)"
+                        }
+                    ]
+                },
+                {
+                    "Roll":3,
+                    "PotionSpecs":[
+                        {
+                            "IsRandomPotion": true
+                        }
+                    ]
+                },
+                {
+                    "Roll":4,
+                    "AmountOfGrenades": 3
+                }
+            ],
+            [
+                {
+                    "Roll":1 ,
+                    "PotionSpecs":[
+                        {
+                            "IsRandomPotion": true
+                        },
+                        {
+                            "IsRandomPotion": true
+                        }
+                    ]
+                },
+                {
+                    "Roll":2,
+                    "AmountOfGrenadeMods":1
+                },
+                {
+                    "Roll":3,
+                    "AmountOfShieldMods":1
+                },
+                {
+                    "Roll":4,
+                    "WeaponSpecs": [
+                        {}
+                    ]
+                }
+            ],
+            [
+                {
+                    "Roll":1 ,
+                    "AmountOfGrenadeMods":1
+                },
+                {
+                    "Roll":2,
+                    "AmountOfShieldMods":1
+                },
+                {
+                    "Roll":3,
+                    "RelicSpecs":[
+                        {
+                            "Rarity":"Common"
+                        }
+                    ]
+                },
+                {
+                    "Roll":4,
+                    "WeaponSpecs": [
+                        {}
+                    ]
+                }
+            ],
+            [
+                {
+                    "Roll":1 ,
+                    "AmountOfGrenadeMods":1
+                },
+                {
+                    "Roll":2,
+                    "RelicSpecs":[
+                        {
+                            "Rarity":"Uncommon"
+                        }
+                    ]
+                },
+                {
+                    "Roll":3,
+                    "WeaponSpecs": [
+                        {}
+                    ]
+                },
+                {
+                    "Roll":4,
+                    "WeaponSpecs": [
+                        {}
+                    ]
+                }
+            ]    
+        ]
+    }
+}

@@ -27,7 +27,7 @@ namespace Business.Factories
             if (! string.IsNullOrWhiteSpace(guildName))
             {
                 roll = 0;
-                return guildsThatProduceItemType.First(x => x.Name.Equals(guildName, StringComparison.InvariantCultureIgnoreCase));
+                return guildsThatProduceItemType.First(x => x.Name.Equals(guildName, StringComparison.InvariantCultureIgnoreCase) || x.AlternateName.Equals(guildName, StringComparison.InvariantCultureIgnoreCase));
             }
 
             roll = RandomNumberGenerator.GetInt32(0, guildsThatProduceItemType.Count());
@@ -42,7 +42,7 @@ namespace Business.Factories
             if (! string.IsNullOrWhiteSpace(guildName))
             {
                 roll = 0;
-                return guildsThatProduceItemType.First(x => x.Name.Equals(guildName, StringComparison.InvariantCultureIgnoreCase));
+                return guildsThatProduceItemType.First(x => x.Name.Equals(guildName, StringComparison.InvariantCultureIgnoreCase) || x.AlternateName.Equals(guildName, StringComparison.InvariantCultureIgnoreCase));
             }
 
             roll = RandomNumberGenerator.GetInt32(0, guildsThatProduceItemType.Count());

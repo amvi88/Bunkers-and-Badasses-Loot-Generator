@@ -9,7 +9,7 @@ namespace Models.Builder
         [Range(1, 30)]
         public int PlayerLevel {get; set;} = 1;
 
-        public string Guild {get; set;}
+        public string Guild { get; set; } = string.Empty;
 
         public Rarity? Rarity {get; set;}
 
@@ -21,8 +21,9 @@ namespace Models.Builder
 
         public bool AllowRedTexts {get; set; }
 
-        public bool BatchMode {get; set;}
+        public bool BatchMode { get; set; } = false;
 
+        [Range(1,100)]
         public int BatchSize {get; set;} = 1;
     }
 }

@@ -1,0 +1,169 @@
+{
+    "TraumasConfiguration": {
+        "Temporary": [
+            {
+                "Name": "Bad Luck",
+                "Effect": "The BREW-U malfunctions, roll on the Permanent table.",
+                "RerollAsPermanent": true
+            },
+            {
+                "Name": "Immersive",
+                "Effect": "Must do a silly character voice, if you ever forget take 1d6 damage."
+            },
+            {
+                "Name": "Unloaded",
+                "Effect": "A random equipped gun doesn't spawn with you. You will see it for sale at the next shop you find."
+            },
+            {
+                "Name": "Refractory",
+                "Effect": "every time you roll a natural 20 on an Attack roll, fall asleep for the the next turn."
+            },
+            {
+                "Name": "No Boom",
+                "Effect": "Current grenades is set to 0."
+            },
+            {
+                "Name": "Stumbling",
+                "Effect": "-1 on Talk Checks for the day."
+            },
+            {
+                "Name": "Pistol Perplexion",
+                "Effect": "Your vault Hunter is unable to tell the difference between gun and food."
+            },
+            {
+                "Name": "Health Drain",
+                "Effect": "-5 max Health for the day."
+            },
+            {
+                "Name": "Power Drain",
+                "Effect": "-10 max Shields for the day."
+            },
+            {
+                "Name": "Punch drunk",
+                "Effect": "You must punch every non-combatant NPC you Meet."
+            },
+            {
+                "Name": "Impatient",
+                "Effect": "-1 on Search and Sneak Checks for the day."
+            },
+            {
+                "Name": "Wellllllll Hello There",
+                "Effect": "You Must flirt with every NPC you Meet. Including Bosses."
+            },
+            {
+                "Name": "Catch-a-Phrase",
+                "Effect": "Your vault Hunter is now desperate to popularise a stupid catchphrase they've just come up with."
+            },
+            {
+                "Name": "Four Hundred and Four",
+                "Effect": "One of your non-current guns does not spawn."
+            },
+            {
+                "Name": "Your Hands Are Guns",
+                "Effect": "Your currently equipped gun fuses into the bones of your hands. You no longer have fingers, or the ability to grab things."
+            },
+            {
+                "Name": "You Had Me At Initiative",
+                "Effect": "Your vault Hunter is now unrequitedly in love with another player’s vault Hunter. At the end of the day, you Must dramatically reveal your true feelings."
+            },
+            {
+                "Name": "Brain Freeze",
+                "Effect": "-1 on Insight and Interact Checks for the day."
+            },
+            {
+                "Name": "The Best Policy",
+                "Effect": "Your vault Hunter is now incapable of lying for the rest of the day."
+            },
+            {
+                "Name": "Minor Issue",
+                "Effect": "Your Vault Hunter is now four years old. All their stats are the same, but they look and speak like a four year old."
+            },
+            {
+                "Name": "You Are Claptrap",
+                "Effect": "A bolt of lightning strikes you and turns you into a claptrap unit. All of your stats are reduced by 2. and you have to speak in an annoying voice until the end of the day."
+            }
+        ],
+        "Permanent": [
+            {
+                "Name": "Bad Reputation",
+                "Effect": "Word of now you fell in battle gets around. There’s a 25% chance that any NPC you Meet will nave heard the embarrassing story of how you got beaten up, and will respect you less for it."
+            },
+            {
+                "Name": "How2EngLish?",
+                "Effect": "You forget 10% of your vocabulary. -1 on Talk Checks."
+            },
+            {
+                "Name": "I Had a bad Experience",
+                "Effect": "You become terrified of the particular type of enemy who defeated you. In al future combats with this particular enemy type, take -1 to all Accuracy Rolls"
+            },
+            {
+                "Name": "Trinket",
+                "Effect": "Loss of sentimental item. Probably something important lo the campaign. --Least Favorite"
+            },
+            {
+                "Name":"Least Favorite",
+                "Effect": "Other players must determine your least favourite food/music/film/book/whatever. That is now your vault Hunter’s Favorite Thing in the world, and they will bring it Up anytime they can elegantly do so."
+            },
+            {
+                "Name": "Scar Tissue",
+                "Effect": "Generates a horrific scar in the location where you took Damage. 25% chance to be recognized when entering a town."
+            },
+            {
+                "Name": "Touchy Feely",
+                "Effect": "You have the insatiable urge to touch everything you including things you probably shouldn't. -1 on Interact Checks."
+            },
+            {
+                "Name": "Cool Eyepatch",
+                "Effect": "Your character loses an eye and has to wear a badass eyepatch over the socket you get -2. to search checks, but a +3 to interact checks."
+            },
+            {
+                "Name": "Love and Loss",
+                "Effect": "Your character is nursed back to health by an adorable, friendly animal of the BM's choosing. The BM must then work the cute animal into the story, and then somehow tragically remove them within the next two sessions."
+            },
+            {
+                "Name": "Synapse Oops",
+                "Effect": "Brain farts are now a medical condition you have. -1 on Insight Checks."
+            },
+            {
+                "Name": "Your Dad is Disappointed in You",
+                "Effect": "Your dad hears about how you died. He is disappointed in you. Your mom is still proud of you, though."
+            },
+            {
+                "Name": "Wilful Ignorance",
+                "Effect": "Your vault Hunter refuses to believe they fell in battle and assumes everyone is misremembering the event."
+            },
+            {
+                "Name": "Riverdance",
+                "Effect": "Metal clogs get stuck on your feet. -1 on Sneak Checks."
+            },
+            {
+                "Name": "Family Vengeance",
+                "Effect": "Add \"Jr.\" to your character's name. You are now your own child, avenging the death of your parent."
+            },
+            {
+                "Name": "Crybaby",
+                "Effect": "Death hurts a lot, and your vault Hunter cries when they think about it."
+            },
+            {
+                "Name": "No Ships, Sherlock",
+                "Effect": "Your trusty sleuthing cap got rakk poop on it. -1 on Search Checks."
+            },
+            {
+                "Name": "Fart Fartington",
+                "Effect": "Your Vault Hunter's name is now Fart Fartington. This can never be changed. If the vault Hunters name is already Fart Fartington, \"Fart Fartington\" becomes their new nickname. Their name would now be Fart \"Fart Fartington\" Fartington."
+            },
+            {
+                "Name": "18/20",
+                "Effect": "Your depth perception got pretty deep. -1 on Traverse Checks."
+            },
+            {
+                "Name": "Unsteady Hands",
+                "Effect": "whenever you Swap guns, roll a d20. on a 1, the gun flies out of your hands and lands 2 squares away."
+            },
+            {
+                "Name": "Godkiller",
+                "Effect": "Your Vault Hunter blames the one TRULY responsible for their death: You. Your Vault Hunter now has a personal vendetta against you. The BM will insert you into the story somewhere and your Vault Hunter will do whatever is necessary to hunt you down and say some very harsh words."
+            }
+        ]
+    }
+}

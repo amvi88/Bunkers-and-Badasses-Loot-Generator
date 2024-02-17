@@ -1,0 +1,880 @@
+{
+  "WeaponArchetypes": {
+    "Archetypes": [
+      {
+        "GunType": "CombatRifle",
+        "Names": [
+          "Carbine",
+          "Defender",
+          "Grenadier",
+          "Minigun",
+          "Blaster",
+          "Rifle",
+          "Scarab",
+          "Cannon",
+          "Gatling Gun",
+          "Root",
+          "Lance",
+          "Torpedo",
+          "Spitter",
+          "Renegade",
+          "Guerilla",
+          "Rocketeer",
+          "Spinigun",
+          "Bezoomy",
+          "Blister",
+          "BizZurker",
+          "Burzum",
+          "Caracal",
+          "Carbine",
+          "Clipper",
+          "Flogger",
+          "Jaguar",
+          "Maslo",
+          "Mngwa",
+          "N-System",
+          "Oddy-knocky",
+          "Polisher",
+          "Purferater",
+          "Puma",
+          "Q-System",
+          "Ratatater",
+          "Repeater",
+          "Shlaga",
+          "Stranger",
+          "V-System",
+          "Wizzperer"
+        ],
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d6",
+            "Range": 6,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 3,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 3,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "1d8",
+            "Range": 6,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 3,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d8",
+            "Range": 6,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 2
+              }
+            ]
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d6",
+            "Range": 6,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 3,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d10",
+            "Range": 6,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "GunType": "Pistol",
+        "Names": [
+          "Over-Drive",
+          "Repeater",
+          "Anaconda",
+          "Peacemaker",
+          "Magnum",
+          "Negotiator",
+          "Apparatus",
+          "Factualizer",
+          "Attitude",
+          "Devigorator",
+          "Expeditious",
+          "Vision",
+          "Leverage",
+          "Impact",
+          "Synergy",
+          "Revolver",
+          "Wheelgun",
+          "Longarm Iron",
+          "Widow Maker",
+          "Pepperbox",
+          "Aegis",
+          "Phobia",
+          "Torment",
+          "Animosity",
+          "Umbrage",
+          "Aimshot",
+          "Power Shot",
+          "Biggun",
+          "Quickshot",
+          "Cannon",
+          "Hole Puncher",
+          "Rod",
+          "Slapper",
+          "Injector",
+          "TMP",
+          "Assassin",
+          "Fighter",
+          "Troublemaker",
+          "Anarchist"
+        ],
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "2d4",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 3,
+                "Crits": 0
+              }
+            ]
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "1d6",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 3,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "2d6",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d8",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 2
+              }
+            ]
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "2d8",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "GunType": "SubmachineGun",
+        "Names": [
+          "Anarchy",
+          "Bruiser",
+          "SMG",
+          "Stinger",
+          "Thumper",
+          "Tsunami"
+        ],
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d4",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 3,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 5,
+                "Crits": 0
+              }
+            ]
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d4",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 4,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 5,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d6",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 3,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 5,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d6",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 4,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d10",
+            "Range": 5,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 2,
+                "Crits": 2
+              },
+              {
+                "Label": "8-15",
+                "Hits": 3,
+                "Crits": 2
+              },
+              {
+                "Label": "16+",
+                "Hits": 5,
+                "Crits": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "GunType": "Shotgun",
+        "Bonus": "If Range 2 or Less +2 DMG",
+        "Names": [
+          "Carnage",
+          "Matador",
+          "Scattergun",
+          "Shredder",
+          "Thinking",
+          "Projectile Diversification",
+          "Face Time",
+          "Crowdsourcing",
+          "Development",
+          "Longrider",
+          "Scattergun",
+          "Coach Gun",
+          "Bushwack",
+          "Quad",
+          "Sportsman",
+          "Home Security",
+          "Double Barrels!",
+          "Triple Barrels!",
+          "Shotgun Supreme!",
+          "Stalker",
+          "Bangstick",
+          "Pounder",
+          "Hulk",
+          "Ravager"
+        ],
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d8",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d8",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d8",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 2
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 2
+              }
+            ]
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d10",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d12",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "8-15",
+                "Hits": 2,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "GunType": "SniperRifle",
+        "Bonus": "If Range 3+:  +3 ACC",
+        "Names": [
+          "Gamble",
+          "Hawkeye",
+          "Lance",
+          "Wrath",
+          "Sniper",
+          "Thunder",
+          "Power",
+          "Elephant Gun",
+          "Nailer",
+          "Edge",
+          "Rider"
+        ],
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d10",
+            "Range": 8,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 0,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "1d12",
+            "Range": 8,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 0,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d10",
+            "Range": 8,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 2
+              }
+            ]
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d10",
+            "Range": 8,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 2
+              }
+            ]
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d12",
+            "Range": 8,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 2
+              }
+            ]
+          }
+        ]
+      },      
+      {
+        "GunType": "RocketLauncher",
+        "Bonus": "Splash",
+        "Names": [
+          "Area efect",
+          "Bazooka",
+          "Blaaa",
+          "Bombabarbardeer",
+          "Boom",
+          "Deee!",
+          "Dispatch",
+          "Duuurp!",
+          "Glory",
+          "Hero",
+          "Launcher",
+          "Panorama",
+          "Projectile",
+          "Prowler",
+          "Punishment",
+          "RPG",
+          "Spread",
+          "Vanquisher",
+          "Zooka!"
+        ],
+        "WeaponSpecs": [
+          {
+            "MinLevel": 1,
+            "MaxLevel": 6,
+            "Damage": "1d12",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 7,
+            "MaxLevel": 12,
+            "Damage": "2d10",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 13,
+            "MaxLevel": 18,
+            "Damage": "1d12",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 1,
+                "Crits": 2
+              }
+            ]
+          },
+          {
+            "MinLevel": 19,
+            "MaxLevel": 24,
+            "Damage": "2d12",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 0
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 1
+              }
+            ]
+          },
+          {
+            "MinLevel": 25,
+            "MaxLevel": 30,
+            "Damage": "1d20",
+            "Range": 4,
+            "HitsByAccuracy": [
+              {
+                "Label": "2-7",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "8-15",
+                "Hits": 1,
+                "Crits": 1
+              },
+              {
+                "Label": "16+",
+                "Hits": 2,
+                "Crits": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

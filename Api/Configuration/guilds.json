@@ -1,0 +1,1268 @@
+{
+    "GuildConfiguration": {
+        "Guilds": [
+            {
+                "Name": "Ashen",
+                "AlternateName":"Anshin",
+                "SupportedItemTypes": "Grenade, Shield",
+                "GrenadeSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Gains health equal to damage done",
+                        "Damage": "1d8",
+                        "GrenadeType": "Transfusion"
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Automatically hits closest target",
+                        "Damage": "2d8",
+                        "GrenadeType": "Homing"
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Gains health equal to damage done",
+                        "Damage": "3d8",
+                        "GrenadeType": "Transfusion"
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Automatically hits closest target",
+                        "Damage": "4d8",
+                        "GrenadeType": "Homing"
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Gains health equal to damage done",
+                        "Damage": "5d8",
+                        "GrenadeType": "Transfusion"
+                    }
+                ],
+                "ShieldSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Fast Recharge Rate",
+                        "Capacity": 30,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Fast Recharge Rate",
+                        "Capacity": 55,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Fast Recharge Rate",
+                        "Capacity": 70,
+                        "RechargeRate": 25
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Gain +10 Health and +3 Melee Damage when equipped",
+                        "Capacity": 70,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Gain +30 max Health and +10 Health Regen when equipped",
+                        "Capacity": 60,
+                        "RechargeRate": 10
+                    }
+                ],
+                "WeaponSpecs": []
+            },
+            {
+                "Name": "Alas!",
+                "AlternateName":"Atlas",
+                "SupportedItemTypes": "Gun, Shield",
+                "SupportedGunTypes": "CombatRifle, Pistol, Shotgun, SniperRifle",
+                "GrenadeSpecs": [],
+                "ShieldSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "1d4 Shock Resistance",
+                        "Capacity": 30,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "1d6 Shock Resistance",
+                        "Capacity": 55,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "1d10 Shock Resistance",
+                        "Capacity": 70,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Roll %s for each incoming attack. On a 60%+ take half damage",
+                        "Capacity": 60,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Roll %s for each incoming attack. On a 70%+ take no damage",
+                        "Capacity": 0,
+                        "RechargeRate": 0
+                    }
+                ],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": false,
+                        "Bonus": "+1 DMG Mod",
+                        "Effect": "Increased Damage"
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": false,
+                        "Bonus": "+2 DMG Mod",
+                        "Effect": "Increased Damage"
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": false,
+                        "Bonus": "+3 DMG Mod",
+                        "Effect": "Increased Damage"
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": false,
+                        "Bonus": "+3 DMG Mod",
+                        "Effect": "Increased Damage"
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": false,
+                        "Bonus": "+4 DMG Mod",
+                        "Effect": "Increased Damage"
+                    }
+                ]
+            },
+            {
+                "Name": "Skuldugger",
+                "AlternateName":"COV",
+                "SupportedItemTypes": "Gun",
+                "SupportedGunTypes": "Pistol, SubmachineGun, Shotgun, SniperRifle",
+                "GrenadeSpecs": [],
+                "ShieldSpecs": [],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": false,
+                        "Bonus": "+2 DMG Mod, Overheat 1d4",
+                        "Effect": "Increased Damage. When taking a Reload Action, roll the dice value and take the result as Incendiary Damage"
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": false,
+                        "Bonus": "+3 DMG Mod, Overheat 1d6",
+                        "Effect": "Increased Damage. When taking a Reload Action, roll the dice value and take the result as Incendiary Damage"
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": false,
+                        "Bonus": "+4 DMG Mod, Overheat 1d8",
+                        "Effect": "Increased Damage. When taking a Reload Action, roll the dice value and take the result as Incendiary Damage"
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": false,
+                        "Bonus": "+5 DMG Mod, Overheat 1d10",
+                        "Effect": "Increased Damage. When taking a Reload Action, roll the dice value and take the result as Incendiary Damage"
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": false,
+                        "Bonus": "+6 DMG Mod, Overheat 1d12",
+                        "Effect": "Increased Damage. When taking a Reload Action, roll the dice value and take the result as Incendiary Damage"
+                    }
+                ]
+            },
+            {
+                "Name": "Dahlia",
+                "AlternateName":"Dahl",
+                "SupportedItemTypes": "Gun, Grenade, Shield",
+                "SupportedGunTypes": "CombatRifle, Pistol, SubmachineGun, Shotgun, SniperRifle",
+                "GrenadeSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Recharges shields equal to damage done",
+                        "Damage": "1d8",
+                        "GrenadeType": "Generator"
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Detonates on target square for 2 turns",
+                        "Damage": "2d8",
+                        "GrenadeType": "Bouncing Beetle"
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Recharges shields equal to damage done",
+                        "Damage": "3d8",
+                        "GrenadeType": "Generator"
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Detonates on target square for 2 turns",
+                        "Damage": "4d8",
+                        "GrenadeType": "Bouncing Beetle"
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Recharges shields equal to damage done",
+                        "Damage": "5d8",
+                        "GrenadeType": "Generator"
+                    }
+                ],
+                "ShieldSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "1d4 Corrosive Resistance",
+                        "Capacity": 30,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "1d6 Corrosive Resistance",
+                        "Capacity": 55,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "1d10 Corrosive Resistance",
+                        "Capacity": 75,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "When depleted during an encounter, drops 20 gold",
+                        "Capacity": 60,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "When depleted drops 3 grenades into adjacent squares that deal 3d6 Shock damage",
+                        "Capacity": 80,
+                        "RechargeRate": 15
+                    }
+                ],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": true,
+                        "Bonus": "Burst: +1 Hit",
+                        "Effect": "Burst adds an additional hit to each attack, increased accuracy"
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": true,
+                        "Bonus": "Burst: +1 Hit, +1 ACC Mod",
+                        "Effect": "Burst adds an additional hit to each attack, increased accuracy"
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": true,
+                        "Bonus": "Burst: +1 Hit, +2 ACC Mod",
+                        "Effect": "Burst adds an additional hit to each attack, increased accuracy"
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": true,
+                        "Bonus": "Burst: +1 Hit, +3 ACC Mod",
+                        "Effect": "Burst adds an additional hit to each attack, increased accuracy"
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": true,
+                        "Bonus": "Burst: +1 Hit, +4 ACC Mod",
+                        "Effect": "Burst adds an additional hit to each attack, increased accuracy"
+                    }
+                ]
+            },
+            {
+                "Name": "Blackpowder",
+                "AlternateName":"Jakobs",
+                "SupportedItemTypes": "Gun",
+                "SupportedGunTypes": "Pistol, Shotgun, SniperRifle",
+                "GrenadeSpecs": [],
+                "ShieldSpecs": [],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": false,
+                        "Bonus": "+2 ACC Mod, +2 Crit Damage",
+                        "Effect": "Increased Accuracy. Highly increased Crit Damage"
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": false,
+                        "Bonus": "+2 ACC Mod, +3 Crit Damage",
+                        "Effect": "Increased Accuracy. Highly increased Crit Damage"
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": false,
+                        "Bonus": "+2 ACC Mod, +4 Crit Damage",
+                        "Effect": "Increased Accuracy. Highly increased Crit Damage"
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": false,
+                        "Bonus": "+2 ACC Mod, +5 Crit Damage",
+                        "Effect": "Increased Accuracy. Highly increased Crit Damage"
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": false,
+                        "Bonus": "+2 ACC Mod, +6 Crit Damage",
+                        "Effect": "Increased Accuracy. Highly increased Crit Damage"
+                    }
+                ]
+            },
+            {
+                "Name": "Malefactor",
+                "AlternateName":"Maliwan",
+                "SupportedItemTypes": "Gun, Grenade, Shield",
+                "SupportedGunTypes": "Pistol, SubmachineGun, SniperRifle, RocketLauncher",
+                "GrenadeSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Gains Elemental type",
+                        "Damage": "1d8",
+                        "GrenadeType": "Elemental",
+                        "IsElemental": true
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Detonates on contact with target",
+                        "Damage": "2d8",
+                        "GrenadeType": "Contact"
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Gains Elemental type",
+                        "Damage": "3d8",
+                        "GrenadeType": "Elemental",
+                        "IsElemental": true
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Detonates on contact with target",
+                        "Damage": "4d8",
+                        "GrenadeType": "Contact"
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Gains Elemental type",
+                        "Damage": "5d8",
+                        "GrenadeType": "Elemental",
+                        "IsElemental": true
+                    }
+                ],
+                "ShieldSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "When depleted 1d6 Shock damage to adjacent targets",
+                        "Capacity": 30,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "When depleted 2d6 Shock damage to adjacent targets",
+                        "Capacity": 50,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "When depleted 3d6 Shock damage to adjacent targets",
+                        "Capacity": 70,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "When depleted pulls targets up to 3 squares away then deals 4d6 Shock damage to adjacent targets",
+                        "Capacity": 70,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Deals 2d6 Incendiary Damage to adjacent targets each turn while depleted",
+                        "Capacity": 80,
+                        "RechargeRate": 15
+                    }
+                ],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": true,
+                        "Bonus": "Element Roll. -2 DMG Mod",
+                        "IncreasedElementalRollPercentage": 0,
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": true,
+                        "Bonus": "Element Roll. -1 DMG Mod",
+                        "IncreasedElementalRollPercentage": 0,
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": true,
+                        "Bonus": "+10 Element Roll",
+                        "IncreasedElementalRollPercentage": 10,
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": true,
+                        "Bonus": "+15 Element Roll",
+                        "IncreasedElementalRollPercentage": 15,
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": true,
+                        "Bonus": "+20 Element Roll",
+                        "IncreasedElementalRollPercentage": 20,
+                        "Effect": "Rolls for elemental damage. Reduced Elemental Damage at lower Rarities",
+                        "MustBeElemental": true
+                    }
+                ]
+            },
+            {
+                "Name": "Pangoblin",
+                "AlternateName":"Pangolin",
+                "SupportedItemTypes": "Shield, Grenade",
+                "GrenadeSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Bounces off surfaces explodes on contact with any target",
+                        "Damage": "1d8",
+                        "GrenadeType": "Rubberized"
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Targets hit are knocked back 1 square",
+                        "Damage": "2d8",
+                        "GrenadeType": "Force"
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Bounces off surfaces explodes on contact with any target",
+                        "Damage": "3d8",
+                        "GrenadeType": "Rubberized"
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Targets hit are knocked back 1 square",
+                        "Damage": "4d8",
+                        "GrenadeType": "Force"
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Bounces off surfaces explodes on contact with any target",
+                        "Damage": "5d8",
+                        "GrenadeType": "Rubberized"
+                    }
+                ],
+                "ShieldSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "High Capacity",
+                        "Capacity": 40,
+                        "RechargeRate": 5
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "High Capacity",
+                        "Capacity": 60,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "High Capacity",
+                        "Capacity": 80,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Reduce movement to 2 squares unless depleted",
+                        "Capacity": 100,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Gain +4 DMG Mod to Ranged Attacks while not depleted",
+                        "Capacity": 60,
+                        "RechargeRate": 10
+                    }
+                ],
+                "WeaponSpecs": []
+            },
+            {
+                "Name": "Hyperius",
+                "AlternateName":"Hyperion",
+                "SupportedItemTypes": "Gun, Grenade",
+                "SupportedGunTypes": "CombatRifle, Pistol, SubmachineGun, Shotgun, SniperRifle, RocketLauncher",
+                "GrenadeSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Teleports to target and ignores cover",
+                        "Damage": "1d8",
+                        "GrenadeType": "Longbow"
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Increased Damage",
+                        "Damage": "2d10",
+                        "GrenadeType": "Roider"
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Teleports to target and ignores cover",
+                        "Damage": "3d8",
+                        "GrenadeType": "Longbow"
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Increased Damage",
+                        "Damage": "4d10",
+                        "GrenadeType": "Roider"
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Teleports to target and ignores cover",
+                        "Damage": "5d8",
+                        "GrenadeType": "Longbow"
+                    }
+                ],
+                "ShieldSpecs": [],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": true,
+                        "Bonus": "+1 ACC Mod. -2 DMG Mod",
+                        "Effect": "Increased Accuracy. Reduced Overall Damage"
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": true,
+                        "Bonus": "+2 ACC Mod. -2 DMG Mod",
+                        "Effect": "Increased Accuracy. Reduced Overall Damage"
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": true,
+                        "Bonus": "+3 ACC Mod. -2 DMG Mod",
+                        "Effect": "Increased Accuracy. Reduced Overall Damage"
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": true,
+                        "Bonus": "+4 ACC Mod. -2 DMG Mod",
+                        "Effect": "Increased Accuracy. Reduced Overall Damage"
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": true,
+                        "Bonus": "+5 ACC Mod. -2 DMG Mod",
+                        "Effect": "Increased Accuracy. Reduced Overall Damage"
+                    }
+                ]
+            },
+            {
+                "Name": "Feriore",
+                "AlternateName":"Tediore",
+                "SupportedItemTypes": "Gun, Shield, Grenade",
+                "SupportedGunTypes": "CombatRifle, Pistol, SubmachineGun, Shotgun",
+                "GrenadeSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Detonates, the jumps 2 squares and detonates again",
+                        "Damage": "1d8",
+                        "GrenadeType": "Jumping"
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Sticks to surfaces detonates after 1 turn",
+                        "Damage": "2d8",
+                        "GrenadeType": "Sticky"
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Detonates, the jumps 2 squares and detonates again",
+                        "Damage": "3d8",
+                        "GrenadeType": "Jumping"
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Sticks to surfaces detonates after 1 turn",
+                        "Damage": "4d8",
+                        "GrenadeType": "Sticky"
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Detonates, the jumps 2 squares and detonates again",
+                        "Damage": "5d8",
+                        "GrenadeType": "Jumping"
+                    }
+                ],
+                "ShieldSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "1d4 Health Regen per recharge",
+                        "Capacity": 30,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "1d6 Health Regen per recharge",
+                        "Capacity": 50,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "1d8 Health Regen per recharge",
+                        "Capacity": 70,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Recharge 5 shield at the start of each turn",
+                        "Capacity": 70,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "When depleted, toss like a grenade, dealing 3d8 damage then returning",
+                        "Capacity": 60,
+                        "RechargeRate": 20
+                    }
+                ],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": true,
+                        "Bonus": "Swap/Reload 1d4 Grenade Damage. -3 ACC Mod",
+                        "Effect": "Swap/Reload : When taking a Swap Gun or Reload Action, the gun is thrown and deals damage like a grenade"
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": true,
+                        "Bonus": "Swap/Reload 1d6 Grenade Damage. -3 ACC Mod",
+                        "Effect": "Swap/Reload : When taking a Swap Gun or Reload Action, the gun is thrown and deals damage like a grenade"
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": true,
+                        "Bonus": "Swap/Reload 1d8 Grenade Damage. -2 ACC Mod",
+                        "Effect": "Swap/Reload : When taking a Swap Gun or Reload Action, the gun is thrown and deals damage like a grenade"
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": true,
+                        "Bonus": "Swap/Reload 1d10 Grenade Damage. -2 ACC Mod",
+                        "Effect": "Swap/Reload : When taking a Swap Gun or Reload Action, the gun is thrown and deals damage like a grenade"
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": true,
+                        "Bonus": "Swap/Reload 1d12 Grenade Damage. -1 ACC Mod",
+                        "Effect": "Swap/Reload : When taking a Swap Gun or Reload Action, the gun is thrown and deals damage like a grenade"
+                    }
+                ]
+            },
+            {
+                "Name": "Torgue",
+                "AlternateName":"Torgue",
+                "SupportedItemTypes": "Gun, Shield, Grenade",
+                "SupportedGunTypes": "CombatRifle, Pistol, SubmachineGun, Shotgun, SniperRifle, RocketLauncher",
+                "GrenadeSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Splits into 3 Grenades",
+                        "Damage": "1d8",
+                        "GrenadeType": "Mirv"
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Deals Full Splash Damagev",
+                        "Damage": "2d8",
+                        "GrenadeType": "Splash"
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Splits into 3 Grenades",
+                        "Damage": "3d8",
+                        "GrenadeType": "Mirv"
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Deals Full Splash Damage",
+                        "Damage": "4d8",
+                        "GrenadeType": "Splash"
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Splits into 3 Grenades",
+                        "Damage": "5d8",
+                        "GrenadeType": "Mirv"
+                    }
+                ],
+                "ShieldSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Gain 10 max Health",
+                        "Capacity": 30,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Gain 20 max Health",
+                        "Capacity": 50,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Gain 30 max Health",
+                        "Capacity": 70,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Insults an Enemy as Mr. Torgue each turn, dealing 1d4 Psychic Mockery Damage and taunting the Enemy",
+                        "Capacity": 75,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "When depleted creates a 3x3 square area blast dealing 3d6 Explosive damage and Causing Knockback",
+                        "Capacity": 80,
+                        "RechargeRate": 15
+                    }
+                ],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": true,
+                        "Bonus": "Splash. -4 ACC Mod",
+                        "Effect": "Less accuracy, Splash"
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": true,
+                        "Bonus": "Splash. -3 ACC Mod",
+                        "Effect": "Less accuracy, Splash"
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": true,
+                        "Bonus": "Splash. -2 ACC Mod",
+                        "Effect": "Less accuracy, Splash"
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": true,
+                        "Bonus": "Splash. -1 ACC Mod",
+                        "Effect": "Less accuracy, Splash"
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": true,
+                        "Bonus": "Splash",
+                        "Effect": "Less accuracy, Splash"
+                    }
+                ]
+            },
+            {
+                "Name": "Stoker",
+                "AlternateName":"Vladof",
+                "SupportedItemTypes": "Gun, Shield, Grenade",
+                "SupportedGunTypes": "CombatRifle, Pistol, Shotgun, SniperRifle, RocketLauncher",
+                "GrenadeSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Won't detonate until the target is adjacent",
+                        "Damage": "1d8",
+                        "GrenadeType": "Proximity Mine"
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Launches up and deals Damage downward in a 2x2 square area",
+                        "Damage": "2d8",
+                        "GrenadeType": "Rain"
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Won't detonate until the target is adjacent",
+                        "Damage": "3d8",
+                        "GrenadeType": "Proximity Mine"
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Launches up and deals Damage downward in a 2x2 square area",
+                        "Damage": "4d8",
+                        "GrenadeType": "Rain"
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Won't detonate until the target is adjacent",
+                        "Damage": "5d8",
+                        "GrenadeType": "Proximity Mine"
+                    }
+                ],
+                "ShieldSpecs": [
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "When Depleted 1d6 Incendiary Damage to adjacent targets",
+                        "Capacity": 30,
+                        "RechargeRate": 10
+                    },
+                    {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "When Depleted 2d6 Incendiary Damage to adjacent targets",
+                        "Capacity": 50,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "When Depleted 3d6 Incendiary Damage to adjacent targets",
+                        "Capacity": 70,
+                        "RechargeRate": 20
+                    },
+                    {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Shock Damage recharges the Shield instead of Damaging it",
+                        "Capacity": 70,
+                        "RechargeRate": 15
+                    },
+                    {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Lauches 3 Corrosive spikes at the target if you take 10 or more Damage from an Attack. Each spike deals 1d6 Corrosive Damage",
+                        "Capacity": 80,
+                        "RechargeRate": 15
+                    }
+                ],
+                "WeaponSpecs": [
+                    {
+                        "Rarity": "Common",
+                        "IsElemental": true,
+                        "Bonus": "Extra Attack. -3 ACC Mod",
+                        "Effect": "Less accuracy, gains an Extra Attack Action"
+                    },
+                    {
+                        "Rarity": "Uncommon",
+                        "IsElemental": true,
+                        "Bonus": "Extra Attack. -2 ACC Mod",
+                        "Effect": "Less accuracy, gains an Extra Attack Action"
+                    },
+                    {
+                        "Rarity": "Rare",
+                        "IsElemental": true,
+                        "Bonus": "Extra Attack. -1 ACC Mod",
+                        "Effect": "Less accuracy, gains an Extra Attack Action"
+                    },
+                    {
+                        "Rarity": "Epic",
+                        "IsElemental": true,
+                        "Bonus": "Extra Attack.",
+                        "Effect": "Extra Attack Action"
+                    },
+                    {
+                        "Rarity": "Legendary",
+                        "IsElemental": true,
+                        "Bonus": "Extra Attack, Extra Movement",
+                        "Effect": "Extra Attack Action, Extra Movement Action"
+                    }
+                ]
+            },
+            {
+                "Name": "Conjura",
+                "AlternateName":"Conjura",
+                "SupportedItemTypes": "Spell",
+                "SpellEffectSpecs":[
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "+1 Bonus Damage Per Die"            
+                      },
+                      {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "+2 Bonus Damage Per Die"
+                      },
+                      {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "+3 Bonus Damage Per Die"
+                      },
+                      {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "+4 Bonus Damage Per Die"
+                      },
+                      {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "+5 Bonus Damage Per Die"
+                      }
+                ],
+                "SpellSpecs":[
+                    {
+                        "SpellType" : "ArcTorrent",
+                        "Effect": "Damage Dice become d10’s. Call down a Lightning Bolt, dealing Damage in a target square"
+                    },
+                    {
+                        "SpellType" : "Sigil",
+                        "Effect": "Damages and Slows enemies in a 5x5 area centered on you"
+                    },
+                    {
+                        "SpellType" : "Eruption",
+                        "Effect": "Target Square explodes, dealing damage"
+                    },
+                    {
+                        "SpellType" : "Fireball",
+                        "Effect": "Toss a Fireball that damages enemies and ignores cover in a 3x3 area"
+                    },
+                    {
+                        "SpellType" : "Sunder",
+                        "Effect": "Send out a fissure that damages enemies on the ground"
+                    },
+                    {
+                        "SpellType" : "Talon",
+                        "Effect": "Send out a spectral Wyvern that Damages all enemies in a straight line"
+                    },
+                    {
+                        "SpellType" : "Hydra",
+                        "Effect": "Conjure a Hydra Familiar for 2 Turns"
+                    },
+                    {
+                        "SpellType" : "IceSpike",
+                        "Effect": "Summon a spike of Ice from the ground, damaging enemies. Leaves a 3x3 Cryo Pool for 2 turns that deals spell damage"
+                    },
+                    {
+                        "SpellType" : "Barrage",
+                        "Effect": "Missiles seek enemies and deal damage. Damage Dice become D6’s"
+                    },
+                    {
+                        "SpellType" : "Calamity",
+                        "Effect": "Drop a meteor on Target Square, dealing high damage"
+                    }
+
+                ]
+            },
+            {
+                "Name": "Arken",
+                "AlternateName":"Arken",
+                "SupportedItemTypes": "Spell",
+                "SpellEffectSpecs":[
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 2 Charges, or cast a Charged spell"            
+                      },
+                      {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 3 Charges, or cast a Charged spell"
+                      },
+                      {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 4 Charges, or cast a Charged spell"
+                      },
+                      {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 5 Charges, or cast a Charged spell"
+                      },
+                      {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Each turn, as a Throw Action, you can choose to either spend 1 Grenade Charging the spell, up to 6 Charges, or cast a Charged spell"
+                      }
+                ],
+                "SpellSpecs":[
+                    {
+                        "SpellType" : "ArcTorrent",
+                        "Effect": "Calls down a Bolt that does Damage when cast. Each time you Charge the spell, double the number of Bolts called on cast. Bolts can target the same square"
+                    },
+                    {
+                        "SpellType" : "Sigil",
+                        "Effect": "Allies in a 5x5 area centered on you gain Damage Reduction equal to the spell’s Damage for 1 turn per Charge"
+                    },
+                    {
+                        "SpellType" : "Eruption",
+                        "Effect": "Target Square explodes, dealing damage. Increase the radius of the explosion by 1 for each Charge. (1x1, 3x3, 5x5, 7x7, etc.)"
+                    },
+                    {
+                        "SpellType" : "Fireball",
+                        "Effect": "Pulls in enemies from 2 squares away per Charge before exploding, damaging enemies in a 3x3 area"
+                    },
+                    {
+                        "SpellType" : "Sunder",
+                        "Effect": "Send out a fissure that knocks back enemies and creates a wall that lasts 2 Turns per Charge"
+                    },
+                    {
+                        "SpellType" : "Talon",
+                        "Effect": "Send out a spectral Wyvern that releases two mini-Wyverns that deal half Damage. Each Charge doubles the number of mini-Wyverns released. Each Wyvern can target a different enemy"
+                    },
+                    {
+                        "SpellType" : "Hydra",
+                        "Effect": "Conjure a Hydra Familiar for 2 Turns. Each Charge gives it +1 Attack/Turn."
+                    },
+                    {
+                        "SpellType" : "IceSpike",
+                        "Effect": "Each turn you Charge the Spell, Melee Attackers take 1d8 Cryo Damage. Fires an Ice Spike at one Target when Cast"
+                    },
+                    {
+                        "SpellType" : "Barrage",
+                        "Effect": "Missiles seek enemies and deal damage. Each turn you Charge, gain +2 SPD Mod until your next turn"
+                    },
+                    {
+                        "SpellType" : "Calamity",
+                        "Effect": "Drop a meteor on a Target Square, dealing high damage. When cast, for each charge, pull all non-boss enemies 1sq towards that Target before the meteor hits"
+                    }
+                ]
+            },
+            {
+                "Name": "Wyrdweaver",
+                "AlternateName":"Wyrdweaver",
+                "SupportedItemTypes": "Spell",
+                "SpellEffectSpecs":[
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "You can choose to cast the spell multiple times, up to 1 Echo, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"            
+                      },
+                      {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "You can choose to cast the spell multiple times, up to 2 Echoes, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"
+                      },
+                      {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "You can choose to cast the spell multiple times, up to 3 Echoes, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"
+                      },
+                      {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "You can choose to cast the spell multiple times, up to 4 Echoes, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"
+                      },
+                      {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "You can choose to cast the spell multiple times, up to 5 Echoes, at the cost of 1 total Grenade. Each Echo generates 1 Mayhem"
+                      }
+                ],
+                "SpellSpecs":[
+                    {
+                        "SpellType" : "ArcTorrent",
+                        "Effect": "Calls down a Bolt that does Damage when cast. Each time you Charge the spell, double the number of Bolts called on cast. Bolts can target the same square"
+                    },
+                    {
+                        "SpellType" : "Sigil",
+                        "Effect": "Creates a 5x5 area centered on you that increases DMG Mod and ACC Mod of all allies in the area by +1 until your next Turn. Each Echo grants an additional +1"
+                    },
+                    {
+                        "SpellType" : "Eruption",
+                        "Effect": "Target Square explodes, dealing damage. Each Echo can target a different square"
+                    },
+                    {
+                        "SpellType" : "Fireball",
+                        "Effect": "Explodes and damages enemies in a 3x3 area"
+                    },
+                    {
+                        "SpellType" : "Sunder",
+                        "Effect": "Send out a fissure that explodes each time it Echoes, dealing Splash Damage"
+                    },
+                    {
+                        "SpellType" : "Talon",
+                        "Effect": "Damage Dice becomes d8’s. Release a spectral Wyvern that damages one enemy"
+                    },
+                    {
+                        "SpellType" : "Hydra",
+                        "Effect": "Conjura a Hydra Familiar for 2 Turns. Each Echo increases its duration by 2 Turns"
+                    },
+                    {
+                        "SpellType" : "IceSpike",
+                        "Effect": "Fires an Ice Knife that sticks into enemies until your next Turn. Each knife increases all damage to that Target by +2"
+                    },
+                    {
+                        "SpellType" : "Barrage",
+                        "Effect": "Missiles seek enemies and deal damage"
+                    },
+                    {
+                        "SpellType" : "Calamity",
+                        "Effect": "Change Damage Dice to d8’s. Calls down meteors that deal Damage"
+                    }
+                ]
+            },
+            {
+                "Name": "Miraculum",
+                "AlternateName":"Miraculum",
+                "SupportedItemTypes": "Spell",
+                "SpellEffectSpecs":[
+                    {
+                        "MinLevel": 1,
+                        "MaxLevel": 6,
+                        "Effect": "Creates an effect centered on you that lasts 2 turns"            
+                      },
+                      {
+                        "MinLevel": 7,
+                        "MaxLevel": 12,
+                        "Effect": "Creates an effect centered on you that lasts 3 turns"
+                      },
+                      {
+                        "MinLevel": 13,
+                        "MaxLevel": 18,
+                        "Effect": "Creates an effect centered on you that lasts 4 turns"
+                      },
+                      {
+                        "MinLevel": 19,
+                        "MaxLevel": 24,
+                        "Effect": "Creates an effect centered on you that lasts 5 turns"
+                      },
+                      {
+                        "MinLevel": 25,
+                        "MaxLevel": 30,
+                        "Effect": "Creates an effect centered on you that lasts 6 turns"
+                      }
+                ],
+                "SpellSpecs":[
+                    {
+                        "SpellType" : "ArcTorrent",
+                        "Effect": "Damage Dice become d6’s, but Bolts strike each adjacent enemy each turn. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Sigil",
+                        "Effect": "You and adjacent allies gain +2 SPD Mod and heal Spell’s Damage each turn instead of damaging enemies. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Eruption",
+                        "Effect": "Creates an explosion centered on you each Turn that damages and knocks adjacent enemies back 1 square. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Fireball",
+                        "Effect": "Surround yourself in a wall of fire, dealing damage to all adjacent each turn. Spell follows you and gives +1 DMG Mod for the duration"
+                    },
+                    {
+                        "SpellType" : "Sunder",
+                        "Effect": "Send out a fissure towards the nearest enemy each turn, damaging them and knocking them to the ground"
+                    },
+                    {
+                        "SpellType" : "Talon",
+                        "Effect": "Spectral Wyverns circle you, damaging adjacent enemies each Turn and giving enemies a -2 to hit you. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Hydra",
+                        "Effect": "Conjure 2 Hydra Familiars each turn in a 5x5 area centered on you. Spell Follows you"
+                    },
+                    {
+                        "SpellType" : "IceSpike",
+                        "Effect": "Creates a Blizzard centered on you. Damages all adjacent enemies each turn and reduces their Movement to 1. Spell follows you"
+                    },
+                    {
+                        "SpellType" : "Barrage",
+                        "Effect": "Missiles seek enemies and deal damage. Fires missiles each turn"
+                    },
+                    {
+                        "SpellType" : "Calamity",
+                        "Effect": "Damage Dice become d8’s, but meteors strike each adjacent square each turn. Spell follows you"
+                    }
+                ]
+            }
+        ]
+    }
+}

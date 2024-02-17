@@ -32,6 +32,7 @@ namespace Business.Services
             .Select(g => new Guild
             {
                 Name = g.Name,
+                AlternameName = g.AlternateName,
                 SupportedGunTypes = g.SupportedGunTypes,
                 SupportedItemTypes = g.SupportedItemTypes
             }).ToList();
@@ -44,6 +45,7 @@ namespace Business.Services
             .Select(g => new Guild
             {
                 Name = g.Name,
+                AlternameName = g.AlternateName,
                 SupportedGunTypes = g.SupportedGunTypes,
                 SupportedItemTypes = g.SupportedItemTypes
             });
