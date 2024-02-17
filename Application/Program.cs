@@ -5,6 +5,7 @@ using Models.Config;
 using Models.Builder;
 using Models;
 using Business.Services;
+using ElectronNET.API;
 
 public class Program
 {
@@ -51,6 +52,20 @@ public class Program
         builder.Services.AddTransient<IMoxxTailService, MoxxTailService>();
         builder.Services.AddSingleton<IWeaponCustomizationService, WeaponCustomizationService>();
         builder.Services.AddBlazorContextMenu();
+
+        builder.Services.AddElectron();
+        builder.WebHost.UseElectron(args);
+
+        if (HybridSupport.IsElectronActive)
+        {
+            // Open the Electron-Window here
+            Task.Run(async () => {
+                var window = await Electron.WindowManager.CreateWindowAsync();
+                window.OnClosed += () => {
+                    Electron.App.Quit();
+                };
+            });
+        }
 
         var app = builder.Build();
 
