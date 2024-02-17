@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http.Json;
 
 using Business.Factories;
+using ElectronNET.API;
 using Models.Config;
 using Models.Builder;
 using Models;
@@ -52,7 +53,22 @@ public class Program
         builder.Services.AddSingleton<IWeaponCustomizationService, WeaponCustomizationService>();
         builder.Services.AddBlazorContextMenu();
 
+        builder.Services.AddElectron();
+        builder.WebHost.UseElectron(args);
+
+        if (HybridSupport.IsElectronActive)
+        {
+            // Open the Electron-Window here
+            Task.Run(async () => {
+                var window = await Electron.WindowManager.CreateWindowAsync();
+                window.OnClosed += () => {
+                    Electron.App.Quit();
+                };
+            });
+        }
+
         var app = builder.Build();
+
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
