@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
@@ -13,9 +13,9 @@
     <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Blazor.ContextMenu" Version="1.14.0" />
+    <PackageReference Include="Blazor.ContextMenu" Version="2.0.0" />
     <PackageReference Include="ElectronNET.API" Version="23.6.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="6.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="8.0.4" />
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="npm run install-build" WorkingDirectory="js" />
