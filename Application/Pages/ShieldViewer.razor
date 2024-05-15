@@ -56,6 +56,12 @@
     [Parameter]
     public bool UseBorderlandsManufacturers { get; set; } = false;
 
+    [Parameter]
+    public bool UseCustomManufacturers { get; set; } = false;
+
+    [Parameter]
+    public string CustomManufacturerImage { get; set; } = string.Empty;
+
     public string GetCardCssClass => $"card card--{CraftedShield.Rarity.ToString().ToLower()}";
     
     public string GetShieldImage => !string.IsNullOrWhiteSpace(CraftedShield.ImageUrl) 
@@ -64,8 +70,9 @@
 
     public string GetSourceImage => $"images/resources/game-icons/{CraftedShield.Source}.png";
 
-    public string GetGuildImage => $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedShield.AlternateGuildName : CraftedShield.Guild)}.png";
-
+    public string GetGuildImage => UseCustomManufacturers
+        ? CustomManufacturerImage
+        : $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedShield.AlternateGuildName : CraftedShield.Guild)}.png";
 
     public override string GetFileName()
     {

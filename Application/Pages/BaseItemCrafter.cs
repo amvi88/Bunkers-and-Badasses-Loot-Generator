@@ -7,13 +7,15 @@ namespace Application.Pages
 {
     public class BaseItemCrafter : BaseItemViewer
     {
-        public bool UseCustomImage { get; set; } = false;
+        public bool UseCustomImage { get; set; } = false;    
+        public bool UploadCustomManufacturerLogo { get; set; } = false;
         public bool AccordionOneCollapsed { get; set; } = false;
         public bool AccordionTwoCollapsed { get; set; } = true;
         public bool AccordionThreeCollapsed { get; set; } = true;
         public bool AccordionFourCollapsed { get; set; } = true;
         public bool AccordionFiveCollapsed { get; set; } = true;
         public bool UseBorderlandsManufacturers { get; set; } = false;
+        public bool UseCustomManufacturers { get; set; } = false;
 
         public List<Guild> guilds = new List<Guild>();
 

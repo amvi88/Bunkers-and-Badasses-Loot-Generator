@@ -5,60 +5,61 @@
 @inherits BaseItemViewer;
 
 <div>
-  <figure class=@GetCardCssClass id="@GetElementId()">
-      <ContextMenuTrigger MenuId="@GetMenuId()">
-      <div class="card__image-container">
-        <img src=@GetGrenadeImage alt="grenade" class="card__image"> 
-        <img src="@GetGuildImage" alt="@CraftedGrenadeMod.Guild" class="card__guild_image"> 
-      </div>
-      
-      <figcaption class="card__caption">
-        <h1 class="card__name">@GetCardLabel</h1>
+    <figure class=@GetCardCssClass id="@GetElementId()">
+        <ContextMenuTrigger MenuId="@GetMenuId()">
+            <div class="card__image-container">
+                <img src=@GetGrenadeImage alt="grenade" class="card__image">
+                <img src="@GetGuildImage" alt="@CraftedGrenadeMod.Guild" class="card__guild_image">
+            </div>
 
-        <h3 class="@GetCssClassCardType">
-          Grenade Mod
-        </h3>
+            <figcaption class="card__caption">
+                <h1 class="card__name">@GetCardLabel</h1>
 
-        <div class="card_label">@CraftedGrenadeMod.Effect</div>
-                
-        <table class="card__stats">
-          <tbody>            
-            <tr>
-              <th>Damage</th>
-              <td>
-                @for (int index = 0; index < CraftedGrenadeMod.AmountOfDice; index++)
-                {
-                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedGrenadeMod.DiceType">
-                }                
-              </td>
-            </tr>
-            @if (CraftedGrenadeMod.Element != Element.None){
-              <tr>
-                <th>Elemental</th>
-                <td>
-                  @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
-                {
-                   @if (element == Element.None)
-                   {
-                     continue;
-                   }
-                    @if (CraftedGrenadeMod.Element.HasFlag(element))
-                    {
-                      <img src="@GetElementImage(element.ToString())" alt="@element" class="element"> 
-                    }
-                }  
-                </td>
-              </tr>
-            }
-          </tbody>
-        </table>        
-      </figcaption>
-      </ContextMenuTrigger>
+                <h3 class="@GetCssClassCardType">
+                    Grenade Mod
+                </h3>
+
+                <div class="card_label">@CraftedGrenadeMod.Effect</div>
+
+                <table class="card__stats">
+                    <tbody>
+                        <tr>
+                            <th>Damage</th>
+                            <td>
+                                @for (int index = 0; index < CraftedGrenadeMod.AmountOfDice; index++)
+                                {
+                                    <img class="dice_small" src="@GetDiceImage" alt="@CraftedGrenadeMod.DiceType">
+                                }
+                            </td>
+                        </tr>
+                        @if (CraftedGrenadeMod.Element != Element.None)
+                        {
+                            <tr>
+                                <th>Elemental</th>
+                                <td>
+                                    @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+                                    {
+                                        @if (element == Element.None)
+                                        {
+                                            continue;
+                                        }
+                                        @if (CraftedGrenadeMod.Element.HasFlag(element))
+                                        {
+                                            <img src="@GetElementImage(element.ToString())" alt="@element" class="element">
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </figcaption>
+        </ContextMenuTrigger>
     </figure>
 
     <ContextMenu Id="@GetMenuId()">
-      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
-      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
     </ContextMenu>
 
 </div>
@@ -70,6 +71,12 @@
     [Parameter]
     public bool UseBorderlandsManufacturers { get; set; } = false;
 
+    [Parameter]
+    public bool UseCustomManufacturers { get; set; } = false;
+
+    [Parameter]
+    public string CustomManufacturerImage { get; set; } = string.Empty;
+
     public string GetCardCssClass => $"card card--{CraftedGrenadeMod.Rarity.ToString().ToLower()}";
 
     public string GetCardLabel => CraftedGrenadeMod.GrenadeType;
@@ -78,15 +85,19 @@
 
     public string GetDiceImage => $"images/resources/dice/{CraftedGrenadeMod.DiceType}.png";
 
-    public string GetGrenadeImage => $"images/resources/grenades/{CraftedGrenadeMod.Guild}.png";
+    public string GetGrenadeImage => !string.IsNullOrWhiteSpace(CraftedGrenadeMod.ImageUrl)
+          ? CraftedGrenadeMod.ImageUrl
+          : $"images/resources/grenades/{CraftedGrenadeMod.Guild}.png";
 
-    public string GetGuildImage => $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedGrenadeMod.AlternateGuildName : CraftedGrenadeMod.Guild)}.png";
+    public string GetGuildImage => UseCustomManufacturers
+        ? CustomManufacturerImage
+        : $"images/resources/guilds/{(UseBorderlandsManufacturers ? CraftedGrenadeMod.AlternateGuildName : CraftedGrenadeMod.Guild)}.png";
 
     public override string GetFileName()
     {
-      return $"GrenadeMod_{CraftedGrenadeMod.Guild}_{CraftedGrenadeMod.GrenadeType}.png";
+        return $"GrenadeMod_{CraftedGrenadeMod.Guild}_{CraftedGrenadeMod.GrenadeType}.png";
     }
 
-    public string GetElementImage(string elementId) =>  $"images/resources/elements/{elementId}.png";
+    public string GetElementImage(string elementId) => $"images/resources/elements/{elementId}.png";
 
 }

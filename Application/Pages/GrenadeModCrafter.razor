@@ -14,183 +14,217 @@
 <PageTitle>B&B: Build-a-boom!</PageTitle>
 
 <div class="row">
-  <div class="col-md-8">
-    <EditForm Model=@grenadeMod>
-      <DataAnnotationsValidator />
-      <ValidationSummary />
+    <div class="col-md-8">
+        <EditForm Model=@grenadeMod>
+            <DataAnnotationsValidator />
+            <ValidationSummary />
 
-      <div class="accordion accordion-flush" id="accordionFlush">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionOne data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Grenade Mod Archetypes
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse @AccordionOneClass" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
-            <div class="accordion-body">
-               <div class="mb-3">
-                  <label for="GrenadeModLevel" class="control-label">Level:</label>
-                  <InputNumber Value="grenadeMod.Level" ValueExpression="@(() => grenadeMod.Level)"
-                      ValueChanged="@((int value) => grenadeMod.Level = value)" name="GrenadeModLevel" class="form-control" aria-label="Grenade Mod Level" />
-                </div>
-                <div class="mb-3">
-                  <label for="text" class="control-label">Type:</label>
-                  <InputText @bind-Value="grenadeMod.GrenadeType" name="GrenadeModType" class="form-control" aria-label="Weapon Name" placeholder="Player Level"/>
-                </div>                
-                <div class="mb-3">
-                  <label for="text" class="control-label">Effect:</label>
-                  <InputText @bind-Value="grenadeMod.Effect" name="GrenadeModEffect" class="form-control" aria-label="Weapon Name" placeholder="Player Level"/>
-                </div>
+            <div class="accordion accordion-flush" id="accordionFlush">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionOne data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Grenade Mod Archetypes
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse @AccordionOneClass" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label for="GrenadeModLevel" class="control-label">Level:</label>
+                                <InputNumber Value="grenadeMod.Level" ValueExpression="@(() => grenadeMod.Level)"
+                                             ValueChanged="@((int value) => grenadeMod.Level = value)" name="GrenadeModLevel" class="form-control" aria-label="Grenade Mod Level" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="text" class="control-label">Type:</label>
+                                <InputText @bind-Value="grenadeMod.GrenadeType" name="GrenadeModType" class="form-control" aria-label="Weapon Name" placeholder="Player Level" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="text" class="control-label">Effect:</label>
+                                <InputText @bind-Value="grenadeMod.Effect" name="GrenadeModEffect" class="form-control" aria-label="Weapon Name" placeholder="Player Level" />
+                            </div>
 
-                @if (guilds != null && guilds.Any())
-                {
-                  <div class="mb-3">
-                    <label class="control-label">Preferred Guild:</label>
-                    <InputSelect Value="grenadeMod.Guild" ValueExpression="@(() => grenadeMod.Guild)"
-                      ValueChanged="@((string value) => FavoriteGuildChanged(value))" class="form-control" aria-label="Preferred Guild">
-                      @foreach (var guild in guilds)
-                      {
-                            <option value="@guild.Name" selected=@(guild.Name == grenadeMod.Guild)>@guild.Name</option>
-                      }
-                    </InputSelect>
-                  </div>
-                }
+                            @if (!UseCustomManufacturers && guilds != null && guilds.Any())
+                            {
+                                <div class="mb-3">
+                                    <label class="control-label">Preferred Guild:</label>
+                                    <InputSelect Value="grenadeMod.Guild" ValueExpression="@(() => grenadeMod.Guild)"
+                                                 ValueChanged="@((string value) => FavoriteGuildChanged(value))" class="form-control" aria-label="Preferred Guild">
+                                        @foreach (var guild in guilds)
+                                        {
+                                            <option value="@guild.Name" selected=@(guild.Name == grenadeMod.Guild)>@guild.Name</option>
+                                        }
+                                    </InputSelect>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="mb-3">
+                                    <label class="control-label">Guild:</label>
+                                    <InputText @bind-Value="grenadeMod.Guild" name="GuildName" class="form-control" aria-label="Guild Name" aria-placeholder="Guild Name" placeholder="Guild Name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="control-label">Upload Custom Logo</label>
+                                    <input type="checkbox" checked="@(UploadCustomManufacturerLogo)" @onchange="eventArgs => { UploadCustomManufacturerLogo = !UploadCustomManufacturerLogo; }">
+                                </div>
+                                @if (!UploadCustomManufacturerLogo)
+                                {
+                                    <div class="mb-3">
+                                        <label class="control-label">Manufacturer Image URL (Optional):</label>
+                                        <InputText @bind-Value="CustomManufacturerImage" name="CustomManufacturerImage" class="form-control" aria-label="Image Url" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="mb-3">
+                                        <label class="control-label">Select an Image:</label>
+                                        <InputFile OnChange="OnManufacturerImageChange" class="form-control" accept=".png" />
+                                    </div>
+                                }
+                            }
 
-                <div class="mb-3">
-                  <label class="control-label">Rarity:</label>
-                  <div>
-                    <InputRadioGroup @bind-Value="grenadeMod.Rarity">
-                      @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
-                      {
-                        <label class="radio-inline label-separated">
-                          <InputRadio Value="@rarity" checked="@(rarity == grenadeMod.Rarity)" />
-                          @rarity
-                        </label>
-                      }
-                    </InputRadioGroup>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionThree data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Damage and Elements
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse @AccordionThreeClass" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
-            <div class="accordion-body">
-              <div class="mb-3">
-                <label class="control-label">Damage: (i.e: 1d10)</label>
-                <InputText @bind-Value="grenadeMod.Damage" name="Damage" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4"/>
-              </div>
-
-              <div class="mb-3">
-                <label class="control-label">Elements:</label>
-                  <div>
-                  @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
-                  {
-                    @if (element == Element.None)
-                    {
-                      continue;
-                    }
-                    <label class="radio-inline label-separated">
-                      <input type="checkbox" @onchange="eventArgs => { ElementChanged(element, (bool)eventArgs.Value); }" />
-                      @element
-                    </label>
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>        
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingFive">
-            <button class="accordion-button collapsed" @onclick=ToggleAccordionFive type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-              Custom Image
-            </button>
-          </h2>
-          <div id="flush-collapseFive" class="accordion-collapse @AccordionFiveClass" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
-            <div class="accordion-body">
-              <div class="mb-3">
-                    <div class="mb-3">
-                      <label class="control-label">Use Borderlands Manufacturers?</label>
-                      <input type="checkbox" checked="@(UseBorderlandsManufacturers)" @onchange="eventArgs => { UseBorderlandsManufacturers = !UseBorderlandsManufacturers; }">
-                    </div>  
-                    <div class="mb-3">
-                      <label class="control-label">Upload Custom Image</label>
-                      <input type="checkbox" checked="@(UseCustomImage)" @onchange="eventArgs => { UseCustomImage = !UseCustomImage; }">
+                            <div class="mb-3">
+                                <label class="control-label">Rarity:</label>
+                                <div>
+                                    <InputRadioGroup @bind-Value="grenadeMod.Rarity">
+                                        @foreach (var rarity in (Rarity[])Enum.GetValues(typeof(Rarity)))
+                                        {
+                                            <label class="radio-inline label-separated">
+                                                <InputRadio Value="@rarity" checked="@(rarity == grenadeMod.Rarity)" />
+                                                @rarity
+                                            </label>
+                                        }
+                                    </InputRadioGroup>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    @if (!UseCustomImage)
-                    {
-                      <div class="mb-3">
-                          <label class="control-label">Card Image URL (Optional):</label>
-                          <InputText @bind-Value="grenadeMod.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url"/>
-                      </div>
-                    }
-                    else
-                    {
-                      <div class="mb-3">
-                          <label class="control-label">Select an Image:</label>
-                          <InputFile OnChange="OnFileChange" class="form-control" accept=".png" />                          
-                      </div> 
-                    }
-              </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionThree data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Damage and Elements
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse @AccordionThreeClass" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label class="control-label">Damage: (i.e: 1d10)</label>
+                                <InputText @bind-Value="grenadeMod.Damage" name="Damage" class="form-control col-md-6" aria-label="Damage Dice Type" aria-placeholder="i.e. 1d4" placeholder="i.e. 1d4" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="control-label">Elements:</label>
+                                <div>
+                                    @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+                                    {
+                                        @if (element == Element.None)
+                                        {
+                                            continue;
+                                        }
+                                        <label class="radio-inline label-separated">
+                                            <input type="checkbox" @onchange="eventArgs => { ElementChanged(element, (bool)eventArgs.Value); }" />
+                                            @element
+                                        </label>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" @onclick=ToggleAccordionFive type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Custom
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse @AccordionFiveClass" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <div class="mb-3">
+                                    <label class="control-label">Use Custom Manufacturers?</label>
+                                    <input type="checkbox" checked="@(UseCustomManufacturers)" @onchange="eventArgs => { UseCustomManufacturers = !UseCustomManufacturers; }">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="control-label">Use Borderlands Manufacturers?</label>
+                                    <input type="checkbox" checked="@(UseBorderlandsManufacturers)" @onchange="eventArgs => { UseBorderlandsManufacturers = !UseBorderlandsManufacturers; }">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="control-label">Upload Custom Image</label>
+                                    <input type="checkbox" checked="@(UseCustomImage)" @onchange="eventArgs => { UseCustomImage = !UseCustomImage; }">
+                                </div>
+                                @if (!UseCustomImage)
+                                {
+                                    <div class="mb-3">
+                                        <label class="control-label">Card Image URL (Optional):</label>
+                                        <InputText @bind-Value="grenadeMod.ImageUrl" name="ImageUrl" class="form-control" aria-label="Image Url" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="mb-3">
+                                        <label class="control-label">Select an Image:</label>
+                                        <InputFile OnChange="OnGrenadeModImageChange" class="form-control" accept=".png" />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-    </EditForm>
-  </div>
+        </EditForm>
+    </div>
 
-  <div class="col-md-4">
-    <GrenadeModViewer CraftedGrenadeMod=@grenadeMod UseBorderlandsManufacturers=@UseBorderlandsManufacturers/>
-  </div>
+    <div class="col-md-4">
+        <GrenadeModViewer CraftedGrenadeMod=@grenadeMod UseBorderlandsManufacturers=@UseBorderlandsManufacturers UseCustomManufacturers=@UseCustomManufacturers CustomManufacturerImage=@CustomManufacturerImage />
+    </div>
 </div>
 
 @code {
-  GrenadeMod grenadeMod = new GrenadeMod
-  {
-    GrenadeType = "My Grenade Mod",
-    Effect = "My Effect",
-    Element = Element.None,
-    Damage = "1d4"    
-  };
- 
-  protected override void OnInitialized()
-  {
-    guilds = guildService.GetGuilds();
-    grenadeMod.Guild = guilds.First().Name;
-  }     
+    string CustomManufacturerImage = "";
 
-  void FavoriteGuildChanged(string guild)
-  {
-    var selectedGuild = guilds.First(x => x.Name == guild);
-    grenadeMod.Guild = selectedGuild.Name;
-    grenadeMod.AlternateGuildName = selectedGuild.AlternameName;    
-    this.StateHasChanged();
-  }
+    GrenadeMod grenadeMod = new GrenadeMod
+        {
+            GrenadeType = "My Grenade Mod",
+            Effect = "My Effect",
+            Element = Element.None,
+            Damage = "1d4"
+        };
+
+    protected override void OnInitialized()
+    {
+        guilds = guildService.GetGuilds();
+        grenadeMod.Guild = guilds.First().Name;
+    }
+
+    void FavoriteGuildChanged(string guild)
+    {
+        var selectedGuild = guilds.First(x => x.Name == guild);
+        grenadeMod.Guild = selectedGuild.Name;
+        grenadeMod.AlternateGuildName = selectedGuild.AlternameName;
+        this.StateHasChanged();
+    }
 
 
-  void ElementChanged(Element element, bool changed)
-  {
-      if (changed)
-      {
-        grenadeMod.Element |= element;
-      }
-      else
-      {
-        grenadeMod.Element ^= element;
-      }
-      this.StateHasChanged();
-  }
+    void ElementChanged(Element element, bool changed)
+    {
+        if (changed)
+        {
+            grenadeMod.Element |= element;
+        }
+        else
+        {
+            grenadeMod.Element ^= element;
+        }
+        this.StateHasChanged();
+    }
 
-  async Task OnFileChange(InputFileChangeEventArgs eventArgs)
+    async Task OnGrenadeModImageChange(InputFileChangeEventArgs eventArgs)
     {
         grenadeMod.ImageUrl = await EncodeImageFile(eventArgs);
     }
 
-  
+    async Task OnManufacturerImageChange(InputFileChangeEventArgs eventArgs)
+    {
+        CustomManufacturerImage = await EncodeImageFile(eventArgs);
+    }
 }

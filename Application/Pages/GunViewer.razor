@@ -135,6 +135,12 @@
     [Parameter]
     public bool UseBorderlandsManufacturers { get; set; } = false;
 
+    [Parameter]
+    public bool UseCustomManufacturers { get; set; } = false;
+
+    [Parameter]
+    public string CustomManufacturerImage { get; set; } = string.Empty;
+
     public string GetGunName => string.IsNullOrWhiteSpace(CraftedGun.Prefix?.Name)
         ? CraftedGun.Name  
         : $"{CraftedGun.Prefix?.Name} {CraftedGun.Name}";
@@ -146,7 +152,9 @@
 
     public string GetSourceImage => $"images/resources/game-icons/{CraftedGun.Source}.png";
 
-    public string GetGuildImage => $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedGun.AlternateGuildName : CraftedGun.Guild)}.png";
+    public string GetGuildImage => UseCustomManufacturers
+        ? CustomManufacturerImage
+        : $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedGun.AlternateGuildName : CraftedGun.Guild)}.png";
 
 
     public string GetWeaponTypeImage => $"images/resources/gun-icons/{CraftedGun.GunType.ToString().ToLower()}.png";
