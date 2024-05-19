@@ -1,4 +1,5 @@
-﻿@using Microsoft.AspNetCore.Components.Web
+﻿@using ElectronNET.API
+@using Microsoft.AspNetCore.Components.Web
 @namespace Application.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
@@ -29,6 +30,10 @@
         <a class="dismiss">🗙</a>
     </div>
 
+    @if (HybridSupport.IsElectronActive)
+    {
+        <script>process = undefined;</script>
+    }
     <script src="_framework/blazor.server.js"></script>
     <script src="_content/Blazor.ContextMenu/blazorContextMenu.min.js"></script>
 </body>
