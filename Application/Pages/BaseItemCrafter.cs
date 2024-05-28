@@ -17,6 +17,11 @@ namespace Application.Pages
         public bool UseBorderlandsManufacturers { get; set; } = false;
         public bool UseCustomManufacturers { get; set; } = false;
 
+        public string RedTextName { get; set; } = string.Empty;
+        public string RedTextEffect { get; set; } = string.Empty;
+        public string PrefixName { get; set; } = string.Empty;
+        public string PrefixEffect { get; set; } = string.Empty;
+
         public List<Guild> guilds = new List<Guild>();
 
         public async Task<string?> EncodeImageFile(InputFileChangeEventArgs eventArgs)

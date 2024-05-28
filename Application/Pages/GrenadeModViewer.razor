@@ -19,6 +19,15 @@
                     Grenade Mod
                 </h3>
 
+                @if (CraftedGrenadeMod.RedText != null)
+                {
+                    <div class="card__redtexts">
+                        <h4 class="card__redtext">
+                            <span class="card__label">@CraftedGrenadeMod.RedText.Name</span>
+                        </h4>
+                    </div>
+                }
+
                 <div class="card_label">@CraftedGrenadeMod.Effect</div>
 
                 <table class="card__stats">
@@ -49,6 +58,13 @@
                                         }
                                     }
                                 </td>
+                            </tr>
+                        }
+                        @if (!string.IsNullOrEmpty(CraftedGrenadeMod.RedText?.Effect))
+                        {
+                            <tr>
+                                <th>Red Text</th>
+                                <td>@CraftedGrenadeMod.RedText?.Effect</td>
                             </tr>
                         }
                     </tbody>

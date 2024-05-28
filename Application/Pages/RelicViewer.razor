@@ -3,48 +3,63 @@
 @inherits BaseItemViewer;
 
 <div>
-   <figure class="@GetCardCssClass"  id="@GetElementId()">
-      <ContextMenuTrigger MenuId="@GetMenuId()">
-      <div class="card__image-container">
-        <img src=@GetRelicImage alt="shield" class="card__image">   
-      </div>
-      
-      <figcaption class="card__caption">
-        <h1 class="card__name">@CraftedRelic.Type</h1>
-        
-        <h3 class="card__type">
-        @CraftedRelic.Rarity Relic 
-        </h3>
+    <figure class="@GetCardCssClass" id="@GetElementId()">
+        <ContextMenuTrigger MenuId="@GetMenuId()">
+            <div class="card__image-container">
+                <img src=@GetRelicImage alt="shield" class="card__image">
+            </div>
 
-        <div>
-          <div class="card_effect">
-            <h4>
-              <span class="card__label">Effect</span>            
-            </h4>
+            <figcaption class="card__caption">
+                <h1 class="card__name">@CraftedRelic.Type</h1>
 
-            <span>@CraftedRelic.Effect</span>
-          </div>
-        </div>
+                <h3 class="card__type">
+                    @CraftedRelic.Rarity Relic
+                </h3>
 
-        <div>
-          <div class="card_stats">
-            <h4>
-              <span class="card__label">Preferred Class</span>            
-            </h4>
+                @if (CraftedRelic.RedText != null)
+                {
+                    <div class="card__redtexts">
+                        <h4 class="card__redtext">
+                            <span class="card__label">@CraftedRelic.RedText.Name</span>
+                        </h4>
+                    </div>
+                }
 
-            <span>@CraftedRelic.PreferredClass</span>
-            <br>
-            <span>@CraftedRelic.ClassEffect</span>
-          </div>
-        </div>
-        
-      </figcaption>
-      </ContextMenuTrigger>
+                <div>
+                    <div class="card_effect">
+                        <h4>
+                            <span class="card__label">Effect</span>
+                        </h4>
+
+                        <span>@CraftedRelic.Effect</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card_stats">
+                        <h4>
+                            <span class="card__label">Preferred Class</span>
+                        </h4>
+
+                        <span>@CraftedRelic.PreferredClass</span>
+                        <br>
+                        <span>@CraftedRelic.ClassEffect</span>
+                        
+                        @if (!string.IsNullOrEmpty(CraftedRelic.RedText?.Effect))
+                        {
+                            <span class="card__label bonus">(Red Text) @CraftedRelic.RedText?.Effect</span>
+                        }
+
+                    </div>
+                </div>
+
+            </figcaption>
+        </ContextMenuTrigger>
     </figure>
 
     <ContextMenu Id="@GetMenuId()">
-      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
-      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
     </ContextMenu>
 
 </div>
@@ -59,6 +74,6 @@
 
     public override string GetFileName()
     {
-      return $"Relic_{CraftedRelic.Rarity}_{CraftedRelic.Type}.png";
+        return $"Relic_{CraftedRelic.Rarity}_{CraftedRelic.Type}.png";
     }
 }

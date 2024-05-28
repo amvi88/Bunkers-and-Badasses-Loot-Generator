@@ -6,46 +6,63 @@
 @inherits BaseItemViewer;
 <div>
     <figure class="@GetCardCssClass" id="@GetElementId()">
-      <ContextMenuTrigger MenuId="@GetMenuId()">
-      <div class="card__image-container">
-        @if (!string.IsNullOrWhiteSpace(CraftedShield.Source))
-        {
-          <img src="@GetSourceImage" alt="@CraftedShield.Source" class="card__game_icon"> 
-        }        
-        <img src=@GetShieldImage alt="shield" class="card__image">   
-        <img src="@GetGuildImage" alt="@CraftedShield.Guild" class="card__guild_image">
-      </div>
-      
-      <figcaption class="card__caption">
-        @if (!string.IsNullOrWhiteSpace(CraftedShield.Name)){
-          <h1 class="card__name">@CraftedShield.Name</h1>
-        }
+        <ContextMenuTrigger MenuId="@GetMenuId()">
+            <div class="card__image-container">
+                @if (!string.IsNullOrWhiteSpace(CraftedShield.Source))
+                {
+                    <img src="@GetSourceImage" alt="@CraftedShield.Source" class="card__game_icon">
+                }
+                <img src=@GetShieldImage alt="shield" class="card__image">
+                <img src="@GetGuildImage" alt="@CraftedShield.Guild" class="card__guild_image">
+            </div>
 
-        <h3 class="card__type">
-         Shield
-        </h3>
+            <figcaption class="card__caption">
+                @if (!string.IsNullOrWhiteSpace(CraftedShield.Name))
+                {
+                    <h1 class="card__name">@CraftedShield.Name</h1>
+                }
 
-        <div class="card_label">@CraftedShield.Effect</div>
-                
-        <div class="card__stats">
-          <div>
-            <img class="icon_small" src="images/resources/card-icons/shield.png" alt="Shield">
-          </div>
-          <div class="stat_label">Capacity</div>
-          <div>@CraftedShield.Capacity</div>
-          <div>
-            <img class="icon_small" src="images/resources/card-icons/exchange.png" alt="Recharge Rate">
-          </div>
-          <div class="stat_label">Recharge Rate</div>
-          <div>@CraftedShield.RechargeRate</div>
-        </div>        
-      </figcaption>
-      </ContextMenuTrigger>
+                <h3 class="card__type">
+                    Shield
+                </h3>
+
+                @if (CraftedShield.RedText != null)
+                {
+                    <div class="card__redtexts">
+                        <h4 class="card__redtext">
+                            <span class="card__label">@CraftedShield.RedText.Name</span>
+                        </h4>
+                    </div>
+                }
+
+                <div class="card_label">@CraftedShield.Effect</div>
+
+                <div class="card__stats">
+                    <div>
+                        <img class="icon_small" src="images/resources/card-icons/shield.png" alt="Shield">
+                    </div>
+                    <div class="stat_label">Capacity</div>
+                    <div>@CraftedShield.Capacity</div>
+                    <div>
+                        <img class="icon_small" src="images/resources/card-icons/exchange.png" alt="Recharge Rate">
+                    </div>
+                    <div class="stat_label">Recharge Rate</div>
+                    <div>@CraftedShield.RechargeRate</div>
+                </div>
+
+
+                @if (!string.IsNullOrEmpty(CraftedShield.RedText?.Effect))
+                {
+                    <div>(RedText) @CraftedShield.RedText?.Effect</div>
+                }
+
+            </figcaption>
+        </ContextMenuTrigger>
     </figure>
 
     <ContextMenu Id="@GetMenuId()">
-      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
-      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
     </ContextMenu>
 
 </div>
@@ -63,19 +80,19 @@
     public string CustomManufacturerImage { get; set; } = string.Empty;
 
     public string GetCardCssClass => $"card card--{CraftedShield.Rarity.ToString().ToLower()}";
-    
-    public string GetShieldImage => !string.IsNullOrWhiteSpace(CraftedShield.ImageUrl) 
-          ? CraftedShield.ImageUrl 
+
+    public string GetShieldImage => !string.IsNullOrWhiteSpace(CraftedShield.ImageUrl)
+          ? CraftedShield.ImageUrl
           : $"images/resources/shields/{CraftedShield.Guild}.png";
 
     public string GetSourceImage => $"images/resources/game-icons/{CraftedShield.Source}.png";
 
     public string GetGuildImage => UseCustomManufacturers
         ? CustomManufacturerImage
-        : $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedShield.AlternateGuildName : CraftedShield.Guild)}.png";
+        : $"images/resources/guilds/{(UseBorderlandsManufacturers ? CraftedShield.AlternateGuildName : CraftedShield.Guild)}.png";
 
     public override string GetFileName()
     {
-      return $"Shield_{CraftedShield.Guild}.png";
+        return $"Shield_{CraftedShield.Guild}.png";
     }
 }

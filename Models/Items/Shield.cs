@@ -18,5 +18,9 @@ namespace Models.Builder
         public string Source { get; set; }
 
         public Rarity Rarity { get; set; } = Rarity.Common;
+
+        public RedText RedText { get; set; }
+
+        public Element Element { get; set; }
     }
 }

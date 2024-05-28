@@ -8,6 +8,8 @@
 @inherits BaseItemCrafter
 @inject ILogger<GrenadeModCrafter> logger
 @inject IGuildService guildService
+@inject IWeaponCustomizationService weaponCustomizationService
+
 
 <h1>Grenade Mods</h1>
 <hr />
@@ -99,6 +101,45 @@
                     </div>
                 </div>
                 <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionTwo data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Red Texts
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse @AccordionTwoClass" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
+                        <div class="accordion-body">                                               
+
+                            <div class="mb-3">
+                                <label class="control-label">Use Custom Red Texts?</label>
+                                <input type="checkbox" checked="@(UseCustomRedTexts)" @onchange="eventArgs => { UseCustomRedTexts = !UseCustomRedTexts; }">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="control-label">Red Text:</label>
+                                @if (!UseCustomRedTexts)
+                                {
+                                    <InputSelect class="form-control" aria-label="RedText" Value="RedTextName" ValueExpression="@(() => RedTextName)" ValueChanged="@((string redText) => RedTextChanged(redText))">
+                                        <option value="" selected>None</option>
+                                        @foreach (var kvp in redTexts)
+                                        {
+                                            <option value="@kvp.Key" selected>@kvp.Key</option>
+                                        }
+                                    </InputSelect>
+                                    @if (!string.IsNullOrWhiteSpace(RedTextEffect))
+                                    {
+                                        <span class="form-text">@RedTextEffect</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <InputText @bind-Value="grenadeMod.RedText.Name" name="RedTextName" class="form-control" aria-label="RedText Name" aria-placeholder="RedText Name" placeholder="RedText Name" />
+                                    <InputText @bind-Value="grenadeMod.RedText.Effect" name="RedTextEffect" class="form-control" aria-label="RedText Effect" aria-placeholder="RedText Effect" placeholder="RedText Effect" />
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingThree">
                         <button class="accordion-button collapsed" type="button" @onclick=ToggleAccordionThree data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                             Damage and Elements
@@ -181,19 +222,51 @@
 
 @code {
     string CustomManufacturerImage = "";
+    Dictionary<string, RedText> redTexts = null;
+    bool UseCustomRedTexts = false;
+
+    void RedTextChanged(string redText)
+    {
+        if (grenadeMod.RedText != null && grenadeMod.RedText.Element.HasValue)
+        {
+            grenadeMod.Element ^= grenadeMod.RedText.Element.Value;
+        }
+
+        if (string.IsNullOrWhiteSpace(redText))
+        {
+            grenadeMod.RedText = new RedText();
+            RedTextName = string.Empty;
+            RedTextEffect = string.Empty;
+        }
+        else
+        {
+            grenadeMod.RedText = redTexts[redText];
+            RedTextName = grenadeMod.RedText.Name;
+            RedTextEffect = grenadeMod.RedText.Effect;
+            if (grenadeMod.RedText.Element.HasValue)
+            {
+                grenadeMod.Element |= grenadeMod.RedText.Element.Value;
+            }
+        }
+
+        this.StateHasChanged();
+    }
+
 
     GrenadeMod grenadeMod = new GrenadeMod
         {
             GrenadeType = "My Grenade Mod",
             Effect = "My Effect",
             Element = Element.None,
-            Damage = "1d4"
+            Damage = "1d4",
+            RedText = new RedText()
         };
 
     protected override void OnInitialized()
     {
         guilds = guildService.GetGuilds();
         grenadeMod.Guild = guilds.First().Name;
+        redTexts = weaponCustomizationService.GetRedTexts();
     }
 
     void FavoriteGuildChanged(string guild)

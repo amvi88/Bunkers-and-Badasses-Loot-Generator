@@ -68,3 +68,22 @@ img.icon_small {
   left: 0;
   max-height: 40px;
 }
+
+.card__redtexts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card__redtext {
+    text-align: center;
+}
+
+    .card__redtext > .card__label {
+        color: #f0061f;
+        font-weight: 500;
+        font-size: .75em;
+        text-align: center;
+        font-family: "SpaceMarine";
+    }
