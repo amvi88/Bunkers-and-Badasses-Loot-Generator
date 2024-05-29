@@ -2,7 +2,7 @@ using Models.Common;
 
 namespace Models.Config
 {
-    public class WeaponCustomizationOptions 
+    public class CustomizationOptions 
     {
         public Rarity[][] RarityMatrix {get; set;}
 

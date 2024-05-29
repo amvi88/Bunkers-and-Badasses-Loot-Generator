@@ -35,7 +35,7 @@ namespace Api
             builder.Configuration.AddJsonFile("Configuration/spells.json", true);
 
             builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetSection("GuildConfiguration"));
-            builder.Services.Configure<WeaponCustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));
+            builder.Services.Configure<CustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));
             builder.Services.Configure<WeaponArchetypesOptions>(builder.Configuration.GetSection("WeaponArchetypes"));
             builder.Services.Configure<PotionConfigurationOptions>(builder.Configuration.GetSection("PotionConfiguration"));
             builder.Services.Configure<RelicConfigurationOptions>(builder.Configuration.GetSection("RelicConfiguration"));
@@ -80,7 +80,7 @@ namespace Api
             builder.Services.AddTransient<IRelicService, RelicService>();
             builder.Services.AddTransient<IGunService, GunService>();
             builder.Services.AddTransient<IMoxxTailService, MoxxTailService>();
-            builder.Services.AddSingleton<IWeaponCustomizationService, WeaponCustomizationService>();
+            builder.Services.AddSingleton<ICustomizationService, CustomizationService>();
 
             builder.Services.AddRateLimiter(options => 
             {

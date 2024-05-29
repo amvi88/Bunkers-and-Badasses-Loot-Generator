@@ -9,9 +9,9 @@ namespace Business.Factories
     public class SpellFactory : GuildDrivenFactory<Spell, SpellRandomizerFactoryParameters>
     {
         private readonly SpellConfigurationOptions _spellCustomizationOptions;
-        private readonly WeaponCustomizationOptions _weaponCustomizationOptions;
+        private readonly CustomizationOptions _weaponCustomizationOptions;
 
-        public SpellFactory(IOptions<GuildConfigurationOptions> guildOptions, IOptions<WeaponCustomizationOptions> weaponCustomizationOptions, IOptions<SpellConfigurationOptions> spellCustomizationOptions)
+        public SpellFactory(IOptions<GuildConfigurationOptions> guildOptions, IOptions<CustomizationOptions> weaponCustomizationOptions, IOptions<SpellConfigurationOptions> spellCustomizationOptions)
             : base(guildOptions)
         {
             _spellCustomizationOptions = spellCustomizationOptions.Value ?? throw new ArgumentException(nameof(spellCustomizationOptions));

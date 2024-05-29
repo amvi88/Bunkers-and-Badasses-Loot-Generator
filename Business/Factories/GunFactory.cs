@@ -8,10 +8,10 @@ namespace Business.Factories
 {
     public class GunFactory : GuildDrivenFactory<Gun, GunRandomizerFactoryParameters>
     {
-        private readonly WeaponCustomizationOptions _weaponCustomization;
+        private readonly CustomizationOptions _weaponCustomization;
         private readonly WeaponArchetypesOptions _weaponArchetypesOptions;
 
-        public GunFactory(IOptions<GuildConfigurationOptions> guildOptions, IOptions<WeaponCustomizationOptions> weaponCustomizationOptions, IOptions<WeaponArchetypesOptions> weaponArchetypesOptions)
+        public GunFactory(IOptions<GuildConfigurationOptions> guildOptions, IOptions<CustomizationOptions> weaponCustomizationOptions, IOptions<WeaponArchetypesOptions> weaponArchetypesOptions)
             : base(guildOptions)
         {
             _weaponCustomization = weaponCustomizationOptions.Value ?? throw new ArgumentException(nameof(weaponCustomizationOptions));

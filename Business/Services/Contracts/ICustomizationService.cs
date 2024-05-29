@@ -3,7 +3,7 @@ using Models.Config;
 
 namespace Business.Services
 {
-    public interface IWeaponCustomizationService
+    public interface ICustomizationService
     {
         Dictionary<string, Prefix> GetPrefixes();
         Dictionary<string, RedText> GetRedTexts();

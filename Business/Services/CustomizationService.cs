@@ -6,12 +6,12 @@ using Models.Config;
 namespace Business.Services
 {
 
-    public class WeaponCustomizationService : IWeaponCustomizationService
+    public class CustomizationService : ICustomizationService
     {
-        private readonly WeaponCustomizationOptions _weaponCustomizationOptions;
+        private readonly CustomizationOptions _weaponCustomizationOptions;
         private readonly WeaponArchetypesOptions _weaponArchetypesOptions;
 
-        public WeaponCustomizationService(IOptions<WeaponCustomizationOptions> weaponCustomizationOptions, IOptions<WeaponArchetypesOptions> weaponArchetypesOptions)
+        public CustomizationService(IOptions<CustomizationOptions> weaponCustomizationOptions, IOptions<WeaponArchetypesOptions> weaponArchetypesOptions)
         {
             _weaponCustomizationOptions = weaponCustomizationOptions.Value ?? throw new ArgumentNullException(nameof(weaponCustomizationOptions));
             _weaponArchetypesOptions = weaponArchetypesOptions.Value ?? throw new ArgumentNullException(nameof(weaponArchetypesOptions));
