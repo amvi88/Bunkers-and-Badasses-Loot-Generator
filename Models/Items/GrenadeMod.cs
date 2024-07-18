@@ -8,9 +8,9 @@ namespace Models.Builder
 
         public string Damage { get; set; }
 
-        public int AmountOfDice => int.Parse(Damage.Substring(0, 1));
+        public int[] AmountOfDice => Damage.Split(' ','+',',').Select(x => int.Parse(x.Substring(0, 1))).ToArray();
 
-        public string DiceType => Damage.Substring(1);
+        public string[] DiceType => Damage.Split(' ', '+', ',').Select(x => x.Substring(1)).ToArray();
 
         public string GrenadeType { get; set; }
 

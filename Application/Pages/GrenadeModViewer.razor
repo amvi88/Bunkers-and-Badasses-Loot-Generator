@@ -35,9 +35,12 @@
                         <tr>
                             <th>Damage</th>
                             <td>
-                                @for (int index = 0; index < CraftedGrenadeMod.AmountOfDice; index++)
+                                @for (int index = 0; index < CraftedGrenadeMod.AmountOfDice.Length; index++)
                                 {
-                                    <img class="dice_small" src="@GetDiceImage" alt="@CraftedGrenadeMod.DiceType">
+                                    @for (int diceCount = 0; diceCount < CraftedGrenadeMod.AmountOfDice[index]; diceCount++)
+                                    {
+                                        <img class="dice_small" src="@GetDiceImage(CraftedGrenadeMod.DiceType[index])" alt="@CraftedGrenadeMod.DiceType[index]">
+                                    }
                                 }
                             </td>
                         </tr>
@@ -99,7 +102,7 @@
 
     public string GetCssClassCardType => $"card__type {(CraftedGrenadeMod.Element != Element.None ? CraftedGrenadeMod.Element.ToString().ToLower() : "normal")}";
 
-    public string GetDiceImage => $"images/resources/dice/{CraftedGrenadeMod.DiceType}.png";
+    public string GetDiceImage(string diceType) => $"images/resources/dice/{diceType}.png";
 
     public string GetGrenadeImage => !string.IsNullOrWhiteSpace(CraftedGrenadeMod.ImageUrl)
           ? CraftedGrenadeMod.ImageUrl
