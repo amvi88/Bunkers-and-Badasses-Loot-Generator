@@ -10,7 +10,7 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 USER appuser
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build
-RUN curl -fsSL https://deb.nodesource.com/setup_current.x | bash - 
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - 
 RUN apt-get install -y nodejs
 COPY . src/
 
