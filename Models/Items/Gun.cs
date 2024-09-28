@@ -50,6 +50,8 @@ namespace Models.Builder
 
         public RedText RedText {get; set;}
 
+        public TealText TealText { get; set; }
+
         public Prefix Prefix { get; set; }
  
         public string GunArchetypeBonus { get; set; }

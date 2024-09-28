@@ -1,13 +1,13 @@
 body {
-  font-family: "Open Sans", Helvetica, sans-serif;
-  text-align: center;
-  margin: 20px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    text-align: center;
+    margin: 20px;
 }
 
 img {
-  max-height: 150px;
-  margin: auto;
-  display: inline-block;
+    max-height: 150px;
+    margin: auto;
+    display: inline-block;
 }
 
 h1,
@@ -15,162 +15,178 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 0;
-  font-weight: 400;
+    margin: 0;
+    font-weight: 400;
 }
 
-.card__guild_image{
-  position: relative;
-  bottom: 20px;
-  left: 0;
-  max-height: 30px;
+.card__guild_image {
+    position: relative;
+    bottom: 20px;
+    left: 0;
+    max-height: 30px;
 }
 
 .card__name {
-  font-size: larger;
+    font-size: larger;
 }
 
 .card__redtexts {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 .card__redtext {
-  text-align: center;
+    text-align: center;
 }
 
-.card__redtext>.card__label {
-  color: #f0061f;
-  font-weight: 500;
-  font-size: .75em;
-  text-align: center;
-  font-family: "SpaceMarine";
+    .card__redtext > .card__label {
+        color: #f0061f;
+        font-weight: 500;
+        font-size: .75em;
+        text-align: center;
+        font-family: "SpaceMarine";
+    }
+
+.card__tealtexts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card__tealtext {
+    text-align: center;
+}
+
+.card__tealtext > .card__label {
+    color: teal;
+    font-weight: 500;
+    font-size: .75em;
+    text-align: center;
+    font-family: "SpaceMarine";
 }
 
 .card__stats {
-  margin: 0;
-  margin-bottom: .5em;
-  width: 100%;
-  font-size: small;
-  text-transform: uppercase;
+    margin: 0;
+    margin-bottom: .5em;
+    width: 100%;
+    font-size: small;
+    text-transform: uppercase;
 }
 
 .card__hits {
-  width: 100%;
+    width: 100%;
 }
 
-.card__hits caption {
-  width: 100%;
-  caption-side: top;
-  font-size: medium;
-  text-align: center;
-}
+    .card__hits caption {
+        width: 100%;
+        caption-side: top;
+        font-size: medium;
+        text-align: center;
+    }
 
-.card_hits_caption{
-  font-family: "SpaceMarine", "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-  font-size: medium;
+.card_hits_caption {
+    font-family: "SpaceMarine", "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+    font-size: medium;
 }
 
 .card__hits th {
-  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-  text-align: right;
-  font-weight: 300;
-  font-size: small;
-  text-transform: uppercase;
+    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+    text-align: right;
+    font-weight: 300;
+    font-size: small;
+    text-transform: uppercase;
 }
 
 .card__hits th,
 .card__hits td {
-  width: 33%;
-  padding: 0.25em 0.5em 0;
+    width: 33%;
+    padding: 0.25em 0.5em 0;
 }
 
-.card__abilities
-{
-  margin-top: .5em;
-  padding-bottom: 10px;
+.card__abilities {
+    margin-top: .5em;
+    padding-bottom: 10px;
 }
 
 .card__ability {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0;
-  flex: 1 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0;
+    flex: 1 0;
 }
 
 img.dice_small {
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 img.icon_small {
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .card__hits .icon {
-  width: 1em;
-  vertical-align: text-top;
-  margin-top: .1em;
-  margin-left: .2em
+    width: 1em;
+    vertical-align: text-top;
+    margin-top: .1em;
+    margin-left: .2em
 }
 
 .card_hits_caption {
-  text-align: center;
+    text-align: center;
 }
 
 .card-hits-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-size: medium;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: medium;
 }
 
 .card__game_icon {
-  position: absolute;
-  width: 36px;
-  float: right;
-  left: .99em;
-  top: 1.2em
+    position: absolute;
+    width: 36px;
+    float: right;
+    left: .99em;
+    top: 1.2em
 }
 
 .accuracy {
-  text-align: right;
+    text-align: right;
 }
 
 .hits {
-  text-align: center;
+    text-align: center;
 }
 
 .critical {
-  text-align: left;
+    text-align: left;
 }
 
 .gun-icon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .bonus {
-  text-transform: uppercase;
-  font-size: 12.5px;
-  text-align: justify;
+    text-transform: uppercase;
+    font-size: 12.5px;
+    text-align: justify;
 }
 
-.element-container
-{
-  display: grid;
-  justify-content: center;
+.element-container {
+    display: grid;
+    justify-content: center;
 }
 
-.element
-{
-  max-width: 32px;
-  max-height: 32px;
+.element {
+    max-width: 32px;
+    max-height: 32px;
 }
 
 .accuracy-icon {
-  max-width: 32px;
-  max-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
 }

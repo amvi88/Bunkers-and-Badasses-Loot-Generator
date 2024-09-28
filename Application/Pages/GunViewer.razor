@@ -7,124 +7,138 @@
 
 <div>
     <figure class="@GetCardCssClass" id="@GetElementId()">
-      <ContextMenuTrigger MenuId="@GetMenuId()">
-      <div class="card__image-container">
-        @if (!string.IsNullOrWhiteSpace(CraftedGun.Source))
-        {
-          <img src="@GetSourceImage" alt="@CraftedGun.Source" class="card__game_icon"> 
-        }
-        <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">  
-        <img src="@GetGuildImage" alt="@CraftedGun.Guild" class="card__guild_image"> 
-      </div>
-      
-      <figcaption class="card__caption">
-        <h1 class="@GetCssClassCardCaption">@GetGunName</h1>        
-        
-        <h3 class="@GetCssClassCardType">
-          @CraftedGun.Rarity.ToString()
-        </h3>
-
-        @if (CraftedGun.RedText != null)
-        {
-          <div class="card__redtexts">
-            <h4 class="card__redtext">
-              <span class="card__label">@CraftedGun.RedText.Name</span>            
-            </h4>
-          </div>
-        }
-
-        <table class="card__stats">
-          <tbody>            
-            <tr>
-              <th>Damage</th>
-              <td>
-                @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
+        <ContextMenuTrigger MenuId="@GetMenuId()">
+            <div class="card__image-container">
+                @if (!string.IsNullOrWhiteSpace(CraftedGun.Source))
                 {
-                  <img class="dice_small" src="@GetDiceImage" alt="@CraftedGun.DiceType">
+                    <img src="@GetSourceImage" alt="@CraftedGun.Source" class="card__game_icon">
                 }
-              </td>
-            </tr>
-
-            @if (CraftedGun.Element != Element.None){
-              <tr>
-                <th>Elemental</th>
-                <td>
-                  @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
-                {
-                   @if (element == Element.None)
-                   {
-                     continue;
-                   }
-                    @if (CraftedGun.Element.HasFlag(element))
-                    {
-                      <img src="@GetElementImage(element.ToString())" alt="@element" class="element"> 
-                    }
-                }  
-
-                @for (int index = 0; index < CraftedGun.ExtraAmountOfDice; index++)
-                {
-                  <img class="element" src="@GetExtraDiceImage" alt="@CraftedGun.ExtraDiceType">
-                }
-                </td>
-              </tr>
-            }
-            
-            <tr>
-              <th>Range</th>
-              <td>@CraftedGun.Range</td>
-            </tr>
-          </tbody>
-        </table>
-
-       @if (CraftedGun.HitsByAccuracy != null)
-       {
-          <div class="card__hits">
-            <div class="card_hits_caption">Hits By Accuracy</div>
-            <div class="card-hits-container">            
-                @foreach(var hit in CraftedGun.HitsByAccuracy)
-                {
-                    <div class="accuracy">@hit.Label</div>
-                    <div class="hits">@hit.Hits<img class="accuracy-icon" src="images/resources/card-icons/hit.png" alt="Hits"></div>
-                    <div class="critical">@hit.Crits<img class="accuracy-icon" src="images/resources/card-icons/crit.png" alt="Crits"></div>
-                }
+                <img src="@GetGunImage" alt="@CraftedGun.GunType" class="card__image">
+                <img src="@GetGuildImage" alt="@CraftedGun.Guild" class="card__guild_image">
             </div>
-          </div>
-        }
 
-        <div class="card__abilities">
-          <div class="card_hits_caption">Abilities</div>
-         @if (!string.IsNullOrEmpty(CraftedGun.GuildBonus))
-          {
-            <span class="card__label bonus">(Guild) @CraftedGun.GuildBonus</span>            
-          }
-          @if (!string.IsNullOrEmpty(CraftedGun.GunArchetypeBonus))
-          {
-            <span class="card__label bonus">(Archetype) @CraftedGun.GunArchetypeBonus</span>            
-          }
-          @if (!string.IsNullOrEmpty(CraftedGun.ElementalBonus))
-          {
-            <span class="card__label bonus">(Elemental) @CraftedGun.ElementalBonus</span>            
-          }
-          @if (!string.IsNullOrEmpty(CraftedGun.Prefix?.Effect))
-          {
-            <span class="card__label bonus">(Prefix) @CraftedGun.Prefix?.Effect</span>            
-          }
-          @if (!string.IsNullOrEmpty(CraftedGun.RedText?.Effect))
-          {
-            <span class="card__label bonus">(Red Text) @CraftedGun.RedText?.Effect</span>            
-          }
-        </div>
- 
-        <img src=@GetWeaponTypeImage alt="@CraftedGun.GunType" class="card__image gun-icon" >
+            <figcaption class="card__caption">
+                <h1 class="@GetCssClassCardCaption">@GetGunName</h1>
 
-        
-      </figcaption>
-      </ContextMenuTrigger>
+                <h3 class="@GetCssClassCardType">
+                    @CraftedGun.Rarity.ToString()
+                </h3>
+
+                @if (CraftedGun.RedText != null)
+                {
+                    <div class="card__redtexts">
+                        <h4 class="card__redtext">
+                            <span class="card__label">@CraftedGun.RedText.Name</span>
+                        </h4>
+                    </div>
+                }
+
+                @if (CraftedGun.TealText != null)
+                {
+                    <div class="card__tealtexts">
+                        <h4 class="card__tealtext">
+                            <span class="card__label">@CraftedGun.TealText.Name</span>
+                        </h4>
+                    </div>
+                }
+
+                <table class="card__stats">
+                    <tbody>
+                        <tr>
+                            <th>Damage</th>
+                            <td>
+                                @for (int index = 0; index < CraftedGun.AmountOfDice; index++)
+                                {
+                                    <img class="dice_small" src="@GetDiceImage" alt="@CraftedGun.DiceType">
+                                }
+                            </td>
+                        </tr>
+
+                        @if (CraftedGun.Element != Element.None)
+                        {
+                            <tr>
+                                <th>Elemental</th>
+                                <td>
+                                    @foreach (var element in (Element[])Enum.GetValues(typeof(Element)))
+                                    {
+                                        @if (element == Element.None)
+                                        {
+                                            continue;
+                                        }
+                                        @if (CraftedGun.Element.HasFlag(element))
+                                        {
+                                            <img src="@GetElementImage(element.ToString())" alt="@element" class="element">
+                                        }
+                                    }
+
+                                    @for (int index = 0; index < CraftedGun.ExtraAmountOfDice; index++)
+                                    {
+                                        <img class="element" src="@GetExtraDiceImage" alt="@CraftedGun.ExtraDiceType">
+                                    }
+                                </td>
+                            </tr>
+                        }
+
+                        <tr>
+                            <th>Range</th>
+                            <td>@CraftedGun.Range</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                @if (CraftedGun.HitsByAccuracy != null)
+                {
+                    <div class="card__hits">
+                        <div class="card_hits_caption">Hits By Accuracy</div>
+                        <div class="card-hits-container">
+                            @foreach (var hit in CraftedGun.HitsByAccuracy)
+                            {
+                                <div class="accuracy">@hit.Label</div>
+                                <div class="hits">@hit.Hits<img class="accuracy-icon" src="images/resources/card-icons/hit.png" alt="Hits"></div>
+                                <div class="critical">@hit.Crits<img class="accuracy-icon" src="images/resources/card-icons/crit.png" alt="Crits"></div>
+                            }
+                        </div>
+                    </div>
+                }
+
+                <div class="card__abilities">
+                    <div class="card_hits_caption">Abilities</div>
+                    @if (!string.IsNullOrEmpty(CraftedGun.GuildBonus))
+                    {
+                        <span class="card__label bonus">(Guild) @CraftedGun.GuildBonus</span>
+                    }
+                    @if (!string.IsNullOrEmpty(CraftedGun.GunArchetypeBonus))
+                    {
+                        <span class="card__label bonus">(Archetype) @CraftedGun.GunArchetypeBonus</span>
+                    }
+                    @if (!string.IsNullOrEmpty(CraftedGun.ElementalBonus))
+                    {
+                        <span class="card__label bonus">(Elemental) @CraftedGun.ElementalBonus</span>
+                    }
+                    @if (!string.IsNullOrEmpty(CraftedGun.Prefix?.Effect))
+                    {
+                        <span class="card__label bonus">(Prefix) @CraftedGun.Prefix?.Effect</span>
+                    }
+                    @if (!string.IsNullOrEmpty(CraftedGun.RedText?.Effect))
+                    {
+                        <span class="card__label bonus">(Red Text) @CraftedGun.RedText?.Effect</span>
+                    }
+                    @if (!string.IsNullOrEmpty(CraftedGun.TealText?.Effect))
+                    {
+                        <span class="card__label bonus">(Teal Text) @CraftedGun.TealText?.Effect</span>
+                    }
+                </div>
+
+                <img src=@GetWeaponTypeImage alt="@CraftedGun.GunType" class="card__image gun-icon">
+
+
+            </figcaption>
+        </ContextMenuTrigger>
     </figure>
 
     <ContextMenu Id="@GetMenuId()">
-      <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
-      <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Download"><span class="oi oi-data-transfer-download icon-download"></span> Download</BlazorContextMenu.Item>
+        <BlazorContextMenu.Item OnClick="@Copy"><span class="oi oi-clipboard icon-copy"></span> Copy to clipboard</BlazorContextMenu.Item>
     </ContextMenu>
 </div>
 
@@ -142,11 +156,11 @@
     public string CustomManufacturerImage { get; set; } = string.Empty;
 
     public string GetGunName => string.IsNullOrWhiteSpace(CraftedGun.Prefix?.Name)
-        ? CraftedGun.Name  
+        ? CraftedGun.Name
         : $"{CraftedGun.Prefix?.Name} {CraftedGun.Name}";
 
     public string GetCardCssClass => $"card card--{CraftedGun.Rarity.ToString().ToLower()}";
-    
+
     public string GetGunImage => !string.IsNullOrWhiteSpace(CraftedGun.ImageUrl) ? CraftedGun.ImageUrl
                  : $"images/resources/guns/{CraftedGun.GunType}.png";
 
@@ -154,11 +168,11 @@
 
     public string GetGuildImage => UseCustomManufacturers
         ? CustomManufacturerImage
-        : $"images/resources/guilds/{(UseBorderlandsManufacturers? CraftedGun.AlternateGuildName : CraftedGun.Guild)}.png";
+        : $"images/resources/guilds/{(UseBorderlandsManufacturers ? CraftedGun.AlternateGuildName : CraftedGun.Guild)}.png";
 
 
     public string GetWeaponTypeImage => $"images/resources/gun-icons/{CraftedGun.GunType.ToString().ToLower()}.png";
-    
+
     public string GetCssClassCardCaption => $"card__name";
 
     public string GetCssClassCardType => $"card__type normal";
@@ -167,10 +181,10 @@
 
     public string GetExtraDiceImage => $"images/resources/dice/{CraftedGun.ExtraDiceType}.png";
 
-    public string GetElementImage(string elementId) =>  $"images/resources/elements/{elementId}.png";
+    public string GetElementImage(string elementId) => $"images/resources/elements/{elementId}.png";
 
     public override string GetFileName()
     {
-      return $"Gun_{CraftedGun.Guild}_{CraftedGun.Name.Replace(" ","_")}.png";
+        return $"Gun_{CraftedGun.Guild}_{CraftedGun.Name.Replace(" ", "_")}.png";
     }
 }
