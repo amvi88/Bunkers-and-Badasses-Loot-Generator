@@ -4,7 +4,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>    
+    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>   
+  </PropertyGroup>
+  <PropertyGroup>
+    <PublishReadyToRunComposite>true</PublishReadyToRunComposite>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj" />
