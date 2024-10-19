@@ -9,6 +9,9 @@ namespace Application.Pages
         [Inject]
         private IJSRuntime JSRuntime {get; set;}
 
+        [Inject]
+        private IConfiguration Configuration { get; set;}
+
         private IJSObjectReference? module;
         private string? result;
         protected Guid id = Guid.NewGuid();
@@ -18,6 +21,11 @@ namespace Application.Pages
             {
                 module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./js/index.js");
             }
+        }
+
+        protected bool UseCardImages() 
+        {
+            return Configuration.GetValue<bool>("ProgramSettings:UseImages");
         }
 
         protected async Task Download()

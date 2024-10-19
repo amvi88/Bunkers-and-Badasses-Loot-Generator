@@ -105,6 +105,7 @@ public class Program
         builder.Configuration.AddJsonFile("Configuration/cacherolls.json", true);
         builder.Configuration.AddJsonFile("Configuration/enemydrops.json", true);
         builder.Configuration.AddJsonFile("Configuration/spells.json", true);
+        builder.Configuration.AddJsonFile("Configuration/general.json", true);
 
         builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetSection("GuildConfiguration"));
         builder.Services.Configure<CustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));

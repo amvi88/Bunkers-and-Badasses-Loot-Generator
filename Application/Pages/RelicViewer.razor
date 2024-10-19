@@ -5,9 +5,12 @@
 <div>
     <figure class="@GetCardCssClass" id="@GetElementId()">
         <ContextMenuTrigger MenuId="@GetMenuId()">
-            <div class="card__image-container">
-                <img src=@GetRelicImage alt="shield" class="card__image">
-            </div>
+            @if (UseCardImages())
+            {
+                <div class="card__image-container">
+                    <img src=@GetRelicImage alt="shield" class="card__image">
+                </div>
+            }
 
             <figcaption class="card__caption">
                 <h1 class="card__name">@CraftedRelic.Type</h1>
@@ -44,7 +47,7 @@
                         <span>@CraftedRelic.PreferredClass</span>
                         <br>
                         <span>@CraftedRelic.ClassEffect</span>
-                        
+
                         @if (!string.IsNullOrEmpty(CraftedRelic.RedText?.Effect))
                         {
                             <span class="card__label bonus">(Red Text) @CraftedRelic.RedText?.Effect</span>

@@ -8,7 +8,10 @@
     <figure class=@GetCardCssClass id="@GetElementId()">
         <ContextMenuTrigger MenuId="@GetMenuId()">
             <div class="card__image-container">
-                <img src=@GetGrenadeImage alt="grenade" class="card__image">
+                @if(UseCardImages())
+                {
+                    <img src=@GetGrenadeImage alt="grenade" class="card__image">
+                }
                 <img src="@GetGuildImage" alt="@CraftedGrenadeMod.Guild" class="card__guild_image">
             </div>
 

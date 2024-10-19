@@ -12,7 +12,10 @@
                 {
                     <img src="@GetSourceImage" alt="@CraftedShield.Source" class="card__game_icon">
                 }
-                <img src=@GetShieldImage alt="shield" class="card__image">
+                @if (UseCardImages())
+                {
+                    <img src=@GetShieldImage alt="shield" class="card__image">
+                }
                 <img src="@GetGuildImage" alt="@CraftedShield.Guild" class="card__guild_image">
             </div>
 
