@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-jammy AS base
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble AS base
 WORKDIR /app
 EXPOSE 5000
 
@@ -9,8 +9,8 @@ ENV ASPNETCORE_URLS=http://+:5000
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - 
+FROM mcr.microsoft.com/dotnet/sdk:10.0-noble AS build
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - 
 RUN apt-get install -y nodejs
 COPY . src/
 
