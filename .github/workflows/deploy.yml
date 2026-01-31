@@ -29,11 +29,11 @@ jobs:
         uses: docker/build-push-action@v5.1.0
         with:
           push: true
-          tags: ${{ env.ACR_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
+          tags: ${{ env.ACR_LOGIN_SERVER }}/bnbregistry/bunkers-and-badasses-app:${{ github.sha }}
           file: ./Application/Dockerfile
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          images: '${{ env.ACR_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}'
+          images: '${{ env.ACR_LOGIN_SERVER }}/bnbregistry/bunkers-and-badasses-app:${{ github.sha }}'
