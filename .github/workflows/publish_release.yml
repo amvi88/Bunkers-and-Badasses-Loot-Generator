@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Global Dependencies
-        run: dotnet tool install ElectronNET.CLI -g
+        run: dotnet tool install ElectronNET.CLI --global
       - name: Install dependencies
         run: dotnet restore
       - name: Build and Publish
