@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: [ '8.0.x']
-        node-version: ['20.x']
+        dotnet-version: [ '10.0.x']
+        node-version: ['22.x']
 
     steps:
       - uses: actions/checkout@v4
