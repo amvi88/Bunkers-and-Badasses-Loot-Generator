@@ -1,0 +1,29 @@
+name: Build and Create Release
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '10.0.x']
+        node-version: ['22.x']
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup dotnet ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Global Dependencies
+        run: dotnet tool install ElectronNET.CLI --global
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build and Publish
+        run: dotnet electronize build /target win /PublishReadyToRun true /Config Release
