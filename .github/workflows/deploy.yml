@@ -27,7 +27,7 @@ jobs:
 
       - name: Build and push image
         run: |
-          docker build -t ${{ env.ACR_LOGIN_SERVER }}/myapp:${{ github.sha }} .
+          docker build -t ${{ env.ACR_LOGIN_SERVER }}/myapp:${{ github.sha }} ./Application/Dockerfile
           docker push ${{ env.ACR_LOGIN_SERVER }}/myapp:${{ github.sha }}
 
       - name: Deploy to Azure Web App
