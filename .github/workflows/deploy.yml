@@ -25,10 +25,12 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
-      - name: Build and push image
-        run: |
-          docker build -t ${{ env.ACR_LOGIN_SERVER }}/myapp:${{ github.sha }} ./Application/Dockerfile
-          docker push ${{ env.ACR_LOGIN_SERVER }}/myapp:${{ github.sha }}
+      - name: Build and push container image to registry
+        uses: docker/build-push-action@v5.1.0
+        with:
+          push: true
+          tags: ${{ env.ACR_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
+          file: ./Application/Dockerfile
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
