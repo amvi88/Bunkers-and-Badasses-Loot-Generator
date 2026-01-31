@@ -4,7 +4,7 @@ on:
     branches: [ "main" ]
 
 env:
-  AZURE_WEBAPP_NAME: 'bunkers-and-badasses-app'   # Your App Service name
+  AZURE_WEBAPP_NAME: 'Bunkers-And-Badasses-App'   # Your App Service name
   ACR_LOGIN_SERVER: 'bnbregistry.azurecr.io'
 
 jobs:
@@ -36,4 +36,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          images: '${{ env.ACR_LOGIN_SERVER }}/myapp:${{ github.sha }}'
+          images: '${{ env.ACR_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}'
