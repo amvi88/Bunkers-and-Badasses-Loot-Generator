@@ -6,6 +6,7 @@ using Models.Builder;
 using Models;
 using Business.Services;
 using ElectronNET.API;
+using Microsoft.Extensions.FileProviders;
 
 public class Program
 {
@@ -88,24 +89,38 @@ public class Program
 
     private static void SetupConfiguration(WebApplicationBuilder builder)
     {
-        builder.Configuration.AddJsonFile("Configuration/weaponarchetypes.json", true);
-        builder.Configuration.AddJsonFile("Configuration/weaponcustomization.json", true);
-        builder.Configuration.AddJsonFile("Configuration/weaponprefixes.json", true);
-        builder.Configuration.AddJsonFile("Configuration/weaponredtext.json", true);
-        builder.Configuration.AddJsonFile("Configuration/weapongallery.json", true);
-        builder.Configuration.AddJsonFile("Configuration/shieldgallery.json", true);
-        builder.Configuration.AddJsonFile("Configuration/guilds.json", true);
-        builder.Configuration.AddJsonFile("Configuration/potions.json", true);
-        builder.Configuration.AddJsonFile("Configuration/tinytinaspotions.json", true);
-        builder.Configuration.AddJsonFile("Configuration/relics.json", true);
-        builder.Configuration.AddJsonFile("Configuration/moxxtails.json", true);
-        builder.Configuration.AddJsonFile("Configuration/traumas.json", true);
-        builder.Configuration.AddJsonFile("Configuration/dicechests.json", true);
-        builder.Configuration.AddJsonFile("Configuration/unassumingchests.json", true);
-        builder.Configuration.AddJsonFile("Configuration/cacherolls.json", true);
-        builder.Configuration.AddJsonFile("Configuration/enemydrops.json", true);
-        builder.Configuration.AddJsonFile("Configuration/spells.json", true);
-        builder.Configuration.AddJsonFile("Configuration/general.json", true);
+        var configurationProvider = new PhysicalFileProvider(
+            Path.Combine(AppContext.BaseDirectory, "Configuration"));
+        var configurationFiles = new[]
+        {
+            "weaponarchetypes.json",
+            "weaponcustomization.json",
+            "weaponprefixes.json",
+            "weaponredtext.json",
+            "weapongallery.json",
+            "shieldgallery.json",
+            "guilds.json",
+            "potions.json",
+            "tinytinaspotions.json",
+            "relics.json",
+            "moxxtails.json",
+            "traumas.json",
+            "dicechests.json",
+            "unassumingchests.json",
+            "cacherolls.json",
+            "enemydrops.json",
+            "spells.json",
+            "general.json",
+        };
+
+        foreach (var fileName in configurationFiles)
+        {
+            builder.Configuration.AddJsonFile(
+                configurationProvider,
+                fileName,
+                optional: false,
+                reloadOnChange: true);
+        }
 
         builder.Services.Configure<GuildConfigurationOptions>(builder.Configuration.GetSection("GuildConfiguration"));
         builder.Services.Configure<CustomizationOptions>(builder.Configuration.GetSection("WeaponCustomization"));

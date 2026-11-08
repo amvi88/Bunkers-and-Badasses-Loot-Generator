@@ -1,0 +1,183 @@
+@baseUrl = https://localhost:7443
+@contentType = application/json
+
+### Health
+GET {{baseUrl}}/health
+
+### Randomize a gun
+POST {{baseUrl}}/api/guns/randomize
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "guild": "Atlas",
+  "rarity": "Rare",
+  "element": "Incendiary",
+  "gunType": "Pistol",
+  "allowPrefixes": true,
+  "allowRedTexts": true
+}
+
+### Randomize a grenade mod
+POST {{baseUrl}}/api/grenade-mods/randomize
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "guild": "Atlas",
+  "rarity": "Rare",
+  "element": "Shock"
+}
+
+### Randomize a shield
+POST {{baseUrl}}/api/shields/randomize
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "guild": "Atlas"
+}
+
+### Randomize a relic
+POST {{baseUrl}}/api/relics/randomize
+Content-Type: {{contentType}}
+
+{
+  "rarity": "Epic"
+}
+
+### Randomize a spell
+POST {{baseUrl}}/api/spells/randomize
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "guild": "Atlas",
+  "rarity": "Rare"
+}
+
+### Randomize a Moxx-tail
+GET {{baseUrl}}/api/moxx-tails/randomize
+
+### Get trauma
+POST {{baseUrl}}/api/traumas/randomize
+Content-Type: {{contentType}}
+
+{
+  "traumaType": "Temporary"
+}
+
+### Generate a gun batch
+POST {{baseUrl}}/api/guns/batch
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "batchSize": 3
+}
+
+### Generate a shield batch
+POST {{baseUrl}}/api/shields/batch
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "batchSize": 3
+}
+
+### Generate shop inventory
+POST {{baseUrl}}/api/shops/inventory
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "batchSize": 1,
+  "amountOfGuns": 2,
+  "amountOfShieldMods": 2,
+  "amountOfGrenadeMods": 2,
+  "amountOfPotions": 2
+}
+
+### Open a dice chest
+POST {{baseUrl}}/api/chests/dice
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "gunType": "CombatRifle",
+  "guild": "Atlas",
+  "allowPrefixes": true,
+  "allowRedTexts": true
+}
+
+### Open an unassuming chest
+POST {{baseUrl}}/api/chests/unassuming
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "gunType": "CombatRifle",
+  "guild": "Atlas",
+  "allowPrefixes": true,
+  "allowRedTexts": true
+}
+
+### Open a cache roll
+POST {{baseUrl}}/api/chests/cache-roll
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "gunType": "CombatRifle",
+  "guild": "Atlas",
+  "allowPrefixes": true,
+  "allowRedTexts": true,
+  "cacheRollSize": "Tiny",
+  "goldFarmerBonus": false
+}
+
+### Open an enemy drop
+POST {{baseUrl}}/api/chests/enemy-drop
+Content-Type: {{contentType}}
+
+{
+  "playerLevel": 10,
+  "gunType": "CombatRifle",
+  "guild": "Atlas",
+  "allowPrefixes": true,
+  "allowRedTexts": true,
+  "lootPiles": 1
+}
+
+### Get weapon prefixes
+GET {{baseUrl}}/api/customizations/prefixes
+
+### Get weapon red texts
+GET {{baseUrl}}/api/customizations/red-texts
+
+### Get weapon archetype bonuses
+GET {{baseUrl}}/api/customizations/weapon-archetype-bonuses
+
+### Get weapon archetype hits
+GET {{baseUrl}}/api/customizations/weapon-archetype-hits?gunType=Pistol&playerLevel=10
+
+### Resolve a named potion
+POST {{baseUrl}}/api/potions/resolve
+Content-Type: {{contentType}}
+
+{
+  "isRandomPotion": false,
+  "name": "Healing Potion"
+}
+
+### Get all guilds
+GET {{baseUrl}}/api/guilds
+
+### Get guilds producing a shield
+GET {{baseUrl}}/api/guilds/producing?itemType=Shield
+
+### Get guilds producing pistols
+GET {{baseUrl}}/api/guilds/producing-guns?gunType=Pistol
+
+### Get a guild's weapon modifiers
+GET {{baseUrl}}/api/guilds/Atlas/weapon-modifiers?rarity=Rare
