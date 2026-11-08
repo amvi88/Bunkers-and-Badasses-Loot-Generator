@@ -6,13 +6,27 @@ using Models.Builder;
 using Models;
 using Business.Services;
 using ElectronNET.API;
+using ElectronNET.API.Entities;
 using Microsoft.Extensions.FileProviders;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        var builder = WebApplication.CreateBuilder(args);
+        var environmentName = Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT")
+            ?? Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+        var contentRootPath = string.Equals(
+            environmentName,
+            "Development",
+            StringComparison.OrdinalIgnoreCase)
+                ? Directory.GetCurrentDirectory()
+                : AppContext.BaseDirectory;
+        var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+        {
+            Args = args,
+            ContentRootPath = contentRootPath
+        });
+
         SetupConfiguration(builder);
 
         builder.Logging.AddAzureWebAppDiagnostics();
@@ -55,18 +69,12 @@ public class Program
         builder.Services.AddBlazorContextMenu();
 
         builder.Services.AddElectron();
-        builder.WebHost.UseElectron(args);
-
-        if (HybridSupport.IsElectronActive)
+        builder.UseElectron(args, async () =>
         {
-            // Open the Electron-Window here
-            Task.Run(async () => {
-                var window = await Electron.WindowManager.CreateWindowAsync();
-                window.OnClosed += () => {
-                    Electron.App.Quit();
-                };
-            });
-        }
+            var window = await Electron.WindowManager.CreateWindowAsync(
+                new BrowserWindowOptions { IsRunningBlazor = true });
+            window.OnClosed += () => Electron.App.Quit();
+        });
 
         var app = builder.Build();
 

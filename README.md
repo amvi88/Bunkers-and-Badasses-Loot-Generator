@@ -3,7 +3,7 @@
 This is an unofficial [Loot Generator](https://bunkers-and-badasses-app.azurewebsites.net/) for 2K and Nerdvana Games <a href="https://nerdvanagames.myshopify.com/">Bunkers and Badasses</a> TTRPG Game. Feel free to use the data files for your own purpoises. (See what i did there?)
 
 ## Running it locally 
-You'll need [Node.js](https://nodejs.org/en/download/) and the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download).
+You'll need [Node.js 22 or later](https://nodejs.org/en/download/) and the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download).
 This project was an excuse to play a bit with Blazor, so I recommend using Visual Studio Code in case you'd like to debug.
 
 ### Loot API
@@ -30,11 +30,15 @@ The container listens on HTTP port `8080`; terminate HTTPS at a trusted reverse 
 
 `LootModule/` provides Node.js ES module functions for local loot generation without making HTTP requests. It reads the same root `Configuration/` JSON files as the Blazor app and API. See [LootModule/README.md](./LootModule/README.md) for exports, examples, and tests.
 
-If you want to compile a desktop version from a command line run the command
+### Desktop application
 
-dotnet electronize build /target win /PublishReadyToRun true /Config Release
+The Electron.NET Core MSBuild integration launches the Electron app with the `Electron.NET App` profile in Visual Studio or VS Code. To create a distributable Windows build, run this from the repository root on Windows:
 
-You can target win and linux as release targets
+```shell
+dotnet publish Application/Application.csproj --configuration Release --runtime win-x64 -p:PublishReadyToRun=true
+```
+
+The Windows portable app is produced in `Application/bin/Release/net10.0/win-x64/publish`. To create the Linux archive, run the equivalent command with `--runtime linux-x64` on Linux (or through WSL).
 
 ## Copyright
 Copyright 2022 Alberto Malavassi Viales

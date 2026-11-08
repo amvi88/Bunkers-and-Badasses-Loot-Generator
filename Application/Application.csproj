@@ -4,7 +4,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>   
+    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>
+    <Title>BnbLootHelper</Title>
+    <Description>Bunkers and Badasses Loot Generator</Description>
+    <Version>1.5.0</Version>
+    <PackageId>Application</PackageId>
+    <ElectronPackageId>com.bnbloothelper.app</ElectronPackageId>
+    <ElectronSingleInstance>false</ElectronSingleInstance>
+    <Copyright>Copyright 2026</Copyright>
   </PropertyGroup>
   <PropertyGroup>
     <PublishReadyToRunComposite>true</PublishReadyToRunComposite>
@@ -17,7 +24,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Blazor.ContextMenu" Version="2.1.0" />
-    <PackageReference Include="ElectronNET.API" Version="23.6.2" />
+    <PackageReference Include="ElectronNET.Core" Version="0.6.0" />
+    <PackageReference Include="ElectronNET.Core.AspNet" Version="0.6.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="10.0.14" />
   </ItemGroup>
   <ItemGroup>
@@ -30,9 +38,4 @@
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="npm run install-build" WorkingDirectory="js" />
   </Target>
-  <ItemGroup>
-    <Content Update="electron.manifest.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 </Project>
