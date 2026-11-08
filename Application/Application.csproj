@@ -18,7 +18,7 @@
   <ItemGroup>
     <PackageReference Include="Blazor.ContextMenu" Version="2.1.0" />
     <PackageReference Include="ElectronNET.API" Version="23.6.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="10.0.14" />
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="npm run install-build" WorkingDirectory="js" />
