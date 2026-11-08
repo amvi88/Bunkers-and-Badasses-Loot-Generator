@@ -1,0 +1,14 @@
+{
+  "name": "@bunkers-and-badasses/loot-module",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Node.js ES module for the Bunkers and Badasses loot services",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

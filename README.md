@@ -26,6 +26,10 @@ docker run --rm -p 8080:8080 loot-api
 
 The container listens on HTTP port `8080`; terminate HTTPS at a trusted reverse proxy or hosting platform rather than placing a development certificate in the image.
 
+### Local loot ES module
+
+`LootModule/` provides Node.js ES module functions for local loot generation without making HTTP requests. It reads the same root `Configuration/` JSON files as the Blazor app and API. See [LootModule/README.md](./LootModule/README.md) for exports, examples, and tests.
+
 If you want to compile a desktop version from a command line run the command
 
 dotnet electronize build /target win /PublishReadyToRun true /Config Release
