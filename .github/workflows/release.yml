@@ -1,0 +1,120 @@
+name: Build and release desktop apps
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: Application/js/package-lock.json
+
+      - name: Validate release version
+        shell: pwsh
+        run: |
+          $version = $env:GITHUB_REF_NAME -replace '^v', ''
+          if ($version -notmatch '^\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?$') {
+            throw "Release tag must be a semantic version, such as v1.5.0. Received: $env:GITHUB_REF_NAME"
+          }
+          "RELEASE_VERSION=$version" >> $env:GITHUB_ENV
+
+      - name: Publish Windows app
+        run: dotnet publish Application/Application.csproj --configuration Release --runtime win-x64 -p:PublishReadyToRun=true "-p:Version=$env:RELEASE_VERSION"
+
+      - name: Zip Windows app
+        shell: pwsh
+        run: |
+          $publishDirectory = "Application/bin/Release/net10.0/win-x64/publish"
+          $installer = Join-Path $publishDirectory "BnbLootHelper $env:RELEASE_VERSION.exe"
+          if (-not (Test-Path -LiteralPath $installer)) {
+            throw "Electron Builder did not produce the expected Windows app: $installer"
+          }
+          Compress-Archive -LiteralPath $installer -DestinationPath "BnbLootHelper.Setup.$env:RELEASE_VERSION.zip" -CompressionLevel Optimal
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-release
+          path: BnbLootHelper.Setup.*.zip
+          if-no-files-found: error
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: Application/js/package-lock.json
+
+      - name: Validate release version
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "Release tag must be a semantic version, such as v1.5.0. Received: $GITHUB_REF_NAME" >&2
+            exit 1
+          fi
+          echo "RELEASE_VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Publish Linux app
+        run: dotnet publish Application/Application.csproj --configuration Release --runtime linux-x64 -p:PublishReadyToRun=true "-p:Version=$RELEASE_VERSION"
+
+      - name: Prepare Linux archive
+        shell: bash
+        run: |
+          publish_directory="Application/bin/Release/net10.0/linux-x64/publish"
+          mapfile -t archives < <(find "$publish_directory" -maxdepth 1 -type f -name '*.tar.xz')
+          if [[ "${#archives[@]}" -ne 1 ]]; then
+            echo "Expected one Electron Builder .tar.xz archive in $publish_directory; found ${#archives[@]}." >&2
+            exit 1
+          fi
+          cp "${archives[0]}" "BnbLootHelper.Setup.${RELEASE_VERSION}.linux-x64.tar.xz"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-release
+          path: BnbLootHelper.Setup.*.linux-x64.tar.xz
+          if-no-files-found: error
+
+  create-release:
+    needs:
+      - build-windows
+      - build-linux
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: "*-release"
+          path: release-assets
+          merge-multiple: true
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: Bunkers and Badasses ${{ github.ref_name }}
+          generate_release_notes: true
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          files: release-assets/*
+          fail_on_unmatched_files: true

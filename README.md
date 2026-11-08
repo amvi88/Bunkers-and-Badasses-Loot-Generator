@@ -40,6 +40,8 @@ dotnet publish Application/Application.csproj --configuration Release --runtime 
 
 The Windows portable app is produced in `Application/bin/Release/net10.0/win-x64/publish`. To create the Linux archive, run the equivalent command with `--runtime linux-x64` on Linux (or through WSL).
 
+To publish both desktop builds as a GitHub Release, push a semantic-version tag such as `v1.5.0`. The release workflow builds Windows and Linux on their native runners, then attaches a Windows ZIP and Linux `.tar.xz` archive to the release.
+
 ## Copyright
 Copyright 2022 Alberto Malavassi Viales
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
