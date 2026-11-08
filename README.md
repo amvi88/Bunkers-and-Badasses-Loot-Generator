@@ -17,6 +17,15 @@ dotnet run --project LootApi
 
 The API listens at `https://localhost:7443`; its OpenAPI document is available at `https://localhost:7443/openapi/v1.json` in Development. HTTP requests are redirected to HTTPS.
 
+Build and run the API container from the repository root:
+
+```shell
+docker build -f LootApi/Dockerfile -t loot-api .
+docker run --rm -p 8080:8080 loot-api
+```
+
+The container listens on HTTP port `8080`; terminate HTTPS at a trusted reverse proxy or hosting platform rather than placing a development certificate in the image.
+
 If you want to compile a desktop version from a command line run the command
 
 dotnet electronize build /target win /PublishReadyToRun true /Config Release
