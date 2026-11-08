@@ -3,8 +3,19 @@
 This is an unofficial [Loot Generator](https://bunkers-and-badasses-app.azurewebsites.net/) for 2K and Nerdvana Games <a href="https://nerdvanagames.myshopify.com/">Bunkers and Badasses</a> TTRPG Game. Feel free to use the data files for your own purpoises. (See what i did there?)
 
 ## Running it locally 
-You'll need both [NodeJs](https://nodejs.org/en/download/) and [Net Core 8.0](https://dotnet.microsoft.com/en-us/download).
+You'll need [Node.js](https://nodejs.org/en/download/) and the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download).
 This project was an excuse to play a bit with Blazor, so I recommend using Visual Studio Code in case you'd like to debug.
+
+### Loot API
+
+The `LootApi` project exposes the services in `Business/Services` as HTTP endpoints. The Blazor app and API both read the shared game data from the root `Configuration/` directory. Run the API locally over HTTPS with:
+
+```shell
+dotnet dev-certs https --trust
+dotnet run --project LootApi
+```
+
+The API listens at `https://localhost:7443`; its OpenAPI document is available at `https://localhost:7443/openapi/v1.json` in Development. HTTP requests are redirected to HTTPS.
 
 If you want to compile a desktop version from a command line run the command
 
