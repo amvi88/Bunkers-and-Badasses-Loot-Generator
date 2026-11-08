@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v5.1.0
         with:
           push: true
-          tags: ${{ env.ACR_LOGIN_SERVER }}/bunkers-and-badasses-app:${{ github.sha }}
+          tags: ${{ env.ACR_LOGIN_SERVER }}/bnbregistry/bunkers-and-badasses-app:${{ github.sha }}
           file: ./Application/Dockerfile
 
       - name: Deploy to Azure Web App
