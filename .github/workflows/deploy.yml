@@ -4,7 +4,7 @@ on:
     branches: [ "main" ]
 
 env:
-  AZURE_WEBAPP_NAME: 'Bunkers-And-Badasses-App'   # Your App Service name
+  AZURE_WEBAPP_NAME: 'bunkers-and-badasses-app'   # Your App Service name
   ACR_LOGIN_SERVER: 'bnbregistry.azurecr.io'
 
 jobs:
