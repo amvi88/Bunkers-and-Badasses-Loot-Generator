@@ -4,18 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "snowpack build",
-    "install-build": "npm install && snowpack build"
+    "build": "vite build",
+    "install-build": "npm ci && npm run build"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@snowpack/plugin-optimize": "0.2.13",
-    "snowpack": "^3.7.1"
+    "vite": "^8.3.6"
   },
   "dependencies": {
-    "dom-to-image-more": "3.7.2",
     "html-to-image": "1.11.13"
   }
 }
